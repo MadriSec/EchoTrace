@@ -1,0 +1,29 @@
+09:14:22.270194295 open 760984 Controller Boot /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f
+09:14:25.565413952 open 760984 Controller Boot /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/server/libjvm.so f
+09:14:30.508798512 open 760984 MSC service thr /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libextnet.so f
+09:14:30.508964148 open 760984 MSC service thr /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libextnet.so f
+09:14:32.874522117 open 760984 MSC service thr /opt/jboss/wildfly/modules/system/layers/base/org/apache/activemq/artemis/journal/main/lib/linux-x86_64/libartemis-native-64.so f
+09:14:32.874753142 open 760984 MSC service thr /opt/jboss/wildfly/modules/system/layers/base/org/apache/activemq/artemis/journal/main/lib/linux-x86_64/libartemis-native-64.so f
+09:14:32.875036850 open 760984 MSC service thr /etc/ld.so.cache f
+09:14:32.884824984 open 760984 MSC service thr /opt/jboss/wildfly/modules/system/layers/base/org/apache/activemq/artemis/journal/main/lib/linux-x86_64/libartemis-native-64.so f
+09:14:33.897896354 open 760984 MSC service thr /tmp/libnetty_transport_native_epoll_x86_643082655166422190258.so f
+09:14:33.898077827 open 760984 MSC service thr /tmp/libnetty_transport_native_epoll_x86_643082655166422190258.so f
+09:14:33.899005777 open 760984 MSC service thr /tmp/libnetty_transport_native_epoll_x86_643082655166422190258.so f
+09:14:33.899114467 open 760984 MSC service thr /tmp/libnetty_transport_native_epoll_x86_643082655166422190258.so f
+09:14:36.422786125 open 760984 MSC service thr /opt/jboss/wildfly/standalone/tmp/vfs/temp/temp81ef60dbdd961b67/content-e6c1f86be76df996/WEB-INF/lib/jakarta.xml.soap-api-1.4.2.jar f
+09:14:36.821635735 open 760984 MSC service thr /opt/jboss/wildfly/standalone/tmp/vfs/temp/temp81ef60dbdd961b67/content-e6c1f86be76df996/WEB-INF/lib/jakarta.xml.soap-api-1.4.2.jar f
+09:14:36.821758488 open 760984 MSC service thr /opt/jboss/wildfly/standalone/tmp/vfs/deployment/deployment510a69623c9a52d0/jakarta.xml.soap-api-1.4.2.jar-45c08e7b385323a2/jakarta.xml.soap-api-1.4.2.jar f
+09:14:36.821936950 open 760984 MSC service thr /opt/jboss/wildfly/standalone/tmp/vfs/deployment/deployment510a69623c9a52d0/jakarta.xml.soap-api-1.4.2.jar-45c08e7b385323a2/jakarta.xml.soap-api-1.4.2.jar f
+09:14:44.638812814 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f
+09:15:01.340681813 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/server/libjvm.so f
+09:15:03.729000687 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libzip.so f
+09:15:14.141975901 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f
+09:15:14.444150450 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f
+09:15:15.332026984 open 760984 java /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f
+09:15:19.208873647 open 762012 sh /etc/ld.so.cache f
+09:15:19.208922786 open 762012 sh /lib64/libtinfo.so.5 f
+09:15:19.209020592 open 762012 sh /lib64/libdl.so.2 f
+09:15:19.209160887 open 762012 sh /lib64/libc.so.6 f
+09:15:19.210571874 open 762012 sh /etc/ld.so.cache f
+09:15:19.210612786 open 762012 sh /lib64/libnss_files.so.2 f
+09:15:45.008718304 open 760984 MSC service thr /usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so f

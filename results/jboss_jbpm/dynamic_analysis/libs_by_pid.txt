@@ -1,0 +1,10 @@
+760984	Controller	Boot
+760984	java	/usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libnio.so
+760984	java	/usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/libzip.so
+760984	java	/usr/lib/jvm/java-11-openjdk-11.0.8.10-0.el7_8.x86_64/lib/server/libjvm.so
+760984	MSC	service
+762012	sh	/etc/ld.so.cache
+762012	sh	/lib64/libc.so.6
+762012	sh	/lib64/libdl.so.2
+762012	sh	/lib64/libnss_files.so.2
+762012	sh	/lib64/libtinfo.so.5

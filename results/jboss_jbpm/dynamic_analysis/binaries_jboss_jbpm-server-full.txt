@@ -1,0 +1,8 @@
+09:15:19.208300844 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208399942 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208424599 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208458291 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208472234 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208566110 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208581103 execve MSC service thr /usr/lib/jvm/java/bin/java
+09:15:19.208716172 execve sh sh

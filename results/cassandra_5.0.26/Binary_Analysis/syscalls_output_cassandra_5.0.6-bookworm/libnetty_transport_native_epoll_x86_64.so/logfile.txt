@@ -1,0 +1,375 @@
+
+Path to recvmmsg:
+  netty_epoll_native_isSupportingRecvmmsg_6a60 - [syscall]-> recvmmsg
+
+Path to sendmmsg:
+  netty_epoll_native_sendmmsg0_7c20 - [syscall]-> sendmmsg
+
+Path to getsockname:
+  netty_epoll_linuxsocket_localVSockAddress_5240 - [DIRECT]-> getsockname_10a870
+  getsockname_10a870 - [syscall]-> getsockname
+
+Path to recvfrom:
+  netty_unix_socket_recvAddress_bb00 - [DIRECT]-> recv_10a900
+  recv_10a900 - [syscall]-> recvfrom
+
+Path to getsockopt:
+  netty_unix_socket_getReceiveBufferSize_c920 - [DIRECT]-> getsockopt_10a8a0
+  getsockopt_10a8a0 - [syscall]-> getsockopt
+
+Path to shutdown:
+  netty_unix_socket_shutdown_ad90 - [DIRECT]-> shutdown_10ad80
+  shutdown_10ad80 - [syscall]-> shutdown
+
+Path to sendmsg:
+  netty_unix_socket_sendToAddresses_af40 - [DIRECT]-> sendmsg_10abf0
+  sendmsg_10abf0 - [syscall]-> sendmsg
+
+Path to socket:
+  netty_unix_socket_newSocketDomainDgramFd_b550 - [DIRECT]-> socket_10adb0
+  socket_10adb0 - [syscall]-> socket
+
+Path to write:
+  netty_unix_filedescriptor_writeAddress_9790 - [DIRECT]-> write_f8330
+  write_f8330 - [syscall]-> write
+
+Path to read:
+  netty_unix_filedescriptor_readAddress_9200 - [DIRECT]-> read_f8290
+  read_f8290 - [syscall]-> read
+
+Path to splice:
+  netty_epoll_native_splice0_6b70 - [DIRECT]-> splice_1090e0
+  splice_1090e0 - [syscall]-> splice
+
+Path to bind:
+  netty_unix_socket_isIPv6Preferred0_b4a0 - [DIRECT]-> bind_10a770
+  bind_10a770 - [syscall]-> bind
+
+Path to close:
+  netty_unix_socket_isIPv6Preferred0_b4a0 - [DIRECT]-> close_f89d0
+  close_f89d0 - [syscall]-> close
+
+Path to connect:
+  netty_unix_socket_connectDomainSocket_a170 - [DIRECT]-> connect_10a7a0
+  connect_10a7a0 - [syscall]-> connect
+
+Path to accept:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> accept_10a6d0
+  accept_10a6d0 - [syscall]-> accept
+
+Path to accept4:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> accept4_10af40
+  accept4_10af40 - [syscall]-> accept4
+
+Path to clock_gettime:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> clock_gettime_cf420
+  clock_gettime_cf420 - [syscall]-> clock_gettime
+
+Path to epoll_create:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> epoll_create_109ba0
+  epoll_create_109ba0 - [syscall]-> epoll_create
+
+Path to epoll_create1:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> epoll_create1_109bd0
+  epoll_create1_109bd0 - [syscall]-> epoll_create1
+
+Path to epoll_ctl:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> epoll_ctl_109c00
+  epoll_ctl_109c00 - [syscall]-> epoll_ctl
+
+Path to epoll_pwait2:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> epoll_pwait2_108cf0
+  epoll_pwait2_108cf0 - [syscall]-> epoll_pwait2
+
+Path to epoll_wait:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> epoll_wait_108ed0
+  epoll_wait_108ed0 - [syscall]-> epoll_wait
+
+Path to eventfd2:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> eventfd_108df0
+  eventfd_108df0 - [syscall]-> eventfd2
+
+Path to fcntl:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> fcntl_f8790
+  fcntl_f8790 - [syscall]-> fcntl
+
+Path to futex:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> fuzzyfunc-0x8e0e0_8e0e0
+  fuzzyfunc-0x8e0e0_8e0e0 - [syscall]-> futex
+
+Path to getpeername:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> getpeername_10a840
+  getpeername_10a840 - [syscall]-> getpeername
+
+Path to listen:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> listen_10a8d0
+  listen_10a8d0 - [syscall]-> listen
+
+Path to openat:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> open_f7fb0
+  open_f7fb0 - [syscall]-> openat
+
+Path to pipe2:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> pipe_f8af0
+  pipe_f8af0 - [syscall]-> pipe2
+
+Path to recvmsg:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> recvmsg_10aa80
+  recvmsg_10aa80 - [syscall]-> recvmsg
+
+Path to sendto:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> send_10ab30
+  send_10ab30 - [syscall]-> sendto
+
+Path to sendfile:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> sendfile_fc7f0
+  sendfile_fc7f0 - [syscall]-> sendfile
+
+Path to setsockopt:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> setsockopt_10ad50
+  setsockopt_10ad50 - [syscall]-> setsockopt
+
+Path to timerfd_create:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> timerfd_create_10a140
+  timerfd_create_10a140 - [syscall]-> timerfd_create
+
+Path to timerfd_settime:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> timerfd_settime_1093d0
+  timerfd_settime_1093d0 - [syscall]-> timerfd_settime
+
+Path to uname:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> uname_d3b00
+  uname_d3b00 - [syscall]-> uname
+
+Path to unlink:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> unlink_f9b00
+  unlink_f9b00 - [syscall]-> unlink
+
+Path to writev:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> writev_fde40
+  writev_fde40 - [syscall]-> writev
+
+Path to getrandom:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> getrandom_3f180
+  getrandom_3f180 - [syscall]-> getrandom
+
+Path to mmap:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> mmap_101990
+  mmap_101990 - [syscall]-> mmap
+
+Path to munmap:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> munmap_1019f0
+  munmap_1019f0 - [syscall]-> munmap
+
+Path to rt_sigprocmask:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [syscall]-> rt_sigprocmask
+
+Path to madvise:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> madvise_101af0
+  madvise_101af0 - [syscall]-> madvise
+
+Path to getdents64:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> getdents64_d0030
+  getdents64_d0030 - [syscall]-> getdents64
+
+Path to pread64:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> __pread64_nocancel_fd120
+  __pread64_nocancel_fd120 - [syscall]-> pread64
+
+Path to mprotect:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> mprotect_101a20
+  mprotect_101a20 - [syscall]-> mprotect
+
+Path to sched_getaffinity:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x957a0_957a0
+  fuzzyfunc-0x957a0_957a0 - [DIRECT]-> get_nprocs_104330
+  get_nprocs_104330 - [DIRECT]-> fuzzyfunc-0x1042b0_1042b0
+  fuzzyfunc-0x1042b0_1042b0 - [syscall]-> sched_getaffinity
+
+Path to exit:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit
+
+Path to exit_group:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit_group
+
+Path to getcwd:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> __xpg_strerror_r_a2430
+  __xpg_strerror_r_a2430 - [DIRECT]-> strerror_r_9aed0
+  strerror_r_9aed0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [syscall]-> getcwd
+
+Path to rt_sigaction:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> sigaction_3c010
+  sigaction_3c010 - [DIRECT]-> __libc_sigaction_3c060
+  __libc_sigaction_3c060 - [syscall]-> rt_sigaction
+
+Path to newfstatat:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> __xpg_strerror_r_a2430
+  __xpg_strerror_r_a2430 - [DIRECT]-> strerror_r_9aed0
+  strerror_r_9aed0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fstatat_f7850
+  fstatat_f7850 - [syscall]-> newfstatat
+
+Path to brk:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> __default_morecore_96030
+  __default_morecore_96030 - [DIRECT]-> sbrk_fdc70
+  sbrk_fdc70 - [DIRECT]-> brk_fdc30
+  brk_fdc30 - [syscall]-> brk
+
+Path to tgkill:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> tgkill
+
+Path to gettid:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> gettid
+
+Path to sched_getparam:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> dladdr_84c50
+  dladdr_84c50 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getparam_edf80
+  sched_getparam_edf80 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> dladdr_84c50
+  dladdr_84c50 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getscheduler_edfe0
+  sched_getscheduler_edfe0 - [syscall]-> sched_getscheduler
+
+Path to sched_setscheduler:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> dladdr_84c50
+  dladdr_84c50 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_setscheduler_edfb0
+  sched_setscheduler_edfb0 - [syscall]-> sched_setscheduler
+
+Path to sched_get_priority_max:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> dladdr_84c50
+  dladdr_84c50 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_max_ee040
+  sched_get_priority_max_ee040 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> dladdr_84c50
+  dladdr_84c50 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_min_ee070
+  sched_get_priority_min_ee070 - [syscall]-> sched_get_priority_min
+
+Path to mremap:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> fprintf_51df0
+  fprintf_51df0 - [DIRECT]-> fuzzyfunc-0x5c400_5c400
+  fuzzyfunc-0x5c400_5c400 - [DIRECT]-> fuzzyfunc-0x59fa0_59fa0
+  fuzzyfunc-0x59fa0_59fa0 - [DIRECT]-> __libc_scratch_buffer_grow_preserve_9a8e0
+  __libc_scratch_buffer_grow_preserve_9a8e0 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> mremap_1099c0
+  mremap_1099c0 - [syscall]-> mremap
+
+Path to lseek:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> __xpg_strerror_r_a2430
+  __xpg_strerror_r_a2430 - [DIRECT]-> strerror_r_9aed0
+  strerror_r_9aed0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> rewinddir_cff00
+  rewinddir_cff00 - [DIRECT]-> lseek_f83d0
+  lseek_f83d0 - [syscall]-> lseek
+
+Path to getpid:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> calloc_996d0
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [DIRECT]-> getpid_d54e0
+  getpid_d54e0 - [syscall]-> getpid
+
+Path to prlimit64:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> __xpg_strerror_r_a2430
+  __xpg_strerror_r_a2430 - [DIRECT]-> strerror_r_9aed0
+  strerror_r_9aed0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> fuzzyfunc-0x36e30_36e30
+  fuzzyfunc-0x36e30_36e30 - [DIRECT]-> fuzzyfunc-0x38a50_38a50
+  fuzzyfunc-0x38a50_38a50 - [DIRECT]-> fuzzyfunc-0x38580_38580
+  fuzzyfunc-0x38580_38580 - [DIRECT]-> qsort_3ffd0
+  qsort_3ffd0 - [DIRECT]-> qsort_r_3fc80
+  qsort_r_3fc80 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> getrlimit_fd7d0
+  getrlimit_fd7d0 - [syscall]-> prlimit64
+
+Path to sysinfo:
+  netty_unix_socket_connectDomainSocket_a170 - [INDIRECT]-> __xpg_strerror_r_a2430
+  __xpg_strerror_r_a2430 - [DIRECT]-> strerror_r_9aed0
+  strerror_r_9aed0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> fuzzyfunc-0x36e30_36e30
+  fuzzyfunc-0x36e30_36e30 - [DIRECT]-> fuzzyfunc-0x38a50_38a50
+  fuzzyfunc-0x38a50_38a50 - [DIRECT]-> fuzzyfunc-0x38580_38580
+  fuzzyfunc-0x38580_38580 - [DIRECT]-> qsort_3ffd0
+  qsort_3ffd0 - [DIRECT]-> qsort_r_3fc80
+  qsort_r_3fc80 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> get_avphys_pages_104440
+  get_avphys_pages_104440 - [DIRECT]-> sysinfo_10a0b0
+  sysinfo_10a0b0 - [syscall]-> sysinfo

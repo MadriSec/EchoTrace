@@ -1,0 +1,25 @@
+FROM eclipse-temurin:8-jre-jammy
+
+ENV CASSANDRA_VERSION=3.0.29 \
+    CASSANDRA_HOME=/opt/cassandra \
+    CASSANDRA_DATA=/var/lib/cassandra \
+    CASSANDRA_LOGS=/var/log/cassandra
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates curl tar python3 \
+    && curl -fSL "https://archive.apache.org/dist/cassandra/${CASSANDRA_VERSION}/apache-cassandra-${CASSANDRA_VERSION}-bin.tar.gz" \
+       -o /tmp/cassandra.tar.gz \
+    && mkdir -p "${CASSANDRA_HOME}" "${CASSANDRA_DATA}" "${CASSANDRA_LOGS}" \
+    && tar -xzf /tmp/cassandra.tar.gz -C "${CASSANDRA_HOME}" --strip-components=1 \
+    && rm /tmp/cassandra.tar.gz \
+    && useradd -r -m -d "${CASSANDRA_DATA}" -s /usr/sbin/nologin cassandra \
+    && chown -R cassandra:cassandra "${CASSANDRA_HOME}" "${CASSANDRA_DATA}" "${CASSANDRA_LOGS}" \
+    && apt-get purge -y --auto-remove curl \
+    && rm -rf /var/lib/apt/lists/*
+
+USER cassandra
+WORKDIR ${CASSANDRA_HOME}
+
+EXPOSE 7000 7001 7199 9042 9160
+
+CMD ["bin/cassandra", "-f"]

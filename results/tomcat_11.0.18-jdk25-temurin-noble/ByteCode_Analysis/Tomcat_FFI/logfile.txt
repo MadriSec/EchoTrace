@@ -1,0 +1,338 @@
+
+Path to gettimeofday:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> __gettimeofday_syscall_d9a80
+  __gettimeofday_syscall_d9a80 - [syscall]-> gettimeofday
+
+Path to rt_sigreturn:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> __restore_rt_42520
+  __restore_rt_42520 - [syscall]-> rt_sigreturn
+
+Path to accept:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> accept_127490
+  accept_127490 - [syscall]-> accept
+
+Path to bind:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> bind_127530
+  bind_127530 - [syscall]-> bind
+
+Path to chmod:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> chmod_1142d0
+  chmod_1142d0 - [syscall]-> chmod
+
+Path to futex:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> clear_once_control_99f40
+  clear_once_control_99f40 - [syscall]-> futex
+
+Path to clock_gettime:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> clock_gettime@@GLIBC_2.17_e5650
+  clock_gettime@@GLIBC_2.17_e5650 - [syscall]-> clock_gettime
+
+Path to close:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> close_114fd0
+  close_114fd0 - [syscall]-> close
+
+Path to connect:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> connect_127560
+  connect_127560 - [syscall]-> connect
+
+Path to arch_prctl:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getcontext_538d0
+  getcontext_538d0 - [syscall]-> arch_prctl
+
+Path to getrandom:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getentropy_46d10
+  getentropy_46d10 - [syscall]-> getrandom
+
+Path to getpid:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getpid_ec040
+  getpid_ec040 - [syscall]-> getpid
+
+Path to getsockname:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getsockname_127630
+  getsockname_127630 - [syscall]-> getsockname
+
+Path to getsockopt:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getsockopt_127660
+  getsockopt_127660 - [syscall]-> getsockopt
+
+Path to ioctl:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> ioctl_11a990
+  ioctl_11a990 - [syscall]-> ioctl
+
+Path to listen:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> listen_1276a0
+  listen_1276a0 - [syscall]-> listen
+
+Path to lseek:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> lseek_114990
+  lseek_114990 - [syscall]-> lseek
+
+Path to madvise:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> madvise_11ebf0
+  madvise_11ebf0 - [syscall]-> madvise
+
+Path to mlock:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> mlock_11ec80
+  mlock_11ec80 - [syscall]-> mlock
+
+Path to mmap:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> mmap_11ea90
+  mmap_11ea90 - [syscall]-> mmap
+
+Path to mprotect:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> mprotect_11eb20
+  mprotect_11eb20 - [syscall]-> mprotect
+
+Path to munmap:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> munmap_11eaf0
+  munmap_11eaf0 - [syscall]-> munmap
+
+Path to openat:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> open_114560
+  open_114560 - [syscall]-> openat
+
+Path to read:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> read_114850
+  read_114850 - [syscall]-> read
+
+Path to recvfrom:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> recvfrom_127790
+  recvfrom_127790 - [syscall]-> recvfrom
+
+Path to recvmsg:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> recvmsg_127860
+  recvmsg_127860 - [syscall]-> recvmsg
+
+Path to pselect6:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> select_11b560
+  select_11b560 - [syscall]-> pselect6
+
+Path to sendfile:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sendfile_1191f0
+  sendfile_1191f0 - [syscall]-> sendfile
+
+Path to sendmsg:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sendmsg_1279d0
+  sendmsg_1279d0 - [syscall]-> sendmsg
+
+Path to sendto:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sendto_127a70
+  sendto_127a70 - [syscall]-> sendto
+
+Path to setsockopt:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> setsockopt_127b40
+  setsockopt_127b40 - [syscall]-> setsockopt
+
+Path to shmat:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> shmat_128460
+  shmat_128460 - [syscall]-> shmat
+
+Path to shmdt:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> shmdt_128490
+  shmdt_128490 - [syscall]-> shmdt
+
+Path to shmget:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> shmget_1284c0
+  shmget_1284c0 - [syscall]-> shmget
+
+Path to shutdown:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> shutdown_127b80
+  shutdown_127b80 - [syscall]-> shutdown
+
+Path to socket:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> socket_127bb0
+  socket_127bb0 - [syscall]-> socket
+
+Path to rt_sigprocmask:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> swapcontext_53e00
+  swapcontext_53e00 - [syscall]-> rt_sigprocmask
+
+Path to time:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> time_syscall_d9970
+  time_syscall_d9970 - [syscall]-> time
+
+Path to uname:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> uname_ea300
+  uname_ea300 - [syscall]-> uname
+
+Path to write:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> write_1148f0
+  write_1148f0 - [syscall]-> write
+
+Path to sched_yield:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _IO_cleanup_8eb50
+  _IO_cleanup_8eb50 - [DIRECT]-> sched_yield_108d00
+  sched_yield_108d00 - [syscall]-> sched_yield
+
+Path to mremap:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _IO_file_underflow_mmap_8bb50
+  _IO_file_underflow_mmap_8bb50 - [DIRECT]-> mremap_1269c0
+  mremap_1269c0 - [syscall]-> mremap
+
+Path to exit:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> _exit_eac00
+  _exit_eac00 - [syscall]-> exit
+
+Path to exit_group:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> _exit_eac00
+  _exit_eac00 - [syscall]-> exit_group
+
+Path to fcntl:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> fdopen@@GLIBC_2.2.5_7ee50
+  fdopen@@GLIBC_2.2.5_7ee50 - [DIRECT]-> fcntl_114d70
+  fcntl_114d70 - [syscall]-> fcntl
+
+Path to newfstatat:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> fstat_113d50
+  fstat_113d50 - [DIRECT]-> fstatat_113db0
+  fstatat_113db0 - [syscall]-> newfstatat
+
+Path to dup:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> perror_60e70
+  perror_60e70 - [DIRECT]-> dup_115060
+  dup_115060 - [syscall]-> dup
+
+Path to getdents64:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> readdir_e6680
+  readdir_e6680 - [DIRECT]-> getdents64_e6630
+  getdents64_e6630 - [syscall]-> getdents64
+
+Path to rt_sigaction:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sigaction_424d0
+  sigaction_424d0 - [DIRECT]-> __libc_sigaction_42530
+  __libc_sigaction_42530 - [syscall]-> rt_sigaction
+
+Path to prlimit64:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sysconf_ed280
+  sysconf_ed280 - [DIRECT]-> getrlimit_11a350
+  getrlimit_11a350 - [syscall]-> prlimit64
+
+Path to writev:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> __libc_fatal_896d0
+  __libc_fatal_896d0 - [DIRECT]-> __libc_message.constprop.0_89280
+  __libc_message.constprop.0_89280 - [syscall]-> writev
+
+Path to getcwd:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> __gconv_read_conf_2cad0
+  __gconv_read_conf_2cad0 - [DIRECT]-> __gconv_get_path_2be90
+  __gconv_get_path_2be90 - [DIRECT]-> getcwd_115250
+  getcwd_115250 - [syscall]-> getcwd
+
+Path to pread64:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> __pread64_nocancel_119bd0
+  __pread64_nocancel_119bd0 - [syscall]-> pread64
+
+Path to tgkill:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> raise_42460
+  raise_42460 - [DIRECT]-> pthread_kill@@GLIBC_2.34_968d0
+  pthread_kill@@GLIBC_2.34_968d0 - [syscall]-> tgkill
+
+Path to gettid:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> raise_42460
+  raise_42460 - [DIRECT]-> pthread_kill@@GLIBC_2.34_968d0
+  pthread_kill@@GLIBC_2.34_968d0 - [syscall]-> gettid
+
+Path to sched_getaffinity:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sysconf_ed280
+  sysconf_ed280 - [DIRECT]-> get_nprocs_conf_121b70
+  get_nprocs_conf_121b70 - [DIRECT]-> __get_nprocs_sched_1218c0
+  __get_nprocs_sched_1218c0 - [syscall]-> sched_getaffinity
+
+Path to sysinfo:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> sysconf_ed280
+  sysconf_ed280 - [DIRECT]-> get_phys_pages_121c70
+  get_phys_pages_121c70 - [DIRECT]-> sysinfo_126e60
+  sysinfo_126e60 - [syscall]-> sysinfo
+
+Path to clock_nanosleep:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> usleep_11bf60
+  usleep_11bf60 - [DIRECT]-> nanosleep_ea660
+  nanosleep_ea660 - [DIRECT]-> clock_nanosleep@@GLIBC_2.17_e5730
+  clock_nanosleep@@GLIBC_2.17_e5730 - [syscall]-> clock_nanosleep
+
+Path to poll:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _nss_dns_getcanonname_r_144730
+  _nss_dns_getcanonname_r_144730 - [DIRECT]-> __res_context_query_14d070
+  __res_context_query_14d070 - [DIRECT]-> __res_context_send_14eda0
+  __res_context_send_14eda0 - [DIRECT]-> poll_118c00
+  poll_118c00 - [syscall]-> poll
+
+Path to sendmmsg:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _nss_dns_getcanonname_r_144730
+  _nss_dns_getcanonname_r_144730 - [DIRECT]-> __res_context_query_14d070
+  __res_context_query_14d070 - [DIRECT]-> __res_context_send_14eda0
+  __res_context_send_14eda0 - [DIRECT]-> sendmmsg_127ec0
+  sendmmsg_127ec0 - [syscall]-> sendmmsg
+
+Path to getpeername:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> _nss_dns_getcanonname_r_144730
+  _nss_dns_getcanonname_r_144730 - [DIRECT]-> __res_context_query_14d070
+  __res_context_query_14d070 - [DIRECT]-> __res_context_send_14eda0
+  __res_context_send_14eda0 - [DIRECT]-> send_vc_14e6a0
+  send_vc_14e6a0 - [DIRECT]-> getpeername_127600
+  getpeername_127600 - [syscall]-> getpeername
+
+Path to sched_getparam:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> dlsym@@GLIBC_2.34_90740
+  dlsym@@GLIBC_2.34_90740 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_current_priority_9d170
+  __pthread_current_priority_9d170 - [DIRECT]-> sched_getparam_108c70
+  sched_getparam_108c70 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> dlsym@@GLIBC_2.34_90740
+  dlsym@@GLIBC_2.34_90740 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_current_priority_9d170
+  __pthread_current_priority_9d170 - [DIRECT]-> sched_getscheduler_108cd0
+  sched_getscheduler_108cd0 - [syscall]-> sched_getscheduler
+
+Path to sched_setscheduler:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> dlsym@@GLIBC_2.34_90740
+  dlsym@@GLIBC_2.34_90740 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_setscheduler_108ca0
+  sched_setscheduler_108ca0 - [syscall]-> sched_setscheduler
+
+Path to sched_get_priority_max:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> dlsym@@GLIBC_2.34_90740
+  dlsym@@GLIBC_2.34_90740 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_max_108d30
+  sched_get_priority_max_108d30 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> dlsym@@GLIBC_2.34_90740
+  dlsym@@GLIBC_2.34_90740 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_min_108d60
+  sched_get_priority_min_108d60 - [syscall]-> sched_get_priority_min
+
+Path to brk:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> calloc_a6520
+  calloc_a6520 - [DIRECT]-> _int_malloc_a39b0
+  _int_malloc_a39b0 - [DIRECT]-> sysmalloc_a30d0
+  sysmalloc_a30d0 - [DIRECT]-> __glibc_morecore_a25b0
+  __glibc_morecore_a25b0 - [DIRECT]-> sbrk_11a8e0
+  sbrk_11a8e0 - [DIRECT]-> brk_11a8a0
+  brk_11a8a0 - [syscall]-> brk
+
+Path to readv:
+  X509_STORE_CTX_get1_issuer_231910 - [INDIRECT]-> getaddrinfo_10aa00
+  getaddrinfo_10aa00 - [DIRECT]-> getservbyname_r@@GLIBC_2.2.5_139c40
+  getservbyname_r@@GLIBC_2.2.5_139c40 - [DIRECT]-> __nscd_getservbyname_r_170410
+  __nscd_getservbyname_r_170410 - [DIRECT]-> nscd_getserv_r_16faa0
+  nscd_getserv_r_16faa0 - [DIRECT]-> __readvall_171000
+  __readvall_171000 - [DIRECT]-> readv_11aa20
+  readv_11aa20 - [syscall]-> readv

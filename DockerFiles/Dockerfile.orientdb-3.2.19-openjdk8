@@ -1,0 +1,26 @@
+FROM openjdk:8u342-jre-slim-buster
+
+ENV ORIENTDB_VERSION=3.2.19 \
+    ORIENTDB_HOME=/opt/orientdb \
+    ORIENTDB_DATA=/var/lib/orientdb
+
+RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list \
+    && echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list \
+    && apt-get update -o Acquire::Check-Valid-Until=false \
+    && apt-get install -y --no-install-recommends ca-certificates curl tar \
+    && curl -fSL "https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/${ORIENTDB_VERSION}/orientdb-community-${ORIENTDB_VERSION}.tar.gz" \
+       -o /tmp/orientdb.tar.gz \
+    && mkdir -p "${ORIENTDB_HOME}" "${ORIENTDB_DATA}" \
+    && tar -xzf /tmp/orientdb.tar.gz -C "${ORIENTDB_HOME}" --strip-components=1 \
+    && rm /tmp/orientdb.tar.gz \
+    && useradd -r -m -d "${ORIENTDB_DATA}" -s /usr/sbin/nologin orientdb \
+    && chown -R orientdb:orientdb "${ORIENTDB_HOME}" "${ORIENTDB_DATA}" \
+    && apt-get purge -y --auto-remove curl \
+    && rm -rf /var/lib/apt/lists/*
+
+USER orientdb
+WORKDIR ${ORIENTDB_HOME}
+
+EXPOSE 2424 2480
+
+CMD ["bin/server.sh"]

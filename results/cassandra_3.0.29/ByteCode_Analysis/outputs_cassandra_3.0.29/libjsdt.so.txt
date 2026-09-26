@@ -1,0 +1,5 @@
+Java_sun_tracing_dtrace_JVM_activate0
+Java_sun_tracing_dtrace_JVM_defineClass0
+Java_sun_tracing_dtrace_JVM_dispose0
+Java_sun_tracing_dtrace_JVM_isEnabled0
+Java_sun_tracing_dtrace_JVM_isSupported0

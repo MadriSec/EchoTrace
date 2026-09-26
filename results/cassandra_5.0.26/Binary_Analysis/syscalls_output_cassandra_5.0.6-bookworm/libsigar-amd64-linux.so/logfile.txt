@@ -1,0 +1,445 @@
+
+Path to futex:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x8e0e0_8e0e0
+  fuzzyfunc-0x8e0e0_8e0e0 - [syscall]-> futex
+
+Path to close_range:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [syscall]-> close_range
+
+Path to rt_sigprocmask:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [syscall]-> rt_sigprocmask
+
+Path to setresuid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [syscall]-> setresuid
+
+Path to setresgid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [syscall]-> setresgid
+
+Path to write:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x1428e0_1428e0
+  fuzzyfunc-0x1428e0_1428e0 - [DIRECT]-> write_f8330
+  write_f8330 - [syscall]-> write
+
+Path to poll:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x142960_142960
+  fuzzyfunc-0x142960_142960 - [DIRECT]-> poll_fc210
+  poll_fc210 - [syscall]-> poll
+
+Path to read:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x142960_142960
+  fuzzyfunc-0x142960_142960 - [DIRECT]-> read_f8290
+  read_f8290 - [syscall]-> read
+
+Path to rt_sigaction:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> __libc_sigaction_3c060
+  __libc_sigaction_3c060 - [syscall]-> rt_sigaction
+
+Path to exit:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit
+
+Path to exit_group:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit_group
+
+Path to fchdir:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> fchdir_f8c10
+  fchdir_f8c10 - [syscall]-> fchdir
+
+Path to chdir:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> chdir_f8be0
+  chdir_f8be0 - [syscall]-> chdir
+
+Path to close:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> __close_nocancel_fce50
+  __close_nocancel_fce50 - [syscall]-> close
+
+Path to openat:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> __open64_nocancel_fcfb0
+  __open64_nocancel_fcfb0 - [syscall]-> openat
+
+Path to dup2:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> dup2_f8a90
+  dup2_f8a90 - [syscall]-> dup2
+
+Path to getpgid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> getpgid_d5710
+  getpgid_d5710 - [syscall]-> getpgid
+
+Path to getuid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> getuid_d5500
+  getuid_d5500 - [syscall]-> getuid
+
+Path to fcntl:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> fcntl_f8790
+  fcntl_f8790 - [syscall]-> fcntl
+
+Path to setsid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> setsid_d57d0
+  setsid_d57d0 - [syscall]-> setsid
+
+Path to setpgid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> setpgid_d5740
+  setpgid_d5740 - [syscall]-> setpgid
+
+Path to sched_setscheduler:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> sched_setscheduler_edfb0
+  sched_setscheduler_edfb0 - [syscall]-> sched_setscheduler
+
+Path to sched_setparam:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> sched_setparam_edf50
+  sched_setparam_edf50 - [syscall]-> sched_setparam
+
+Path to getgid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> getgid_d5520
+  getgid_d5520 - [syscall]-> getgid
+
+Path to prlimit64:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> getrlimit_fd7d0
+  getrlimit_fd7d0 - [syscall]-> prlimit64
+
+Path to writev:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [syscall]-> writev
+
+Path to getpid:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> ptql_branch_init_pid_221d0
+  ptql_branch_init_pid_221d0 - [DIRECT]-> getpid_d54e0
+  getpid_d54e0 - [syscall]-> getpid
+
+Path to readlink:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> sigar_proc_exe_get_1d7e0
+  sigar_proc_exe_get_1d7e0 - [DIRECT]-> readlink_f9aa0
+  readlink_f9aa0 - [syscall]-> readlink
+
+Path to stat:
+  Java_org_hyperic_sigar_DiskUsage_gather_d170 - [DIRECT]-> sigar_disk_usage_get_1de60
+  sigar_disk_usage_get_1de60 - [DIRECT]-> __xstat_109520
+  __xstat_109520 - [syscall]-> stat
+
+Path to socket:
+  Java_org_hyperic_sigar_Sigar_getNetInterfaceList_15650 - [DIRECT]-> sigar_net_interface_list_get_19950
+  sigar_net_interface_list_get_19950 - [DIRECT]-> socket_10adb0
+  socket_10adb0 - [syscall]-> socket
+
+Path to ioctl:
+  Java_org_hyperic_sigar_Sigar_getNetInterfaceList_15650 - [DIRECT]-> sigar_net_interface_list_get_19950
+  sigar_net_interface_list_get_19950 - [DIRECT]-> ioctl_fdd20
+  ioctl_fdd20 - [syscall]-> ioctl
+
+Path to times:
+  Java_org_hyperic_sigar_ThreadCpu_gather_e1d0 - [DIRECT]-> sigar_thread_cpu_get_1da10
+  sigar_thread_cpu_get_1da10 - [DIRECT]-> times_d3b30
+  times_d3b30 - [syscall]-> times
+
+Path to lstat:
+  Java_org_hyperic_sigar_FileInfo_gatherLink_15150 - [DIRECT]-> sigar_link_attrs_get_21810
+  sigar_link_attrs_get_21810 - [DIRECT]-> __lxstat_1095c0
+  __lxstat_1095c0 - [syscall]-> lstat
+
+Path to kill:
+  Java_org_hyperic_sigar_Sigar_kill_ae40 - [DIRECT]-> sigar_proc_kill_16400
+  sigar_proc_kill_16400 - [DIRECT]-> kill_3c260
+  kill_3c260 - [syscall]-> kill
+
+Path to mremap:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_files_initgroups_dyn_13a670
+  _nss_files_initgroups_dyn_13a670 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> mremap_1099c0
+  mremap_1099c0 - [syscall]-> mremap
+
+Path to madvise:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_files_initgroups_dyn_13a670
+  _nss_files_initgroups_dyn_13a670 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> madvise_101af0
+  madvise_101af0 - [syscall]-> madvise
+
+Path to munmap:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> munmap_1019f0
+  munmap_1019f0 - [syscall]-> munmap
+
+Path to mmap:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> mmap_101990
+  mmap_101990 - [syscall]-> mmap
+
+Path to getdents64:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> getdents64_d0030
+  getdents64_d0030 - [syscall]-> getdents64
+
+Path to pread64:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> __pread64_nocancel_fd120
+  __pread64_nocancel_fd120 - [syscall]-> pread64
+
+Path to lseek:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0xf6d40_f6d40
+  fuzzyfunc-0xf6d40_f6d40 - [DIRECT]-> fuzzyfunc-0x1096d0_1096d0
+  fuzzyfunc-0x1096d0_1096d0 - [DIRECT]-> lseek_f83d0
+  lseek_f83d0 - [syscall]-> lseek
+
+Path to getrandom:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> getrandom_3f180
+  getrandom_3f180 - [syscall]-> getrandom
+
+Path to clock_gettime:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> clock_gettime_cf420
+  clock_gettime_cf420 - [syscall]-> clock_gettime
+
+Path to uname:
+  Java_org_hyperic_sigar_Sigar_open_ac90 - [DIRECT]-> sigar_open_17ff0
+  sigar_open_17ff0 - [DIRECT]-> sigar_os_open_1b710
+  sigar_os_open_1b710 - [DIRECT]-> uname_d3b00
+  uname_d3b00 - [syscall]-> uname
+
+Path to unlink:
+  Java_org_hyperic_sigar_util_Getline_histadd_15ef0 - [DIRECT]-> sigar_getline_histadd_26050
+  sigar_getline_histadd_26050 - [DIRECT]-> remove_58a40
+  remove_58a40 - [DIRECT]-> unlink_f9b00
+  unlink_f9b00 - [syscall]-> unlink
+
+Path to rmdir:
+  Java_org_hyperic_sigar_util_Getline_histadd_15ef0 - [DIRECT]-> sigar_getline_histadd_26050
+  sigar_getline_histadd_26050 - [DIRECT]-> remove_58a40
+  remove_58a40 - [DIRECT]-> rmdir_f9b60
+  rmdir_f9b60 - [syscall]-> rmdir
+
+Path to connect:
+  Java_org_hyperic_sigar_RPC_ping_12650 - [DIRECT]-> sigar_rpc_ping_175b0
+  sigar_rpc_ping_175b0 - [DIRECT]-> clnttcp_create_142a70
+  clnttcp_create_142a70 - [DIRECT]-> connect_10a7a0
+  connect_10a7a0 - [syscall]-> connect
+
+Path to getcwd:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x85460_85460
+  fuzzyfunc-0x85460_85460 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [syscall]-> getcwd
+
+Path to mprotect:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> mprotect_101a20
+  mprotect_101a20 - [syscall]-> mprotect
+
+Path to sched_getaffinity:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x957a0_957a0
+  fuzzyfunc-0x957a0_957a0 - [DIRECT]-> get_nprocs_104330
+  get_nprocs_104330 - [DIRECT]-> fuzzyfunc-0x1042b0_1042b0
+  fuzzyfunc-0x1042b0_1042b0 - [syscall]-> sched_getaffinity
+
+Path to sysinfo:
+  Java_org_hyperic_sigar_ResourceLimit_gather_b460 - [DIRECT]-> sigar_resource_limit_get_19810
+  sigar_resource_limit_get_19810 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> get_avphys_pages_104440
+  get_avphys_pages_104440 - [DIRECT]-> sysinfo_10a0b0
+  sysinfo_10a0b0 - [syscall]-> sysinfo
+
+Path to statfs:
+  Java_org_hyperic_sigar_FileSystemUsage_gather_d950 - [DIRECT]-> sigar_file_system_usage_get_1ea10
+  sigar_file_system_usage_get_1ea10 - [DIRECT]-> sigar_statvfs_214e0
+  sigar_statvfs_214e0 - [DIRECT]-> statvfs_f7c50
+  statvfs_f7c50 - [DIRECT]-> statfs_f7bf0
+  statfs_f7bf0 - [syscall]-> statfs
+
+Path to tgkill:
+  Java_org_hyperic_sigar_util_Getline_getline_15e20 - [DIRECT]-> sigar_getline_26bd0
+  sigar_getline_26bd0 - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> tgkill
+
+Path to gettid:
+  Java_org_hyperic_sigar_util_Getline_getline_15e20 - [DIRECT]-> sigar_getline_26bd0
+  sigar_getline_26bd0 - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> gettid
+
+Path to bind:
+  Java_org_hyperic_sigar_RPC_ping_12650 - [DIRECT]-> sigar_rpc_ping_175b0
+  sigar_rpc_ping_175b0 - [DIRECT]-> clnttcp_create_142a70
+  clnttcp_create_142a70 - [DIRECT]-> bindresvport_11f370
+  bindresvport_11f370 - [DIRECT]-> bind_10a770
+  bind_10a770 - [syscall]-> bind
+
+Path to setsockopt:
+  Java_org_hyperic_sigar_RPC_ping_12650 - [DIRECT]-> sigar_rpc_ping_175b0
+  sigar_rpc_ping_175b0 - [DIRECT]-> clntudp_create_143a70
+  clntudp_create_143a70 - [DIRECT]-> __libc_clntudp_bufcreate_143760
+  __libc_clntudp_bufcreate_143760 - [DIRECT]-> setsockopt_10ad50
+  setsockopt_10ad50 - [syscall]-> setsockopt
+
+Path to sendto:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_dns_getcanonname_r_125370
+  _nss_dns_getcanonname_r_125370 - [DIRECT]-> __res_context_query_12c6a0
+  __res_context_query_12c6a0 - [DIRECT]-> __res_context_send_12f330
+  __res_context_send_12f330 - [DIRECT]-> fuzzyfunc-0x12e4f0_12e4f0
+  fuzzyfunc-0x12e4f0_12e4f0 - [DIRECT]-> send_10ab30
+  send_10ab30 - [syscall]-> sendto
+
+Path to recvfrom:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_dns_getcanonname_r_125370
+  _nss_dns_getcanonname_r_125370 - [DIRECT]-> __res_context_query_12c6a0
+  __res_context_query_12c6a0 - [DIRECT]-> __res_context_send_12f330
+  __res_context_send_12f330 - [DIRECT]-> fuzzyfunc-0x12e4f0_12e4f0
+  fuzzyfunc-0x12e4f0_12e4f0 - [DIRECT]-> recvfrom_10a9c0
+  recvfrom_10a9c0 - [syscall]-> recvfrom
+
+Path to sendmmsg:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_dns_getcanonname_r_125370
+  _nss_dns_getcanonname_r_125370 - [DIRECT]-> __res_context_query_12c6a0
+  __res_context_query_12c6a0 - [DIRECT]-> __res_context_send_12f330
+  __res_context_send_12f330 - [DIRECT]-> fuzzyfunc-0x12e4f0_12e4f0
+  fuzzyfunc-0x12e4f0_12e4f0 - [DIRECT]-> sendmmsg_10b0a0
+  sendmmsg_10b0a0 - [syscall]-> sendmmsg
+
+Path to getpeername:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> _nss_dns_getcanonname_r_125370
+  _nss_dns_getcanonname_r_125370 - [DIRECT]-> __res_context_query_12c6a0
+  __res_context_query_12c6a0 - [DIRECT]-> __res_context_send_12f330
+  __res_context_send_12f330 - [DIRECT]-> fuzzyfunc-0x12dc50_12dc50
+  fuzzyfunc-0x12dc50_12dc50 - [DIRECT]-> getpeername_10a840
+  getpeername_10a840 - [syscall]-> getpeername
+
+Path to newfstatat:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x85460_85460
+  fuzzyfunc-0x85460_85460 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fstatat_f7850
+  fstatat_f7850 - [syscall]-> newfstatat
+
+Path to brk:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> fuzzyfunc-0x96070_96070
+  fuzzyfunc-0x96070_96070 - [DIRECT]-> __default_morecore_96030
+  __default_morecore_96030 - [DIRECT]-> sbrk_fdc70
+  sbrk_fdc70 - [DIRECT]-> brk_fdc30
+  brk_fdc30 - [syscall]-> brk
+
+Path to sched_getparam:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getparam_edf80
+  sched_getparam_edf80 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getscheduler_edfe0
+  sched_getscheduler_edfe0 - [syscall]-> sched_getscheduler
+
+Path to sched_get_priority_max:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_max_ee040
+  sched_get_priority_max_ee040 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  Java_org_hyperic_sigar_Sigar_getProcArgs_13770 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_min_ee070
+  sched_get_priority_min_ee070 - [syscall]-> sched_get_priority_min
+
+Path to pipe2:
+  Java_org_hyperic_sigar_ptql_SigarProcessQuery_findProcess_15ba0 - [DIRECT]-> sigar_ptql_query_find_process_237d0
+  sigar_ptql_query_find_process_237d0 - [DIRECT]-> ptql_proc_list_get_234c0
+  ptql_proc_list_get_234c0 - [DIRECT]-> sigar_sudo_file2str_22060
+  sigar_sudo_file2str_22060 - [DIRECT]-> popen_778e0
+  popen_778e0 - [DIRECT]-> _IO_proc_open_77540
+  _IO_proc_open_77540 - [DIRECT]-> pipe2_f8b20
+  pipe2_f8b20 - [syscall]-> pipe2
+
+Path to readv:
+  Java_org_hyperic_sigar_Sigar_getFQDN_15830 - [DIRECT]-> sigar_fqdn_get_1a1a0
+  sigar_fqdn_get_1a1a0 - [DIRECT]-> gethostbyaddr_r_1186d0
+  gethostbyaddr_r_1186d0 - [DIRECT]-> fuzzyfunc-0x149f90_149f90
+  fuzzyfunc-0x149f90_149f90 - [DIRECT]-> fuzzyfunc-0x149680_149680
+  fuzzyfunc-0x149680_149680 - [DIRECT]-> fuzzyfunc-0x14be20_14be20
+  fuzzyfunc-0x14be20_14be20 - [DIRECT]-> readv_fdda0
+  readv_fdda0 - [syscall]-> readv
+
+Path to recvmsg:
+  Java_org_hyperic_sigar_Sigar_getFQDN_15830 - [DIRECT]-> sigar_fqdn_get_1a1a0
+  sigar_fqdn_get_1a1a0 - [DIRECT]-> gethostbyaddr_r_1186d0
+  gethostbyaddr_r_1186d0 - [DIRECT]-> fuzzyfunc-0x149f90_149f90
+  fuzzyfunc-0x149f90_149f90 - [DIRECT]-> fuzzyfunc-0x149680_149680
+  fuzzyfunc-0x149680_149680 - [DIRECT]-> fuzzyfunc-0x14c430_14c430
+  fuzzyfunc-0x14c430_14c430 - [DIRECT]-> fuzzyfunc-0x14c010_14c010
+  fuzzyfunc-0x14c010_14c010 - [DIRECT]-> recvmsg_10aa80
+  recvmsg_10aa80 - [syscall]-> recvmsg
+
+Path to clone:
+  Java_org_hyperic_sigar_ptql_SigarProcessQuery_findProcess_15ba0 - [DIRECT]-> sigar_ptql_query_find_process_237d0
+  sigar_ptql_query_find_process_237d0 - [DIRECT]-> ptql_proc_list_get_234c0
+  ptql_proc_list_get_234c0 - [DIRECT]-> sigar_sudo_file2str_22060
+  sigar_sudo_file2str_22060 - [DIRECT]-> popen_778e0
+  popen_778e0 - [DIRECT]-> _IO_proc_open_77540
+  _IO_proc_open_77540 - [DIRECT]-> posix_spawn_f6a70
+  posix_spawn_f6a70 - [DIRECT]-> fuzzyfunc-0xf72c0_f72c0
+  fuzzyfunc-0xf72c0_f72c0 - [DIRECT]-> fuzzyfunc-0xf6a90_f6a90
+  fuzzyfunc-0xf6a90_f6a90 - [DIRECT]-> fuzzyfunc-0x109900_109900
+  fuzzyfunc-0x109900_109900 - [DIRECT]-> clone_108b00
+  clone_108b00 - [syscall]-> clone
+
+Path to wait4:
+  Java_org_hyperic_sigar_ptql_SigarProcessQuery_findProcess_15ba0 - [DIRECT]-> sigar_ptql_query_find_process_237d0
+  sigar_ptql_query_find_process_237d0 - [DIRECT]-> ptql_proc_list_get_234c0
+  ptql_proc_list_get_234c0 - [DIRECT]-> sigar_sudo_file2str_22060
+  sigar_sudo_file2str_22060 - [DIRECT]-> popen_778e0
+  popen_778e0 - [DIRECT]-> _IO_proc_open_77540
+  _IO_proc_open_77540 - [DIRECT]-> posix_spawn_f6a70
+  posix_spawn_f6a70 - [DIRECT]-> fuzzyfunc-0xf72c0_f72c0
+  fuzzyfunc-0xf72c0_f72c0 - [DIRECT]-> fuzzyfunc-0xf6a90_f6a90
+  fuzzyfunc-0xf6a90_f6a90 - [DIRECT]-> waitpid_d3b90
+  waitpid_d3b90 - [DIRECT]-> wait4_d3bc0
+  wait4_d3bc0 - [syscall]-> wait4

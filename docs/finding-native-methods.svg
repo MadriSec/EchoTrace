@@ -1,0 +1,88 @@
+<svg viewBox="0 0 680 548" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Bytecode analysis stage: application JARs and container-JDK runtime JARs feed a shared ASM and SootUp scanner that dispatches to six per-mechanism detectors whose merged records flow into native mapping.">
+  <style>
+    .title{font-weight:500;font-size:15px;fill:#1a1a18}
+    .th{font-weight:500;font-size:13px}
+    .t{font-weight:400;font-size:13px}
+    .ts{font-weight:400;font-size:11px}
+    .gray &gt; rect{fill:#f2f2ef;stroke:#c9c8c2;stroke-width:1.2}
+    .gray text{fill:#3a3a37}
+    .teal &gt; rect{fill:#e1f5ee;stroke:#1d9e75;stroke-width:1.2}
+    .teal text{fill:#0a3f33}
+    .purple &gt; rect{fill:#eeedfe;stroke:#534ab7;stroke-width:1.2}
+    .purple text{fill:#2a2470}
+    .arr{stroke:#8c8c86;stroke-width:1.5;fill:none}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+  <rect x="1" y="1" width="678" height="546" rx="10" fill="#ffffff" stroke="#e6e6e1"/>
+
+  <text x="340" y="26" text-anchor="middle" class="title">finding native methods — bytecode analysis</text>
+
+  <g class="gray"><rect x="64" y="44" width="248" height="50" rx="8"/>
+  <text x="188" y="69" text-anchor="middle" class="th">application JARs</text>
+  <text x="188" y="86" text-anchor="middle" class="ts">observed during dynamic capture</text></g>
+
+  <g class="gray"><rect x="368" y="44" width="248" height="50" rx="8"/>
+  <text x="492" y="69" text-anchor="middle" class="th">container-JDK runtime JARs</text>
+  <text x="492" y="86" text-anchor="middle" class="ts">extracted from the image</text></g>
+
+  <line class="arr" x1="210" y1="94" x2="300" y2="125" marker-end="url(#arrow)"/>
+  <line class="arr" x1="470" y1="94" x2="380" y2="125" marker-end="url(#arrow)"/>
+
+  <g class="teal"><rect x="180" y="126" width="320" height="56" rx="8"/>
+  <text x="340" y="150" text-anchor="middle" class="th">shared scanner — ASM + SootUp</text>
+  <text x="340" y="168" text-anchor="middle" class="ts">classes resolved once, bodies warmed</text></g>
+
+  <line class="arr" x1="340" y1="182" x2="67" y2="247" marker-end="url(#arrow)"/>
+  <line class="arr" x1="340" y1="182" x2="176" y2="247" marker-end="url(#arrow)"/>
+  <line class="arr" x1="340" y1="182" x2="285" y2="247" marker-end="url(#arrow)"/>
+  <line class="arr" x1="340" y1="182" x2="394" y2="247" marker-end="url(#arrow)"/>
+  <line class="arr" x1="340" y1="182" x2="503" y2="247" marker-end="url(#arrow)"/>
+  <line class="arr" x1="340" y1="182" x2="612" y2="247" marker-end="url(#arrow)"/>
+
+  <g class="purple"><rect x="18" y="248" width="98" height="72" rx="8"/>
+  <text x="67" y="278" text-anchor="middle" class="th">JNI</text>
+  <text x="67" y="296" text-anchor="middle" class="ts">ACC_NATIVE</text>
+  <text x="67" y="311" text-anchor="middle" class="ts">declarations</text></g>
+
+  <g class="purple"><rect x="127" y="248" width="98" height="72" rx="8"/>
+  <text x="176" y="278" text-anchor="middle" class="th">JNA iface</text>
+  <text x="176" y="296" text-anchor="middle" class="ts">extends</text>
+  <text x="176" y="311" text-anchor="middle" class="ts">jna.Library</text></g>
+
+  <g class="purple"><rect x="236" y="248" width="98" height="72" rx="8"/>
+  <text x="285" y="278" text-anchor="middle" class="th">JNA dynamic</text>
+  <text x="285" y="296" text-anchor="middle" class="ts">getFunction</text>
+  <text x="285" y="311" text-anchor="middle" class="ts">→ invoke</text></g>
+
+  <g class="purple"><rect x="345" y="248" width="98" height="72" rx="8"/>
+  <text x="394" y="278" text-anchor="middle" class="th">JNA direct</text>
+  <text x="394" y="296" text-anchor="middle" class="ts">Native</text>
+  <text x="394" y="311" text-anchor="middle" class="ts">.register()</text></g>
+
+  <g class="purple"><rect x="454" y="248" width="98" height="72" rx="8"/>
+  <text x="503" y="278" text-anchor="middle" class="th">FFI / FFM</text>
+  <text x="503" y="296" text-anchor="middle" class="ts">downcall</text>
+  <text x="503" y="311" text-anchor="middle" class="ts">Handle</text></g>
+
+  <g class="purple"><rect x="563" y="248" width="98" height="72" rx="8"/>
+  <text x="612" y="278" text-anchor="middle" class="th">JNR / JFFI</text>
+  <text x="612" y="296" text-anchor="middle" class="ts">loader +</text>
+  <text x="612" y="311" text-anchor="middle" class="ts">interface</text></g>
+
+  <line class="arr" x1="67" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+  <line class="arr" x1="176" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+  <line class="arr" x1="285" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+  <line class="arr" x1="394" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+  <line class="arr" x1="503" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+  <line class="arr" x1="612" y1="320" x2="340" y2="397" marker-end="url(#arrow)"/>
+
+  <g class="teal"><rect x="158" y="398" width="364" height="58" rx="8"/>
+  <text x="340" y="422" text-anchor="middle" class="th">native-method + binding records</text>
+  <text x="340" y="440" text-anchor="middle" class="ts">native_methods · jna_hits · ffi_all_hits</text></g>
+
+  <line class="arr" x1="340" y1="456" x2="340" y2="495" marker-end="url(#arrow)"/>
+
+  <g class="gray"><rect x="230" y="496" width="220" height="36" rx="18"/>
+  <text x="340" y="519" text-anchor="middle" class="t">to native mapping (stage 3)</text></g>
+</svg>

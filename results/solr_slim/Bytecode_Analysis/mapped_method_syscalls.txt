@@ -1,0 +1,667 @@
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.timerFd -> netty_epoll_native_timerFd [NETTY]
+jdk.internal.misc.Unsafe.putDouble: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha384: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketStreamFd -> netty_unix_socket_newSocketStreamFd [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpMd5SigMaxKeyLen -> netty_epoll_native_tcpMd5SigMaxKeyLen [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSendShutdown: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.ssizeMax -> netty_unix_limits_ssizeMax [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheNoInternalStore: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlAdd0 -> netty_epoll_native_epollCtlAdd0 [NETTY]
+libzip.so:java.util.zip.Deflater.deflateBufferBuffer -> Java_java_util_zip_Deflater_deflateBufferBuffer [JNI]
+jdk.internal.misc.Unsafe.getIntVolatile: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.setMemory0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.disableOcsp: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertHasExpired: NOT_FOUND_IN_LIBS
+java.lang.Thread.isAlive: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putInt: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ProcessHandleImpl.isAlive0 -> Java_java_lang_ProcessHandleImpl_isAlive0 [JNI]
+libjava.so:jdk.internal.reflect.Reflection.areNestMates -> Java_jdk_internal_reflect_Reflection_areNestMates [JNI]
+io.netty.internal.tcnative.SSLContext.setCertificateChainBio: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.staticFieldOffset0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheNoInternalLookup: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToDomainSocket -> netty_unix_socket_sendToDomainSocket [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantCertificateVerify: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.listen -> netty_unix_socket_listen [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidNonCa: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepIdle -> netty_epoll_linuxsocket_getTcpKeepIdle [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.offsetofEpollData -> netty_epoll_native_offsetofEpollData [NETTY]
+libzip.so:java.util.zip.CRC32.updateByteBuffer0 -> Java_java_util_zip_CRC32_updateByteBuffer0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCreate -> netty_epoll_native_epollCreate [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrNoExplicitPolicy: NOT_FOUND_IN_LIBS
+java.lang.Class.getInterfaces0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.freeBIO: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetCrlIssuer: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLSession.setTimeout: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpBindAddressNoPort -> netty_epoll_linuxsocket_isIpBindAddressNoPort [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReusePort -> netty_unix_socket_setReusePort [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isKeepAlive -> netty_unix_socket_isKeepAlive [NETTY]
+io.netty.internal.tcnative.SSL.shutdownSSL: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpInfo -> netty_epoll_linuxsocket_getTcpInfo [NETTY]
+io.netty.internal.tcnative.Library.aprVersionString: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionCacheFull: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEBADF -> netty_unix_errors_errnoEBADF [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpDeferAccept -> netty_epoll_linuxsocket_setTcpDeferAccept [NETTY]
+io.netty.internal.tcnative.SSLContext.sessionConnect: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagDisableWildCards: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionMisses: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnnestedResource: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpRecvOrigDestAddr -> netty_epoll_linuxsocket_isIpRecvOrigDestAddr [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.uioMaxIov -> netty_unix_limits_uioMaxIov [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDomainFd -> netty_unix_socket_newSocketDomainFd [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCertNotBeforeField: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setUdpGro -> netty_epoll_linuxsocket_setUdpGro [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSubtreeMinMax: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setHostNameValidation: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrIpAddressMismatch: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.bioFlushByteBuffer: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidPurpose: NOT_FOUND_IN_LIBS
+java.lang.Object.notify: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeEnablePartialWrite: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setSSLSessionCache: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.newMemBIO: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.getMode: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateIgnore: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.send -> netty_unix_socket_send [NETTY]
+io.netty.internal.tcnative.SSLContext.setMode: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.staticFieldOffset: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrExcludedViolation: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.cos -> Java_java_lang_StrictMath_cos [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.bindVSock -> netty_epoll_linuxsocket_bindVSock [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.sizeofEpollEvent -> netty_epoll_native_sizeofEpollEvent [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpDeferAccept -> netty_epoll_linuxsocket_getTcpDeferAccept [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha256: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSelfSignedCertInChain: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setRawOptArray -> netty_unix_socket_setRawOptArray [NETTY]
+java.lang.Object.notifyAll: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getClientRandom: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.read0 -> Java_java_io_RandomAccessFile_read0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromAddress -> netty_unix_socket_recvFromAddress [NETTY]
+io.netty.internal.tcnative.SSLContext.make: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.setDictionary -> Java_java_util_zip_Inflater_setDictionary [JNI]
+jdk.internal.misc.Unsafe.storeFence: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateOnce: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidExtension: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDomainDgramFd -> netty_unix_socket_newSocketDomainDgramFd [NETTY]
+jdk.internal.misc.Unsafe.getBoolean: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpMd5Sig -> netty_epoll_linuxsocket_setTcpMd5Sig [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpQuickAck -> netty_epoll_linuxsocket_setTcpQuickAck [NETTY]
+io.netty.internal.tcnative.SSLContext.getSslCtx: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.expand: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getMode: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedConstraintType: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingSendmmsg -> netty_epoll_native_isSupportingSendmmsg [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.getLastError: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getVersion: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getSniHostname: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getDouble: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.System.mapLibraryName -> Java_java_lang_System_mapLibraryName [JNI]
+libjava.so:java.lang.Double.longBitsToDouble -> Java_java_lang_Double_longBitsToDouble [JNI]
+jdk.internal.misc.Unsafe.staticFieldBase0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionBrotli: NOT_FOUND_IN_LIBS
+java.io.ObjectOutputStream.floatsToBytes: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingRecvmmsg -> netty_epoll_native_isSupportingRecvmmsg [NETTY_FUZZY]
+libjava.so:java.lang.StrictMath.sin -> Java_java_lang_StrictMath_sin [JNI]
+io.netty.internal.tcnative.SSL.freeX509Chain: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.interrupt0 -> JVM_Interrupt [JVM]
+java.lang.Class.getEnclosingMethod0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollin -> netty_epoll_native_epollin [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.setVerify: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Throwable.fillInStackTrace -> Java_java_lang_Throwable_fillInStackTrace [JNI]
+libjava.so:java.util.TimeZone.getSystemGMTOffsetID -> Java_java_util_TimeZone_getSystemGMTOffsetID [JNI]
+libjava.so:java.lang.StrictMath.acos -> Java_java_lang_StrictMath_acos [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.connect -> netty_unix_socket_connect [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getIntAt0 -> Java_jdk_internal_reflect_ConstantPool_getIntAt0 [JNI]
+io.netty.internal.tcnative.SSL.bioClearByteBuffer: NOT_FOUND_IN_LIBS
+sun.security.krb5.SCDynamicStoreConfig.getKerberosConfig: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putLong: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getByte: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.write -> netty_unix_filedescriptor_write [NETTY_FUZZY]
+sun.security.krb5.Config.getWindowsDirectory: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getTask: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Executable.getTypeAnnotationBytes0 -> Java_java_lang_reflect_Executable_getTypeAnnotationBytes0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpUserTimeout -> netty_epoll_linuxsocket_setTcpUserTimeout [NETTY]
+libjava.so:java.lang.reflect.Array.set -> Java_java_lang_reflect_Array_set [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidVersion: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpUserTimeout -> netty_epoll_linuxsocket_getTcpUserTimeout [NETTY]
+io.netty.internal.tcnative.SSL.setMode: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.park: NOT_FOUND_IN_LIBS
+java.lang.Class.desiredAssertionStatus0: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.freeMemory0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.internal.tcnative.SSL.version -> netty_epoll_native_kernelVersion [NETTY_FUZZY]
+io.netty.internal.tcnative.SSLContext.sessionTicketKeyRenew: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.readFromSSL: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setContextId: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setOptions: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Float.intBitsToFloat -> Java_java_lang_Float_intBitsToFloat [JNI]
+libnet.so:java.net.NetworkInterface.getByIndex0 -> Java_java_net_NetworkInterface_getByIndex0 [JNI]
+libjava.so:java.lang.Runtime.totalMemory -> Java_java_lang_Runtime_totalMemory [JNI]
+jdk.internal.misc.Unsafe.throwException: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.bioNewByteBuffer: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.inflateBytesBuffer -> Java_java_util_zip_Inflater_inflateBytesBuffer [JNI]
+libjava.so:java.lang.SecurityManager.getClassContext -> Java_java_lang_SecurityManager_getClassContext [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxEncryptedLength: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrApplicationVerification: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ClassLoader.findLoadedClass0 -> Java_java_lang_ClassLoader_findLoadedClass0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.uioMaxIov -> netty_unix_limits_uioMaxIov [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.getPeerCertificate: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setKeyLogCallback: NOT_FOUND_IN_LIBS
+java.lang.Class.getDeclaredMethods0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isTcpQuickAck -> netty_epoll_linuxsocket_isTcpQuickAck [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEPIPE -> netty_unix_errors_errnoEPIPE [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.localDomainSocketAddress -> netty_unix_socket_localDomainSocketAddress [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReceiveBufferSize -> netty_unix_socket_setReceiveBufferSize [NETTY]
+libjava.so:java.io.RandomAccessFile.seek0 -> Java_java_io_RandomAccessFile_seek0 [JNI]
+io.netty.internal.tcnative.SSL.newSSL: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setVerify: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetIssuerCertLocally: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionTicketKeyResume: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileDescriptor.sync -> Java_java_io_FileDescriptor_sync [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.read -> netty_unix_filedescriptor_read [NETTY_FUZZY]
+io.netty.internal.tcnative.Library.aprHasThreads: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFdRead -> netty_epoll_native_eventFdRead [NETTY]
+libnet.so:java.net.NetworkInterface.isUp0 -> Java_java_net_NetworkInterface_isUp0 [JNI]
+io.netty.internal.tcnative.SSLContext.setCertificateBio: NOT_FOUND_IN_LIBS
+org.xerial.snappy.BitShuffleNative.unshuffleDirectBuffer: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setCipherSuites: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSoError -> netty_unix_socket_getSoError [NETTY]
+io.netty.internal.tcnative.SSLSession.free: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.free: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.internal.tcnative.Buffer.size -> netty_unix_limits_udsSunPathSize [NETTY_FUZZY]
+io.netty.internal.tcnative.SSLContext.setSessionCacheSize: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpRecvOrigDestAddr -> netty_epoll_linuxsocket_setIpRecvOrigDestAddr [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepIdle -> netty_epoll_linuxsocket_setTcpKeepIdle [NETTY]
+jdk.internal.misc.Unsafe.fullFence: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.System.setErr0 -> Java_java_lang_System_setErr0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpFreeBind -> netty_epoll_linuxsocket_setIpFreeBind [NETTY]
+io.netty.internal.tcnative.SSL.bioWrite: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetCrl: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionZstd: NOT_FOUND_IN_LIBS
+java.lang.Thread.currentThread: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDaneNoMatch: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getSessionId: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setSoBusyPoll -> netty_epoll_linuxsocket_setSoBusyPoll [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.udsSunPathSize -> netty_unix_limits_udsSunPathSize [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReuseAddress -> netty_unix_socket_setReuseAddress [NETTY]
+libjava.so:java.lang.Runtime.availableProcessors -> Java_java_lang_Runtime_availableProcessors [JNI]
+io.netty.internal.tcnative.SSLSession.shouldBeSingleUse: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getIpMulticastLoop -> netty_epoll_linuxsocket_getIpMulticastLoop [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslStConnect: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeEnableFalseStart: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecodeIssuerPublicKey: NOT_FOUND_IN_LIBS
+java.lang.Thread.dumpThreads: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.bind -> netty_unix_socket_bind [NETTY]
+java.lang.Class.getDeclaringClass0: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.copyMemory0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.enableOcsp: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.freeSSL: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollet -> netty_epoll_native_epollet [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpTransparent -> netty_epoll_linuxsocket_setIpTransparent [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoCrlSign: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getSigAlgs: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedExtensionFeature: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.getFilePointer -> Java_java_io_RandomAccessFile_getFilePointer [JNI]
+libjava.so:jdk.internal.reflect.Reflection.getClassAccessFlags -> Java_jdk_internal_reflect_Reflection_getClassAccessFlags [JNI]
+jdk.internal.misc.Unsafe.getLong: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getRawOptArray -> netty_unix_socket_getRawOptArray [NETTY]
+io.netty.internal.tcnative.SSL.setKeyMaterial: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendTo -> netty_unix_socket_sendTo [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.shutdown -> netty_unix_socket_shutdown [NETTY]
+libzip.so:java.util.zip.Inflater.reset -> Java_java_util_zip_Inflater_reset [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFdWrite -> netty_epoll_native_eventFdWrite [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateNever: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpCork -> netty_epoll_linuxsocket_setTcpCork [NETTY]
+libzip.so:java.util.zip.Deflater.deflateBufferBytes -> Java_java_util_zip_Deflater_deflateBufferBytes [JNI]
+libnet.so:java.net.NetworkInterface.getMacAddr0 -> Java_java_net_NetworkInterface_getMacAddr0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepCnt -> netty_epoll_linuxsocket_setTcpKeepCnt [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha384: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.forName0 -> Java_java_lang_Class_forName0 [JNI]
+org.xerial.snappy.SnappyNative.rawCompress: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionCbHits: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.newPipe -> netty_unix_filedescriptor_newPipe [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagMultiLabelWildCards: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Buffer.addressSize0 -> netty_unix_buffer_addressSize0 [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrAkidSkidMismatch: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepIntvl -> netty_epoll_linuxsocket_setTcpKeepIntvl [NETTY]
+jdk.internal.misc.Unsafe.unpark: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setSessionIdContext: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionTicketKeyFail: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionZlib: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepCnt -> netty_epoll_linuxsocket_getTcpKeepCnt [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidCurve: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpCipherServerPreference: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setSoLinger -> netty_unix_socket_setSoLinger [NETTY]
+io.netty.internal.tcnative.SSLContext.setCertRequestedCallback: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isIPv6Preferred0 -> netty_unix_socket_isIPv6Preferred0 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEWOULDBLOCK -> netty_unix_errors_errnoEWOULDBLOCK [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setBroadcast -> netty_unix_socket_setBroadcast [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpFreeBind -> netty_epoll_linuxsocket_isIpFreeBind [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrOutOfMem: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCrlLastUpdateField: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPermittedViolation: NOT_FOUND_IN_LIBS
+java.lang.System.arraycopy: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBLosNotAllowed: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha256: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.ssizeMax -> netty_unix_limits_ssizeMax [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setSendBufferSize -> netty_unix_socket_setSendBufferSize [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.sendmmsg0 -> netty_epoll_native_sendmmsg0 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.internal.tcnative.Buffer.address -> netty_epoll_linuxsocket_localVSockAddress [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.clearOptions: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setSessionCacheTimeout: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setCertificateChainBio: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.remoteAddress -> netty_unix_socket_remoteAddress [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddress -> netty_unix_socket_sendToAddress [NETTY]
+jdk.internal.misc.Unsafe.putChar: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.getMemberVMInfo: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSendBufferSize -> netty_unix_socket_getSendBufferSize [NETTY]
+libsnappyjava_snappy-java-1.1.10.5.so:org.xerial.snappy.SnappyNative.nativeLibraryVersion -> Java_org_xerial_snappy_SnappyNative_nativeLibraryVersion [JNI]
+jdk.internal.misc.Unsafe.compareAndSetObject: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putFloat: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ProcessImpl.forkAndExec -> Java_java_lang_ProcessImpl_forkAndExec [JNI]
+libnet.so:java.net.NetworkInterface.getByInetAddress0 -> Java_java_net_NetworkInterface_getByInetAddress0 [JNI]
+io.netty.internal.tcnative.SSLContext.setAlpnProtos0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.parseX509Chain: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollWait0 -> netty_epoll_native_epollWait0 [NETTY]
+libjava.so:java.lang.StrictMath.IEEEremainder -> Java_java_lang_StrictMath_IEEEremainder [JNI]
+libjava.so:java.security.AccessController.getInheritedAccessControlContext -> Java_java_security_AccessController_getInheritedAccessControlContext [JNI]
+io.netty.internal.tcnative.SSLContext.setCertificate: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.reflect.ConstantPool.getUTF8At0 -> Java_jdk_internal_reflect_ConstantPool_getUTF8At0 [JNI]
+io.netty.internal.tcnative.SSL.getServerRandom: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorSyscall: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writeAddress -> netty_unix_filedescriptor_writeAddress [NETTY_FUZZY]
+libjava.so:java.lang.Shutdown.beforeHalt -> Java_java_lang_Shutdown_beforeHalt [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isUdpGro -> netty_epoll_linuxsocket_isUdpGro [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlSignatureFailure: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEALREADY -> netty_unix_errors_errorEALREADY [NETTY_FUZZY]
+jdk.internal.misc.Unsafe.pageSize: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCrlNextUpdateField: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendAddress -> netty_unix_socket_sendAddress [NETTY]
+libjava.so:java.lang.StrictMath.sinh -> Java_java_lang_StrictMath_sinh [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnhandledCriticalCrlExtension: NOT_FOUND_IN_LIBS
+java.lang.Class.getSuperclass: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getTrafficClass -> netty_unix_socket_getTrafficClass [NETTY]
+org.xerial.snappy.SnappyNative.uncompressedLength: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.loader.BootLoader.getSystemPackageLocation -> Java_jdk_internal_loader_BootLoader_getSystemPackageLocation [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.disconnect -> netty_unix_socket_disconnect [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoDigitalSignature: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.msgFastopen -> netty_unix_socket_msgFastopen [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpMulticastLoop -> netty_epoll_linuxsocket_setIpMulticastLoop [NETTY]
+io.netty.internal.tcnative.SSLContext.getOptions: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslReceivedShutdown: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.System.currentTimeMillis -> JVM_CurrentTimeMillis [JVM]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoSSLv2: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoSSLv3: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlHasExpired: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getTimeout: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantAccept: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.yield -> JVM_Yield [JVM]
+libzip.so:java.util.zip.Inflater.inflateBufferBytes -> Java_java_util_zip_Inflater_inflateBufferBytes [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTimeToLive -> netty_epoll_linuxsocket_getTimeToLive [NETTY]
+io.netty.internal.tcnative.SSL.setOcspResponse: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSubjectIssuerMismatch: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setCipherSuite: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isReusePort -> netty_unix_socket_isReusePort [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPathLengthExceeded: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTimeToLive -> netty_epoll_linuxsocket_setTimeToLive [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vOK: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.Library.initialize0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpTransparent -> netty_epoll_linuxsocket_isIpTransparent [NETTY]
+jdk.internal.misc.Unsafe.getObject: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ProcessHandleImpl.getProcessPids0 -> Java_java_lang_ProcessHandleImpl_getProcessPids0 [JNI]
+jdk.internal.misc.Unsafe.putObjectVolatile: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setNumTickets: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddresses -> netty_unix_socket_sendToAddresses [NETTY]
+io.netty.internal.tcnative.SSLContext.getSessionCacheSize: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.joinGroup -> netty_epoll_linuxsocket_joinGroup [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollout -> netty_epoll_native_epollout [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.setRenegotiateMode: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.strError -> netty_unix_errors_strError [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.bioLengthByteBuffer: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpFastOpen -> netty_epoll_linuxsocket_setTcpFastOpen [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddressesDomainSocket -> netty_unix_socket_sendToAddressesDomainSocket [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoECONNRESET -> netty_unix_errors_errnoECONNRESET [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.iovMax -> netty_unix_limits_iovMax [NETTY_FUZZY]
+java.security.AccessController.doPrivileged: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.init -> Java_java_util_zip_Inflater_init [JNI]
+java.io.ObjectOutputStream.doublesToBytes: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoCompression: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslStAccept: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCertNotAfterField: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.writeToSSL: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setNpnProtos0: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.reset -> Java_java_util_zip_Deflater_reset [JNI]
+libjava.so:java.lang.StrictMath.log10 -> Java_java_lang_StrictMath_log10 [JNI]
+io.netty.internal.tcnative.SSLSession.getTimeout: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecryptCrlSignature: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpNotSentLowAt -> netty_epoll_linuxsocket_setTcpNotSentLowAt [NETTY]
+io.netty.internal.tcnative.SSLContext.setSessionCacheMode: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.gc -> Java_java_lang_Runtime_gc [JNI]
+io.netty.internal.tcnative.SSL.parsePrivateKey: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagNoPartialWildCards: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedConstraintSyntax: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.bioSetFd: NOT_FOUND_IN_LIBS
+java.nio.MappedByteBuffer.load0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPathLoop: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.log -> Java_java_lang_StrictMath_log [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setInterface -> netty_epoll_linuxsocket_setInterface [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepIntvl -> netty_epoll_linuxsocket_getTcpKeepIntvl [NETTY]
+io.netty.internal.tcnative.SSLContext.setSniHostnameMatcher: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlDel0 -> netty_epoll_native_epollCtlDel0 [NETTY]
+libjava.so:java.io.FileOutputStream.open0 -> Java_java_io_FileOutputStream_open0 [JNI]
+jdk.internal.misc.Unsafe.getLongVolatile: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEINPROGRESS -> netty_unix_errors_errnoEINPROGRESS [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha512: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromAddressDomainSocket -> netty_unix_socket_recvFromAddressDomainSocket [NETTY]
+java.lang.Class.getProtectionDomain0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.addCertificateCompressionAlgorithm0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoCertSign: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.System.setOut0 -> Java_java_lang_System_setOut0 [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagAlwaysCheckSubject: NOT_FOUND_IN_LIBS
+java.lang.Object.clone: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setUseTasks: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getShort: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxRecordLength: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getRawOptAddress -> netty_unix_socket_getRawOptAddress [NETTY]
+io.netty.internal.tcnative.SSL.getShutdown: NOT_FOUND_IN_LIBS
+org.xerial.snappy.SnappyNative.rawUncompress: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getCiphers: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.tan -> Java_java_lang_StrictMath_tan [JNI]
+jdk.internal.misc.Unsafe.putLongVolatile: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.getSessionCacheTimeout: NOT_FOUND_IN_LIBS
+java.io.ObjectInputStream.bytesToFloats: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Object.getClass -> Java_java_lang_Object_getClass [JNI]
+libjvm.so:java.lang.Class.isPrimitive -> JVM_IsPrimitiveClass [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setKeepAlive -> netty_unix_socket_setKeepAlive [NETTY]
+libsnappyjava_snappy-java-1.1.10.5.so:org.xerial.snappy.SnappyNative.maxCompressedLength -> Java_org_xerial_snappy_SnappyNative_maxCompressedLength [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writevAddresses -> netty_unix_filedescriptor_writevAddresses [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.recvmsg0 -> netty_epoll_native_recvmsg0 [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertRejected: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.loader.BootLoader.getSystemPackageNames -> Java_jdk_internal_loader_BootLoader_getSystemPackageNames [JNI]
+io.netty.internal.tcnative.SSLContext.clearOptions: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.isSessionReused: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLSession.upRef: NOT_FOUND_IN_LIBS
+java.lang.Thread.isInterrupted: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setCurvesList0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorNone: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileOutputStream.write -> Java_java_io_FileOutputStream_write [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOTCONN -> netty_unix_errors_errnoENOTCONN [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setRawOptAddress -> netty_unix_socket_setRawOptAddress [NETTY]
+java.lang.Object.hashCode: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertUntrusted: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putIntVolatile: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getPeerCredentials -> netty_epoll_linuxsocket_getPeerCredentials [NETTY]
+jdk.internal.misc.Unsafe.getChar: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateExplicit: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.newArray -> Java_java_lang_reflect_Array_newArray [JNI]
+java.nio.MappedByteBuffer.force0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.isInInit: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.compareAndSetLong: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.reallocateMemory0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getAlpnSelected: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetIssuerCert: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Shutdown.halt0 -> Java_java_lang_Shutdown_halt0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFd -> netty_epoll_native_eventFd [NETTY]
+io.netty.internal.tcnative.SSLContext.sessionNumber: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.finishConnect -> netty_unix_socket_finishConnect [NETTY]
+io.netty.internal.tcnative.SSL.authenticationMethods: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getOcspResponse: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaPkcsSha1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.accept -> netty_unix_socket_accept [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDgramFd -> netty_unix_socket_newSocketDgramFd [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.readAddress -> netty_unix_filedescriptor_readAddress [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.joinSsmGroup -> netty_epoll_linuxsocket_joinSsmGroup [NETTY]
+libjava.so:java.lang.StrictMath.atan -> Java_java_lang_StrictMath_atan [JNI]
+io.netty.internal.tcnative.SSL.getHandshakeCount: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setKeyMaterialClientSide: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.compareAndSetInt: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.sleep -> JVM_Sleep [JVM]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidSignatureAlgorithm: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.staticFieldBase: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFd -> netty_unix_socket_recvFd [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha512: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.leaveGroup -> netty_epoll_linuxsocket_leaveGroup [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getFloatAt0 -> Java_jdk_internal_reflect_ConstantPool_getFloatAt0 [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDifferntCrlScope: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSoLinger -> netty_unix_socket_getSoLinger [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.remoteVSockAddress -> netty_epoll_linuxsocket_remoteVSockAddress [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorZeroReturn: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidCa: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionAcceptRenegotiate: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv12: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.recvmmsg0 -> netty_epoll_native_recvmmsg0 [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv13: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv11: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setIntOpt -> netty_unix_socket_setIntOpt [NETTY]
+io.netty.internal.tcnative.SSL.getOptions: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollBusyWait0 -> netty_epoll_native_epollBusyWait0 [NETTY]
+io.netty.internal.tcnative.SSL.getCipherForSSL: NOT_FOUND_IN_LIBS
+java.lang.Object.wait: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionCompress: NOT_FOUND_IN_LIBS
+java.lang.Thread.getThreads: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getError: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.localVSockAddress -> netty_epoll_linuxsocket_localVSockAddress [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recv -> netty_unix_socket_recv [NETTY]
+io.netty.internal.tcnative.SSL.setTimeout: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getInterface -> netty_epoll_linuxsocket_getInterface [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrHostnameMismatch: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.reflect.ConstantPool.getLongAt0 -> Java_jdk_internal_reflect_ConstantPool_getLongAt0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isReuseAddress -> netty_unix_socket_isReuseAddress [NETTY]
+libjava.so:java.lang.System.identityHashCode -> Java_java_lang_System_identityHashCode [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlNotYetValid: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isTcpCork -> netty_epoll_linuxsocket_isTcpCork [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.sizeOfjlong -> netty_unix_limits_sizeOfjlong [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.remoteDomainSocketAddress -> netty_unix_socket_remoteDomainSocketAddress [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEd25519: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.open0 -> Java_java_io_RandomAccessFile_open0 [JNI]
+java.lang.Class.getSimpleBinaryName0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Buffer.memoryAddress0 -> netty_unix_buffer_memoryAddress0 [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcs1Md5Sha1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.connectVSock -> netty_epoll_linuxsocket_connectVSock [NETTY]
+io.netty.internal.tcnative.SSLContext.setCertificateChainFile: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheServer: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.cosh -> Java_java_lang_StrictMath_cosh [JNI]
+io.netty.internal.tcnative.SSL.setSession: NOT_FOUND_IN_LIBS
+java.lang.ClassLoader$NativeLibrary.load0: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.isArray -> JVM_IsArrayClass [JVM]
+jdk.internal.misc.Unsafe.ensureClassInitialized0: NOT_FOUND_IN_LIBS
+libnet.so:java.net.NetworkInterface.getByName0 -> Java_java_net_NetworkInterface_getByName0 [JNI]
+libjava.so:java.io.RandomAccessFile.length -> Java_java_io_RandomAccessFile_length [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.sendFile -> netty_epoll_linuxsocket_sendFile [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorECONNREFUSED -> netty_unix_errors_errorECONNREFUSED [NETTY_FUZZY]
+jdk.internal.misc.Unsafe.getObjectVolatile: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isIPv6 -> netty_unix_socket_isIPv6 [NETTY]
+io.netty.internal.tcnative.SSL.bioSetByteBuffer: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.inflateBufferBuffer -> Java_java_util_zip_Inflater_inflateBufferBuffer [JNI]
+io.netty.internal.tcnative.SSLContext.sessionConnectGood: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpLegacyServerConnect: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddressDomainSocket -> netty_unix_socket_sendToAddressDomainSocket [NETTY]
+io.netty.internal.tcnative.SSL.getNextProtoNegotiated: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlPathValidationError: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorENETUNREACH -> netty_unix_errors_errorENETUNREACH [NETTY_FUZZY]
+libjava.so:java.lang.Module.addReads0 -> Java_java_lang_Module_addReads0 [JNI]
+io.netty.internal.tcnative.SSL.getMaxWrapOverhead: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getReceiveBufferSize -> netty_unix_socket_getReceiveBufferSize [NETTY]
+libjvm.so:java.lang.Class.isInterface -> JVM_IsInterface [JVM]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedNameSyntax: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setCACertificateBio: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ClassLoader.findBootstrapClass -> Java_java_lang_ClassLoader_findBootstrapClass [JNI]
+io.netty.internal.tcnative.SSL.initialize: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp384r1Sha384: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileInputStream.open0 -> Java_java_io_FileInputStream_open0 [JNI]
+libjava.so:jdk.internal.reflect.Reflection.getCallerClass -> Java_jdk_internal_reflect_Reflection_getCallerClass [JNI]
+io.netty.internal.tcnative.SSL.loadPrivateKeyFromEngine: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.sqrt -> Java_java_lang_StrictMath_sqrt [JNI]
+io.netty.internal.tcnative.SSLContext.setCertVerifyCallback: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setSessionTicketKeys0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setTcpNoDelay -> netty_unix_socket_setTcpNoDelay [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp521r1Sha512: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.kernelVersion -> netty_epoll_native_kernelVersion [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isBroadcast -> netty_unix_socket_isBroadcast [NETTY]
+java.lang.Class.getDeclaredConstructors0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOENT -> netty_unix_errors_errnoENOENT [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendFd -> netty_unix_socket_sendFd [NETTY]
+io.netty.internal.tcnative.SSL.doHandshake: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionConnectRenegotiate: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getSoBusyPoll -> netty_epoll_linuxsocket_getSoBusyPoll [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollerr -> netty_epoll_native_epollerr [NETTY_FUZZY]
+io.netty.internal.tcnative.SSLContext.getSessionCacheMode: NOT_FOUND_IN_LIBS
+org.xerial.snappy.BitShuffleNative.shuffleDirectBuffer: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollrdhup -> netty_epoll_native_epollrdhup [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxPlaintextLength: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.isInstance -> Java_java_lang_Class_isInstance [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writev -> netty_unix_filedescriptor_writev [NETTY_FUZZY]
+io.netty.internal.tcnative.SSL.bioLengthNonApplication: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileInputStream.readBytes -> Java_java_io_FileInputStream_readBytes [JNI]
+libzip.so:java.util.zip.CRC32.updateBytes0 -> Java_java_util_zip_CRC32_updateBytes0 [JNI]
+java.lang.Class.getRawAnnotations: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putByte: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.defineAnonymousClass0: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileOutputStream.writeBytes -> Java_java_io_FileOutputStream_writeBytes [JNI]
+java.lang.invoke.MethodHandleNatives.resolve: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantPrivateKeyOperation: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollWait -> netty_epoll_native_epollWait [NETTY]
+io.netty.internal.tcnative.SSLContext.setTmpDHLength: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.readBytes -> Java_java_io_RandomAccessFile_readBytes [JNI]
+io.netty.internal.tcnative.SSLContext.sessionAcceptGood: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isTcpNoDelay -> netty_unix_socket_isTcpNoDelay [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBCannotSignP384WithP256: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.misc.VM.latestUserDefinedLoader0 -> Java_jdk_internal_misc_VM_latestUserDefinedLoader0 [JNI]
+io.netty.internal.tcnative.SSL.getLastErrorNumber: NOT_FOUND_IN_LIBS
+libnet.so:java.net.NetworkInterface.getAll -> Java_java_net_NetworkInterface_getAll [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantX509Lookup: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionDecompress: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.sslPending: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Executable.getParameters0 -> Java_java_lang_reflect_Executable_getParameters0 [JNI]
+io.netty.internal.tcnative.SSLSession.getSessionId: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromDomainSocket -> netty_unix_socket_recvFromDomainSocket [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTicket: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.get -> Java_java_lang_reflect_Array_get [JNI]
+java.io.ObjectInputStream.bytesToDoubles: NOT_FOUND_IN_LIBS
+java.lang.Thread.setNativeName: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeReleaseBuffers: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.multiNewArray -> Java_java_lang_reflect_Array_multiNewArray [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp256r1Sha256: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Float.floatToRawIntBits -> Java_java_lang_Float_floatToRawIntBits [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertNotYetValid: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putBoolean: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpNotSentLowAt -> netty_epoll_linuxsocket_getTcpNotSentLowAt [NETTY]
+libzip.so:java.util.zip.Deflater.deflateBytesBuffer -> Java_java_util_zip_Deflater_deflateBytesBuffer [JNI]
+java.lang.Thread.holdsLock: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrProxyPathLengthExceeded: NOT_FOUND_IN_LIBS
+libnet.so:java.net.NetworkInterface.isLoopback0 -> Java_java_net_NetworkInterface_isLoopback0 [JNI]
+jdk.internal.perf.Perf.createLong: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheOff: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantConnect: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.atan2 -> Java_java_lang_StrictMath_atan2 [JNI]
+java.lang.invoke.MethodHandleNatives.objectFieldOffset: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.leaveSsmGroup -> netty_epoll_linuxsocket_leaveSsmGroup [NETTY]
+io.netty.internal.tcnative.SSLContext.sessionTicketKeyNew: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrProxyCertificatesNotAllowed: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.fipsModeSet: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.bindDomainSocket -> netty_unix_socket_bindDomainSocket [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getDoubleAt0 -> Java_jdk_internal_reflect_ConstantPool_getDoubleAt0 [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertChainTooLong: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.init -> Java_java_util_zip_Deflater_init [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeAcceptMovingWriteBuffer: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putObject: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getFloat: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.arrayBaseOffset0: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.System.nanoTime -> JVM_NanoTime [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH -> netty_unix_errors_errorEHOSTUNREACH [NETTY_FUZZY]
+org.xerial.snappy.SnappyNative.isValidCompressedBuffer: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Double.doubleToRawLongBits -> Java_java_lang_Double_doubleToRawLongBits [JNI]
+libjvm.so:java.lang.Thread.setPriority0 -> JVM_SetThreadPriority [JVM]
+io.netty.internal.tcnative.SSL.getMasterKey: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.splice0 -> netty_epoll_native_splice0 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFrom -> netty_unix_socket_recvFrom [NETTY]
+jdk.internal.misc.Unsafe.putShort: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.connectDomainSocket -> netty_unix_socket_connectDomainSocket [NETTY]
+io.netty.internal.tcnative.SSLContext.enableOcsp: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheClient: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantWrite: NOT_FOUND_IN_LIBS
+org.xerial.snappy.BitShuffleNative.shuffle: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setCertificateBio: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.newVSockStreamFd -> netty_epoll_linuxsocket_newVSockStreamFd [NETTY]
+libjava.so:java.security.AccessController.getStackAccessControlContext -> Java_java_security_AccessController_getStackAccessControlContext [JNI]
+java.lang.Class.initClassName: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.init: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpBindAddressNoPort -> netty_epoll_linuxsocket_setIpBindAddressNoPort [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.registerUnix -> netty_epoll_native_registerUnix [NETTY]
+libsnappyjava_snappy-java-1.1.10.5.so:org.xerial.snappy.SnappyNative.arrayCopy -> Java_org_xerial_snappy_SnappyNative_arrayCopy [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.close -> netty_unix_filedescriptor_close [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrEmailMismatch: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.iovMax -> netty_unix_limits_iovMax [NETTY_FUZZY]
+jdk.internal.misc.Unsafe.getInt: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.setPrivateKeyMethod0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionTimeouts: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.clearError: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDepthZeroSelfSignedCert: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getErrorString: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.freePrivateKey: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.isAssignableFrom -> Java_java_lang_Class_isAssignableFrom [JNI]
+libjava.so:java.lang.StackTraceElement.initStackTraceElements -> Java_java_lang_StackTraceElement_initStackTraceElements [JNI]
+io.netty.internal.tcnative.SSLContext.setMaxCertList: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.maxMemory -> Java_java_lang_Runtime_maxMemory [JNI]
+java.lang.Class.getConstantPool: NOT_FOUND_IN_LIBS
+libjava.so:java.io.Console.echo -> Java_java_io_Console_echo [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setTrafficClass -> netty_unix_socket_setTrafficClass [NETTY]
+jdk.internal.misc.Unsafe.arrayIndexScale0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidPolicyExtension: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.setDictionary -> Java_java_util_zip_Deflater_setDictionary [JNI]
+libjava.so:java.lang.String.intern -> Java_java_lang_String_intern [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.open -> netty_unix_filedescriptor_open [NETTY_FUZZY]
+libjava.so:java.lang.reflect.Array.getLength -> Java_java_lang_reflect_Array_getLength [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertRevoked: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.versionString: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnhandledCriticalExtension: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpFastopenMode -> netty_epoll_native_tcpFastopenMode [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlMod0 -> netty_epoll_native_epollCtlMod0 [NETTY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidAlgorithm: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.isSupportingUdpSegment -> netty_epoll_native_isSupportingUdpSegment [NETTY]
+java.lang.Class.getGenericSignature0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setShutdown: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpAllowUnsafeLegacyRenegotiation: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.freeMemory -> Java_java_lang_Runtime_freeMemory [JNI]
+io.netty.internal.tcnative.Library.aprMajorVersion: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.writeBytes -> Java_java_io_RandomAccessFile_writeBytes [JNI]
+jdk.internal.misc.Unsafe.loadFence: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.asin -> Java_java_lang_StrictMath_asin [JNI]
+io.netty.internal.tcnative.SSLContext.setCertificateCallback: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantRead: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecryptCertSignature: NOT_FOUND_IN_LIBS
+org.xerial.snappy.BitShuffleNative.unshuffle: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.deflateBytesBytes -> Java_java_util_zip_Deflater_deflateBytesBytes [JNI]
+libzip.so:java.util.zip.Inflater.inflateBytesBytes -> Java_java_util_zip_Inflater_inflateBytesBytes [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateFreely: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.setOptions: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvAddress -> netty_unix_socket_recvAddress [NETTY]
+libjava.so:java.lang.StrictMath.log1p -> Java_java_lang_StrictMath_log1p [JNI]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToVerifyLeafSignature: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getModifiers -> JVM_GetClassModifiers [JVM]
+jdk.internal.misc.Unsafe.allocateMemory0: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.tanh -> Java_java_lang_StrictMath_tanh [JNI]
+io.netty.internal.tcnative.SSLSession.getTime: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertSignatureFailure: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionBoth: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnspecified: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getPeerCertChain: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.objectFieldOffset0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSL.getTime: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionHits: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEAGAIN -> netty_unix_errors_errnoEAGAIN [NETTY_FUZZY]
+libjava.so:jdk.internal.reflect.ConstantPool.getClassAt0 -> Java_jdk_internal_reflect_ConstantPool_getClassAt0 [JNI]
+java.lang.ClassLoader.findBuiltinLib: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.SSLContext.sessionAccept: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.shouldBeInitialized0: NOT_FOUND_IN_LIBS
+libjava.so:java.util.TimeZone.getSystemTimeZoneID -> Java_java_util_TimeZone_getSystemTimeZoneID [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEISCONN -> netty_unix_errors_errorEISCONN [NETTY_FUZZY]
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrAkidIssuerSerialMismatch: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.start0 -> JVM_StartThread [JVM]
+io.netty.internal.tcnative.SSL.getSession: NOT_FOUND_IN_LIBS
+java.lang.Class.getDeclaredFields0: NOT_FOUND_IN_LIBS
+io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorSSL: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.localAddress -> netty_unix_socket_localAddress [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getIntOpt -> netty_unix_socket_getIntOpt [NETTY]
+libjava.so:java.io.RandomAccessFile.setLength -> Java_java_io_RandomAccessFile_setLength [JNI]
+io.netty.internal.tcnative.SSL.setTlsExtHostName0: NOT_FOUND_IN_LIBS

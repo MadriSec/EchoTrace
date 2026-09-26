@@ -1,0 +1,43 @@
+FROM eclipse-temurin:8-jre-jammy
+
+ARG STORM_VERSION=2.4.0
+ARG STORM_DIST_URL=https://archive.apache.org/dist/storm/apache-storm-${STORM_VERSION}/apache-storm-${STORM_VERSION}.tar.gz
+
+ENV STORM_HOME=/opt/storm \
+    STORM_CONF_DIR=/opt/storm/conf \
+    STORM_LOCAL_DIR=/var/lib/storm \
+    PATH=/opt/storm/bin:$PATH
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates curl gosu python3 tar tini \
+    && ln -sf /usr/bin/python3 /usr/local/bin/python \
+    && curl -fSL "${STORM_DIST_URL}" -o /tmp/apache-storm.tar.gz \
+    && mkdir -p "${STORM_HOME}" "${STORM_LOCAL_DIR}" \
+    && tar -xzf /tmp/apache-storm.tar.gz -C "${STORM_HOME}" --strip-components=1 \
+    && rm /tmp/apache-storm.tar.gz \
+    && groupadd -r storm \
+    && useradd -r -g storm -d "${STORM_LOCAL_DIR}" -s /usr/sbin/nologin storm \
+    && chown -R storm:storm "${STORM_HOME}" "${STORM_LOCAL_DIR}" \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN set -eux; \
+    { \
+      echo "storm.zookeeper.servers:"; \
+      echo "  - \"zookeeper\""; \
+      echo "nimbus.seeds: [\"nimbus\"]"; \
+      echo "storm.local.dir: \"${STORM_LOCAL_DIR}\""; \
+      echo "supervisor.slots.ports:"; \
+      echo "  - 6700"; \
+      echo "  - 6701"; \
+      echo "  - 6702"; \
+      echo "  - 6703"; \
+      echo "ui.port: 8080"; \
+    } > "${STORM_CONF_DIR}/storm.yaml" \
+    && chown storm:storm "${STORM_CONF_DIR}/storm.yaml"
+
+WORKDIR ${STORM_HOME}
+
+EXPOSE 6627 8080 6700 6701 6702 6703
+
+ENTRYPOINT ["tini", "--", "gosu", "storm", "storm"]
+CMD ["version"]

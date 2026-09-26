@@ -1,0 +1,23 @@
+=== Skipped Methods (VerifyError/Exceptions) ===
+Format: methodSig | exceptionType | message
+
+<net.openhft.affinity.AffinityLock: void <clinit>()> | VerifyError | Cannot inherit from final class
+<org.apache.cassandra.transport.CBUtil: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.datastax.shaded.netty.buffer.ByteBufUtil: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.datastax.shaded.netty.handler.ssl.OpenSsl: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.datastax.shaded.netty.handler.ssl.JdkAlpnApplicationProtocolNegotiator: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.datastax.shaded.netty.handler.ssl.util.BouncyCastleSelfSignedCertGenerator: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.util.concurrent.AggregateFutureState: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.util.concurrent.AbstractFuture: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.io.Closer: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.hash.LongAddables: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.hash.LittleEndianByteArray: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.google.common.cache.LongAddables: void <clinit>()> | VerifyError | Cannot inherit from final class
+<com.kenai.jffi.PageManager$SingletonHolder: void <clinit>()> | VerifyError | Cannot inherit from final class
+<io.netty.buffer.ByteBufUtil: void <clinit>()> | VerifyError | Cannot inherit from final class
+<io.netty.handler.ssl.OpenSsl: void <clinit>()> | VerifyError | Cannot inherit from final class
+<io.netty.handler.ssl.JdkAlpnApplicationProtocolNegotiator: void <clinit>()> | VerifyError | Cannot inherit from final class
+<io.netty.handler.proxy.Socks5ProxyHandler: void <clinit>()> | VerifyError | Cannot inherit from final class
+<org.caffinitas.ohc.linked.Uns: void <clinit>()> | VerifyError | Cannot inherit from final class
+<org.caffinitas.ohc.chunked.Uns: void <clinit>()> | VerifyError | Cannot inherit from final class
+<net.openhft.posix.internal.PosixAPIHolder: void <clinit>()> | VerifyError | Cannot inherit from final class

@@ -1,0 +1,20 @@
+=== JNA Direct Mapping Hits ===
+Format: methodSig | lib | symbol | jar
+
+<org.apache.cassandra.utils.NativeLibraryLinux: int posix_fadvise(int,long,int,int)> | c | posix_fadvise | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: long getpid()> | c | getpid | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: com.sun.jna.Pointer strerror(int)> | c | strerror | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int close(int)> | c | close | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int open(java.lang.String,int)> | c | open | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int fsync(int)> | c | fsync | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int fcntl(int,int,long)> | c | fcntl | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int munlockall()> | c | munlockall | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryLinux: int mlockall(int)> | c | mlockall | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: long getpid()> | c | getpid | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int munlockall()> | c | munlockall | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int close(int)> | c | close | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: com.sun.jna.Pointer strerror(int)> | c | strerror | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int mlockall(int)> | c | mlockall | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int fsync(int)> | c | fsync | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int open(java.lang.String,int)> | c | open | apache-cassandra-5.0.6.jar
+<org.apache.cassandra.utils.NativeLibraryDarwin: int fcntl(int,int,long)> | c | fcntl | apache-cassandra-5.0.6.jar

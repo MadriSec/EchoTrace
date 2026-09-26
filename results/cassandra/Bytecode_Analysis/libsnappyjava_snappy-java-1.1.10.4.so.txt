@@ -1,0 +1,3 @@
+Java_org_xerial_snappy_SnappyNative_arrayCopy
+Java_org_xerial_snappy_SnappyNative_maxCompressedLength
+Java_org_xerial_snappy_SnappyNative_nativeLibraryVersion

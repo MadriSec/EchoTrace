@@ -1,0 +1,6 @@
+bash
+dirname
+runc
+uname
+/usr/bin/env
+/usr/java/openjdk-14/bin/java

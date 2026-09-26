@@ -1,0 +1,14 @@
+JVM_AssertionStatusDirectives
+JVM_CurrentTimeMillis
+JVM_GetClassModifiers
+JVM_Interrupt
+JVM_IsArrayClass
+JVM_IsInterface
+JVM_IsPrimitiveClass
+JVM_NanoTime
+JVM_ResumeThread
+JVM_SetThreadPriority
+JVM_Sleep
+JVM_StartThread
+JVM_SuspendThread
+JVM_Yield

@@ -1,0 +1,4 @@
+[submodule "SysPartCode"]
+	path = SysPartCode
+	url = https://github.com/vidyalakshmir/SysPartCode.git
+	branch = optimizations

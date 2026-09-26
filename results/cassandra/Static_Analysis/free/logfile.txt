@@ -1,0 +1,6 @@
+
+Path to exit:
+  _exit_eac00 - [syscall]-> exit
+
+Path to exit_group:
+  _exit_eac00 - [syscall]-> exit_group

@@ -1,0 +1,8 @@
+/bin/sh
+/usr/bin/date
+/usr/bin/expr
+/usr/bin/grep
+/usr/sbin/runc
+/usr/bin/sed
+/usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/java
+/usr/bin/whoami

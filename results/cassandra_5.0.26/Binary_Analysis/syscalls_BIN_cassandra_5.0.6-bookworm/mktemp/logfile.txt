@@ -1,0 +1,204 @@
+
+Path to exit:
+  _exit_d43e0 - [syscall]-> exit
+
+Path to exit_group:
+  _exit_d43e0 - [syscall]-> exit_group
+
+Path to lseek:
+  lseek_f83d0 - [syscall]-> lseek
+
+Path to openat:
+  open_f7fb0 - [syscall]-> openat
+
+Path to close:
+  close_f89d0 - [syscall]-> close
+
+Path to clock_gettime:
+  clock_gettime_cf420 - [syscall]-> clock_gettime
+
+Path to mkdir:
+  mkdir_f7f20 - [syscall]-> mkdir
+
+Path to getrandom:
+  getrandom_3f180 - [syscall]-> getrandom
+
+Path to rt_sigprocmask:
+  abort_2639f - [syscall]-> rt_sigprocmask
+
+Path to futex:
+  setlocale_32270 - [DIRECT]-> pthread_rwlock_wrlock_8f260
+  pthread_rwlock_wrlock_8f260 - [syscall]-> futex
+
+Path to writev:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [syscall]-> writev
+
+Path to unlink:
+  remove_58a40 - [DIRECT]-> unlink_f9b00
+  unlink_f9b00 - [syscall]-> unlink
+
+Path to rmdir:
+  remove_58a40 - [DIRECT]-> rmdir_f9b60
+  rmdir_f9b60 - [syscall]-> rmdir
+
+Path to newfstatat:
+  lstat_f7830 - [DIRECT]-> fstatat_f7850
+  fstatat_f7850 - [syscall]-> newfstatat
+
+Path to mremap:
+  realloc_99120 - [DIRECT]-> mremap_1099c0
+  mremap_1099c0 - [syscall]-> mremap
+
+Path to madvise:
+  realloc_99120 - [DIRECT]-> madvise_101af0
+  madvise_101af0 - [syscall]-> madvise
+
+Path to mmap:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> mmap_101990
+  mmap_101990 - [syscall]-> mmap
+
+Path to munmap:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [DIRECT]-> munmap_1019f0
+  munmap_1019f0 - [syscall]-> munmap
+
+Path to read:
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __read_nocancel_fd0f0
+  __read_nocancel_fd0f0 - [syscall]-> read
+
+Path to getcwd:
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [syscall]-> getcwd
+
+Path to rt_sigaction:
+  abort_2639f - [DIRECT]-> sigaction_3c010
+  sigaction_3c010 - [DIRECT]-> __libc_sigaction_3c060
+  __libc_sigaction_3c060 - [syscall]-> rt_sigaction
+
+Path to getdents64:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> getdents64_d0030
+  getdents64_d0030 - [syscall]-> getdents64
+
+Path to pread64:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> __pread64_nocancel_fd120
+  __pread64_nocancel_fd120 - [syscall]-> pread64
+
+Path to mprotect:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> mprotect_101a20
+  mprotect_101a20 - [syscall]-> mprotect
+
+Path to sched_getaffinity:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x957a0_957a0
+  fuzzyfunc-0x957a0_957a0 - [DIRECT]-> get_nprocs_104330
+  get_nprocs_104330 - [DIRECT]-> fuzzyfunc-0x1042b0_1042b0
+  fuzzyfunc-0x1042b0_1042b0 - [syscall]-> sched_getaffinity
+
+Path to write:
+  mbrtowc_b17c0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> fuzzyfunc-0x34d20_34d20
+  fuzzyfunc-0x34d20_34d20 - [DIRECT]-> write_f8330
+  write_f8330 - [syscall]-> write
+
+Path to tgkill:
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> tgkill
+
+Path to gettid:
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> gettid
+
+Path to prlimit64:
+  setlocale_32270 - [DIRECT]-> fuzzyfunc-0x32860_32860
+  fuzzyfunc-0x32860_32860 - [DIRECT]-> fuzzyfunc-0x337f0_337f0
+  fuzzyfunc-0x337f0_337f0 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> getrlimit_fd7d0
+  getrlimit_fd7d0 - [syscall]-> prlimit64
+
+Path to fcntl:
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fdopendir_d03b0
+  fdopendir_d03b0 - [DIRECT]-> fuzzyfunc-0xfce80_fce80
+  fuzzyfunc-0xfce80_fce80 - [syscall]-> fcntl
+
+Path to getpid:
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [DIRECT]-> getpid_d54e0
+  getpid_d54e0 - [syscall]-> getpid
+
+Path to sysinfo:
+  setlocale_32270 - [DIRECT]-> fuzzyfunc-0x32860_32860
+  fuzzyfunc-0x32860_32860 - [DIRECT]-> fuzzyfunc-0x337f0_337f0
+  fuzzyfunc-0x337f0_337f0 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> get_avphys_pages_104440
+  get_avphys_pages_104440 - [DIRECT]-> sysinfo_10a0b0
+  sysinfo_10a0b0 - [syscall]-> sysinfo
+
+Path to brk:
+  calloc_996d0 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> __default_morecore_96030
+  __default_morecore_96030 - [DIRECT]-> sbrk_fdc70
+  sbrk_fdc70 - [DIRECT]-> brk_fdc30
+  brk_fdc30 - [syscall]-> brk
+
+Path to sched_getparam:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getparam_edf80
+  sched_getparam_edf80 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getscheduler_edfe0
+  sched_getscheduler_edfe0 - [syscall]-> sched_getscheduler
+
+Path to sched_setscheduler:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_setscheduler_edfb0
+  sched_setscheduler_edfb0 - [syscall]-> sched_setscheduler
+
+Path to sched_get_priority_max:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_max_ee040
+  sched_get_priority_max_ee040 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  setlocale_32270 - [INDIRECT]-> fuzzyfunc-0x7fc10_7fc10
+  fuzzyfunc-0x7fc10_7fc10 - [DIRECT]-> fuzzyfunc-0x14ec30_14ec30
+  fuzzyfunc-0x14ec30_14ec30 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_min_ee070
+  sched_get_priority_min_ee070 - [syscall]-> sched_get_priority_min

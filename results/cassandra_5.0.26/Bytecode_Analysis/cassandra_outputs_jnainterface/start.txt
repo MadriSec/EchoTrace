@@ -1,0 +1,7 @@
+getpid
+sched_setaffinity
+sched_getcpu
+syscall
+uname
+sched_getaffinity
+pthread_self

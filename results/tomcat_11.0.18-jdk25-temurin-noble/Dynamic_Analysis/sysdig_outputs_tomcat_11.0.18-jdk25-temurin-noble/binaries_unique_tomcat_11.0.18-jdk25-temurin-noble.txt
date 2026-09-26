@@ -1,0 +1,6 @@
+bash
+dirname
+/opt/java/openjdk/bin/java
+runc
+uname
+/usr/bin/env

@@ -1,0 +1,1635 @@
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.timerFd -> netty_epoll_native_timerFd [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.isReuseAddress: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putDouble: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putShortVolatile: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evError: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putByte: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketStreamFd -> netty_unix_socket_newSocketStreamFd [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpMd5SigMaxKeyLen -> netty_epoll_native_tcpMd5SigMaxKeyLen [NETTY_FUZZY]
+com.kenai.jffi.Foreign.copyMemoryChecked: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.ssizeMax -> netty_unix_limits_ssizeMax [NETTY_FUZZY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.updateNativeByteBuffer -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_updateNativeByteBuffer [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheNoInternalStore -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSessCacheNoInternalStore [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlAdd0 -> netty_epoll_native_epollCtlAdd0 [NETTY]
+com.kenai.jffi.Foreign.pageSize: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getIntVolatile: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.disableOcsp -> netty_internal_tcnative_SSLContext_disableOcsp [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpHmac.getContextSize -> Java_com_amazon_corretto_crypto_provider_EvpHmac_getContextSize [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.recommendedCOutSize -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_recommendedCOutSize [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertificateChainBio -> netty_internal_tcnative_SSLContext_setCertificateChainBio [NETTY]
+io.netty.channel.kqueue.Native.keventAddUserEvent: NOT_FOUND_IN_LIBS
+org.apache.cassandra.utils.NativeLibraryLinux.getpid: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errChecksumWrong -> Java_com_github_luben_zstd_Zstd_errChecksumWrong [JNI]
+com.kenai.jffi.Foreign.putByteArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCreate -> netty_epoll_native_epollCreate [NETTY]
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.LZ4_decompress_fast -> Java_net_jpountz_lz4_LZ4JNI_LZ4_1decompress_1fast [JNI]
+com.kenai.jffi.Foreign.putByteArray: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReusePort -> netty_unix_socket_setReusePort [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpInfo -> netty_epoll_linuxsocket_getTcpInfo [NETTY]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.connectResumeOnReadWrite: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.FileInfo.getTypeString -> Java_org_hyperic_sigar_FileInfo_getTypeString [JNI]
+org.hyperic.sigar.win32.EventLog.openlog: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnnestedResource -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnnestedResource [NETTY]
+org.hyperic.sigar.win32.Pdh.pdhConnectMachine: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getFloat: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioFlushByteBuffer -> netty_internal_tcnative_SSL_bioFlushByteBuffer [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.getSoLinger: NOT_FOUND_IN_LIBS
+sun.java2d.pipe.ShapeSpanIterator.getPathBox: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getMode -> netty_internal_tcnative_SSLContext_getMode [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.send -> netty_unix_socket_send [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpDeferAccept: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrExcludedViolation -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrExcludedViolation [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.sizeofEpollEvent -> netty_epoll_native_sizeofEpollEvent [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.CpuPerc.gather -> Java_org_hyperic_sigar_CpuPerc_gather [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setIpRecvOrigDestAddr: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI3NoErrno: NOT_FOUND_IN_LIBS
+org.apache.cassandra.utils.NativeLibraryLinux.close: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpDeferAccept: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcUtils.getCurveNameFromEncoded -> Java_com_amazon_corretto_crypto_provider_EcUtils_getCurveNameFromEncoded [JNI]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32_digest -> Java_net_jpountz_xxhash_XXHashJNI_XXH32_1digest [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEPIPE: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putByteChecked: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.indexOf -> Java_com_sun_jna_Native_indexOf [JNI]
+jdk.internal.misc.Unsafe.getFloatVolatile: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getSslCtx -> netty_internal_tcnative_SSLContext_getSslCtx [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEAGAIN: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferDecompressingStreamNoFinalizer.decompressStreamNative -> Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_decompressStreamNative [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.FileSystemUsage.gather -> Java_org_hyperic_sigar_FileSystemUsage_gather [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOTCONN: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getDouble: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.staticFieldBase0: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.trainFromBuffer0 -> Java_com_github_luben_zstd_Zstd_trainFromBuffer0 [JNI]
+java.io.ObjectOutputStream.floatsToBytes: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.sin -> Java_java_lang_StrictMath_sin [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingRecvmmsg -> netty_epoll_native_isSupportingRecvmmsg [NETTY_FUZZY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.removeAllSnapshots -> Java_org_hyperic_sigar_vmware_VM_removeAllSnapshots [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.freeCStream -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_freeCStream [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.write -> netty_unix_filedescriptor_write [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getTask -> netty_internal_tcnative_SSL_getTask [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNetListenAddress -> Java_org_hyperic_sigar_Sigar_getNetListenAddress [JNI]
+org.hyperic.sigar.win32.Service.QueryServiceConfig: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.set -> Java_java_lang_reflect_Array_set [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getResource -> Java_org_hyperic_sigar_vmware_VM_getResource [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegOpenKey: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setMode -> netty_internal_tcnative_SSL_setMode [NETTY]
+com.kenai.jffi.Foreign.putDoubleChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.readFromSSL -> netty_internal_tcnative_SSL_readFromSSL [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.initContext -> Java_com_amazon_corretto_crypto_provider_MD5Spi_initContext [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.flushStream -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_flushStream [JNI]
+libjava.so:java.lang.Runtime.totalMemory -> Java_java_lang_Runtime_totalMemory [JNI]
+libjnidispatch.so:com.sun.jna.Native.setMemory -> Java_com_sun_jna_Native_setMemory [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxEncryptedLength -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslMaxEncryptedLength [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrApplicationVerification -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrApplicationVerification [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.setCompleter -> Java_org_hyperic_sigar_util_Getline_setCompleter [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setKeyLogCallback -> netty_internal_tcnative_SSLContext_setKeyLogCallback [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.localDomainSocketAddress -> netty_unix_socket_localDomainSocketAddress [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.DirStat.gather -> Java_org_hyperic_sigar_DirStat_gather [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.NetInterfaceConfig.gather -> Java_org_hyperic_sigar_NetInterfaceConfig_gather [JNI]
+libjava.so:java.io.RandomAccessFile.seek0 -> Java_java_io_RandomAccessFile_seek0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.newSSL -> netty_internal_tcnative_SSL_newSSL [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKey.getDerEncodedParams -> Java_com_amazon_corretto_crypto_provider_EvpKey_getDerEncodedParams [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.free -> netty_internal_tcnative_SSLSession_free [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Buffer.size -> netty_internal_tcnative_Buffer_size [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSessionCacheSize -> netty_internal_tcnative_SSLContext_setSessionCacheSize [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpRecvOrigDestAddr -> netty_epoll_linuxsocket_setIpRecvOrigDestAddr [NETTY]
+com.kenai.jffi.Foreign.putLongArray: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpFreeBind -> netty_epoll_linuxsocket_setIpFreeBind [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.isReusePort: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetCrl -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToGetCrl [NETTY]
+com.kenai.jffi.Foreign.getDoubleArray: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.currentThread -> JVM_CurrentThread [JVM]
+com.kenai.jffi.Foreign.dlsym: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getSessionId -> netty_internal_tcnative_SSL_getSessionId [NETTY]
+org.hyperic.sigar.FileSystem.gather: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReuseAddress -> netty_unix_socket_setReuseAddress [NETTY]
+com.kenai.jffi.Foreign.getVersion: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getPid -> Java_org_hyperic_sigar_Sigar_getPid [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslStConnect -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslStConnect [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeEnableFalseStart -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslModeEnableFalseStart [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NetConnection.getStateString -> Java_org_hyperic_sigar_NetConnection_getStateString [JNI]
+jdk.internal.misc.Unsafe.copyMemory0: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.getInt -> Java_com_sun_jna_Native_getInt [JNI]
+com.kenai.jffi.Foreign.invokeI6NoErrno: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.loadFastDictDecompress -> Java_com_github_luben_zstd_Zstd_loadFastDictDecompress [JNI]
+sun.java2d.pipe.ShapeSpanIterator.addSegment: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.loadFastDictCompress -> Java_com_github_luben_zstd_Zstd_loadFastDictCompress [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.fastDigest -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_fastDigest [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedExtensionFeature -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnsupportedExtensionFeature [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.leaveSsmGroup: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.LimitsStaticallyReferencedJniMethods.iovMax: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getLong: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.defineClass: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueEventArray.evSet: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.decompressDirectByteBufferStream0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferStream0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setKeyMaterial -> netty_internal_tcnative_SSL_setKeyMaterial [NETTY]
+libzip.so:java.util.zip.Inflater.reset -> Java_java_util_zip_Inflater_reset [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.finish -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_finish [JNI]
+com.kenai.jffi.Foreign.getDouble: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.forName0 -> Java_java_lang_Class_forName0 [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isTcpQuickAck: NOT_FOUND_IN_LIBS
+org.xerial.snappy.SnappyNative.rawCompress: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Buffer.addressSize0 -> netty_unix_buffer_addressSize0 [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getConfig -> Java_org_hyperic_sigar_vmware_VM_getConfig [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.initCStreamWithFastDict -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithFastDict [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegDeleteValue: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidCurve -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBInvalidCurve [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.newSocketDomainDgramFd: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getDictIdFromFrameBuffer -> Java_com_github_luben_zstd_Zstd_getDictIdFromFrameBuffer [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isIPv6Preferred0 -> netty_unix_socket_isIPv6Preferred0 [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.leaveGroup: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpFreeBind -> netty_epoll_linuxsocket_isIpFreeBind [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCrlLastUpdateField -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrErrorInCrlLastUpdateField [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isTcpCork: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.updateContextByteArray -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_updateContextByteArray [JNI]
+com.kenai.jffi.Foreign.setLastError: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.getContextSize -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_getContextSize [JNI]
+com.datastax.shaded.netty.channel.unix.LimitsStaticallyReferencedJniMethods.sizeOfjlong: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcEnv.getAll -> Java_org_hyperic_sigar_ProcEnv_getAll [JNI]
+com.kenai.jffi.Foreign.getSaveErrnoCtxFunction: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaPrivateKey.encodeRsaPrivateKey -> Java_com_amazon_corretto_crypto_provider_EvpRsaPrivateKey_encodeRsaPrivateKey [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.kqueue.BsdSocket.getPeerCredentials -> netty_epoll_linuxsocket_getPeerCredentials [NETTY_FUZZY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionWorkers -> Java_com_github_luben_zstd_Zstd_setCompressionWorkers [JNI]
+io.netty.channel.kqueue.BsdSocket.connectx: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getDoubleVolatile: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.joinSsmGroup: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesXtsSpi.decSameBuffer -> Java_com_amazon_corretto_crypto_provider_AesXtsSpi_decSameBuffer [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.compressStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_compressStream [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionMinMatch -> Java_com_github_luben_zstd_Zstd_setCompressionMinMatch [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorSyscall -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorSyscall [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.init -> Java_com_github_luben_zstd_ZstdCompressCtx_init [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.releaseContext -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_releaseContext [JNI]
+com.kenai.jffi.Foreign.getIntArray: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.Native.offsetofKEventIdent: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.loadDDict0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDict0 [JNI]
+com.kenai.jffi.Foreign.invokeL3NoErrno: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.pageSize: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getZeroTerminatedByteArrayChecked: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcUtils.getCurveNames -> Java_com_amazon_corretto_crypto_provider_EcUtils_getCurveNames [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.NfsServerV2.gather -> Java_org_hyperic_sigar_NfsServerV2_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.disconnect -> netty_unix_socket_disconnect [NETTY]
+com.datastax.shaded.netty.channel.unix.LimitsStaticallyReferencedJniMethods.ssizeMax: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI0NoErrno: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.LZ4_compressBound -> Java_net_jpountz_lz4_LZ4JNI_LZ4_1compressBound [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslReceivedShutdown -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslReceivedShutdown [NETTY]
+com.kenai.jffi.Foreign.getShort: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcCredName.gather -> Java_org_hyperic_sigar_ProcCredName_gather [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlHasExpired -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCrlHasExpired [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.getHashSize -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_getHashSize [JNI]
+libzip.so:java.util.zip.Inflater.inflateBufferBytes -> Java_java_util_zip_Inflater_inflateBufferBytes [JNI]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.writeAddress: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Service.ChangeServiceDescription: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.setGuestInfo -> Java_org_hyperic_sigar_vmware_VM_setGuestInfo [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isReusePort -> netty_unix_socket_isReusePort [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Utils.getEvpMdFromName -> Java_com_amazon_corretto_crypto_provider_Utils_getEvpMdFromName [JNI]
+com.kenai.jffi.Foreign.lookupBuiltinType: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.RegistryKey.RegFlushKey: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ptql.SigarProcessQuery.findProcess -> Java_org_hyperic_sigar_ptql_SigarProcessQuery_findProcess [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setNumTickets -> netty_internal_tcnative_SSLContext_setNumTickets [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getSessionCacheSize -> netty_internal_tcnative_SSLContext_getSessionCacheSize [NETTY]
+com.kenai.jffi.Foreign.invokeN4O4: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN4O3: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.freeDStream -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_freeDStream [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.recvFrom: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN4O2: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getFloatArray: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN4O1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.strError -> netty_unix_errors_strError [NETTY_FUZZY]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64 -> Java_net_jpountz_xxhash_XXHashJNI_XXH64 [JNI]
+org.hyperic.sigar.win32.Pdh.pdhLookupPerfIndex: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getCpuListNative -> Java_org_hyperic_sigar_Sigar_getCpuListNative [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.iovMax -> netty_unix_limits_iovMax [NETTY_FUZZY]
+libzip.so:java.util.zip.Inflater.init -> Java_java_util_zip_Inflater_init [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.isError -> Java_com_github_luben_zstd_Zstd_isError [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errDstSizeTooSmall -> Java_com_github_luben_zstd_Zstd_errDstSizeTooSmall [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.epollBusyWait0: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.reset -> Java_java_util_zip_Deflater_reset [JNI]
+libjava.so:java.lang.StrictMath.log10 -> Java_java_lang_StrictMath_log10 [JNI]
+com.kenai.jffi.Foreign.memcpyChecked: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.gc -> Java_java_lang_Runtime_gc [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagNoPartialWildCards -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509CheckFlagNoPartialWildCards [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedConstraintSyntax -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnsupportedConstraintSyntax [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.setBroadcast: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferDecompressingStreamNoFinalizer.createDStreamNative -> Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_createDStreamNative [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setInterface -> netty_epoll_linuxsocket_setInterface [NETTY]
+org.hyperic.sigar.win32.Pdh.pdhGetInstances: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepIntvl -> netty_epoll_linuxsocket_getTcpKeepIntvl [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.revertToSnapshot -> Java_org_hyperic_sigar_vmware_VM_revertToSnapshot [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpNotSentLowAt: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSniHostnameMatcher -> netty_internal_tcnative_SSLContext_setSniHostnameMatcher [NETTY]
+libjava.so:java.io.FileOutputStream.open0 -> Java_java_io_FileOutputStream_open0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEINPROGRESS -> netty_unix_errors_errnoEINPROGRESS [NETTY_FUZZY]
+libjava.so:java.lang.reflect.Array.setDouble -> Java_java_lang_reflect_Array_setDouble [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha512 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPkcsSha512 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoCertSign -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrKeyUsageNoCertSign [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagAlwaysCheckSubject -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509CheckFlagAlwaysCheckSubject [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setUseTasks -> netty_internal_tcnative_SSLContext_setUseTasks [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxRecordLength -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslMaxRecordLength [NETTY]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evfiltWrite: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.EventLog.readlog: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferDecompressingStreamNoFinalizer.recommendedDOutSizeNative -> Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionJobSize -> Java_com_github_luben_zstd_Zstd_setCompressionJobSize [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getSessionCacheTimeout -> netty_internal_tcnative_SSLContext_getSessionCacheTimeout [NETTY]
+java.io.ObjectInputStream.bytesToFloats: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errFrameParameterUnsupported -> Java_com_github_luben_zstd_Zstd_errFrameParameterUnsupported [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setKeepAlive -> netty_unix_socket_setKeepAlive [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.clearOptions -> netty_internal_tcnative_SSLContext_clearOptions [NETTY]
+com.kenai.jffi.Foreign.strlen: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.isSessionReused -> netty_internal_tcnative_SSL_isSessionReused [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorNone -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorNone [NETTY]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32 -> Java_net_jpountz_xxhash_XXHashJNI_XXH32 [JNI]
+org.apache.cassandra.utils.NativeLibraryLinux.mlockall: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.updateContextByteArray -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_updateContextByteArray [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.kqueue.BsdSocket.setTcpFastOpen -> netty_epoll_linuxsocket_setTcpFastOpen [NETTY_FUZZY]
+libjnidispatch.so:com.sun.jna.Native.getChar -> Java_com_sun_jna_Native_getChar [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferDecompressingStreamNoFinalizer.initDStreamNative -> Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_initDStreamNative [JNI]
+com.kenai.jffi.Foreign.getLong: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.reallocateMemory0: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.bind: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetIssuerCert -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToGetIssuerCert [NETTY]
+libjava.so:java.lang.Shutdown.halt0 -> Java_java_lang_Shutdown_halt0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionNumber -> netty_internal_tcnative_SSLContext_sessionNumber [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaPkcsSha1 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignEcdsaPkcsSha1 [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaKey.getModulus -> Java_com_amazon_corretto_crypto_provider_EvpRsaKey_getModulus [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.joinSsmGroup -> netty_epoll_linuxsocket_joinSsmGroup [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.encryptUpdateAAD -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_encryptUpdateAAD [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getHandshakeCount -> netty_internal_tcnative_SSL_getHandshakeCount [NETTY]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.init -> Java_net_jpountz_xxhash_XXHashJNI_init [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidSignatureAlgorithm -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBInvalidSignatureAlgorithm [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.DiskUsage.gather -> Java_org_hyperic_sigar_DiskUsage_gather [JNI]
+com.kenai.jffi.Foreign.longDoubleToDouble: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha512 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPssRsaeSha512 [NETTY]
+com.kenai.jffi.Foreign.unregisterNatives: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.leaveGroup -> netty_epoll_linuxsocket_leaveGroup [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.isIPv6Preferred0: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getLongChecked: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSoLinger -> netty_unix_socket_getSoLinger [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorZeroReturn -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorZeroReturn [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEWOULDBLOCK: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getErrorName -> Java_com_github_luben_zstd_Zstd_getErrorName [JNI]
+io.netty.channel.kqueue.BsdSocket.getAcceptFilter: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpQuickAck: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.open -> Java_org_hyperic_sigar_Sigar_open [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evAdd: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv12 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoTLSv12 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv13 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoTLSv13 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv11 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoTLSv11 [NETTY]
+libjnidispatch.so:com.sun.jna.Native.invokeObject -> Java_com_sun_jna_Native_invokeObject [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getOptions -> netty_internal_tcnative_SSL_getOptions [NETTY]
+libzip.so:java.util.zip.Adler32.updateBytes -> Java_java_util_zip_Adler32_updateBytes [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.decompressUnsafe -> Java_com_github_luben_zstd_Zstd_decompressUnsafe [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNetInterfaceList -> Java_org_hyperic_sigar_Sigar_getNetInterfaceList [JNI]
+libjava.so:java.lang.System.identityHashCode -> Java_java_lang_System_identityHashCode [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.decompressDirectByteBufferToByteArray0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferToByteArray0 [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getGuestInfo -> Java_org_hyperic_sigar_vmware_VM_getGuestInfo [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.shutdown: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.connectVSock -> netty_epoll_linuxsocket_connectVSock [NETTY]
+libjava.so:jdk.internal.misc.Signal.handle0 -> Java_jdk_internal_misc_Signal_handle0 [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.sendFile: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Pdh.pdhAddCounter: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.LZ4_compressHC -> Java_net_jpountz_lz4_LZ4JNI_LZ4_1compressHC [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getDictIdFromDictDirect -> Java_com_github_luben_zstd_Zstd_getDictIdFromDictDirect [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.localDomainSocketAddress: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.sendFile -> netty_epoll_linuxsocket_sendFile [NETTY]
+com.kenai.jffi.Foreign.closureMagazineGet: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorECONNREFUSED -> netty_unix_errors_errorECONNREFUSED [NETTY_FUZZY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorECONNREFUSED: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getServicePid -> Java_org_hyperic_sigar_Sigar_getServicePid [JNI]
+com.kenai.jffi.Foreign.getFloatArrayChecked: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Module.addReads0 -> Java_java_lang_Module_addReads0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getMaxWrapOverhead -> netty_internal_tcnative_SSL_getMaxWrapOverhead [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getReceiveBufferSize -> netty_unix_socket_getReceiveBufferSize [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.oneShotDecrypt -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_oneShotDecrypt [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.LibCryptoRng.generate -> Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCACertificateBio -> netty_internal_tcnative_SSLContext_setCACertificateBio [NETTY]
+libjnidispatch.so:com.sun.jna.Native.malloc -> Java_com_sun_jna_Native_malloc [JNI]
+jdk.internal.misc.Unsafe.putCharVolatile: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.RegistryKey.RegEnumValueName: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionConnectRenegotiate -> netty_internal_tcnative_SSLContext_sessionConnectRenegotiate [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoECONNRESET: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollerr -> netty_epoll_native_epollerr [NETTY_FUZZY]
+org.hyperic.sigar.win32.Pdh.validate: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.FileAttrs.gather -> Java_org_hyperic_sigar_FileAttrs_gather [JNI]
+org.hyperic.sigar.win32.MetaBase.MetaBaseOpenSubKeyAbs: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioLengthNonApplication -> netty_internal_tcnative_SSL_bioLengthNonApplication [NETTY]
+libzip.so:java.util.zip.CRC32.updateBytes0 -> Java_java_util_zip_CRC32_updateBytes0 [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.updateNativeByteBuffer -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_updateNativeByteBuffer [JNI]
+jdk.internal.misc.Unsafe.putByte: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.defineAnonymousClass0: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.resolve: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionTargetLength -> Java_com_github_luben_zstd_Zstd_setCompressionTargetLength [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.isSupportingUdpSegment: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.readBytes -> Java_java_io_RandomAccessFile_readBytes [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isTcpNoDelay -> netty_unix_socket_isTcpNoDelay [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesKeyWrapPaddingSpi.wrapKey -> Java_com_amazon_corretto_crypto_provider_AesKeyWrapPaddingSpi_wrapKey [JNI]
+libnet.so:java.net.NetworkInterface.getAll -> Java_java_net_NetworkInterface_getAll [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromDomainSocket -> netty_unix_socket_recvFromDomainSocket [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.searchLogMax -> Java_com_github_luben_zstd_Zstd_searchLogMax [JNI]
+java.io.ObjectInputStream.bytesToDoubles: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertNotYetValid -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertNotYetValid [NETTY]
+com.kenai.jffi.Foreign.invokeArrayReturnLong: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrProxyPathLengthExceeded -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrProxyPathLengthExceeded [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.create -> Java_org_hyperic_sigar_vmware_VM_create [JNI]
+libnet.so:java.net.NetworkInterface.isLoopback0 -> Java_java_net_NetworkInterface_isLoopback0 [JNI]
+jdk.internal.perf.Perf.createLong: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.CRC32.update -> Java_java_util_zip_CRC32_update [JNI]
+libjava.so:java.lang.reflect.Array.getDouble -> Java_java_lang_reflect_Array_getDouble [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.leaveSsmGroup -> netty_epoll_linuxsocket_leaveSsmGroup [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getHeartbeat -> Java_org_hyperic_sigar_vmware_VM_getHeartbeat [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEBADF: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL6NoErrno: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.Native.sizeofKEvent: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getFloat: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.getFrameProgression0 -> Java_com_github_luben_zstd_ZstdCompressCtx_getFrameProgression0 [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKeyFactory.rsa2Evp -> Java_com_amazon_corretto_crypto_provider_EvpKeyFactory_rsa2Evp [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getDictIdFromFrame -> Java_com_github_luben_zstd_Zstd_getDictIdFromFrame [JNI]
+org.hyperic.sigar.Who.gather: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.dlerror: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantWrite -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantWrite [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setCertificateBio -> netty_internal_tcnative_SSL_setCertificateBio [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.newVSockStreamFd -> netty_epoll_linuxsocket_newVSockStreamFd [NETTY]
+com.datastax.shaded.netty.channel.unix.LimitsStaticallyReferencedJniMethods.uioMaxIov: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcCred.gather -> Java_org_hyperic_sigar_ProcCred_gather [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getId -> Java_org_hyperic_sigar_vmware_VM_getId [JNI]
+libsnappyjava_snappy-java-1.1.10.4.so:org.xerial.snappy.SnappyNative.arrayCopy -> Java_org_xerial_snappy_SnappyNative_arrayCopy [JNI]
+jdk.internal.misc.Unsafe.getInt: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.clearError -> netty_internal_tcnative_SSL_clearError [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.loadCDict0 -> Java_com_github_luben_zstd_ZstdCompressCtx_loadCDict0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setMaxCertList -> netty_internal_tcnative_SSLContext_setMaxCertList [NETTY]
+libjvm.so:java.lang.Class.getConstantPool -> JVM_GetClassConstantPool [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setTrafficClass -> netty_unix_socket_setTrafficClass [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTimeToLive: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errDictionaryCorrupted -> Java_com_github_luben_zstd_Zstd_errDictionaryCorrupted [JNI]
+org.apache.cassandra.utils.NativeLibraryDarwin.open: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.maxCompressionLevel -> Java_com_github_luben_zstd_Zstd_maxCompressionLevel [JNI]
+com.kenai.jffi.Foreign.mmap: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isIpRecvOrigDestAddr: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlMod0 -> netty_epoll_native_epollCtlMod0 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.isSupportingUdpSegment -> netty_epoll_native_isSupportingUdpSegment [NETTY]
+com.kenai.jffi.Foreign.putFloatArray: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getGenericSignature0 -> JVM_GetClassSignature [JVM]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setShutdown -> netty_internal_tcnative_SSL_setShutdown [NETTY]
+libjava.so:java.lang.reflect.Array.setChar -> Java_java_lang_reflect_Array_setChar [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Library.aprMajorVersion -> netty_internal_tcnative_Library_aprMajorVersion [NETTY]
+com.kenai.jffi.Foreign.memmoveChecked: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evDisable: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpInfo: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecryptCertSignature -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToDecryptCertSignature [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.freeCStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_freeCStream [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.ssizeMax: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateFreely -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslRenegotiateFreely [NETTY]
+libjnidispatch.so:com.sun.jna.Native.invokeInt -> Java_com_sun_jna_Native_invokeInt [JNI]
+libjava.so:java.lang.StrictMath.log1p -> Java_java_lang_StrictMath_log1p [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpMd5SigMaxKeyLen: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertSignatureFailure -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertSignatureFailure [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpKeepCnt: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getPeerCertChain -> netty_internal_tcnative_SSL_getPeerCertChain [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.loadCDictFast0 -> Java_com_github_luben_zstd_ZstdCompressCtx_loadCDictFast0 [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.kernelVersion: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.objectFieldOffset0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getTime -> netty_internal_tcnative_SSL_getTime [NETTY]
+sun.java2d.pipe.ShapeSpanIterator.pathDone: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.newSocketStreamFd: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.epollCtlMod0: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Pdh.pdhCloseQuery: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrAkidIssuerSerialMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrAkidIssuerSerialMismatch [NETTY]
+libjvm.so:java.lang.Thread.start0 -> JVM_StartThread [JVM]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.finish -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_finish [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errMaxSymbolValueTooSmall -> Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooSmall [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorSSL -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorSSL [NETTY]
+libjava.so:java.io.RandomAccessFile.setLength -> Java_java_io_RandomAccessFile_setLength [JNI]
+com.kenai.jffi.Foreign.invokeArrayReturnInt: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.windowLogMin -> Java_com_github_luben_zstd_Zstd_windowLogMin [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.setLevel0 -> Java_com_github_luben_zstd_ZstdCompressCtx_setLevel0 [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictCompress.free -> Java_com_github_luben_zstd_ZstdDictCompress_free [JNI]
+com.kenai.jffi.Foreign.longDoubleToString: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.Native.offsetofKEventFFlags: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.ConnectParams.destroy -> Java_org_hyperic_sigar_vmware_ConnectParams_destroy [JNI]
+org.hyperic.sigar.win32.Pdh.pdhLookupPerfName: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.VirtualFree: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeArrayO2Int32: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.RsaCipher.cipher -> Java_com_amazon_corretto_crypto_provider_RsaCipher_cipher [JNI]
+java.lang.Thread.isAlive: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.createCStream -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_createCStream [JNI]
+jdk.internal.misc.Unsafe.putInt: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.staticFieldOffset0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheNoInternalLookup -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSessCacheNoInternalLookup [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.listen -> netty_unix_socket_listen [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidNonCa -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrInvalidNonCa [NETTY]
+org.apache.cassandra.utils.NativeLibraryLinux.fcntl: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepIdle -> netty_epoll_linuxsocket_getTcpKeepIdle [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrNoExplicitPolicy -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrNoExplicitPolicy [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.freeBIO -> netty_internal_tcnative_SSL_freeBIO [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isKeepAlive -> netty_unix_socket_isKeepAlive [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.getContextSize -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_getContextSize [JNI]
+libjnidispatch.so:com.sun.jna.Native.getByte -> Java_com_sun_jna_Native_getByte [JNI]
+libjnidispatch.so:com.sun.jna.Native.setInt -> Java_com_sun_jna_Native_setInt [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getFQDN -> Java_org_hyperic_sigar_Sigar_getFQDN [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionCacheFull -> netty_internal_tcnative_SSLContext_sessionCacheFull [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEBADF -> netty_unix_errors_errnoEBADF [NETTY_FUZZY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.compressUnsafe -> Java_com_github_luben_zstd_Zstd_compressUnsafe [JNI]
+software.chronicle.enterprise.internals.impl.NativeAffinity.getProcessId0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionMisses -> netty_internal_tcnative_SSLContext_sessionMisses [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.uioMaxIov -> netty_unix_limits_uioMaxIov [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpRecvOrigDestAddr -> netty_epoll_linuxsocket_isIpRecvOrigDestAddr [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.getHashSize -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_getHashSize [JNI]
+com.kenai.jffi.Foreign.putShort: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setUdpGro -> netty_epoll_linuxsocket_setUdpGro [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSubtreeMinMax -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSubtreeMinMax [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.searchLogMin -> Java_com_github_luben_zstd_Zstd_searchLogMin [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrIpAddressMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrIpAddressMismatch [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesXtsSpi.encSameBuffer -> Java_com_amazon_corretto_crypto_provider_AesXtsSpi_encSameBuffer [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOENT: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.recvmsg0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setMode -> netty_internal_tcnative_SSLContext_setMode [NETTY]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.close: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.sendToAddressDomainSocket: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.fastDigest -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_fastDigest [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignatureRaw.verifyRaw -> Java_com_amazon_corretto_crypto_provider_EvpSignatureRaw_verifyRaw [JNI]
+java.lang.Object.notifyAll: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getClientRandom -> netty_internal_tcnative_SSL_getClientRandom [NETTY]
+org.hyperic.sigar.win32.MetaBase.MetaBaseOpenSubKey: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromAddress -> netty_unix_socket_recvFromAddress [NETTY]
+jdk.internal.misc.Unsafe.getByteVolatile: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.setDictionary -> Java_java_util_zip_Inflater_setDictionary [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.ConnectParams.create -> Java_org_hyperic_sigar_vmware_ConnectParams_create [JNI]
+com.kenai.jffi.Foreign.getTypeAlign: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Service.CreateService: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateOnce -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslRenegotiateOnce [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.encryptUpdate -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_encryptUpdate [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdBufferDecompressingStreamNoFinalizer.recommendedDOutSizeNative -> Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative [JNI]
+java.lang.invoke.MethodHandleNatives.expand: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedConstraintType -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnsupportedConstraintType [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getLastError -> netty_internal_tcnative_SSL_getLastError [NETTY]
+libjvm.so:java.lang.Class.getEnclosingMethod0 -> JVM_GetEnclosingMethodInfo [JVM]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setVerify -> netty_internal_tcnative_SSL_setVerify [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.decompressDirectByteBuffer0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBuffer0 [JNI]
+jdk.internal.misc.Unsafe.getByte: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.Native.offsetofKEventFlags: NOT_FOUND_IN_LIBS
+org.apache.cassandra.utils.NativeLibraryDarwin.fsync: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidVersion -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBInvalidVersion [NETTY]
+io.netty.channel.kqueue.BsdSocket.setTcpNoPush: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.version -> netty_internal_tcnative_SSL_version [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.SigarLog.setLevel -> Java_org_hyperic_sigar_SigarLog_setLevel [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.compressDirectByteBuffer0 -> Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBuffer0 [JNI]
+libjnidispatch.so:com.sun.jna.Native.open -> Java_com_sun_jna_Native_open [JNI]
+com.kenai.jffi.Foreign.putIntArray: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.BsdSocket.getSndLowAt: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.recv: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putZeroTerminatedByteArray: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getToolsLastActive -> Java_org_hyperic_sigar_vmware_VM_getToolsLastActive [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errTableLogTooLarge -> Java_com_github_luben_zstd_Zstd_errTableLogTooLarge [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evClear: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setReceiveBufferSize -> netty_unix_socket_setReceiveBufferSize [NETTY]
+libjava.so:jdk.internal.misc.Signal.findSignal0 -> Java_jdk_internal_misc_Signal_findSignal0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetIssuerCertLocally -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToGetIssuerCertLocally [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.windowLogMax -> Java_com_github_luben_zstd_Zstd_windowLogMax [JNI]
+libjnidispatch.so:com.sun.jna.Native.free -> Java_com_sun_jna_Native_free [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.free -> Java_com_github_luben_zstd_ZstdDecompressCtx_free [JNI]
+com.kenai.jffi.Foreign.invokeArrayO2Int64: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.loadDictCompress -> Java_com_github_luben_zstd_Zstd_loadDictCompress [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSoError -> netty_unix_socket_getSoError [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesKeyWrapPaddingSpi.unwrapKey -> Java_com_amazon_corretto_crypto_provider_AesKeyWrapPaddingSpi_unwrapKey [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evEOF: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setSoBusyPoll -> netty_epoll_linuxsocket_setSoBusyPoll [NETTY]
+org.hyperic.sigar.win32.RegistryKey.RegQueryBufferValue: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setInt -> Java_java_lang_reflect_Array_setInt [JNI]
+libjava.so:java.lang.Runtime.availableProcessors -> Java_java_lang_Runtime_availableProcessors [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.shouldBeSingleUse -> netty_internal_tcnative_SSLSession_shouldBeSingleUse [NETTY]
+libjvm.so:java.lang.Thread.dumpThreads -> JVM_DumpThreads [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.bind -> netty_unix_socket_bind [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NetFlags.getIfFlagsString -> Java_org_hyperic_sigar_NetFlags_getIfFlagsString [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdBufferDecompressingStreamNoFinalizer.freeDStreamNative -> Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_freeDStreamNative [JNI]
+libjnidispatch.so:com.sun.jna.Native.setWideString -> Java_com_sun_jna_Native_setWideString [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.freeSSL -> netty_internal_tcnative_SSL_freeSSL [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpTransparent -> netty_epoll_linuxsocket_setIpTransparent [NETTY]
+org.apache.cassandra.utils.NativeLibraryDarwin.fcntl: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putByteVolatile: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getSigAlgs -> netty_internal_tcnative_SSL_getSigAlgs [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errDictionaryWrong -> Java_com_github_luben_zstd_Zstd_errDictionaryWrong [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.compressBound -> Java_com_github_luben_zstd_Zstd_compressBound [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errStageWrong -> Java_com_github_luben_zstd_Zstd_errStageWrong [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.shutdown -> netty_unix_socket_shutdown [NETTY]
+org.hyperic.sigar.win32.EventLog.getNumberOfRecords: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFdWrite -> netty_epoll_native_eventFdWrite [NETTY]
+libjava.so:java.lang.reflect.Array.setShort -> Java_java_lang_reflect_Array_setShort [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpCork -> netty_epoll_linuxsocket_setTcpCork [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepCnt -> netty_epoll_linuxsocket_setTcpKeepCnt [NETTY]
+com.datastax.shaded.netty.channel.epoll.Native.epollWait0: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcGen.buildEcParams -> Java_com_amazon_corretto_crypto_provider_EcGen_buildEcParams [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getErrorCode -> Java_com_github_luben_zstd_Zstd_getErrorCode [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.updateNativeByteBuffer -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_updateNativeByteBuffer [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isIpTransparent: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionZlib -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_tlsExtCertCompressionZlib [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpKeepCnt -> netty_epoll_linuxsocket_getTcpKeepCnt [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEWOULDBLOCK -> netty_unix_errors_errnoEWOULDBLOCK [NETTY_FUZZY]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.write: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrOutOfMem -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrOutOfMem [NETTY]
+com.kenai.jffi.Foreign.getCharArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Buffer.address -> netty_internal_tcnative_Buffer_address [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSessionCacheTimeout -> netty_internal_tcnative_SSLContext_setSessionCacheTimeout [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setCertificateChainBio -> netty_internal_tcnative_SSL_setCertificateChainBio [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddress -> netty_unix_socket_sendToAddress [NETTY]
+com.kenai.jffi.Foreign.setMemory: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.sendToAddressesDomainSocket: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKey.encodePublicKey -> Java_com_amazon_corretto_crypto_provider_EvpKey_encodePublicKey [JNI]
+jdk.internal.misc.Unsafe.compareAndSetObject: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errDictionaryCreationFailed -> Java_com_github_luben_zstd_Zstd_errDictionaryCreationFailed [JNI]
+libjava.so:jdk.internal.reflect.ConstantPool.getUTF8At0 -> Java_jdk_internal_reflect_ConstantPool_getUTF8At0 [JNI]
+com.kenai.jffi.Foreign.allocObject: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.LimitsStaticallyReferencedJniMethods.udsSunPathSize: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKeyFactory.ec2Evp -> Java_com_amazon_corretto_crypto_provider_EvpKeyFactory_ec2Evp [JNI]
+libjnidispatch.so:com.sun.jna.Native.setFloat -> Java_com_sun_jna_Native_setFloat [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.epollCtlAdd0: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.localAddress: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlSignatureFailure -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCrlSignatureFailure [NETTY]
+com.kenai.jffi.Foreign.putAddressChecked: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN3O1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendAddress -> netty_unix_socket_sendAddress [NETTY]
+com.kenai.jffi.Foreign.invokeN3O3: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN3O2: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.histadd -> Java_org_hyperic_sigar_util_Getline_histadd [JNI]
+org.xerial.snappy.SnappyNative.uncompressedLength: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.kqueue.Native.registerUnix -> netty_epoll_native_registerUnix [NETTY_FUZZY]
+com.datastax.shaded.netty.channel.unix.Socket.setKeepAlive: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoSSLv2 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoSSLv2 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoSSLv3 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoSSLv3 [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.reset0 -> Java_com_github_luben_zstd_ZstdCompressCtx_reset0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantAccept -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantAccept [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.recvFd: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errNoError -> Java_com_github_luben_zstd_Zstd_errNoError [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Loader.isFipsMode -> Java_com_amazon_corretto_crypto_provider_Loader_isFipsMode [JNI]
+org.hyperic.sigar.win32.EventLog.getOldestRecord: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vOK -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vOK [NETTY]
+jdk.internal.misc.Unsafe.putFloatVolatile: NOT_FOUND_IN_LIBS
+com.github.luben.zstd.Zstd.searchLengthMax: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddresses -> netty_unix_socket_sendToAddresses [NETTY]
+com.datastax.shaded.netty.channel.epoll.Native.sizeofEpollEvent: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI5NoErrno: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setByte -> Java_java_lang_reflect_Array_setByte [JNI]
+com.kenai.jffi.Foreign.getByteArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setRenegotiateMode -> netty_internal_tcnative_SSL_setRenegotiateMode [NETTY]
+libjnidispatch.so:com.sun.jna.Native.getWideString -> Java_com_sun_jna_Native_getWideString [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioLengthByteBuffer -> netty_internal_tcnative_SSL_bioLengthByteBuffer [NETTY]
+com.kenai.jffi.Foreign.invokeArrayReturnStruct: NOT_FOUND_IN_LIBS
+java.security.AccessController.doPrivileged: NOT_FOUND_IN_LIBS
+java.io.ObjectOutputStream.doublesToBytes: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getProcArgs -> Java_org_hyperic_sigar_Sigar_getProcArgs [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.writeToSSL -> netty_internal_tcnative_SSL_writeToSSL [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setNpnProtos0 -> netty_internal_tcnative_SSLContext_setNpnProtos0 [NETTY]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.open: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.getTimeout -> netty_internal_tcnative_SSLSession_getTimeout [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSessionCacheMode -> netty_internal_tcnative_SSLContext_setSessionCacheMode [NETTY]
+libjnidispatch.so:com.sun.jna.Native.invokeLong -> Java_com_sun_jna_Native_invokeLong [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioSetFd -> netty_internal_tcnative_SSL_bioSetFd [NETTY]
+libjnidispatch.so:com.sun.jna.Native.initialize_ffi_type -> Java_com_sun_jna_Native_initialize_1ffi_1type [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.createDefaultSnapshot -> Java_org_hyperic_sigar_vmware_VM_createDefaultSnapshot [JNI]
+libjnidispatch.so:com.sun.jna.Native.invokeStructure -> Java_com_sun_jna_Native_invokeStructure [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPathLoop -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrPathLoop [NETTY]
+com.kenai.jffi.Foreign.freeMemory: NOT_FOUND_IN_LIBS
+software.chronicle.enterprise.internals.impl.NativeAffinity.setAffinity0: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.loadDDictFast0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDictFast0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.addCertificateCompressionAlgorithm0 -> netty_internal_tcnative_SSLContext_addCertificateCompressionAlgorithm0 [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpHmac.updateCtxArray -> Java_com_amazon_corretto_crypto_provider_EvpHmac_updateCtxArray [JNI]
+jdk.internal.misc.Unsafe.getShort: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getRawOptAddress -> netty_unix_socket_getRawOptAddress [NETTY]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollin: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getSigNum -> Java_org_hyperic_sigar_Sigar_getSigNum [JNI]
+org.apache.cassandra.utils.NativeLibraryLinux.fsync: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getCiphers -> netty_internal_tcnative_SSL_getCiphers [NETTY]
+libjnidispatch.so:com.sun.jna.Native.registerMethod -> Java_com_sun_jna_Native_registerMethod [JNI]
+libjava.so:java.lang.Object.getClass -> Java_java_lang_Object_getClass [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.listen: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setFloat -> Java_java_lang_reflect_Array_setFloat [JNI]
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.LZ4_compress_limitedOutput -> Java_net_jpountz_lz4_LZ4JNI_LZ4_1compress_1limitedOutput [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.init -> Java_com_github_luben_zstd_ZstdDecompressCtx_init [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpEcPrivateKey.getPrivateValue -> Java_com_amazon_corretto_crypto_provider_EvpEcPrivateKey_getPrivateValue [JNI]
+java.lang.Thread.isInterrupted: NOT_FOUND_IN_LIBS
+com.sun.jna.Native.write: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setDecompressionMagicless -> Java_com_github_luben_zstd_Zstd_setDecompressionMagicless [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.initDStream -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_initDStream [JNI]
+com.kenai.jffi.Foreign.fatalError: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOTCONN -> netty_unix_errors_errnoENOTCONN [NETTY_FUZZY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errSrcSizeWrong -> Java_com_github_luben_zstd_Zstd_errSrcSizeWrong [JNI]
+jdk.internal.misc.Unsafe.putIntVolatile: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putIntArrayChecked: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNativeBuildDate -> Java_org_hyperic_sigar_Sigar_getNativeBuildDate [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Utils.getDigestLength -> Java_com_amazon_corretto_crypto_provider_Utils_getDigestLength [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getPeerCredentials -> netty_epoll_linuxsocket_getPeerCredentials [NETTY]
+jdk.internal.misc.Unsafe.getChar: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKeyAgreement.agree -> Java_com_amazon_corretto_crypto_provider_EvpKeyAgreement_agree [JNI]
+org.hyperic.sigar.win32.MetaBase.MetaBaseGetStringValue: NOT_FOUND_IN_LIBS
+java.nio.MappedByteBuffer.force0: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.longDoubleToEngineeringString: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errMemoryAllocation -> Java_com_github_luben_zstd_Zstd_errMemoryAllocation [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.getReceiveBufferSize: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getSaveErrnoFunction: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.FileDescriptor.readAddress: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getProcList -> Java_org_hyperic_sigar_Sigar_getProcList [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFd -> netty_epoll_native_eventFd [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Utils.getNativeBufferOffset -> Java_com_amazon_corretto_crypto_provider_Utils_getNativeBufferOffset [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.finishConnect -> netty_unix_socket_finishConnect [NETTY]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.writev: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.setChecksum0 -> Java_com_github_luben_zstd_ZstdCompressCtx_setChecksum0 [JNI]
+org.hyperic.sigar.CpuInfo.gather: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.create -> Java_org_hyperic_sigar_vmware_VMwareServer_create [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.kqueue.BsdSocket.sendFile -> netty_epoll_linuxsocket_sendFile [NETTY_FUZZY]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingRecvmmsg: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.isRegistered -> Java_org_hyperic_sigar_vmware_VMwareServer_isRegistered [JNI]
+org.apache.cassandra.utils.NativeLibraryDarwin.getpid: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.decompressedDirectByteBufferSize -> Java_com_github_luben_zstd_Zstd_decompressedDirectByteBufferSize [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTLSv1 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoTLSv1 [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getFloatAt0 -> Java_jdk_internal_reflect_ConstantPool_getFloatAt0 [JNI]
+com.kenai.jffi.Foreign.getZeroTerminatedByteArray: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.remoteVSockAddress -> netty_epoll_linuxsocket_remoteVSockAddress [NETTY]
+org.hyperic.sigar.win32.Pdh.pdhGetKeys: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionAcceptRenegotiate -> netty_internal_tcnative_SSLContext_sessionAcceptRenegotiate [NETTY]
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.init -> Java_net_jpountz_lz4_LZ4JNI_init [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setIntOpt -> netty_unix_socket_setIntOpt [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollBusyWait0 -> netty_epoll_native_epollBusyWait0 [NETTY]
+java.lang.Object.wait: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionCompress -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslCertCompressionDirectionCompress [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getLongAt0 -> Java_jdk_internal_reflect_ConstantPool_getLongAt0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isReuseAddress -> netty_unix_socket_isReuseAddress [NETTY]
+libjnidispatch.so:com.sun.jna.Native.isProtected -> Java_com_sun_jna_Native_isProtected [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertificateChainFile -> netty_internal_tcnative_SSLContext_setCertificateChainFile [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setSession -> netty_internal_tcnative_SSL_setSession [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.recvFromDomainSocket: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictCompress.initDirect -> Java_com_github_luben_zstd_ZstdDictCompress_initDirect [JNI]
+libjvm.so:java.lang.Class.isArray -> JVM_IsArrayClass [JVM]
+com.kenai.jffi.Foreign.getByteChecked: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.length -> Java_java_io_RandomAccessFile_length [JNI]
+jdk.internal.misc.Unsafe.getObjectVolatile: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isIPv6 -> netty_unix_socket_isIPv6 [NETTY]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollet: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.fastOpenServer: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpLegacyServerConnect -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpLegacyServerConnect [NETTY]
+com.kenai.jffi.Foreign.getJNIVersion: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getNextProtoNegotiated -> netty_internal_tcnative_SSL_getNextProtoNegotiated [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlPathValidationError -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCrlPathValidationError [NETTY]
+org.hyperic.sigar.win32.Service.ControlService: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getShortArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.loadPrivateKeyFromEngine -> netty_internal_tcnative_SSL_loadPrivateKeyFromEngine [NETTY]
+com.kenai.jffi.Foreign.putFloatArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSessionTicketKeys0 -> netty_internal_tcnative_SSLContext_setSessionTicketKeys0 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setTcpNoDelay -> netty_unix_socket_setTcpNoDelay [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp521r1Sha512 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignEcdsaSecp521r1Sha512 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.kernelVersion -> netty_epoll_native_kernelVersion [NETTY_FUZZY]
+libjvm.so:java.lang.Class.getDeclaredConstructors0 -> JVM_GetClassDeclaredConstructors [JVM]
+org.hyperic.sigar.NetRoute.gather: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionLevel -> Java_com_github_luben_zstd_Zstd_setCompressionLevel [JNI]
+com.kenai.jffi.Foreign.getByteArray: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.doHandshake -> netty_internal_tcnative_SSL_doHandshake [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getSoBusyPoll -> netty_epoll_linuxsocket_getSoBusyPoll [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollrdhup -> netty_epoll_native_epollrdhup [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writev -> netty_unix_filedescriptor_writev [NETTY_FUZZY]
+org.apache.cassandra.utils.NativeLibraryLinux.strerror: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getRawAnnotations -> JVM_GetClassAnnotations [JVM]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKey.releaseKey -> Java_com_amazon_corretto_crypto_provider_EvpKey_releaseKey [JNI]
+jdk.internal.misc.Unsafe.allocateInstance: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileOutputStream.writeBytes -> Java_java_io_FileOutputStream_writeBytes [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollWait -> netty_epoll_native_epollWait [NETTY]
+com.github.luben.zstd.Zstd.generateSequences: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.reset0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_reset0 [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorENETUNREACH: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.memchrChecked: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeArrayReturnFloat: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.sslPending -> netty_internal_tcnative_SSL_sslPending [NETTY]
+net.openhft.posix.internal.jna.JNAPosixInterface.mmap: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI2NoErrno: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.get -> Java_java_lang_reflect_Array_get [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionChecksums -> Java_com_github_luben_zstd_Zstd_setCompressionChecksums [JNI]
+org.hyperic.sigar.win32.LocaleInfo.getAttribute: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeReleaseBuffers -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslModeReleaseBuffers [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.getContextSize -> Java_com_amazon_corretto_crypto_provider_MD5Spi_getContextSize [JNI]
+com.kenai.jffi.Foreign.memmove: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getCharVolatile: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp256r1Sha256 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignEcdsaSecp256r1Sha256 [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.updateContextByteArray -> Java_com_amazon_corretto_crypto_provider_MD5Spi_updateContextByteArray [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.uioMaxIov: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.holdsLock -> JVM_HoldsLock [JVM]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcStat.gather -> Java_org_hyperic_sigar_ProcStat_gather [JNI]
+libjnidispatch.so:com.sun.jna.Native.sizeof -> Java_com_sun_jna_Native_sizeof [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionTicketKeyNew -> netty_internal_tcnative_SSLContext_sessionTicketKeyNew [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrProxyCertificatesNotAllowed -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrProxyCertificatesNotAllowed [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.redraw -> Java_org_hyperic_sigar_util_Getline_redraw [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.fipsModeSet -> netty_internal_tcnative_SSL_fipsModeSet [NETTY]
+com.kenai.jffi.Foreign.mprotect: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putFloat: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.arrayBaseOffset0: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionChainLog -> Java_com_github_luben_zstd_Zstd_setCompressionChainLog [JNI]
+libjvm.so:java.lang.Thread.setPriority0 -> JVM_SetThreadPriority [JVM]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getMasterKey -> netty_internal_tcnative_SSL_getMasterKey [NETTY]
+com.kenai.jffi.Foreign.init: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.connectDomainSocket -> netty_unix_socket_connectDomainSocket [NETTY]
+org.hyperic.sigar.win32.Service.OpenSCManager: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.initClassName -> JVM_InitClassName [JVM]
+libjnidispatch.so:com.sun.jna.Native.getDouble -> Java_com_sun_jna_Native_getDouble [JNI]
+com.kenai.jffi.Foreign.putShortArray: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.registerUnix -> netty_epoll_native_registerUnix [NETTY]
+libjnidispatch.so:com.sun.jna.Native.invokePointer -> Java_com_sun_jna_Native_invokePointer [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDepthZeroSelfSignedCert -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrDepthZeroSelfSignedCert [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getErrorString -> netty_internal_tcnative_SSL_getErrorString [NETTY]
+libjava.so:java.lang.Runtime.maxMemory -> Java_java_lang_Runtime_maxMemory [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.getRegisteredVmNames -> Java_org_hyperic_sigar_vmware_VMwareServer_getRegisteredVmNames [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegSetStringValue: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.setDetachState -> Java_com_sun_jna_Native_setDetachState [JNI]
+jdk.internal.misc.Unsafe.arrayIndexScale0: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTimeToLive: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errVersionUnsupported -> Java_com_github_luben_zstd_Zstd_errVersionUnsupported [JNI]
+libjava.so:java.lang.String.intern -> Java_java_lang_String_intern [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evfiltSock: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionHashLog -> Java_com_github_luben_zstd_Zstd_setCompressionHashLog [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Tcp.gather -> Java_org_hyperic_sigar_Tcp_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpFastopenMode -> netty_epoll_native_tcpFastopenMode [NETTY_FUZZY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getRemoteConnections -> Java_org_hyperic_sigar_vmware_VM_getRemoteConnections [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.setRawOptAddress: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollerr: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putDouble: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.asin -> Java_java_lang_StrictMath_asin [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.recommendedDInSize -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDInSize [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.disconnect: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.initContext -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_initContext [JNI]
+libzip.so:java.util.zip.Inflater.inflateBytesBytes -> Java_java_util_zip_Inflater_inflateBytesBytes [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollrdhup: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.getByte -> Java_java_lang_reflect_Array_getByte [JNI]
+jdk.internal.misc.Unsafe.allocateMemory0: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.invokeFloat -> Java_com_sun_jna_Native_invokeFloat [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.oneShotEncrypt -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_oneShotEncrypt [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.registerSequenceProducer -> Java_com_github_luben_zstd_Zstd_registerSequenceProducer [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.isIPv6: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.epollCreate: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.getTime -> netty_internal_tcnative_SSLSession_getTime [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionBoth -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslCertCompressionDirectionBoth [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnspecified -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnspecified [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setUdpGro: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionHits -> netty_internal_tcnative_SSLContext_sessionHits [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionAccept -> netty_internal_tcnative_SSLContext_sessionAccept [NETTY]
+libjava.so:java.util.TimeZone.getSystemTimeZoneID -> Java_java_util_TimeZone_getSystemTimeZoneID [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.epollCtlDel0: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL0NoErrno: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getSession -> netty_internal_tcnative_SSL_getSession [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.nativeClose -> Java_org_hyperic_sigar_Sigar_nativeClose [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setTlsExtHostName0 -> netty_internal_tcnative_SSL_setTlsExtHostName0 [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.hashLogMin -> Java_com_github_luben_zstd_Zstd_hashLogMin [JNI]
+com.kenai.jffi.Foreign.putFloatChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha384 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPssRsaeSha384 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertHasExpired -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertHasExpired [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.win32.FileVersion.gather -> Java_org_hyperic_sigar_win32_FileVersion_gather [JNI]
+libjava.so:jdk.internal.reflect.Reflection.areNestMates -> Java_jdk_internal_reflect_Reflection_areNestMates [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToDomainSocket -> netty_unix_socket_sendToDomainSocket [NETTY]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evDelete: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.getInt -> Java_java_lang_reflect_Array_getInt [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToGetCrlIssuer -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToGetCrlIssuer [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.setTimeout -> netty_internal_tcnative_SSLSession_setTimeout [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Library.aprVersionString -> netty_internal_tcnative_Library_aprVersionString [NETTY]
+com.kenai.jffi.Foreign.getLongArray: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.Native.offsetofKEventFilter: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.setReuseAddress: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionConnect -> netty_internal_tcnative_SSLContext_sessionConnect [NETTY]
+com.kenai.jffi.Foreign.newArray: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.defaultCompressionLevel -> Java_com_github_luben_zstd_Zstd_defaultCompressionLevel [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setSequenceProducerFallback -> Java_com_github_luben_zstd_Zstd_setSequenceProducerFallback [JNI]
+com.kenai.jffi.Foreign.longDoubleToPlainString: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.connect -> Java_org_hyperic_sigar_vmware_VM_connect [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setHostNameValidation -> netty_internal_tcnative_SSL_setHostNameValidation [NETTY]
+org.hyperic.sigar.win32.RegistryKey.RegQueryIntValue: NOT_FOUND_IN_LIBS
+java.lang.Object.notify: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64_init -> Java_net_jpountz_xxhash_XXHashJNI_XXH64_1init [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSSLSessionCache -> netty_internal_tcnative_SSLContext_setSSLSessionCache [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.newMemBIO -> netty_internal_tcnative_SSL_newMemBIO [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.isConnected -> Java_org_hyperic_sigar_vmware_VM_isConnected [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.start -> Java_org_hyperic_sigar_vmware_VM_start [JNI]
+com.kenai.jffi.Foreign.getTypeType: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.endStream -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream [JNI]
+com.kenai.jffi.Foreign.invokeN6O6: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.signFinish -> Java_com_amazon_corretto_crypto_provider_EvpSignature_signFinish [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.bindVSock -> netty_epoll_linuxsocket_bindVSock [NETTY]
+com.kenai.jffi.Foreign.invokeN6O5: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN6O2: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN6O1: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN6O4: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.sendTo: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSelfSignedCertInChain -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSelfSignedCertInChain [NETTY]
+com.kenai.jffi.Foreign.invokeN6O3: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setRawOptArray -> netty_unix_socket_setRawOptArray [NETTY]
+libjava.so:java.io.RandomAccessFile.read0 -> Java_java_io_RandomAccessFile_read0 [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getPermissions -> Java_org_hyperic_sigar_vmware_VM_getPermissions [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.make -> netty_internal_tcnative_SSLContext_make [NETTY]
+com.kenai.jffi.Foreign.invokeArrayWithObjectsReturnStruct: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.storeFence: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getArch: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDomainDgramFd -> netty_unix_socket_newSocketDomainDgramFd [NETTY]
+jdk.internal.misc.Unsafe.getBoolean: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.FileInfo.getMode -> Java_org_hyperic_sigar_FileInfo_getMode [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpQuickAck -> netty_epoll_linuxsocket_setTcpQuickAck [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getCpuInfoList -> Java_org_hyperic_sigar_Sigar_getCpuInfoList [JNI]
+com.kenai.jffi.Foreign.freeNativeMethod: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verifyUpdate -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verifyUpdate [JNI]
+io.netty.channel.kqueue.BsdSocket.isTcpFastOpen: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.System.mapLibraryName -> Java_java_lang_System_mapLibraryName [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionBrotli -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_tlsExtCertCompressionBrotli [NETTY]
+com.kenai.jffi.Foreign.freeCallContext: NOT_FOUND_IN_LIBS
+sun.java2d.pipe.ShapeSpanIterator.setOutputAreaXYXY: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Throwable.fillInStackTrace -> Java_java_lang_Throwable_fillInStackTrace [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.connect -> netty_unix_socket_connect [NETTY]
+com.kenai.jffi.Foreign.putInt: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignatureRaw.signRaw -> Java_com_amazon_corretto_crypto_provider_EvpSignatureRaw_signRaw [JNI]
+jdk.internal.misc.Unsafe.putLong: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.getFloat -> Java_com_sun_jna_Native_getFloat [JNI]
+sun.java2d.pipe.ShapeSpanIterator.dispose: NOT_FOUND_IN_LIBS
+net.openhft.ticker.impl.JNIClock.rdtsc0: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getInterface: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.compressByteArray0 -> Java_com_github_luben_zstd_ZstdCompressCtx_compressByteArray0 [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.isBroadcast: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpUserTimeout -> netty_epoll_linuxsocket_setTcpUserTimeout [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.getHashSize -> Java_com_amazon_corretto_crypto_provider_MD5Spi_getHashSize [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setSoBusyPoll: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaPrivateCrtKey.getCrtParams -> Java_com_amazon_corretto_crypto_provider_EvpRsaPrivateCrtKey_getCrtParams [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpUserTimeout -> netty_epoll_linuxsocket_getTcpUserTimeout [NETTY]
+jdk.internal.misc.Unsafe.park: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.fastDigest -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_fastDigest [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.connect -> Java_org_hyperic_sigar_vmware_VMwareServer_connect [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.getIntOpt: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.freeMemory0: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionOverlapLog -> Java_com_github_luben_zstd_Zstd_setCompressionOverlapLog [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setContextId -> netty_internal_tcnative_SSLContext_setContextId [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setOptions -> netty_internal_tcnative_SSLContext_setOptions [NETTY]
+libjava.so:java.lang.Float.intBitsToFloat -> Java_java_lang_Float_intBitsToFloat [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errFrameParameterWindowTooLarge -> Java_com_github_luben_zstd_Zstd_errFrameParameterWindowTooLarge [JNI]
+com.kenai.jffi.Foreign.getFloatChecked: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.throwException: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.decompressByteArray0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArray0 [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcState.gather -> Java_org_hyperic_sigar_ProcState_gather [JNI]
+org.hyperic.sigar.win32.Service.OpenService: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ClassLoader.findLoadedClass0 -> Java_java_lang_ClassLoader_findLoadedClass0 [JNI]
+io.netty.channel.kqueue.Native.keventWait: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEPIPE -> netty_unix_errors_errnoEPIPE [NETTY_FUZZY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEINPROGRESS: NOT_FOUND_IN_LIBS
+libnet.so:java.net.NetworkInterface.isUp0 -> Java_java_net_NetworkInterface_isUp0 [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.splice0: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.deviceIsConnected -> Java_org_hyperic_sigar_vmware_VM_deviceIsConnected [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertificateBio -> netty_internal_tcnative_SSLContext_setCertificateBio [NETTY]
+org.xerial.snappy.BitShuffleNative.unshuffleDirectBuffer: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setCipherSuites -> netty_internal_tcnative_SSL_setCipherSuites [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.free -> netty_internal_tcnative_SSLContext_free [NETTY]
+org.hyperic.sigar.win32.MetaBase.MetaBaseInit: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepIdle -> netty_epoll_linuxsocket_setTcpKeepIdle [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.tlsExtCertCompressionZstd -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_tlsExtCertCompressionZstd [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.getContextSize -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_getContextSize [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDaneNoMatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrDaneNoMatch [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.udsSunPathSize -> netty_unix_limits_udsSunPathSize [NETTY_FUZZY]
+com.sun.jna.Native.read: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.hashLogMax -> Java_com_github_luben_zstd_Zstd_hashLogMax [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.createNamedSnapshot -> Java_org_hyperic_sigar_vmware_VM_createNamedSnapshot [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.magicNumber -> Java_com_github_luben_zstd_Zstd_magicNumber [JNI]
+com.kenai.jffi.Foreign.putShortChecked: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesXtsSpi.enc -> Java_com_amazon_corretto_crypto_provider_AesXtsSpi_enc [JNI]
+libjvm.so:java.lang.Class.getDeclaringClass0 -> JVM_GetDeclaringClass [JVM]
+org.hyperic.sigar.win32.EventLog.close: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.eventFdWrite: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpKeepIdle: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.send: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoCrlSign -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrKeyUsageNoCrlSign [NETTY]
+libjava.so:jdk.internal.reflect.Reflection.getClassAccessFlags -> Java_jdk_internal_reflect_Reflection_getClassAccessFlags [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.getHashSize -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_getHashSize [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getSoBusyPoll: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putDoubleArray: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha384 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPkcsSha384 [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.bindDomainSocket: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32BB -> Java_net_jpountz_xxhash_XXHashJNI_XXH32BB [JNI]
+com.kenai.jffi.Foreign.isRawParameterPackingEnabled: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32_free -> Java_net_jpountz_xxhash_XXHashJNI_XXH32_1free [JNI]
+org.hyperic.sigar.win32.MetaBase.MetaBaseEnumKey: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcUtils.freeGroup -> Java_com_amazon_corretto_crypto_provider_EcUtils_freeGroup [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setSessionIdContext -> netty_internal_tcnative_SSLContext_setSessionIdContext [NETTY]
+org.apache.cassandra.utils.NativeLibraryDarwin.strerror: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.setIntOpt: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.getShort -> Java_java_lang_reflect_Array_getShort [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpCipherServerPreference -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpCipherServerPreference [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.initContext -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_initContext [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setSoLinger -> netty_unix_socket_setSoLinger [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertRequestedCallback -> netty_internal_tcnative_SSLContext_setCertRequestedCallback [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getDirectByteBufferFrameContentSize -> Java_com_github_luben_zstd_Zstd_getDirectByteBufferFrameContentSize [JNI]
+com.kenai.jffi.Foreign.invokeN2O2: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.getRawOptAddress: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN2O1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setBroadcast -> netty_unix_socket_setBroadcast [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEALREADY: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.NetInterfaceStat.gather -> Java_org_hyperic_sigar_NetInterfaceStat_gather [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPermittedViolation -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrPermittedViolation [NETTY]
+libjvm.so:java.lang.System.arraycopy -> JVM_ArrayCopy [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.ssizeMax -> netty_unix_limits_ssizeMax [NETTY_FUZZY]
+liblz4-java-644747439388655367.so:net.jpountz.lz4.LZ4JNI.LZ4_decompress_safe -> Java_net_jpountz_lz4_LZ4JNI_LZ4_1decompress_1safe [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpFastOpen: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.finish -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_finish [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verifyStart -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verifyStart [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setSendBufferSize -> netty_unix_socket_setSendBufferSize [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.sendmmsg0 -> netty_epoll_native_sendmmsg0 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.clearOptions -> netty_internal_tcnative_SSL_clearOptions [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setValidateSequences -> Java_com_github_luben_zstd_Zstd_setValidateSequences [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegCreateKey: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.NetConnection.gather: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.msgFastopen: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getSendBufferSize -> netty_unix_socket_getSendBufferSize [NETTY]
+libjnidispatch.so:com.sun.jna.Native.findSymbol -> Java_com_sun_jna_Native_findSymbol [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingSendmmsg: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ProcessImpl.forkAndExec -> Java_java_lang_ProcessImpl_forkAndExec [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getIpMulticastLoop: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.copyMemory: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.setSoLinger: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.parseX509Chain -> netty_internal_tcnative_SSL_parseX509Chain [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollWait0 -> netty_epoll_native_epollWait0 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertificate -> netty_internal_tcnative_SSLContext_setCertificate [NETTY]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.iovMax: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putLongArrayChecked: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.BsdSocket.getTcpNoPush: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getServerRandom -> netty_internal_tcnative_SSL_getServerRandom [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEALREADY -> netty_unix_errors_errorEALREADY [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCrlNextUpdateField -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrErrorInCrlNextUpdateField [NETTY]
+libjnidispatch.so:com.sun.jna.Native.ffi_free_closure -> Java_com_sun_jna_Native_ffi_1free_1closure [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnhandledCriticalCrlExtension -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnhandledCriticalCrlExtension [NETTY]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.strError: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.msgFastopen -> netty_unix_socket_msgFastopen [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpMulticastLoop -> netty_epoll_linuxsocket_setIpMulticastLoop [NETTY]
+libjvm.so:java.lang.System.currentTimeMillis -> JVM_CurrentTimeMillis [JVM]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.initCStreamWithDict -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithDict [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.setReusePort: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getUptime -> Java_org_hyperic_sigar_vmware_VM_getUptime [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getTimeout -> netty_internal_tcnative_SSL_getTimeout [NETTY]
+org.hyperic.sigar.win32.MetaBase.MetaBaseClose: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrPathLengthExceeded -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrPathLengthExceeded [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.ptql.SigarProcessQuery.create -> Java_org_hyperic_sigar_ptql_SigarProcessQuery_create [JNI]
+com.kenai.jffi.Foreign.getShortArray: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Mem.gather -> Java_org_hyperic_sigar_Mem_gather [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.setDictID0 -> Java_com_github_luben_zstd_ZstdCompressCtx_setDictID0 [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpTransparent -> netty_epoll_linuxsocket_isIpTransparent [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.isatty -> Java_org_hyperic_sigar_util_Getline_isatty [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errGeneric -> Java_com_github_luben_zstd_Zstd_errGeneric [JNI]
+libjnidispatch.so:com.sun.jna.Native.ffi_prep_cif -> Java_com_sun_jna_Native_ffi_1prep_1cif [JNI]
+com.kenai.jffi.Foreign.putCharArray: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNetRouteList -> Java_org_hyperic_sigar_Sigar_getNetRouteList [JNI]
+software.chronicle.enterprise.internals.impl.NativeAffinity.rdtsc0: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.remoteAddress: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.BsdSocket.setAcceptFilter: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.eventFd: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getCallContextRawParameterSize: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollout -> netty_epoll_native_epollout [NETTY_FUZZY]
+com.kenai.jffi.Foreign.getByte: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getShortChecked: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.sendToDomainSocket: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionLong -> Java_com_github_luben_zstd_Zstd_setCompressionLong [JNI]
+com.kenai.jffi.Foreign.invokeL1: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL0: NOT_FOUND_IN_LIBS
+software.chronicle.enterprise.internals.impl.NativeAffinity.getAffinity0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoECONNRESET -> netty_unix_errors_errnoECONNRESET [NETTY_FUZZY]
+org.hyperic.sigar.win32.Pdh.pdhGetDescription: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL6: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL5: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL4: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verifyUpdateBuffer -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verifyUpdateBuffer [JNI]
+com.kenai.jffi.Foreign.invokeL3: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL2: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.setCallContextErrorFunction: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.RegistryKey.RegCloseKey: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.newSocketDgramFd: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.saveScreenshot -> Java_org_hyperic_sigar_vmware_VM_saveScreenshot [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.win32.Win32.findExecutable -> Java_org_hyperic_sigar_win32_Win32_findExecutable [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcCpu.gather -> Java_org_hyperic_sigar_ProcCpu_gather [JNI]
+org.hyperic.sigar.win32.EventLog.waitForChange: NOT_FOUND_IN_LIBS
+java.nio.MappedByteBuffer.load0: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.SysInfo.gather -> Java_org_hyperic_sigar_SysInfo_gather [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.suspend -> Java_org_hyperic_sigar_vmware_VM_suspend [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcFd.gather -> Java_org_hyperic_sigar_ProcFd_gather [JNI]
+com.datastax.shaded.netty.channel.unix.FileDescriptor.writevAddresses: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNetConnectionList -> Java_org_hyperic_sigar_Sigar_getNetConnectionList [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcTime.gather -> Java_org_hyperic_sigar_ProcTime_gather [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.sign -> Java_com_amazon_corretto_crypto_provider_EvpSignature_sign [JNI]
+jdk.internal.misc.Unsafe.getLongVolatile: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.endStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_endStream [JNI]
+libjvm.so:java.lang.Class.getProtectionDomain0 -> JVM_GetProtectionDomain [JVM]
+sun.java2d.pipe.ShapeSpanIterator.setRule: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN3: NOT_FOUND_IN_LIBS
+java.lang.Object.clone: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN2: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN1: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN0: NOT_FOUND_IN_LIBS
+org.xerial.snappy.SnappyNative.rawUncompress: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN6: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN5: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN4: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putCharArrayChecked: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.sendmmsg0: NOT_FOUND_IN_LIBS
+libsnappyjava_snappy-java-1.1.10.4.so:org.xerial.snappy.SnappyNative.maxCompressedLength -> Java_org_xerial_snappy_SnappyNative_maxCompressedLength [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writevAddresses -> netty_unix_filedescriptor_writevAddresses [NETTY_FUZZY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SelfTestSuite.awsLcSelfTestsPassed -> Java_com_amazon_corretto_crypto_provider_SelfTestSuite_awsLcSelfTestsPassed [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.recvmsg0 -> netty_epoll_native_recvmsg0 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertRejected -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertRejected [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getBuiltinSequenceProducer -> Java_com_github_luben_zstd_Zstd_getBuiltinSequenceProducer [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.upRef -> netty_internal_tcnative_SSLSession_upRef [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCurvesList0 -> netty_internal_tcnative_SSLContext_setCurvesList0 [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getFrameContentSize0 -> Java_com_github_luben_zstd_Zstd_getFrameContentSize0 [JNI]
+java.lang.Object.hashCode: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcGen.generateEvpEcKey -> Java_com_amazon_corretto_crypto_provider_EcGen_generateEvpEcKey [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getDictIdFromDict -> Java_com_github_luben_zstd_Zstd_getDictIdFromDict [JNI]
+org.apache.cassandra.utils.NativeLibraryDarwin.close: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.isInInit -> netty_internal_tcnative_SSL_isInInit [NETTY]
+jdk.internal.misc.Unsafe.compareAndSetLong: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.longDoubleFromDouble: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.isFaultProtectionEnabled: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.updateNativeByteBuffer -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_updateNativeByteBuffer [JNI]
+io.netty.channel.kqueue.BsdSocket.setSndLowAt: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.authenticationMethods -> netty_internal_tcnative_SSL_authenticationMethods [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NfsClientV2.gather -> Java_org_hyperic_sigar_NfsClientV2_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.accept -> netty_unix_socket_accept [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDgramFd -> netty_unix_socket_newSocketDgramFd [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getExecutionState -> Java_org_hyperic_sigar_vmware_VM_getExecutionState [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.SigarLog.setLogger -> Java_org_hyperic_sigar_SigarLog_setLogger [JNI]
+com.kenai.jffi.Foreign.getAddressChecked: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.stop -> Java_org_hyperic_sigar_vmware_VM_stop [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.readAddress -> netty_unix_filedescriptor_readAddress [NETTY_FUZZY]
+org.hyperic.sigar.win32.LocaleInfo.getSystemDefaultLCID: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setKeyMaterialClientSide -> netty_internal_tcnative_SSL_setKeyMaterialClientSide [NETTY]
+libjvm.so:java.lang.Thread.sleep -> JVM_Sleep [JVM]
+com.datastax.shaded.netty.channel.unix.Socket.setSendBufferSize: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.fastDigest -> Java_com_amazon_corretto_crypto_provider_MD5Spi_fastDigest [JNI]
+com.kenai.jffi.Foreign.getAddress: NOT_FOUND_IN_LIBS
+com.github.luben.zstd.Zstd.searchLengthMin: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeArrayWithObjectsFloat: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.FileDescriptor.read: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNativeScmRevision -> Java_org_hyperic_sigar_Sigar_getNativeScmRevision [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFd -> netty_unix_socket_recvFd [NETTY]
+libjnidispatch.so:com.sun.jna.Native.unregister -> Java_com_sun_jna_Native_unregister [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrDifferntCrlScope -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrDifferntCrlScope [NETTY]
+com.kenai.jffi.Foreign.newNativeMethod: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64_free -> Java_net_jpountz_xxhash_XXHashJNI_XXH64_1free [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidCa -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrInvalidCa [NETTY]
+com.kenai.jffi.Foreign.invokeL1NoErrno: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.VirtualAlloc: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getProcModulesNative -> Java_org_hyperic_sigar_Sigar_getProcModulesNative [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.sendFd: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.getThreads -> JVM_GetAllThreads [JVM]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcExe.gather -> Java_org_hyperic_sigar_ProcExe_gather [JNI]
+com.kenai.jffi.Foreign.invokeI1NoErrno: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.offsetofEpollData: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recv -> netty_unix_socket_recv [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setIpFreeBind: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isTcpCork -> netty_epoll_linuxsocket_isTcpCork [NETTY]
+com.kenai.jffi.Foreign.strlenChecked: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.getSendBufferSize: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Pdh.pdhGetCounterType: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.newDirectByteBuffer: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.RegistryKey.RegEnumKey: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheServer -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSessCacheServer [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.isTcpNoDelay: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.FileDescriptor.newPipe: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.getNativeVersion -> Java_com_sun_jna_Native_getNativeVersion [JNI]
+libjnidispatch.so:com.sun.jna.Native.initIDs -> Java_com_sun_jna_Native_initIDs [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcUtils.buildGroup -> Java_com_amazon_corretto_crypto_provider_EcUtils_buildGroup [JNI]
+libnet.so:java.net.NetworkInterface.getByName0 -> Java_java_net_NetworkInterface_getByName0 [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errParameterUnsupported -> Java_com_github_luben_zstd_Zstd_errParameterUnsupported [JNI]
+com.kenai.jffi.Foreign.invokeL4NoErrno: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddressDomainSocket -> netty_unix_socket_sendToAddressDomainSocket [NETTY]
+org.hyperic.sigar.win32.Service.getServiceNames: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.isInterface -> JVM_IsInterface [JVM]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnsupportedNameSyntax -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnsupportedNameSyntax [NETTY]
+com.datastax.shaded.netty.channel.epoll.Native.epollWait: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.initialize -> netty_internal_tcnative_SSL_initialize [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEcdsaSecp384r1Sha384 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignEcdsaSecp384r1Sha384 [NETTY]
+libjava.so:java.io.FileInputStream.open0 -> Java_java_io_FileInputStream_open0 [JNI]
+libjava.so:jdk.internal.reflect.Reflection.getCallerClass -> Java_jdk_internal_reflect_Reflection_getCallerClass [JNI]
+io.netty.channel.kqueue.Native.kqueueCreate: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.recvAddress: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareObject.init -> Java_org_hyperic_sigar_vmware_VMwareObject_init [JNI]
+libjnidispatch.so:com.sun.jna.Native.invokeDouble -> Java_com_sun_jna_Native_invokeDouble [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.isBroadcast -> netty_unix_socket_isBroadcast [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getPasswordNative -> Java_org_hyperic_sigar_Sigar_getPasswordNative [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoENOENT -> netty_unix_errors_errnoENOENT [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendFd -> netty_unix_socket_sendFd [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.updateNativeByteBuffer -> Java_com_amazon_corretto_crypto_provider_MD5Spi_updateNativeByteBuffer [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setEnableLongDistanceMatching -> Java_com_github_luben_zstd_Zstd_setEnableLongDistanceMatching [JNI]
+org.xerial.snappy.BitShuffleNative.shuffleDirectBuffer: NOT_FOUND_IN_LIBS
+jdk.internal.perf.Perf.attach: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.histinit -> Java_org_hyperic_sigar_util_Getline_histinit [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.setRawOptArray: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.compressDirectByteBufferStream0 -> Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBufferStream0 [JNI]
+com.kenai.jffi.Foreign.getLongArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslMaxPlaintextLength -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslMaxPlaintextLength [NETTY]
+libjava.so:java.lang.Class.isInstance -> Java_java_lang_Class_isInstance [JNI]
+libjava.so:java.io.FileInputStream.readBytes -> Java_java_io_FileInputStream_readBytes [JNI]
+libjnidispatch.so:com.sun.jna.Native.getLastError -> Java_com_sun_jna_Native_getLastError [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.getSoError: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantPrivateKeyOperation -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantPrivateKeyOperation [NETTY]
+org.hyperic.sigar.win32.MetaBase.MetaBaseGetIntValue: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.setPledgedSrcSize0 -> Java_com_github_luben_zstd_ZstdCompressCtx_setPledgedSrcSize0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setTmpDHLength -> netty_internal_tcnative_SSLContext_setTmpDHLength [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionAcceptGood -> netty_internal_tcnative_SSLContext_sessionAcceptGood [NETTY]
+com.kenai.jffi.Foreign.allocateMemory: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.misc.VM.latestUserDefinedLoader0 -> Java_jdk_internal_misc_VM_latestUserDefinedLoader0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantX509Lookup -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantX509Lookup [NETTY]
+libjnidispatch.so:com.sun.jna.Native.setShort -> Java_com_sun_jna_Native_setShort [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errPrefixUnknown -> Java_com_github_luben_zstd_Zstd_errPrefixUnknown [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoTicket -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoTicket [NETTY]
+libjvm.so:java.lang.Thread.setNativeName -> JVM_SetNativeThreadName [JVM]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errCorruptionDetected -> Java_com_github_luben_zstd_Zstd_errCorruptionDetected [JNI]
+jdk.internal.misc.Unsafe.putBoolean: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.MetaBase.MetaBaseRelease: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.deviceConnect -> Java_org_hyperic_sigar_vmware_VM_deviceConnect [JNI]
+libjnidispatch.so:com.sun.jna.Native.getShort -> Java_com_sun_jna_Native_getShort [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictCompress.init -> Java_com_github_luben_zstd_ZstdDictCompress_init [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantConnect -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantConnect [NETTY]
+com.kenai.jffi.Foreign.putDoubleArrayChecked: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.objectFieldOffset: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Buffer.addressSize0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.bindDomainSocket -> netty_unix_socket_bindDomainSocket [NETTY]
+libjava.so:jdk.internal.reflect.ConstantPool.getDoubleAt0 -> Java_jdk_internal_reflect_ConstantPool_getDoubleAt0 [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegQueryStringValue: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.recvFromAddressDomainSocket: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.init -> Java_java_util_zip_Deflater_init [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeAcceptMovingWriteBuffer -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslModeAcceptMovingWriteBuffer [NETTY]
+jdk.internal.misc.Unsafe.putObject: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaKey.getPublicExponent -> Java_com_amazon_corretto_crypto_provider_EvpRsaKey_getPublicExponent [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH -> netty_unix_errors_errorEHOSTUNREACH [NETTY_FUZZY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verify -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verify [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFrom -> netty_unix_socket_recvFrom [NETTY]
+jdk.internal.misc.Unsafe.putShort: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.enableOcsp -> netty_internal_tcnative_SSLContext_enableOcsp [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheClient -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSessCacheClient [NETTY]
+org.xerial.snappy.BitShuffleNative.shuffle: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errParameterOutOfBound -> Java_com_github_luben_zstd_Zstd_errParameterOutOfBound [JNI]
+java.lang.invoke.MethodHandleNatives.init: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.getContextSize -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_getContextSize [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setIpBindAddressNoPort -> netty_epoll_linuxsocket_setIpBindAddressNoPort [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.close -> netty_unix_filedescriptor_close [NETTY_FUZZY]
+libjnidispatch.so:com.sun.jna.Native.setProtected -> Java_com_sun_jna_Native_setProtected [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.iovMax -> netty_unix_limits_iovMax [NETTY_FUZZY]
+libsigar-amd64-linux.so:org.hyperic.sigar.ResourceLimit.INFINITY -> Java_org_hyperic_sigar_ResourceLimit_INFINITY [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setPrivateKeyMethod0 -> netty_internal_tcnative_SSLContext_setPrivateKeyMethod0 [NETTY]
+libjava.so:java.lang.Class.isAssignableFrom -> Java_java_lang_Class_isAssignableFrom [JNI]
+libjava.so:java.lang.StackTraceElement.initStackTraceElements -> Java_java_lang_StackTraceElement_initStackTraceElements [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesGcmSpi.encryptDoFinal -> Java_com_amazon_corretto_crypto_provider_AesGcmSpi_encryptDoFinal [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.decompressStream -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_decompressStream [JNI]
+libzip.so:java.util.zip.Deflater.setDictionary -> Java_java_util_zip_Deflater_setDictionary [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getPeerCredentials: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getTypeSize: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.open -> netty_unix_filedescriptor_open [NETTY_FUZZY]
+com.kenai.jffi.Foreign.invokeI6: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI5: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI4: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI3: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeI2: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.getStubSequenceProducer -> Java_com_github_luben_zstd_Zstd_getStubSequenceProducer [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.versionString -> netty_internal_tcnative_SSL_versionString [NETTY]
+com.kenai.jffi.Foreign.invokeI1: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnhandledCriticalExtension -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnhandledCriticalExtension [NETTY]
+com.kenai.jffi.Foreign.invokeI0: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64_digest -> Java_net_jpountz_xxhash_XXHashJNI_XXH64_1digest [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdBufferDecompressingStreamNoFinalizer.decompressStreamNative -> Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_decompressStreamNative [JNI]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32_init -> Java_net_jpountz_xxhash_XXHashJNI_XXH32_1init [JNI]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64_update -> Java_net_jpountz_xxhash_XXHashJNI_XXH64_1update [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpAllowUnsafeLegacyRenegotiation -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpAllowUnsafeLegacyRenegotiation [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.signUpdate -> Java_com_amazon_corretto_crypto_provider_EvpSignature_signUpdate [JNI]
+com.kenai.jffi.Foreign.freeAggregate: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertificateCallback -> netty_internal_tcnative_SSLContext_setCertificateCallback [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantRead -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantRead [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.recvFromAddress: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setOptions -> netty_internal_tcnative_SSL_setOptions [NETTY]
+io.netty.channel.kqueue.Native.keventTriggerUserEvent: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.setByte -> Java_com_sun_jna_Native_setByte [JNI]
+com.kenai.jffi.Foreign.putZeroTerminatedByteArrayChecked: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvAddress -> netty_unix_socket_recvAddress [NETTY]
+libjvm.so:java.lang.Class.getModifiers -> JVM_GetClassModifiers [JVM]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Loader.validateLibcryptoVersion -> Java_com_amazon_corretto_crypto_provider_Loader_validateLibcryptoVersion [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.Loader.getNativeLibraryVersion -> Java_com_amazon_corretto_crypto_provider_Loader_getNativeLibraryVersion [JNI]
+org.apache.cassandra.utils.NativeLibraryDarwin.mlockall: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.reflect.ConstantPool.getClassAt0 -> Java_jdk_internal_reflect_ConstantPool_getClassAt0 [JNI]
+java.lang.ClassLoader.findBuiltinLib: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.loadDictDecompress -> Java_com_github_luben_zstd_Zstd_loadDictDecompress [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getFileSystemListNative -> Java_org_hyperic_sigar_Sigar_getFileSystemListNative [JNI]
+jdk.internal.misc.Unsafe.shouldBeInitialized0: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.putShortArrayChecked: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.VirtualProtect: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpNotSentLowAt: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.localAddress -> netty_unix_socket_localAddress [NETTY]
+libzip.so:java.util.zip.Adler32.updateByteBuffer -> Java_java_util_zip_Adler32_updateByteBuffer [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.initContext -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_initContext [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.connect: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.deviceDisconnect -> Java_org_hyperic_sigar_vmware_VM_deviceDisconnect [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSendShutdown -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSendShutdown [NETTY]
+jdk.internal.misc.Unsafe.setMemory0: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.NetStat.stat -> Java_org_hyperic_sigar_NetStat_stat [JNI]
+libjnidispatch.so:com.sun.jna.Native._getPointer -> Java_com_sun_jna_Native__1getPointer [JNI]
+libjnidispatch.so:com.sun.jna.Native.getStringBytes -> Java_com_sun_jna_Native_getStringBytes [JNI]
+com.kenai.jffi.Foreign.invokeArrayReturnDouble: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getPid -> Java_org_hyperic_sigar_vmware_VM_getPid [JNI]
+com.kenai.jffi.Foreign.longDoubleFromString: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ProcessHandleImpl.isAlive0 -> Java_java_lang_ProcessHandleImpl_isAlive0 [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.exec -> Java_org_hyperic_sigar_vmware_VMwareServer_exec [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslErrorWantCertificateVerify -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslErrorWantCertificateVerify [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.FileInfo.getPermissionsString -> Java_org_hyperic_sigar_FileInfo_getPermissionsString [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcGen.freeEcParams -> Java_com_amazon_corretto_crypto_provider_EcGen_freeEcParams [JNI]
+com.kenai.jffi.Foreign.invokeN5O3: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN5O2: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.offsetofEpollData -> netty_epoll_native_offsetofEpollData [NETTY]
+libzip.so:java.util.zip.CRC32.updateByteBuffer0 -> Java_java_util_zip_CRC32_updateByteBuffer0 [JNI]
+com.kenai.jffi.Foreign.invokeN5O5: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verifyStartBuffer -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verifyStartBuffer [JNI]
+com.kenai.jffi.Foreign.invokeN5O4: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getInterfaces0 -> JVM_GetClassInterfaces [JVM]
+com.kenai.jffi.Foreign.invokeN5O1: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isIpBindAddressNoPort -> netty_epoll_linuxsocket_isIpBindAddressNoPort [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.finishConnect: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.shutdownSSL -> netty_internal_tcnative_SSL_shutdownSSL [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.reset -> Java_org_hyperic_sigar_util_Getline_reset [JNI]
+jdk.internal.misc.Unsafe.putDoubleVolatile: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpDeferAccept -> netty_epoll_linuxsocket_setTcpDeferAccept [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagDisableWildCards -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509CheckFlagDisableWildCards [NETTY]
+org.hyperic.sigar.win32.RegistryKey.RegSetIntValue: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.kill -> Java_org_hyperic_sigar_Sigar_kill [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.newSocketDomainFd -> netty_unix_socket_newSocketDomainFd [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setIpTransparent: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCertNotBeforeField -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrErrorInCertNotBeforeField [NETTY]
+org.apache.cassandra.utils.NativeLibraryLinux.posix_fadvise: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ptql.SigarProcessQuery.find -> Java_org_hyperic_sigar_ptql_SigarProcessQuery_find [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidPurpose -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrInvalidPurpose [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslModeEnablePartialWrite -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslModeEnablePartialWrite [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpKeepIdle: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateIgnore -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslRenegotiateIgnore [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.disconnect -> Java_org_hyperic_sigar_vmware_VMwareServer_disconnect [JNI]
+java.lang.invoke.MethodHandleNatives.staticFieldOffset: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.joinGroup: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.noteConnReset: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.StrictMath.cos -> Java_java_lang_StrictMath_cos [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.noteReadClosed: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getLoadAverage -> Java_org_hyperic_sigar_Sigar_getLoadAverage [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpDeferAccept -> netty_epoll_linuxsocket_getTcpDeferAccept [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPssRsaeSha256 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPssRsaeSha256 [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.getResource -> Java_org_hyperic_sigar_vmware_VMwareServer_getResource [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.accept: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.signStartBuffer -> Java_com_amazon_corretto_crypto_provider_EvpSignature_signStartBuffer [JNI]
+com.kenai.jffi.Foreign.getDoubleChecked: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.MD5Spi.finish -> Java_com_amazon_corretto_crypto_provider_MD5Spi_finish [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.getTrafficClass: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidExtension -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrInvalidExtension [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.initCStream -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStream [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Swap.gather -> Java_org_hyperic_sigar_Swap_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpMd5Sig -> netty_epoll_linuxsocket_setTcpMd5Sig [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getMode -> netty_internal_tcnative_SSL_getMode [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.isSupportingSendmmsg -> netty_epoll_native_isSupportingSendmmsg [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getVersion -> netty_internal_tcnative_SSL_getVersion [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getSniHostname -> netty_internal_tcnative_SSL_getSniHostname [NETTY]
+libjava.so:java.lang.Double.longBitsToDouble -> Java_java_lang_Double_longBitsToDouble [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.freeX509Chain -> netty_internal_tcnative_SSL_freeX509Chain [NETTY]
+libjvm.so:java.lang.Thread.interrupt0 -> JVM_Interrupt [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollin -> netty_epoll_native_epollin [NETTY_FUZZY]
+libjava.so:java.util.TimeZone.getSystemGMTOffsetID -> Java_java_util_TimeZone_getSystemGMTOffsetID [JNI]
+libjava.so:java.lang.StrictMath.acos -> Java_java_lang_StrictMath_acos [JNI]
+libjnidispatch.so:com.sun.jna.Native.getWindowHandle0 -> Java_com_sun_jna_Native_getWindowHandle0 [JNI]
+libjava.so:jdk.internal.reflect.ConstantPool.getIntAt0 -> Java_jdk_internal_reflect_ConstantPool_getIntAt0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioClearByteBuffer -> netty_internal_tcnative_SSL_bioClearByteBuffer [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.createCStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_createCStream [JNI]
+libjvm.so:java.lang.Class.desiredAssertionStatus0 -> JVM_DesiredAssertionStatus [JVM]
+org.apache.cassandra.utils.NativeLibraryLinux.open: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionTicketKeyRenew -> netty_internal_tcnative_SSLContext_sessionTicketKeyRenew [NETTY]
+libnet.so:java.net.NetworkInterface.getByIndex0 -> Java_java_net_NetworkInterface_getByIndex0 [JNI]
+libjnidispatch.so:com.sun.jna.Native.createNativeCallback -> Java_com_sun_jna_Native_createNativeCallback [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioNewByteBuffer -> netty_internal_tcnative_SSL_bioNewByteBuffer [NETTY]
+libjava.so:java.lang.SecurityManager.getClassContext -> Java_java_lang_SecurityManager_getClassContext [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKeyFactory.pkcs82Evp -> Java_com_amazon_corretto_crypto_provider_EvpKeyFactory_pkcs82Evp [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.uioMaxIov -> netty_unix_limits_uioMaxIov [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getPeerCertificate -> netty_internal_tcnative_SSL_getPeerCertificate [NETTY]
+libjnidispatch.so:com.sun.jna.Native.ffi_call -> Java_com_sun_jna_Native_ffi_1call [JNI]
+libjava.so:java.io.FileInputStream.available0 -> Java_java_io_FileInputStream_available0 [JNI]
+libjvm.so:java.lang.Class.getDeclaredMethods0 -> JVM_GetClassDeclaredMethods [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isTcpQuickAck -> netty_epoll_linuxsocket_isTcpQuickAck [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaPrivateKey.getPrivateExponent -> Java_com_amazon_corretto_crypto_provider_EvpRsaPrivateKey_getPrivateExponent [JNI]
+com.datastax.shaded.netty.channel.unix.Buffer.memoryAddress0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setVerify -> netty_internal_tcnative_SSLContext_setVerify [NETTY]
+com.sun.jna.Native.getDirectByteBuffer: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionTicketKeyResume -> netty_internal_tcnative_SSLContext_sessionTicketKeyResume [NETTY]
+libjava.so:java.io.FileDescriptor.sync -> Java_java_io_FileDescriptor_sync [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.read -> netty_unix_filedescriptor_read [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Library.aprHasThreads -> netty_internal_tcnative_Library_aprHasThreads [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.eventFdRead -> netty_epoll_native_eventFdRead [NETTY]
+com.kenai.jffi.Foreign.putLongChecked: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.recommendedDOutSize -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDOutSize [JNI]
+org.hyperic.sigar.win32.Pdh.pdhGetValue: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.fullFence: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpUserTimeout: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioWrite -> netty_internal_tcnative_SSL_bioWrite [NETTY]
+libjava.so:java.io.FileInputStream.read0 -> Java_java_io_FileInputStream_read0 [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.connectDomainSocket: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.invokeVoid -> Java_com_sun_jna_Native_invokeVoid [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionSearchLog -> Java_com_github_luben_zstd_Zstd_setCompressionSearchLog [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpUserTimeout: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getWhoList -> Java_org_hyperic_sigar_Sigar_getWhoList [JNI]
+io.netty.channel.kqueue.Native.offsetofKeventData: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getIpMulticastLoop -> netty_epoll_linuxsocket_getIpMulticastLoop [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecodeIssuerPublicKey -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToDecodeIssuerPublicKey [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getRunAsUser -> Java_org_hyperic_sigar_vmware_VM_getRunAsUser [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.isConnected -> Java_org_hyperic_sigar_vmware_VMwareServer_isConnected [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.enableOcsp -> netty_internal_tcnative_SSL_enableOcsp [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDecompressCtx.decompressByteArrayToDirectByteBuffer0 -> Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArrayToDirectByteBuffer0 [JNI]
+sun.java2d.pipe.ShapeSpanIterator.setNormalize: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollet -> netty_epoll_native_epollet [NETTY_FUZZY]
+org.hyperic.sigar.win32.Pdh.pdhGetObjects: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.finish -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_finish [JNI]
+com.kenai.jffi.Foreign.invokeI4NoErrno: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeN1O1: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA384Spi.fastDigest -> Java_com_amazon_corretto_crypto_provider_SHA384Spi_fastDigest [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getRawOptArray -> netty_unix_socket_getRawOptArray [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendTo -> netty_unix_socket_sendTo [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errInitMissing -> Java_com_github_luben_zstd_Zstd_errInitMissing [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.disconnect -> Java_org_hyperic_sigar_vmware_VM_disconnect [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Uptime.gather -> Java_org_hyperic_sigar_Uptime_gather [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateNever -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslRenegotiateNever [NETTY]
+libzip.so:java.util.zip.Deflater.deflateBufferBytes -> Java_java_util_zip_Deflater_deflateBufferBytes [JNI]
+libnet.so:java.net.NetworkInterface.getMacAddr0 -> Java_java_net_NetworkInterface_getMacAddr0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionCbHits -> netty_internal_tcnative_SSLContext_sessionCbHits [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.newPipe -> netty_unix_filedescriptor_newPipe [NETTY_FUZZY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509CheckFlagMultiLabelWildCards -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509CheckFlagMultiLabelWildCards [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignatureBase.destroyContext -> Java_com_amazon_corretto_crypto_provider_EvpSignatureBase_destroyContext [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrAkidSkidMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrAkidSkidMismatch [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.ResourceLimit.gather -> Java_org_hyperic_sigar_ResourceLimit_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpKeepIntvl -> netty_epoll_linuxsocket_setTcpKeepIntvl [NETTY]
+jdk.internal.misc.Unsafe.unpark: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.setChar -> Java_com_sun_jna_Native_setChar [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionTicketKeyFail -> netty_internal_tcnative_SSLContext_sessionTicketKeyFail [NETTY]
+com.kenai.jffi.Foreign.newClosureMagazine: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.sendToAddresses: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeL2NoErrno: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.freeCompiledMethods: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.NetInfo.gather -> Java_org_hyperic_sigar_NetInfo_gather [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.resetCStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_resetCStream [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.hasSnapshot -> Java_org_hyperic_sigar_vmware_VM_hasSnapshot [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setInterface: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBLosNotAllowed -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBLosNotAllowed [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha256 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPkcsSha256 [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NfsClientV3.gather -> Java_org_hyperic_sigar_NfsClientV3_gather [JNI]
+org.apache.cassandra.utils.NativeLibraryLinux.munlockall: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.remoteAddress -> netty_unix_socket_remoteAddress [NETTY]
+com.kenai.jffi.Foreign.putLong: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putChar: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.getMemberVMInfo: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.close -> Java_com_sun_jna_Native_close [JNI]
+libsnappyjava_snappy-java-1.1.10.4.so:org.xerial.snappy.SnappyNative.nativeLibraryVersion -> Java_org_xerial_snappy_SnappyNative_nativeLibraryVersion [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.epollout: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evfiltRead: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putFloat: NOT_FOUND_IN_LIBS
+libnet.so:java.net.NetworkInterface.getByInetAddress0 -> Java_java_net_NetworkInterface_getByInetAddress0 [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setAlpnProtos0 -> netty_internal_tcnative_SSLContext_setAlpnProtos0 [NETTY]
+libjava.so:java.lang.StrictMath.IEEEremainder -> Java_java_lang_StrictMath_IEEEremainder [JNI]
+libjava.so:java.security.AccessController.getInheritedAccessControlContext -> Java_java_security_AccessController_getInheritedAccessControlContext [JNI]
+com.kenai.jffi.Foreign.getLastError: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isUdpGro: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.FileDescriptor.writeAddress -> netty_unix_filedescriptor_writeAddress [NETTY_FUZZY]
+libjava.so:java.lang.Shutdown.beforeHalt -> Java_java_lang_Shutdown_beforeHalt [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.isUdpGro -> netty_epoll_linuxsocket_isUdpGro [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errDstBufferNull -> Java_com_github_luben_zstd_Zstd_errDstBufferNull [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.isIpFreeBind: NOT_FOUND_IN_LIBS
+java.lang.Class.getSuperclass: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getTrafficClass -> netty_unix_socket_getTrafficClass [NETTY]
+libjava.so:jdk.internal.loader.BootLoader.getSystemPackageLocation -> Java_jdk_internal_loader_BootLoader_getSystemPackageLocation [JNI]
+com.kenai.jffi.Foreign.compileNativeMethods: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrKeyUsageNoDigitalSignature -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrKeyUsageNoDigitalSignature [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getOptions -> netty_internal_tcnative_SSLContext_getOptions [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setIpMulticastLoop: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.yield -> JVM_Yield [JVM]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.AesXtsSpi.dec -> Java_com_amazon_corretto_crypto_provider_AesXtsSpi_dec [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTimeToLive -> netty_epoll_linuxsocket_getTimeToLive [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setDecompressionLongMax -> Java_com_github_luben_zstd_Zstd_setDecompressionLongMax [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setOcspResponse -> netty_internal_tcnative_SSL_setOcspResponse [NETTY]
+libjnidispatch.so:com.sun.jna.Native.freeNativeCallback -> Java_com_sun_jna_Native_freeNativeCallback [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSubjectIssuerMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSubjectIssuerMismatch [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCipherSuite -> netty_internal_tcnative_SSLContext_setCipherSuite [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.sendToAddress: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.RegistryKey.RegQueryMultiStringValue: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.unregisterNativeMethods: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTimeToLive -> netty_epoll_linuxsocket_setTimeToLive [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.Library.initialize0 -> netty_internal_tcnative_Library_initialize0 [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.sendAddress: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getObject: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpKeepIntvl: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putObjectVolatile: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getShortVolatile: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcsSha1 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPkcsSha1 [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.joinGroup -> netty_epoll_linuxsocket_joinGroup [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.Cpu.gather -> Java_org_hyperic_sigar_Cpu_gather [JNI]
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH64BB -> Java_net_jpountz_xxhash_XXHashJNI_XXH64BB [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpFastOpen -> netty_epoll_linuxsocket_setTcpFastOpen [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.sendToAddressesDomainSocket -> netty_unix_socket_sendToAddressesDomainSocket [NETTY]
+com.kenai.jffi.Foreign.getCharArray: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.munmap: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslOpNoCompression -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslOpNoCompression [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslStAccept -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslStAccept [NETTY]
+com.kenai.jffi.Foreign.getInt: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrErrorInCertNotAfterField -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrErrorInCertNotAfterField [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpEcPublicKey.getPublicPointCoords -> Java_com_amazon_corretto_crypto_provider_EvpEcPublicKey_getPublicPointCoords [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.noteDisconnected: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.getFloat -> Java_java_lang_reflect_Array_getFloat [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.free -> Java_com_github_luben_zstd_ZstdCompressCtx_free [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToDecryptCrlSignature -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToDecryptCrlSignature [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.setTcpNotSentLowAt -> netty_epoll_linuxsocket_setTcpNotSentLowAt [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.parsePrivateKey -> netty_internal_tcnative_SSL_parsePrivateKey [NETTY]
+software.chronicle.enterprise.internals.impl.NativeAffinity.getThreadId0: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdBufferDecompressingStreamNoFinalizer.initDStreamNative -> Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_initDStreamNative [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errMaxSymbolValueTooLarge -> Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooLarge [JNI]
+libjava.so:java.lang.StrictMath.log -> Java_java_lang_StrictMath_log [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.blockSizeMax -> Java_com_github_luben_zstd_Zstd_blockSizeMax [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.remoteDomainSocketAddress: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.getProductInfo -> Java_org_hyperic_sigar_vmware_VM_getProductInfo [JNI]
+com.kenai.jffi.Foreign.invokeArrayWithObjectsDouble: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.epollCtlDel0 -> netty_epoll_native_epollCtlDel0 [NETTY]
+libjnidispatch.so:com.sun.jna.Native._getDirectBufferPointer -> Java_com_sun_jna_Native__1getDirectBufferPointer [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.recvFromAddressDomainSocket -> netty_unix_socket_recvFromAddressDomainSocket [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.recommendedCOutSize -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_recommendedCOutSize [JNI]
+libjava.so:java.lang.System.setOut0 -> Java_java_lang_System_setOut0 [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferCompressingStreamNoFinalizer.compressDirectByteBuffer -> Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_compressDirectByteBuffer [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getShutdown -> netty_internal_tcnative_SSL_getShutdown [NETTY]
+com.kenai.jffi.Foreign.freeClosureMagazine: NOT_FOUND_IN_LIBS
+libjnidispatch.so:com.sun.jna.Native.setLong -> Java_com_sun_jna_Native_setLong [JNI]
+jdk.internal.misc.Unsafe.putLongVolatile: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeArrayWithObjectsInt64: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.isPrimitive -> JVM_IsPrimitiveClass [JVM]
+libsigar-amd64-linux.so:org.hyperic.sigar.DirUsage.gather -> Java_org_hyperic_sigar_DirUsage_gather [JNI]
+libjava.so:jdk.internal.loader.BootLoader.getSystemPackageNames -> Java_jdk_internal_loader_BootLoader_getSystemPackageNames [JNI]
+libjava.so:java.io.FileOutputStream.write -> Java_java_io_FileOutputStream_write [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionMagicless -> Java_com_github_luben_zstd_Zstd_setCompressionMagicless [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setSearchForExternalRepcodes -> Java_com_github_luben_zstd_Zstd_setSearchForExternalRepcodes [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getProcPort -> Java_org_hyperic_sigar_Sigar_getProcPort [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.setRawOptAddress -> netty_unix_socket_setRawOptAddress [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertUntrusted -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertUntrusted [NETTY]
+com.datastax.shaded.netty.channel.epoll.Native.recvmmsg0: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslRenegotiateExplicit -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslRenegotiateExplicit [NETTY]
+com.kenai.jffi.Foreign.getJavaVM: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.newArray -> Java_java_lang_reflect_Array_newArray [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNetServicesName -> Java_org_hyperic_sigar_Sigar_getNetServicesName [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpHmac.doFinal -> Java_com_amazon_corretto_crypto_provider_EvpHmac_doFinal [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setRefMultipleDDicts -> Java_com_github_luben_zstd_Zstd_setRefMultipleDDicts [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpHmac.fastHmac -> Java_com_amazon_corretto_crypto_provider_EvpHmac_fastHmac [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getAlpnSelected -> netty_internal_tcnative_SSL_getAlpnSelected [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.ptql.SigarProcessQuery.destroy -> Java_org_hyperic_sigar_ptql_SigarProcessQuery_destroy [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictDecompress.initDirect -> Java_com_github_luben_zstd_ZstdDictDecompress_initDirect [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.getRawOptArray: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getOcspResponse -> netty_internal_tcnative_SSL_getOcspResponse [NETTY]
+com.kenai.jffi.Foreign.invokeArrayO1Int64: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA256Spi.updateContextByteArray -> Java_com_amazon_corretto_crypto_provider_SHA256Spi_updateContextByteArray [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.trainFromBufferDirect0 -> Java_com_github_luben_zstd_Zstd_trainFromBufferDirect0 [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.isKeepAlive: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.signUpdateBuffer -> Java_com_amazon_corretto_crypto_provider_EvpSignature_signUpdateBuffer [JNI]
+org.hyperic.sigar.win32.RegistryKey.RegDeleteKey: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKeyFactory.x5092Evp -> Java_com_amazon_corretto_crypto_provider_EvpKeyFactory_x5092Evp [JNI]
+libjnidispatch.so:com.sun.jna.Native.getAPIChecksum -> Java_com_sun_jna_Native_getAPIChecksum [JNI]
+com.kenai.jffi.Foreign.registerNatives: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictDecompress.free -> Java_com_github_luben_zstd_ZstdDictDecompress_free [JNI]
+jdk.internal.misc.Unsafe.compareAndSetInt: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.chainLogMax -> Java_com_github_luben_zstd_Zstd_chainLogMax [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.fastOpenClient: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.staticFieldBase: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.minCompressionLevel -> Java_com_github_luben_zstd_Zstd_minCompressionLevel [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.getNativeVersion -> Java_org_hyperic_sigar_Sigar_getNativeVersion [JNI]
+com.kenai.jffi.Foreign.putIntChecked: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokePointerParameterArray: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.unix.Socket.newSocketDomainFd: NOT_FOUND_IN_LIBS
+software.chronicle.enterprise.internals.impl.NativeAffinity.getCpu0: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.recvmmsg0 -> netty_epoll_native_recvmmsg0 [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.RsaGen.generateEvpKey -> Java_com_amazon_corretto_crypto_provider_RsaGen_generateEvpKey [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getCipherForSSL -> netty_internal_tcnative_SSL_getCipherForSSL [NETTY]
+com.kenai.jffi.Foreign.invokeArrayWithObjectsReturnObject: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.eventFdRead: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getError -> netty_internal_tcnative_SSL_getError [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.localVSockAddress -> netty_epoll_linuxsocket_localVSockAddress [NETTY]
+com.kenai.jffi.Foreign.memchr: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.setTimeout -> netty_internal_tcnative_SSL_setTimeout [NETTY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getInterface -> netty_epoll_linuxsocket_getInterface [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrHostnameMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrHostnameMismatch [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NetConnection.getTypeString -> Java_org_hyperic_sigar_NetConnection_getTypeString [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCrlNotYetValid -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCrlNotYetValid [NETTY]
+libjnidispatch.so:com.sun.jna.Native.setDouble -> Java_com_sun_jna_Native_setDouble [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdBufferDecompressingStreamNoFinalizer.createDStreamNative -> Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_createDStreamNative [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.LimitsStaticallyReferencedJniMethods.sizeOfjlong -> netty_unix_limits_sizeOfjlong [NETTY_FUZZY]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.remoteDomainSocketAddress -> netty_unix_socket_remoteDomainSocketAddress [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignEd25519 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignEd25519 [NETTY]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpMd5Sig: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.registerNativeMethods: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.open0 -> Java_java_io_RandomAccessFile_open0 [JNI]
+libjvm.so:java.lang.Class.getSimpleBinaryName0 -> JVM_GetSimpleBinaryName [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Buffer.memoryAddress0 -> netty_unix_buffer_memoryAddress0 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSignRsaPkcs1Md5Sha1 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSignRsaPkcs1Md5Sha1 [NETTY]
+org.apache.cassandra.utils.NativeLibraryDarwin.munlockall: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Service.CloseServiceHandle: NOT_FOUND_IN_LIBS
+java.lang.ClassLoader$NativeLibrary.load0: NOT_FOUND_IN_LIBS
+liblz4-java-644747439388655367.so:net.jpountz.xxhash.XXHashJNI.XXH32_update -> Java_net_jpountz_xxhash_XXHashJNI_XXH32_1update [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.connectDataIdempotent: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.ensureClassInitialized0: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.invokeArrayWithObjectsInt32: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.bioSetByteBuffer -> netty_internal_tcnative_SSL_bioSetByteBuffer [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionConnectGood -> netty_internal_tcnative_SSLContext_sessionConnectGood [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.NfsServerV3.gather -> Java_org_hyperic_sigar_NfsServerV3_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorENETUNREACH -> netty_unix_errors_errorENETUNREACH [NETTY_FUZZY]
+libjava.so:java.lang.ClassLoader.findBootstrapClass -> Java_java_lang_ClassLoader_findBootstrapClass [JNI]
+libjnidispatch.so:com.sun.jna.Native.setLastError -> Java_com_sun_jna_Native_setLastError [JNI]
+libjava.so:java.lang.StrictMath.sqrt -> Java_java_lang_StrictMath_sqrt [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.setCertVerifyCallback -> netty_internal_tcnative_SSLContext_setCertVerifyCallback [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDirectBufferDecompressingStreamNoFinalizer.freeDStreamNative -> Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_freeDStreamNative [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.getSessionCacheMode -> netty_internal_tcnative_SSLContext_getSessionCacheMode [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.errWorkSpaceTooSmall -> Java_com_github_luben_zstd_Zstd_errWorkSpaceTooSmall [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA1Spi.getHashSize -> Java_com_amazon_corretto_crypto_provider_SHA1Spi_getHashSize [JNI]
+com.datastax.shaded.netty.channel.epoll.Native.timerFd: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.RPC.strerror -> Java_org_hyperic_sigar_RPC_strerror [JNI]
+com.kenai.jffi.Foreign.invokeArrayO1Int32: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getIntChecked: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.verifyFinish -> Java_com_amazon_corretto_crypto_provider_EvpSignature_verifyFinish [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBCannotSignP384WithP256 -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBCannotSignP384WithP256 [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.getLastErrorNumber -> netty_internal_tcnative_SSL_getLastErrorNumber [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.reset -> Java_org_hyperic_sigar_vmware_VM_reset [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslCertCompressionDirectionDecompress -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslCertCompressionDirectionDecompress [NETTY]
+com.kenai.jffi.Foreign.putAddress: NOT_FOUND_IN_LIBS
+sun.awt.image.BufImgSurfaceData.initRaster: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.dlclose: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLSession.getSessionId -> netty_internal_tcnative_SSLSession_getSessionId [NETTY]
+com.datastax.shaded.netty.channel.unix.Socket.setReceiveBufferSize: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpRsaPrivateCrtKey.hasCrtParams -> Java_com_amazon_corretto_crypto_provider_EvpRsaPrivateCrtKey_hasCrtParams [JNI]
+libjava.so:java.lang.reflect.Array.multiNewArray -> Java_java_lang_reflect_Array_multiNewArray [JNI]
+libjava.so:java.lang.Float.floatToRawIntBits -> Java_java_lang_Float_floatToRawIntBits [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.RPC.ping -> Java_org_hyperic_sigar_RPC_ping [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.LinuxSocket.getTcpNotSentLowAt -> netty_epoll_linuxsocket_getTcpNotSentLowAt [NETTY]
+com.kenai.jffi.Foreign.getDoubleArrayChecked: NOT_FOUND_IN_LIBS
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcGen.generateEvpEcKeyFromSpec -> Java_com_amazon_corretto_crypto_provider_EcGen_generateEvpEcKeyFromSpec [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.util.Getline.getline -> Java_org_hyperic_sigar_util_Getline_getline [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.sslSessCacheOff -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_sslSessCacheOff [NETTY]
+libjava.so:java.lang.StrictMath.atan2 -> Java_java_lang_StrictMath_atan2 [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VM.destroy -> Java_org_hyperic_sigar_vmware_VM_destroy [JNI]
+com.datastax.shaded.netty.channel.epoll.NativeStaticallyReferencedJniMethods.tcpFastopenMode: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setLong -> Java_java_lang_reflect_Array_setLong [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.getTcpKeepIntvl: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertChainTooLong -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertChainTooLong [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EcUtils.curveNameToInfo -> Java_com_amazon_corretto_crypto_provider_EcUtils_curveNameToInfo [JNI]
+libjvm.so:java.lang.System.nanoTime -> JVM_NanoTime [JVM]
+org.hyperic.sigar.win32.Service.DeleteService: NOT_FOUND_IN_LIBS
+org.xerial.snappy.SnappyNative.isValidCompressedBuffer: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Double.doubleToRawLongBits -> Java_java_lang_Double_doubleToRawLongBits [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ThreadCpu.gather -> Java_org_hyperic_sigar_ThreadCpu_gather [JNI]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.epoll.Native.splice0 -> netty_epoll_native_splice0 [NETTY]
+org.hyperic.sigar.win32.Service.QueryServiceStatus: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setBoolean -> Java_java_lang_reflect_Array_setBoolean [JNI]
+libjava.so:java.security.AccessController.getStackAccessControlContext -> Java_java_security_AccessController_getStackAccessControlContext [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpKey.encodePrivateKey -> Java_com_amazon_corretto_crypto_provider_EvpKey_encodePrivateKey [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.EvpSignature.signStart -> Java_com_amazon_corretto_crypto_provider_EvpSignature_signStart [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpKeepCnt: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Pdh.pdhOpenQuery: NOT_FOUND_IN_LIBS
+org.hyperic.sigar.win32.Pdh.pdhRemoveCounter: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrEmailMismatch -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrEmailMismatch [NETTY]
+com.kenai.jffi.Foreign.getIntArrayChecked: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.chainLogMin -> Java_com_github_luben_zstd_Zstd_chainLogMin [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSLContext.sessionTimeouts -> netty_internal_tcnative_SSLContext_sessionTimeouts [NETTY]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.SSL.freePrivateKey -> netty_internal_tcnative_SSL_freePrivateKey [NETTY]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.initContext -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_initContext [JNI]
+com.datastax.shaded.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEISCONN: NOT_FOUND_IN_LIBS
+libjava.so:java.io.Console.echo -> Java_java_io_Console_echo [JNI]
+libjnidispatch.so:com.sun.jna.Native.ffi_prep_closure -> Java_com_sun_jna_Native_ffi_1prep_1closure [JNI]
+com.kenai.jffi.Foreign.newCallContext: NOT_FOUND_IN_LIBS
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evfiltUser: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.getDirectBufferAddress: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrInvalidPolicyExtension -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrInvalidPolicyExtension [NETTY]
+libjava.so:java.lang.reflect.Array.getLength -> Java_java_lang_reflect_Array_getLength [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcEnv.getValue -> Java_org_hyperic_sigar_ProcEnv_getValue [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrCertRevoked -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrCertRevoked [NETTY]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionWindowLog -> Java_com_github_luben_zstd_Zstd_setCompressionWindowLog [JNI]
+com.kenai.jffi.Foreign.invokeL5NoErrno: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.newStruct: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.setCompressionStrategy -> Java_com_github_luben_zstd_Zstd_setCompressionStrategy [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.vmware.VMwareServer.destroy -> Java_org_hyperic_sigar_vmware_VMwareServer_destroy [JNI]
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrSuiteBInvalidAlgorithm -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrSuiteBInvalidAlgorithm [NETTY]
+libsigar-amd64-linux.so:org.hyperic.sigar.FileInfo.gatherLink -> Java_org_hyperic_sigar_FileInfo_gatherLink [JNI]
+libjnidispatch.so:com.sun.jna.Native.getLong -> Java_com_sun_jna_Native_getLong [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdOutputStreamNoFinalizer.flushStream -> Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_flushStream [JNI]
+org.hyperic.sigar.win32.MetaBase.MetaBaseGetMultiStringValue: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.freeMemory -> Java_java_lang_Runtime_freeMemory [JNI]
+io.netty.channel.kqueue.KQueueStaticallyReferencedJniMethods.evEnable: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.loadFence: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdCompressCtx.setContentSize0 -> Java_com_github_luben_zstd_ZstdCompressCtx_setContentSize0 [JNI]
+com.datastax.shaded.netty.channel.epoll.LinuxSocket.setTcpCork: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.memcpy: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdDictDecompress.init -> Java_com_github_luben_zstd_ZstdDictDecompress_init [JNI]
+org.xerial.snappy.BitShuffleNative.unshuffle: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Deflater.deflateBytesBytes -> Java_java_util_zip_Deflater_deflateBytesBytes [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.setTrafficClass: NOT_FOUND_IN_LIBS
+com.kenai.jffi.Foreign.dlopen: NOT_FOUND_IN_LIBS
+com.datastax.shaded.netty.channel.epoll.Native.registerUnix: NOT_FOUND_IN_LIBS
+libnetty_tcnative_linux_x86_64.so:io.netty.internal.tcnative.NativeStaticallyReferencedJniMethods.x509vErrUnableToVerifyLeafSignature -> netty_internal_tcnative_NativeStaticallyReferencedJniMethods_x509vErrUnableToVerifyLeafSignature [NETTY]
+com.amazon.corretto.crypto.provider.AesGcmSpi.encryptInit: NOT_FOUND_IN_LIBS
+libsigar-amd64-linux.so:org.hyperic.sigar.ptql.SigarProcessQuery.match -> Java_org_hyperic_sigar_ptql_SigarProcessQuery_match [JNI]
+libamazonCorrettoCryptoProvider.so:com.amazon.corretto.crypto.provider.SHA512Spi.updateContextByteArray -> Java_com_amazon_corretto_crypto_provider_SHA512Spi_updateContextByteArray [JNI]
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.ZstdInputStreamNoFinalizer.createDStream -> Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_createDStream [JNI]
+libjnidispatch.so:com.sun.jna.Native.setPointer -> Java_com_sun_jna_Native_setPointer [JNI]
+libsigar-amd64-linux.so:org.hyperic.sigar.Sigar.formatSize -> Java_org_hyperic_sigar_Sigar_formatSize [JNI]
+com.datastax.shaded.netty.channel.unix.Socket.setTcpNoDelay: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errnoEAGAIN -> netty_unix_errors_errnoEAGAIN [NETTY_FUZZY]
+com.kenai.jffi.Foreign.setMemoryChecked: NOT_FOUND_IN_LIBS
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEISCONN -> netty_unix_errors_errorEISCONN [NETTY_FUZZY]
+libsigar-amd64-linux.so:org.hyperic.sigar.ProcMem.gather -> Java_org_hyperic_sigar_ProcMem_gather [JNI]
+libjvm.so:java.lang.Class.getDeclaredFields0 -> JVM_GetClassDeclaredFields [JVM]
+libnetty_transport_native_epoll_x86_64.so:io.netty.channel.unix.Socket.getIntOpt -> netty_unix_socket_getIntOpt [NETTY]
+org.hyperic.sigar.win32.RegistryKey.RegLoadKey: NOT_FOUND_IN_LIBS
+libzstd-jni-1.5.7-2.so:com.github.luben.zstd.Zstd.decompressedSize0 -> Java_com_github_luben_zstd_Zstd_decompressedSize0 [JNI]

@@ -1,0 +1,129 @@
+name: CI
+
+# Tier 1 PR gate: fast, reliable checks that need no Docker, Sysdig, eBPF,
+# or the SysPartCode/Egalito toolchain. The full analysis pipeline requires a
+# privileged Linux host and is intentionally out of scope here (see README).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: Build & test (JDK 17)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The cross-JDK detector tests are fed real JDK runtimes through
+      # ECHOTRACE_JDK*_* env vars. Install several JDKs; the LAST setup-java
+      # call wins for JAVA_HOME, so the test JVM runs on 17 (where the leak
+      # test's Thread.yield()-is-native assumption still holds; it changed in 19+).
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Provide cross-JDK runtimes to the test suite
+        run: |
+          echo "ECHOTRACE_JDK8_RT_JAR=${JAVA_HOME_8_X64}/jre/lib/rt.jar" >> "$GITHUB_ENV"
+          echo "ECHOTRACE_JDK11_JAVA_BASE_JMOD=${JAVA_HOME_11_X64}/jmods/java.base.jmod" >> "$GITHUB_ENV"
+          echo "ECHOTRACE_JDK21_JAVA_BASE_JMOD=${JAVA_HOME_21_X64}/jmods/java.base.jmod" >> "$GITHUB_ENV"
+
+      - name: Build, test, and package
+        run: mvn -B -ntp clean verify
+
+      - name: Upload shaded JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: echotrace-jar
+          path: target/*.jar
+          if-no-files-found: error
+
+      - name: Publish test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
+          if-no-files-found: ignore
+
+  compile-jdk21:
+    name: Compile & package (JDK 21)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      # Guards against compile/shade regressions on a newer JDK. Skips tests,
+      # which assume pre-Loom JDK semantics and run in the build-test job on 17.
+      - name: Compile and package
+        run: mvn -B -ntp clean package -DskipTests
+
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ludeeus/action-shellcheck@master
+        with:
+          severity: error
+          ignore_paths: SysPartCode target results
+
+  python:
+    name: Python checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check (hard gate)
+        run: python -m compileall -q scripts
+      - name: Lint with ruff (advisory)
+        continue-on-error: true
+        run: |
+          pip install ruff
+          ruff check --output-format=github scripts
+
+  docs:
+    name: Docs lint (advisory)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint
+        continue-on-error: true
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: '**/*.md'
+      - name: Link check
+        continue-on-error: true
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-concurrency 4 './**/*.md'
+          fail: false

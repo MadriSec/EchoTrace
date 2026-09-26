@@ -1,0 +1,261 @@
+
+Path to rt_sigprocmask:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [syscall]-> rt_sigprocmask
+
+Path to futex:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> fuzzyfunc-0x8e0e0_8e0e0
+  fuzzyfunc-0x8e0e0_8e0e0 - [syscall]-> futex
+
+Path to exit:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit
+
+Path to exit_group:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit_group
+
+Path to write:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> __cxa_pure_virtual_3d460
+  __cxa_pure_virtual_3d460 - [DIRECT]-> write_f8330
+  write_f8330 - [syscall]-> write
+
+Path to writev:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [syscall]-> writev
+
+Path to rt_sigaction:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> sigaction_3c010
+  sigaction_3c010 - [DIRECT]-> __libc_sigaction_3c060
+  __libc_sigaction_3c060 - [syscall]-> rt_sigaction
+
+Path to mremap:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> d_growable_string_callback_adapter_7fdf0
+  d_growable_string_callback_adapter_7fdf0 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> mremap_1099c0
+  mremap_1099c0 - [syscall]-> mremap
+
+Path to madvise:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> d_growable_string_callback_adapter_7fdf0
+  d_growable_string_callback_adapter_7fdf0 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> madvise_101af0
+  madvise_101af0 - [syscall]-> madvise
+
+Path to munmap:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> munmap_1019f0
+  munmap_1019f0 - [syscall]-> munmap
+
+Path to openat:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __open64_nocancel_fcfb0
+  __open64_nocancel_fcfb0 - [syscall]-> openat
+
+Path to mmap:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> mmap_101990
+  mmap_101990 - [syscall]-> mmap
+
+Path to read:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __read_nocancel_fd0f0
+  __read_nocancel_fd0f0 - [syscall]-> read
+
+Path to close:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __close_nocancel_fce50
+  __close_nocancel_fce50 - [syscall]-> close
+
+Path to getdents64:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> getdents64_d0030
+  getdents64_d0030 - [syscall]-> getdents64
+
+Path to pread64:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> __pread64_nocancel_fd120
+  __pread64_nocancel_fd120 - [syscall]-> pread64
+
+Path to getrandom:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> getrandom_3f180
+  getrandom_3f180 - [syscall]-> getrandom
+
+Path to clock_gettime:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> clock_gettime_cf420
+  clock_gettime_cf420 - [syscall]-> clock_gettime
+
+Path to tgkill:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> tgkill
+
+Path to gettid:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> gettid
+
+Path to mprotect:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x97360_97360
+  fuzzyfunc-0x97360_97360 - [DIRECT]-> fuzzyfunc-0x96b20_96b20
+  fuzzyfunc-0x96b20_96b20 - [DIRECT]-> mprotect_101a20
+  mprotect_101a20 - [syscall]-> mprotect
+
+Path to sched_getaffinity:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x957a0_957a0
+  fuzzyfunc-0x957a0_957a0 - [DIRECT]-> get_nprocs_104330
+  get_nprocs_104330 - [DIRECT]-> fuzzyfunc-0x1042b0_1042b0
+  fuzzyfunc-0x1042b0_1042b0 - [syscall]-> sched_getaffinity
+
+Path to getpid:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [DIRECT]-> getpid_d54e0
+  getpid_d54e0 - [syscall]-> getpid
+
+Path to getcwd:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0
+  _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0 - [DIRECT]-> dgettext_358c0
+  dgettext_358c0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [syscall]-> getcwd
+
+Path to sched_getparam:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> thread_local_destructor_9d850
+  thread_local_destructor_9d850 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getparam_edf80
+  sched_getparam_edf80 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> thread_local_destructor_9d850
+  thread_local_destructor_9d850 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x91250_91250
+  fuzzyfunc-0x91250_91250 - [DIRECT]-> sched_getscheduler_edfe0
+  sched_getscheduler_edfe0 - [syscall]-> sched_getscheduler
+
+Path to sched_setscheduler:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> thread_local_destructor_9d850
+  thread_local_destructor_9d850 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_setscheduler_edfb0
+  sched_setscheduler_edfb0 - [syscall]-> sched_setscheduler
+
+Path to sched_get_priority_max:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> thread_local_destructor_9d850
+  thread_local_destructor_9d850 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_max_ee040
+  sched_get_priority_max_ee040 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> thread_local_destructor_9d850
+  thread_local_destructor_9d850 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_min_ee070
+  sched_get_priority_min_ee070 - [syscall]-> sched_get_priority_min
+
+Path to dup:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> _Z31libCryptoRngGenerateRandomBytesPhi_246b0
+  _Z31libCryptoRngGenerateRandomBytesPhi_246b0 - [DIRECT]-> RAND_bytes_1321b0
+  RAND_bytes_1321b0 - [DIRECT]-> RAND_bytes_with_additional_data.part.219_1314c0
+  RAND_bytes_with_additional_data.part.219_1314c0 - [DIRECT]-> CRYPTO_sysrand_1313c0
+  CRYPTO_sysrand_1313c0 - [DIRECT]-> perror_524e0
+  perror_524e0 - [DIRECT]-> dup_f8a60
+  dup_f8a60 - [syscall]-> dup
+
+Path to fcntl:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> _Unwind_Resume_8e440
+  _Unwind_Resume_8e440 - [DIRECT]-> uw_init_context_1_8d830
+  uw_init_context_1_8d830 - [DIRECT]-> pthread_once_8e120
+  pthread_once_8e120 - [DIRECT]-> fuzzyfunc-0x8df80_8df80
+  fuzzyfunc-0x8df80_8df80 - [INDIRECT_RESOLVED]-> init_once_f1890
+  init_once_f1890 - [DIRECT]-> fcntl_f8790
+  fcntl_f8790 - [syscall]-> fcntl
+
+Path to newfstatat:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0
+  _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0 - [DIRECT]-> dgettext_358c0
+  dgettext_358c0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fstatat_f7850
+  fstatat_f7850 - [syscall]-> newfstatat
+
+Path to brk:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> fuzzyfunc-0x96070_96070
+  fuzzyfunc-0x96070_96070 - [DIRECT]-> __default_morecore_96030
+  __default_morecore_96030 - [DIRECT]-> sbrk_fdc70
+  sbrk_fdc70 - [DIRECT]-> brk_fdc30
+  brk_fdc30 - [syscall]-> brk
+
+Path to clock_nanosleep:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> _Z31libCryptoRngGenerateRandomBytesPhi_246b0
+  _Z31libCryptoRngGenerateRandomBytesPhi_246b0 - [DIRECT]-> RAND_bytes_1321b0
+  RAND_bytes_1321b0 - [DIRECT]-> RAND_bytes_with_additional_data.part.219_1314c0
+  RAND_bytes_with_additional_data.part.219_1314c0 - [DIRECT]-> CRYPTO_sysrand_1313c0
+  CRYPTO_sysrand_1313c0 - [DIRECT]-> fill_with_entropy.part.214_f5e90
+  fill_with_entropy.part.214_f5e90 - [DIRECT]-> nanosleep_d3e40
+  nanosleep_d3e40 - [DIRECT]-> clock_nanosleep_cf4e0
+  clock_nanosleep_cf4e0 - [syscall]-> clock_nanosleep
+
+Path to prlimit64:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> _Unwind_Resume_8e440
+  _Unwind_Resume_8e440 - [DIRECT]-> uw_init_context_1_8d830
+  uw_init_context_1_8d830 - [DIRECT]-> pthread_once_8e120
+  pthread_once_8e120 - [DIRECT]-> fuzzyfunc-0x8df80_8df80
+  fuzzyfunc-0x8df80_8df80 - [INDIRECT_RESOLVED]-> init_fork_detect_f1730
+  init_fork_detect_f1730 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> getrlimit_fd7d0
+  getrlimit_fd7d0 - [syscall]-> prlimit64
+
+Path to lseek:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [INDIRECT]-> _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0
+  _ZNKSt7__cxx118messagesIcE6do_getEiiiRKNS_12basic_stringIcSt11char_traitsIcESaIcEEE_8a1e0 - [DIRECT]-> dgettext_358c0
+  dgettext_358c0 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> rewinddir_cff00
+  rewinddir_cff00 - [DIRECT]-> lseek_f83d0
+  lseek_f83d0 - [syscall]-> lseek
+
+Path to sysinfo:
+  Java_com_amazon_corretto_crypto_provider_LibCryptoRng_generate_246d0 - [DIRECT]-> _Unwind_Resume_8e440
+  _Unwind_Resume_8e440 - [DIRECT]-> uw_init_context_1_8d830
+  uw_init_context_1_8d830 - [DIRECT]-> pthread_once_8e120
+  pthread_once_8e120 - [DIRECT]-> fuzzyfunc-0x8df80_8df80
+  fuzzyfunc-0x8df80_8df80 - [INDIRECT_RESOLVED]-> init_fork_detect_f1730
+  init_fork_detect_f1730 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> get_avphys_pages_104440
+  get_avphys_pages_104440 - [DIRECT]-> sysinfo_10a0b0
+  sysinfo_10a0b0 - [syscall]-> sysinfo

@@ -1,0 +1,11 @@
+JVM_CurrentTimeMillis_8f8780
+JVM_GetClassModifiers_8fc210
+JVM_Interrupt_901380
+JVM_IsArrayClass_8fbf40
+JVM_IsInterface_8fb630
+JVM_IsPrimitiveClass_8fc0b0
+JVM_NanoTime_8f87b0
+JVM_SetThreadPriority_900fd0
+JVM_Sleep_90dd00
+JVM_StartThread_907c70
+JVM_Yield_901160

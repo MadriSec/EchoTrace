@@ -1,0 +1,14 @@
+JVM_AssertionStatusDirectives_744e80
+JVM_CurrentTimeMillis_7414c0
+JVM_GetClassModifiers_744050
+JVM_Interrupt_748280
+JVM_IsArrayClass_743e90
+JVM_IsInterface_743310
+JVM_IsPrimitiveClass_743f20
+JVM_NanoTime_7414f0
+JVM_ResumeThread_747dd0
+JVM_SetThreadPriority_747e80
+JVM_Sleep_7532d0
+JVM_StartThread_747740
+JVM_SuspendThread_747c30
+JVM_Yield_747f40

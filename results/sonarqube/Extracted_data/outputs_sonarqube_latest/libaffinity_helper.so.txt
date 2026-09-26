@@ -1,0 +1,2 @@
+Java_com_hazelcast_internal_util_ThreadAffinityHelper_getAffinity0
+Java_com_hazelcast_internal_util_ThreadAffinityHelper_setAffinity0

@@ -1,0 +1,528 @@
+
+Path to exit:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [syscall]-> exit
+
+Path to gettimeofday:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __gettimeofday_syscall_d9a80
+  __gettimeofday_syscall_d9a80 - [syscall]-> gettimeofday
+
+Path to futex:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [syscall]-> futex
+
+Path to rt_sigreturn:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __restore_rt_42520
+  __restore_rt_42520 - [syscall]-> rt_sigreturn
+
+Path to set_robust_list:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> set_robust_list
+
+Path to rt_sigprocmask:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> rt_sigprocmask
+
+Path to rseq:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> rseq
+
+Path to sched_yield:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_cleanup_8eb50
+  _IO_cleanup_8eb50 - [DIRECT]-> sched_yield_108d00
+  sched_yield_108d00 - [syscall]-> sched_yield
+
+Path to close:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_close_8a590
+  _IO_file_close_8a590 - [DIRECT]-> __close_nocancel_1198e0
+  __close_nocancel_1198e0 - [syscall]-> close
+
+Path to munmap:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_close_mmap_8a640
+  _IO_file_close_mmap_8a640 - [DIRECT]-> munmap_11eaf0
+  munmap_11eaf0 - [syscall]-> munmap
+
+Path to read:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_read_8b930
+  _IO_file_read_8b930 - [DIRECT]-> read_114850
+  read_114850 - [syscall]-> read
+
+Path to lseek:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_seek_8a670
+  _IO_file_seek_8a670 - [DIRECT]-> lseek_114990
+  lseek_114990 - [syscall]-> lseek
+
+Path to mmap:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_underflow_maybe_mmap_8b960
+  _IO_file_underflow_maybe_mmap_8b960 - [DIRECT]-> mmap_11ea90
+  mmap_11ea90 - [syscall]-> mmap
+
+Path to mremap:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_underflow_mmap_8bb50
+  _IO_file_underflow_mmap_8bb50 - [DIRECT]-> mremap_1269c0
+  mremap_1269c0 - [syscall]-> mremap
+
+Path to write:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_write@@GLIBC_2.2.5_8aec0
+  _IO_file_write@@GLIBC_2.2.5_8aec0 - [DIRECT]-> write_1148f0
+  write_1148f0 - [syscall]-> write
+
+Path to getpid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [DIRECT]-> getpid_ec040
+  getpid_ec040 - [syscall]-> getpid
+
+Path to sendto:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> sendto_127a70
+  sendto_127a70 - [syscall]-> sendto
+
+Path to poll:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> poll_118c00
+  poll_118c00 - [syscall]-> poll
+
+Path to recvmsg:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> recvmsg_127860
+  recvmsg_127860 - [syscall]-> recvmsg
+
+Path to recvfrom:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> recvfrom_127790
+  recvfrom_127790 - [syscall]-> recvfrom
+
+Path to madvise:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> madvise_11ebf0
+  madvise_11ebf0 - [syscall]-> madvise
+
+Path to ioctl:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_doallocate_7eb10
+  _IO_file_doallocate_7eb10 - [DIRECT]-> isatty_115fb0
+  isatty_115fb0 - [DIRECT]-> tcgetattr_119fa0
+  tcgetattr_119fa0 - [syscall]-> ioctl
+
+Path to newfstatat:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_file_stat_8aeb0
+  _IO_file_stat_8aeb0 - [DIRECT]-> fstat_113d50
+  fstat_113d50 - [DIRECT]-> fstatat_113db0
+  fstatat_113db0 - [syscall]-> newfstatat
+
+Path to writev:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> __libc_fatal_896d0
+  __libc_fatal_896d0 - [DIRECT]-> __libc_message.constprop.0_89280
+  __libc_message.constprop.0_89280 - [syscall]-> writev
+
+Path to openat:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> __open_nocancel_119a50
+  __open_nocancel_119a50 - [syscall]-> openat
+
+Path to getdents64:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> getdents64_e6630
+  getdents64_e6630 - [syscall]-> getdents64
+
+Path to pread64:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> __pread64_nocancel_119bd0
+  __pread64_nocancel_119bd0 - [syscall]-> pread64
+
+Path to clock_gettime:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> __deadline_current_time_1430a0
+  __deadline_current_time_1430a0 - [DIRECT]-> clock_gettime@@GLIBC_2.17_e5650
+  clock_gettime@@GLIBC_2.17_e5650 - [syscall]-> clock_gettime
+
+Path to getrandom:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> ptmalloc_init.part.0_a19b0
+  ptmalloc_init.part.0_a19b0 - [DIRECT]-> getrandom_46c70
+  getrandom_46c70 - [syscall]-> getrandom
+
+Path to exit_group:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [DIRECT]-> exit_455f0
+  exit_455f0 - [DIRECT]-> __run_exit_handlers_45390
+  __run_exit_handlers_45390 - [DIRECT]-> _exit_eac00
+  _exit_eac00 - [syscall]-> exit_group
+
+Path to fstat:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_PreprocessArg_4250
+  JLI_PreprocessArg_4250 - [DIRECT]-> __fxstat_126550
+  __fxstat_126550 - [syscall]-> fstat
+
+Path to stat:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> __xstat_1264f0
+  __xstat_1264f0 - [syscall]-> stat
+
+Path to getcwd:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> getcwd_115250
+  getcwd_115250 - [syscall]-> getcwd
+
+Path to readlink:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> readlink_1160c0
+  readlink_1160c0 - [syscall]-> readlink
+
+Path to faccessat2:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [syscall]-> faccessat2
+
+Path to faccessat:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [syscall]-> faccessat
+
+Path to mprotect:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> _int_malloc_a39b0
+  _int_malloc_a39b0 - [DIRECT]-> sysmalloc_a30d0
+  sysmalloc_a30d0 - [DIRECT]-> mprotect_11eb20
+  mprotect_11eb20 - [syscall]-> mprotect
+
+Path to sched_getaffinity:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> arena_get2.part.0_a1ee0
+  arena_get2.part.0_a1ee0 - [DIRECT]-> get_nprocs_121b30
+  get_nprocs_121b30 - [DIRECT]-> __get_nprocs_sched_1218c0
+  __get_nprocs_sched_1218c0 - [syscall]-> sched_getaffinity
+
+Path to dup:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_StringDup_a210
+  JLI_StringDup_a210 - [DIRECT]-> perror_60e70
+  perror_60e70 - [DIRECT]-> dup_115060
+  dup_115060 - [syscall]-> dup
+
+Path to execve:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> CreateExecutionEnvironment_9300
+  CreateExecutionEnvironment_9300 - [DIRECT]-> execve_eb080
+  execve_eb080 - [syscall]-> execve
+
+Path to access:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> JLI_WildcardExpandClasspath_be50
+  JLI_WildcardExpandClasspath_be50 - [DIRECT]-> access_1149c0
+  access_1149c0 - [syscall]-> access
+
+Path to geteuid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> geteuid_ec070
+  geteuid_ec070 - [syscall]-> geteuid
+
+Path to getgid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> getgid_ec080
+  getgid_ec080 - [syscall]-> getgid
+
+Path to getuid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> getuid_ec060
+  getuid_ec060 - [syscall]-> getuid
+
+Path to getegid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> getegid_ec090
+  getegid_ec090 - [syscall]-> getegid
+
+Path to prlimit64:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> sysconf_ed280
+  sysconf_ed280 - [DIRECT]-> getrlimit_11a350
+  getrlimit_11a350 - [syscall]-> prlimit64
+
+Path to tgkill:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [DIRECT]-> __GI___nptl_setxid_sighandler.cold_2988c
+  __GI___nptl_setxid_sighandler.cold_2988c - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> raise_42460
+  raise_42460 - [DIRECT]-> pthread_kill@@GLIBC_2.34_968d0
+  pthread_kill@@GLIBC_2.34_968d0 - [syscall]-> tgkill
+
+Path to gettid:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [DIRECT]-> __GI___nptl_setxid_sighandler.cold_2988c
+  __GI___nptl_setxid_sighandler.cold_2988c - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> raise_42460
+  raise_42460 - [DIRECT]-> pthread_kill@@GLIBC_2.34_968d0
+  pthread_kill@@GLIBC_2.34_968d0 - [syscall]-> gettid
+
+Path to rt_sigaction:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [DIRECT]-> __GI___nptl_setxid_sighandler.cold_2988c
+  __GI___nptl_setxid_sighandler.cold_2988c - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> sigaction_424d0
+  sigaction_424d0 - [DIRECT]-> __libc_sigaction_42530
+  __libc_sigaction_42530 - [syscall]-> rt_sigaction
+
+Path to socket:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> getifaddrs_141c70
+  getifaddrs_141c70 - [DIRECT]-> getifaddrs_internal_140f80
+  getifaddrs_internal_140f80 - [DIRECT]-> __netlink_open_140eb0
+  __netlink_open_140eb0 - [DIRECT]-> socket_127bb0
+  socket_127bb0 - [syscall]-> socket
+
+Path to bind:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> getifaddrs_141c70
+  getifaddrs_141c70 - [DIRECT]-> getifaddrs_internal_140f80
+  getifaddrs_internal_140f80 - [DIRECT]-> __netlink_open_140eb0
+  __netlink_open_140eb0 - [DIRECT]-> bind_127530
+  bind_127530 - [syscall]-> bind
+
+Path to getsockname:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> getifaddrs_141c70
+  getifaddrs_141c70 - [DIRECT]-> getifaddrs_internal_140f80
+  getifaddrs_internal_140f80 - [DIRECT]-> __netlink_open_140eb0
+  __netlink_open_140eb0 - [DIRECT]-> getsockname_127630
+  getsockname_127630 - [syscall]-> getsockname
+
+Path to fcntl:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_StringDup_a210
+  JLI_StringDup_a210 - [DIRECT]-> perror_60e70
+  perror_60e70 - [DIRECT]-> fdopen@@GLIBC_2.2.5_7ee50
+  fdopen@@GLIBC_2.2.5_7ee50 - [DIRECT]-> fcntl_114d70
+  fcntl_114d70 - [syscall]-> fcntl
+
+Path to getgroups:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> group_member_ec1f0
+  group_member_ec1f0 - [DIRECT]-> getgroups_ec0a0
+  getgroups_ec0a0 - [syscall]-> getgroups
+
+Path to sysinfo:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> GetApplicationHomeFromDll_9aa0
+  GetApplicationHomeFromDll_9aa0 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> sysconf_ed280
+  sysconf_ed280 - [DIRECT]-> get_phys_pages_121c70
+  get_phys_pages_121c70 - [DIRECT]-> sysinfo_126e60
+  sysinfo_126e60 - [syscall]-> sysinfo
+
+Path to sched_getparam:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> _dl_addr_174580
+  _dl_addr_174580 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_current_priority_9d170
+  __pthread_current_priority_9d170 - [DIRECT]-> sched_getparam_108c70
+  sched_getparam_108c70 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> _dl_addr_174580
+  _dl_addr_174580 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_current_priority_9d170
+  __pthread_current_priority_9d170 - [DIRECT]-> sched_getscheduler_108cd0
+  sched_getscheduler_108cd0 - [syscall]-> sched_getscheduler
+
+Path to sched_setscheduler:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> _dl_addr_174580
+  _dl_addr_174580 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_setscheduler_108ca0
+  sched_setscheduler_108ca0 - [syscall]-> sched_setscheduler
+
+Path to sched_get_priority_max:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> _dl_addr_174580
+  _dl_addr_174580 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_max_108d30
+  sched_get_priority_max_108d30 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> _dl_addr_174580
+  _dl_addr_174580 - [DIRECT]-> pthread_mutex_lock@@GLIBC_2.2.5_97ef0
+  pthread_mutex_lock@@GLIBC_2.2.5_97ef0 - [DIRECT]-> __pthread_mutex_lock_full_977a0
+  __pthread_mutex_lock_full_977a0 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_min_108d60
+  sched_get_priority_min_108d60 - [syscall]-> sched_get_priority_min
+
+Path to brk:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> free_a53e0
+  free_a53e0 - [DIRECT]-> _int_free_a26a0
+  _int_free_a26a0 - [DIRECT]-> systrim.constprop.0_a25f0
+  systrim.constprop.0_a25f0 - [DIRECT]-> __glibc_morecore_a25b0
+  __glibc_morecore_a25b0 - [DIRECT]-> sbrk_11a8e0
+  sbrk_11a8e0 - [DIRECT]-> brk_11a8a0
+  brk_11a8a0 - [syscall]-> brk
+
+Path to sched_setaffinity:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> JVMInit_9930
+  JVMInit_9930 - [DIRECT]-> ContinueInNewThread_69a0
+  ContinueInNewThread_69a0 - [DIRECT]-> CallJavaMainInNewThread_9870
+  CallJavaMainInNewThread_9870 - [DIRECT]-> pthread_create@@GLIBC_2.34_94c40
+  pthread_create@@GLIBC_2.34_94c40 - [DIRECT]-> create_thread_945e0
+  create_thread_945e0 - [syscall]-> sched_setaffinity
+
+Path to setsockopt:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> __libc_thread_freeres_a8180
+  __libc_thread_freeres_a8180 - [DIRECT]-> __rpc_thread_destroy_1688a0
+  __rpc_thread_destroy_1688a0 - [DIRECT]-> __rpc_thread_svc_cleanup_169840
+  __rpc_thread_svc_cleanup_169840 - [DIRECT]-> __EI_pmap_unset_15dc30
+  __EI_pmap_unset_15dc30 - [DIRECT]-> __EI_clntudp_bufcreate_166f20
+  __EI_clntudp_bufcreate_166f20 - [DIRECT]-> __GI___libc_clntudp_bufcreate_166c50
+  __GI___libc_clntudp_bufcreate_166c50 - [DIRECT]-> setsockopt_127b40
+  setsockopt_127b40 - [syscall]-> setsockopt
+
+Path to connect:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> __libc_thread_freeres_a8180
+  __libc_thread_freeres_a8180 - [DIRECT]-> __rpc_thread_destroy_1688a0
+  __rpc_thread_destroy_1688a0 - [DIRECT]-> __rpc_thread_svc_cleanup_169840
+  __rpc_thread_svc_cleanup_169840 - [DIRECT]-> __EI_pmap_unset_15dc30
+  __EI_pmap_unset_15dc30 - [DIRECT]-> __EI_clntudp_bufcreate_166f20
+  __EI_clntudp_bufcreate_166f20 - [DIRECT]-> __GI___libc_clntudp_bufcreate_166c50
+  __GI___libc_clntudp_bufcreate_166c50 - [DIRECT]-> __GI_pmap_getport_168640
+  __GI_pmap_getport_168640 - [DIRECT]-> connect_127560
+  connect_127560 - [syscall]-> connect
+
+Path to clone3:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> JVMInit_9930
+  JVMInit_9930 - [DIRECT]-> ContinueInNewThread_69a0
+  ContinueInNewThread_69a0 - [DIRECT]-> CallJavaMainInNewThread_9870
+  CallJavaMainInNewThread_9870 - [DIRECT]-> pthread_create@@GLIBC_2.34_94c40
+  pthread_create@@GLIBC_2.34_94c40 - [DIRECT]-> create_thread_945e0
+  create_thread_945e0 - [DIRECT]-> __clone_internal_1268f0
+  __clone_internal_1268f0 - [DIRECT]-> clone3_1268a0
+  clone3_1268a0 - [syscall]-> clone3
+
+Path to clone:
+  _start_1278 - [DIRECT]-> __libc_start_main@@GLIBC_2.34_29dc0
+  __libc_start_main@@GLIBC_2.34_29dc0 - [DIRECT]-> __libc_start_call_main_29d10
+  __libc_start_call_main_29d10 - [INDIRECT_RESOLVED]-> main_10e0
+  main_10e0 - [DIRECT]-> JLI_Launch_6bf0
+  JLI_Launch_6bf0 - [DIRECT]-> JVMInit_9930
+  JVMInit_9930 - [DIRECT]-> ContinueInNewThread_69a0
+  ContinueInNewThread_69a0 - [DIRECT]-> CallJavaMainInNewThread_9870
+  CallJavaMainInNewThread_9870 - [DIRECT]-> pthread_create@@GLIBC_2.34_94c40
+  pthread_create@@GLIBC_2.34_94c40 - [DIRECT]-> create_thread_945e0
+  create_thread_945e0 - [DIRECT]-> __clone_internal_1268f0
+  __clone_internal_1268f0 - [DIRECT]-> clone_125a40
+  clone_125a40 - [syscall]-> clone

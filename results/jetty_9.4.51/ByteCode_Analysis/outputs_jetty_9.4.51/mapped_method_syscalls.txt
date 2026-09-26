@@ -1,0 +1,161 @@
+libjava.so:java.io.FileInputStream.open0 -> Java_java_io_FileInputStream_open0 [JNI]
+libjava.so:jdk.internal.reflect.Reflection.getCallerClass -> Java_jdk_internal_reflect_Reflection_getCallerClass [JNI]
+libjava.so:java.lang.System.setErr0 -> Java_java_lang_System_setErr0 [JNI]
+libjava.so:java.lang.StrictMath.sqrt -> Java_java_lang_StrictMath_sqrt [JNI]
+java.security.AccessController.doPrivileged: NOT_FOUND_IN_LIBS
+libzip.so:java.util.zip.Inflater.init -> Java_java_util_zip_Inflater_init [JNI]
+java.io.ObjectOutputStream.doublesToBytes: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putDouble: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.currentThread -> JVM_CurrentThread [JVM]
+libjvm.so:java.lang.Class.getDeclaredConstructors0 -> JVM_GetClassDeclaredConstructors [JVM]
+libzip.so:java.util.zip.Deflater.reset -> Java_java_util_zip_Deflater_reset [JNI]
+jdk.internal.misc.Unsafe.getIntVolatile: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.setMemory0: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setInt -> Java_java_lang_reflect_Array_setInt [JNI]
+libjava.so:java.lang.Class.isInstance -> Java_java_lang_Class_isInstance [JNI]
+libjava.so:java.lang.Runtime.availableProcessors -> Java_java_lang_Runtime_availableProcessors [JNI]
+java.lang.Thread.isAlive: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.gc -> Java_java_lang_Runtime_gc [JNI]
+jdk.internal.misc.Unsafe.putInt: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileInputStream.readBytes -> Java_java_io_FileInputStream_readBytes [JNI]
+libzip.so:java.util.zip.CRC32.updateBytes0 -> Java_java_util_zip_CRC32_updateBytes0 [JNI]
+libjava.so:jdk.internal.reflect.Reflection.areNestMates -> Java_jdk_internal_reflect_Reflection_areNestMates [JNI]
+libjvm.so:java.lang.Class.getRawAnnotations -> JVM_GetClassAnnotations [JVM]
+jdk.internal.misc.Unsafe.staticFieldOffset0: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putByte: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.dumpThreads -> JVM_DumpThreads [JVM]
+libjvm.so:java.lang.Class.getDeclaringClass0 -> JVM_GetDeclaringClass [JVM]
+libjava.so:java.lang.StrictMath.log -> Java_java_lang_StrictMath_log [JNI]
+jdk.internal.misc.Unsafe.defineAnonymousClass0: NOT_FOUND_IN_LIBS
+libjava.so:java.io.FileOutputStream.writeBytes -> Java_java_io_FileOutputStream_writeBytes [JNI]
+java.lang.invoke.MethodHandleNatives.resolve: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.readBytes -> Java_java_io_RandomAccessFile_readBytes [JNI]
+libjvm.so:java.lang.Class.getInterfaces0 -> JVM_GetClassInterfaces [JVM]
+libjava.so:java.io.FileOutputStream.open0 -> Java_java_io_FileOutputStream_open0 [JNI]
+libjava.so:jdk.internal.misc.VM.latestUserDefinedLoader0 -> Java_jdk_internal_misc_VM_latestUserDefinedLoader0 [JNI]
+jdk.internal.misc.Unsafe.getLongVolatile: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setDouble -> Java_java_lang_reflect_Array_setDouble [JNI]
+libjvm.so:java.lang.Class.getProtectionDomain0 -> JVM_GetProtectionDomain [JVM]
+libjava.so:jdk.internal.reflect.Reflection.getClassAccessFlags -> Java_jdk_internal_reflect_Reflection_getClassAccessFlags [JNI]
+jdk.internal.misc.Unsafe.getLong: NOT_FOUND_IN_LIBS
+java.lang.Object.clone: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getShort: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Executable.getParameters0 -> Java_java_lang_reflect_Executable_getParameters0 [JNI]
+libjava.so:java.lang.reflect.Array.get -> Java_java_lang_reflect_Array_get [JNI]
+libzip.so:java.util.zip.Inflater.reset -> Java_java_util_zip_Inflater_reset [JNI]
+java.io.ObjectInputStream.bytesToDoubles: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.setNativeName -> JVM_SetNativeThreadName [JVM]
+libjava.so:java.lang.reflect.Array.multiNewArray -> Java_java_lang_reflect_Array_multiNewArray [JNI]
+libjava.so:java.lang.reflect.Array.setShort -> Java_java_lang_reflect_Array_setShort [JNI]
+jdk.internal.misc.Unsafe.putLongVolatile: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Float.floatToRawIntBits -> Java_java_lang_Float_floatToRawIntBits [JNI]
+libzip.so:java.util.zip.Deflater.deflateBufferBytes -> Java_java_util_zip_Deflater_deflateBufferBytes [JNI]
+java.io.ObjectInputStream.bytesToFloats: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putBoolean: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.forName0 -> Java_java_lang_Class_forName0 [JNI]
+libjava.so:java.lang.Object.getClass -> Java_java_lang_Object_getClass [JNI]
+libjvm.so:java.lang.Class.isPrimitive -> JVM_IsPrimitiveClass [JVM]
+libjava.so:java.lang.reflect.Array.setFloat -> Java_java_lang_reflect_Array_setFloat [JNI]
+libjvm.so:java.lang.Thread.holdsLock -> JVM_HoldsLock [JVM]
+java.lang.Thread.isInterrupted: NOT_FOUND_IN_LIBS
+java.lang.Object.notify: NOT_FOUND_IN_LIBS
+jdk.internal.perf.Perf.createLong: NOT_FOUND_IN_LIBS
+java.lang.Object.hashCode: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.objectFieldOffset: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.unpark: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getChar: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.reflect.ConstantPool.getDoubleAt0 -> Java_jdk_internal_reflect_ConstantPool_getDoubleAt0 [JNI]
+java.lang.invoke.MethodHandleNatives.staticFieldOffset: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.setLong -> Java_java_lang_reflect_Array_setLong [JNI]
+libjava.so:java.lang.reflect.Array.newArray -> Java_java_lang_reflect_Array_newArray [JNI]
+libzip.so:java.util.zip.Deflater.init -> Java_java_util_zip_Deflater_init [JNI]
+jdk.internal.misc.Unsafe.putObject: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getFloat: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.System.nanoTime -> JVM_NanoTime [JVM]
+libjava.so:java.lang.Double.doubleToRawLongBits -> Java_java_lang_Double_doubleToRawLongBits [JNI]
+libjvm.so:java.lang.Thread.setPriority0 -> JVM_SetThreadPriority [JVM]
+jdk.internal.misc.Unsafe.compareAndSetLong: NOT_FOUND_IN_LIBS
+java.lang.Object.notifyAll: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putShort: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Shutdown.halt0 -> Java_java_lang_Shutdown_halt0 [JNI]
+libjava.so:java.lang.reflect.Array.setBoolean -> Java_java_lang_reflect_Array_setBoolean [JNI]
+libjvm.so:java.lang.System.arraycopy -> JVM_ArrayCopy [JVM]
+libjava.so:java.security.AccessController.getStackAccessControlContext -> Java_java_security_AccessController_getStackAccessControlContext [JNI]
+libjvm.so:java.lang.Class.initClassName -> JVM_InitClassName [JVM]
+java.lang.invoke.MethodHandleNatives.init: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.storeFence: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getBoolean: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getInt: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.expand: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putChar: NOT_FOUND_IN_LIBS
+java.lang.invoke.MethodHandleNatives.getMemberVMInfo: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Class.isAssignableFrom -> Java_java_lang_Class_isAssignableFrom [JNI]
+libjava.so:java.lang.StackTraceElement.initStackTraceElements -> Java_java_lang_StackTraceElement_initStackTraceElements [JNI]
+libjava.so:java.lang.Runtime.maxMemory -> Java_java_lang_Runtime_maxMemory [JNI]
+libjvm.so:java.lang.Class.getConstantPool -> JVM_GetClassConstantPool [JVM]
+jdk.internal.misc.Unsafe.compareAndSetInt: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.sleep -> JVM_Sleep [JVM]
+jdk.internal.misc.Unsafe.getDouble: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Double.longBitsToDouble -> Java_java_lang_Double_longBitsToDouble [JNI]
+jdk.internal.misc.Unsafe.staticFieldBase0: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.compareAndSetObject: NOT_FOUND_IN_LIBS
+java.io.ObjectOutputStream.floatsToBytes: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.putFloat: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.interrupt0 -> JVM_Interrupt [JVM]
+java.lang.invoke.MethodHandleNatives.staticFieldBase: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getEnclosingMethod0 -> JVM_GetEnclosingMethodInfo [JVM]
+libjava.so:java.security.AccessController.getInheritedAccessControlContext -> Java_java_security_AccessController_getInheritedAccessControlContext [JNI]
+libjava.so:java.lang.String.intern -> Java_java_lang_String_intern [JNI]
+libjava.so:jdk.internal.reflect.ConstantPool.getUTF8At0 -> Java_jdk_internal_reflect_ConstantPool_getUTF8At0 [JNI]
+libjava.so:java.lang.reflect.Array.getLength -> Java_java_lang_reflect_Array_getLength [JNI]
+libjava.so:java.lang.Throwable.fillInStackTrace -> Java_java_lang_Throwable_fillInStackTrace [JNI]
+libjava.so:java.util.TimeZone.getSystemGMTOffsetID -> Java_java_util_TimeZone_getSystemGMTOffsetID [JNI]
+libjava.so:jdk.internal.reflect.ConstantPool.getFloatAt0 -> Java_jdk_internal_reflect_ConstantPool_getFloatAt0 [JNI]
+libjava.so:jdk.internal.reflect.ConstantPool.getIntAt0 -> Java_jdk_internal_reflect_ConstantPool_getIntAt0 [JNI]
+libjava.so:java.lang.Shutdown.beforeHalt -> Java_java_lang_Shutdown_beforeHalt [JNI]
+jdk.internal.misc.Unsafe.putLong: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getByte: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.pageSize: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getGenericSignature0 -> JVM_GetClassSignature [JVM]
+libjava.so:java.lang.reflect.Array.setChar -> Java_java_lang_reflect_Array_setChar [JNI]
+java.lang.Class.getSuperclass: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.reflect.Array.set -> Java_java_lang_reflect_Array_set [JNI]
+libjava.so:jdk.internal.loader.BootLoader.getSystemPackageLocation -> Java_jdk_internal_loader_BootLoader_getSystemPackageLocation [JNI]
+jdk.internal.misc.Unsafe.park: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.Runtime.freeMemory -> Java_java_lang_Runtime_freeMemory [JNI]
+libjvm.so:java.lang.Class.desiredAssertionStatus0 -> JVM_DesiredAssertionStatus [JVM]
+java.lang.Object.wait: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Thread.getThreads -> JVM_GetAllThreads [JVM]
+libjvm.so:java.lang.System.currentTimeMillis -> JVM_CurrentTimeMillis [JVM]
+libjava.so:jdk.internal.reflect.ConstantPool.getLongAt0 -> Java_jdk_internal_reflect_ConstantPool_getLongAt0 [JNI]
+libjvm.so:java.lang.Thread.yield -> JVM_Yield [JVM]
+libzip.so:java.util.zip.Inflater.inflateBufferBytes -> Java_java_util_zip_Inflater_inflateBufferBytes [JNI]
+libjava.so:java.lang.Float.intBitsToFloat -> Java_java_lang_Float_intBitsToFloat [JNI]
+libzip.so:java.util.zip.Deflater.deflateBytesBytes -> Java_java_util_zip_Deflater_deflateBytesBytes [JNI]
+libjava.so:java.lang.System.identityHashCode -> Java_java_lang_System_identityHashCode [JNI]
+libjava.so:java.lang.Runtime.totalMemory -> Java_java_lang_Runtime_totalMemory [JNI]
+libzip.so:java.util.zip.Inflater.inflateBytesBytes -> Java_java_util_zip_Inflater_inflateBytesBytes [JNI]
+jdk.internal.misc.Unsafe.throwException: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.getModifiers -> JVM_GetClassModifiers [JVM]
+libjava.so:java.io.RandomAccessFile.open0 -> Java_java_io_RandomAccessFile_open0 [JNI]
+libjvm.so:java.lang.Class.getSimpleBinaryName0 -> JVM_GetSimpleBinaryName [JVM]
+jdk.internal.misc.Unsafe.allocateMemory0: NOT_FOUND_IN_LIBS
+libjava.so:java.lang.ClassLoader.findLoadedClass0 -> Java_java_lang_ClassLoader_findLoadedClass0 [JNI]
+libjvm.so:java.lang.Class.getDeclaredMethods0 -> JVM_GetClassDeclaredMethods [JVM]
+jdk.internal.misc.Unsafe.getObject: NOT_FOUND_IN_LIBS
+libjava.so:java.io.RandomAccessFile.seek0 -> Java_java_io_RandomAccessFile_seek0 [JNI]
+jdk.internal.misc.Unsafe.objectFieldOffset0: NOT_FOUND_IN_LIBS
+libjvm.so:java.lang.Class.isArray -> JVM_IsArrayClass [JVM]
+jdk.internal.misc.Unsafe.putObjectVolatile: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.ensureClassInitialized0: NOT_FOUND_IN_LIBS
+libjava.so:jdk.internal.reflect.ConstantPool.getClassAt0 -> Java_jdk_internal_reflect_ConstantPool_getClassAt0 [JNI]
+libnet.so:java.net.NetworkInterface.getByName0 -> Java_java_net_NetworkInterface_getByName0 [JNI]
+libjava.so:java.io.RandomAccessFile.length -> Java_java_io_RandomAccessFile_length [JNI]
+jdk.internal.misc.Unsafe.shouldBeInitialized0: NOT_FOUND_IN_LIBS
+jdk.internal.misc.Unsafe.getObjectVolatile: NOT_FOUND_IN_LIBS
+libjava.so:java.util.TimeZone.getSystemTimeZoneID -> Java_java_util_TimeZone_getSystemTimeZoneID [JNI]
+libjvm.so:java.lang.Thread.start0 -> JVM_StartThread [JVM]
+libjava.so:java.lang.reflect.Array.setByte -> Java_java_lang_reflect_Array_setByte [JNI]
+libjvm.so:java.lang.Class.getDeclaredFields0 -> JVM_GetClassDeclaredFields [JVM]
+libjvm.so:java.lang.Class.isInterface -> JVM_IsInterface [JVM]
+libjava.so:java.lang.ClassLoader.findBootstrapClass -> Java_java_lang_ClassLoader_findBootstrapClass [JNI]

@@ -1,0 +1,4 @@
+/usr/bin/bash
+/usr/bin/dirname
+/usr/sbin/runc
+/usr/bin/uname

@@ -1,0 +1,630 @@
+
+Path to gettid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZL19thread_native_entryP6Thread_c1e5a0
+  _ZL19thread_native_entryP6Thread_c1e5a0 - [syscall]-> gettid
+
+Path to futex:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> __condvar_cleanup_waiting_93720
+  __condvar_cleanup_waiting_93720 - [syscall]-> futex
+
+Path to rt_sigreturn:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> __restore_rt_42520
+  __restore_rt_42520 - [syscall]-> rt_sigreturn
+
+Path to rseq:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> rseq
+
+Path to exit:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> exit
+
+Path to set_robust_list:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> set_robust_list
+
+Path to rt_sigprocmask:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [syscall]-> rt_sigprocmask
+
+Path to time:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> time_syscall_d9970
+  time_syscall_d9970 - [syscall]-> time
+
+Path to socket:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [DIRECT]-> enumInterfaces_8b30
+  enumInterfaces_8b30 - [DIRECT]-> socket_127bb0
+  socket_127bb0 - [syscall]-> socket
+
+Path to close:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [DIRECT]-> enumInterfaces_8b30
+  enumInterfaces_8b30 - [DIRECT]-> close_114fd0
+  close_114fd0 - [syscall]-> close
+
+Path to sched_yield:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_cleanup_8eb50
+  _IO_cleanup_8eb50 - [DIRECT]-> sched_yield_108d00
+  sched_yield_108d00 - [syscall]-> sched_yield
+
+Path to munmap:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_close_mmap_8a640
+  _IO_file_close_mmap_8a640 - [DIRECT]-> munmap_11eaf0
+  munmap_11eaf0 - [syscall]-> munmap
+
+Path to read:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_read_8b930
+  _IO_file_read_8b930 - [DIRECT]-> read_114850
+  read_114850 - [syscall]-> read
+
+Path to lseek:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_seek_8a670
+  _IO_file_seek_8a670 - [DIRECT]-> lseek_114990
+  lseek_114990 - [syscall]-> lseek
+
+Path to mmap:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_underflow_maybe_mmap_8b960
+  _IO_file_underflow_maybe_mmap_8b960 - [DIRECT]-> mmap_11ea90
+  mmap_11ea90 - [syscall]-> mmap
+
+Path to mremap:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_underflow_mmap_8bb50
+  _IO_file_underflow_mmap_8bb50 - [DIRECT]-> mremap_1269c0
+  mremap_1269c0 - [syscall]-> mremap
+
+Path to write:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_write@@GLIBC_2.2.5_8aec0
+  _IO_file_write@@GLIBC_2.2.5_8aec0 - [DIRECT]-> write_1148f0
+  write_1148f0 - [syscall]-> write
+
+Path to unlink:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10CompileLogD0Ev_5e1bb0
+  _ZN10CompileLogD0Ev_5e1bb0 - [DIRECT]-> unlink_116120
+  unlink_116120 - [syscall]-> unlink
+
+Path to mprotect:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN15VM_LinuxDllLoad4doitEv_c22c90
+  _ZN15VM_LinuxDllLoad4doitEv_c22c90 - [DIRECT]-> mprotect_11eb20
+  mprotect_11eb20 - [syscall]-> mprotect
+
+Path to clock_gettime:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os13javaTimeNanosEv_c28dd0
+  _ZN2os13javaTimeNanosEv_c28dd0 - [DIRECT]-> clock_gettime@@GLIBC_2.17_e5650
+  clock_gettime@@GLIBC_2.17_e5650 - [syscall]-> clock_gettime
+
+Path to openat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8dll_loadEPKcPci_c1f6a0
+  _ZN2os8dll_loadEPKcPci_c1f6a0 - [DIRECT]-> open_114560
+  open_114560 - [syscall]-> openat
+
+Path to access:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_c17e00
+  _ZN2os8jvm_pathEPci_c17e00 - [DIRECT]-> access_1149c0
+  access_1149c0 - [syscall]-> access
+
+Path to getpid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> __nptl_setxid_sighandler_91870
+  __nptl_setxid_sighandler_91870 - [DIRECT]-> getpid_ec040
+  getpid_ec040 - [syscall]-> getpid
+
+Path to sendto:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> sendto_127a70
+  sendto_127a70 - [syscall]-> sendto
+
+Path to poll:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> poll_118c00
+  poll_118c00 - [syscall]-> poll
+
+Path to recvmsg:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> recvmsg_127860
+  recvmsg_127860 - [syscall]-> recvmsg
+
+Path to recvfrom:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> recvfrom_127790
+  recvfrom_127790 - [syscall]-> recvfrom
+
+Path to madvise:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> madvise_11ebf0
+  madvise_11ebf0 - [syscall]-> madvise
+
+Path to mkdir:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> try_dir_61380
+  try_dir_61380 - [DIRECT]-> mkdir_1144d0
+  mkdir_1144d0 - [syscall]-> mkdir
+
+Path to ioctl:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [DIRECT]-> enumInterfaces_8b30
+  enumInterfaces_8b30 - [DIRECT]-> enumIPv4Interfaces.constprop.0_88c0
+  enumIPv4Interfaces.constprop.0_88c0 - [DIRECT]-> ioctl_11a990
+  ioctl_11a990 - [syscall]-> ioctl
+
+Path to lstat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> Perf_Attach_c5bee0
+  Perf_Attach_c5bee0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000 - [DIRECT]-> __lxstat_1265b0
+  __lxstat_1265b0 - [syscall]-> lstat
+
+Path to geteuid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> Perf_Attach_c5bee0
+  Perf_Attach_c5bee0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000 - [DIRECT]-> geteuid_ec070
+  geteuid_ec070 - [syscall]-> geteuid
+
+Path to fstat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> Perf_Attach_c5bee0
+  Perf_Attach_c5bee0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000 - [DIRECT]-> __fxstat_126550
+  __fxstat_126550 - [syscall]-> fstat
+
+Path to kill:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> Perf_Attach_c5bee0
+  Perf_Attach_c5bee0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP10JavaThread_c60000 - [DIRECT]-> kill_42750
+  kill_42750 - [syscall]-> kill
+
+Path to sysinfo:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_PrintOsInfo_efec20
+  WB_PrintOsInfo_efec20 - [DIRECT]-> _ZN2os13print_os_infoEP12outputStream_c1a8f0
+  _ZN2os13print_os_infoEP12outputStream_c1a8f0 - [DIRECT]-> sysinfo_126e60
+  sysinfo_126e60 - [syscall]-> sysinfo
+
+Path to newfstatat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_file_stat_8aeb0
+  _IO_file_stat_8aeb0 - [DIRECT]-> fstat_113d50
+  fstat_113d50 - [DIRECT]-> fstatat_113db0
+  fstatat_113db0 - [syscall]-> newfstatat
+
+Path to writev:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _IO_vtable_check_89ef0
+  _IO_vtable_check_89ef0 - [DIRECT]-> __libc_fatal_896d0
+  __libc_fatal_896d0 - [DIRECT]-> __libc_message.constprop.0_89280
+  __libc_message.constprop.0_89280 - [syscall]-> writev
+
+Path to stat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN17ClassPathDirEntry11open_streamEP10JavaThreadPKc_586030
+  _ZN17ClassPathDirEntry11open_streamEP10JavaThreadPKc_586030 - [DIRECT]-> _ZN2os4statEPKcP4stat_c28180
+  _ZN2os4statEPKcP4stat_c28180 - [DIRECT]-> __xstat_1264f0
+  __xstat_1264f0 - [syscall]-> stat
+
+Path to fcntl:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN17ClassPathDirEntry11open_streamEP10JavaThreadPKc_586030
+  _ZN17ClassPathDirEntry11open_streamEP10JavaThreadPKc_586030 - [DIRECT]-> _ZN2os4openEPKcii_c1d2b0
+  _ZN2os4openEPKcii_c1d2b0 - [DIRECT]-> fcntl_114d70
+  fcntl_114d70 - [syscall]-> fcntl
+
+Path to getrusage:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN20G1RemSetSamplingTask7executeEv_74d530
+  _ZN20G1RemSetSamplingTask7executeEv_74d530 - [DIRECT]-> _ZN2os12elapsedVTimeEv_c19400
+  _ZN2os12elapsedVTimeEv_c19400 - [DIRECT]-> getrusage_11a3d0
+  getrusage_11a3d0 - [syscall]-> getrusage
+
+Path to vfork:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120 - [DIRECT]-> _ZN2os13fork_and_execEPKcb_c29980
+  _ZN2os13fork_and_execEPKcb_c29980 - [DIRECT]-> vfork_eabc0
+  vfork_eabc0 - [syscall]-> vfork
+
+Path to execve:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120 - [DIRECT]-> _ZN2os13fork_and_execEPKcb_c29980
+  _ZN2os13fork_and_execEPKcb_c29980 - [DIRECT]-> execve_eb080
+  execve_eb080 - [syscall]-> execve
+
+Path to exit_group:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120 - [DIRECT]-> _ZN2os13fork_and_execEPKcb_c29980
+  _ZN2os13fork_and_execEPKcb_c29980 - [DIRECT]-> _exit_eac00
+  _exit_eac00 - [syscall]-> exit_group
+
+Path to getdents64:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> getdents64_e6630
+  getdents64_e6630 - [syscall]-> getdents64
+
+Path to pread64:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _dl_tunable_set_hugetlb_a1000
+  _dl_tunable_set_hugetlb_a1000 - [DIRECT]-> __malloc_hugepage_config_127220
+  __malloc_hugepage_config_127220 - [DIRECT]-> __pread64_nocancel_119bd0
+  __pread64_nocancel_119bd0 - [syscall]-> pread64
+
+Path to getrandom:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> ptmalloc_init.part.0_a19b0
+  ptmalloc_init.part.0_a19b0 - [DIRECT]-> getrandom_46c70
+  getrandom_46c70 - [syscall]-> getrandom
+
+Path to clock_nanosleep:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_CheckThreadObjOfTerminatingThread_f0ce80
+  WB_CheckThreadObjOfTerminatingThread_f0ce80 - [DIRECT]-> _ZN2os17naked_short_sleepEl_c27f70
+  _ZN2os17naked_short_sleepEl_c27f70 - [DIRECT]-> nanosleep_ea660
+  nanosleep_ea660 - [DIRECT]-> clock_nanosleep@@GLIBC_2.17_e5730
+  clock_nanosleep@@GLIBC_2.17_e5730 - [syscall]-> clock_nanosleep
+
+Path to uname:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_PrintOsInfo_efec20
+  WB_PrintOsInfo_efec20 - [DIRECT]-> _ZN2os13print_os_infoEP12outputStream_c1a8f0
+  _ZN2os13print_os_infoEP12outputStream_c1a8f0 - [DIRECT]-> _ZN2os5Posix16print_uname_infoEP12outputStream_c276b0
+  _ZN2os5Posix16print_uname_infoEP12outputStream_c276b0 - [DIRECT]-> uname_ea300
+  uname_ea300 - [syscall]-> uname
+
+Path to setpriority:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10GangWorker3runEv_f17f70
+  _ZN10GangWorker3runEv_f17f70 - [DIRECT]-> _ZN2os12set_priorityEP6Thread14ThreadPriority_c12490
+  _ZN2os12set_priorityEP6Thread14ThreadPriority_c12490 - [DIRECT]-> _ZN2os19set_native_priorityEP6Threadi_c1cf00
+  _ZN2os19set_native_priorityEP6Threadi_c1cf00 - [DIRECT]-> setpriority_11a800
+  setpriority_11a800 - [syscall]-> setpriority
+
+Path to prlimit64:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10ZArguments10initializeEv_f1c140
+  _ZN10ZArguments10initializeEv_f1c140 - [DIRECT]-> _ZN18ZAddressSpaceLimit10mark_stackEv_f1bff0
+  _ZN18ZAddressSpaceLimit10mark_stackEv_f1bff0 - [DIRECT]-> _ZN2os28has_allocatable_memory_limitEPm_c27ae0
+  _ZN2os28has_allocatable_memory_limitEPm_c27ae0 - [DIRECT]-> getrlimit_11a350
+  getrlimit_11a350 - [syscall]-> prlimit64
+
+Path to tgkill:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN13WatcherThread3runEv_bedb60
+  _ZN13WatcherThread3runEv_bedb60 - [DIRECT]-> _ZN7VMError13check_timeoutEv_ee4700
+  _ZN7VMError13check_timeoutEv_ee4700 - [DIRECT]-> _ZN7VMError26interrupt_reporting_threadEv_ee5690
+  _ZN7VMError26interrupt_reporting_threadEv_ee5690 - [DIRECT]-> pthread_kill@@GLIBC_2.34_968d0
+  pthread_kill@@GLIBC_2.34_968d0 - [syscall]-> tgkill
+
+Path to times:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN20VM_G1PauseConcurrent4doitEv_76e1b0
+  _ZN20VM_G1PauseConcurrent4doitEv_76e1b0 - [DIRECT]-> _ZN14GCTraceCPUTimeC2Ev_7840f0
+  _ZN14GCTraceCPUTimeC2Ev_7840f0 - [DIRECT]-> _ZN2os12getTimesSecsEPdS0_S0__c19500
+  _ZN2os12getTimesSecsEPdS0_S0__c19500 - [DIRECT]-> times_ea330
+  times_ea330 - [syscall]-> times
+
+Path to sched_getaffinity:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN22VM_HandshakeAllThreads4doitEv_7b9530
+  _ZN22VM_HandshakeAllThreads4doitEv_7b9530 - [DIRECT]-> _ZN2os22active_processor_countEv_c1e2e0
+  _ZN2os22active_processor_countEv_c1e2e0 - [DIRECT]-> _ZL26get_active_processor_countv_c1e0a0
+  _ZL26get_active_processor_countv_c1e0a0 - [DIRECT]-> sched_getaffinity@@GLIBC_2.3.4_108dc0
+  sched_getaffinity@@GLIBC_2.3.4_108dc0 - [syscall]-> sched_getaffinity
+
+Path to wait4:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120 - [DIRECT]-> _ZN2os13fork_and_execEPKcb_c29980
+  _ZN2os13fork_and_execEPKcb_c29980 - [DIRECT]-> waitpid_ea3a0
+  waitpid_ea3a0 - [DIRECT]-> wait4_ea3d0
+  wait4_ea3d0 - [syscall]-> wait4
+
+Path to clone:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_ee0120 - [DIRECT]-> _ZN2os13fork_and_execEPKcb_c29980
+  _ZN2os13fork_and_execEPKcb_c29980 - [DIRECT]-> fork_ea6a0
+  fork_ea6a0 - [DIRECT]-> _Fork_eab30
+  _Fork_eab30 - [syscall]-> clone
+
+Path to rt_sigaction:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN9__gnu_cxx27__verbose_terminate_handlerEv_f6f790
+  _ZN9__gnu_cxx27__verbose_terminate_handlerEv_f6f790 - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> sigaction_424d0
+  sigaction_424d0 - [DIRECT]-> __libc_sigaction_42530
+  __libc_sigaction_42530 - [syscall]-> rt_sigaction
+
+Path to getpriority:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZNK11NamedThread8print_onEP12outputStream_bed400
+  _ZNK11NamedThread8print_onEP12outputStream_bed400 - [DIRECT]-> _ZNK6Thread8print_onEP12outputStreamb_e63540
+  _ZNK6Thread8print_onEP12outputStreamb_e63540 - [DIRECT]-> _ZN2os19get_native_priorityEPK6ThreadPi_c1cf50
+  _ZN2os19get_native_priorityEPK6ThreadPi_c1cf50 - [DIRECT]-> getpriority_11a7c0
+  getpriority_11a7c0 - [syscall]-> getpriority
+
+Path to getcwd:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> dlopen_doit_905e0
+  dlopen_doit_905e0 - [DIRECT]-> dcgettext_3a8f0
+  dcgettext_3a8f0 - [DIRECT]-> __dcigettext_3b540
+  __dcigettext_3b540 - [DIRECT]-> getcwd_115250
+  getcwd_115250 - [syscall]-> getcwd
+
+Path to sched_setscheduler:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> MHN_clearCallSiteContext_bb85a0
+  MHN_clearCallSiteContext_bb85a0 - [DIRECT]-> _ZN5Mutex4lockEP6Thread_bd7780
+  _ZN5Mutex4lockEP6Thread_bd7780 - [DIRECT]-> pthread_mutex_trylock@@GLIBC_2.34_98e50
+  pthread_mutex_trylock@@GLIBC_2.34_98e50 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_setscheduler_108ca0
+  sched_setscheduler_108ca0 - [syscall]-> sched_setscheduler
+
+Path to sched_getparam:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> MHN_clearCallSiteContext_bb85a0
+  MHN_clearCallSiteContext_bb85a0 - [DIRECT]-> _ZN5Mutex4lockEP6Thread_bd7780
+  _ZN5Mutex4lockEP6Thread_bd7780 - [DIRECT]-> pthread_mutex_trylock@@GLIBC_2.34_98e50
+  pthread_mutex_trylock@@GLIBC_2.34_98e50 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_getparam_108c70
+  sched_getparam_108c70 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> MHN_clearCallSiteContext_bb85a0
+  MHN_clearCallSiteContext_bb85a0 - [DIRECT]-> _ZN5Mutex4lockEP6Thread_bd7780
+  _ZN5Mutex4lockEP6Thread_bd7780 - [DIRECT]-> pthread_mutex_trylock@@GLIBC_2.34_98e50
+  pthread_mutex_trylock@@GLIBC_2.34_98e50 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_getscheduler_108cd0
+  sched_getscheduler_108cd0 - [syscall]-> sched_getscheduler
+
+Path to sched_get_priority_max:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> MHN_clearCallSiteContext_bb85a0
+  MHN_clearCallSiteContext_bb85a0 - [DIRECT]-> _ZN5Mutex4lockEP6Thread_bd7780
+  _ZN5Mutex4lockEP6Thread_bd7780 - [DIRECT]-> pthread_mutex_trylock@@GLIBC_2.34_98e50
+  pthread_mutex_trylock@@GLIBC_2.34_98e50 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_max_108d30
+  sched_get_priority_max_108d30 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> MHN_clearCallSiteContext_bb85a0
+  MHN_clearCallSiteContext_bb85a0 - [DIRECT]-> _ZN5Mutex4lockEP6Thread_bd7780
+  _ZN5Mutex4lockEP6Thread_bd7780 - [DIRECT]-> pthread_mutex_trylock@@GLIBC_2.34_98e50
+  pthread_mutex_trylock@@GLIBC_2.34_98e50 - [DIRECT]-> __pthread_tpp_change_priority_9cd70
+  __pthread_tpp_change_priority_9cd70 - [DIRECT]-> sched_get_priority_min_108d60
+  sched_get_priority_min_108d60 - [syscall]-> sched_get_priority_min
+
+Path to mincore:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10JavaThread3runEv_e655a0
+  _ZN10JavaThread3runEv_e655a0 - [DIRECT]-> _ZN13StackOverflow24create_stack_guard_pagesEv_d9cfc0
+  _ZN13StackOverflow24create_stack_guard_pagesEv_d9cfc0 - [DIRECT]-> _ZN2os24create_stack_guard_pagesEPcm_c151e0
+  _ZN2os24create_stack_guard_pagesEPcm_c151e0 - [DIRECT]-> _ZN2os27pd_create_stack_guard_pagesEPcm_c1c6d0
+  _ZN2os27pd_create_stack_guard_pagesEPcm_c1c6d0 - [DIRECT]-> mincore_11ec20
+  mincore_11ec20 - [syscall]-> mincore
+
+Path to shmdt:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN14ShenandoahHeap10initializeEv_d2a6e0
+  _ZN14ShenandoahHeap10initializeEv_d2a6e0 - [DIRECT]-> _ZN13ReservedSpaceC2EmmmPc_ede390
+  _ZN13ReservedSpaceC2EmmmPc_ede390 - [DIRECT]-> _ZN2os22release_memory_specialEPcm_c159e0
+  _ZN2os22release_memory_specialEPcm_c159e0 - [DIRECT]-> _ZN2os25pd_release_memory_specialEPcm_c1ce20
+  _ZN2os25pd_release_memory_specialEPcm_c1ce20 - [DIRECT]-> shmdt_128490
+  shmdt_128490 - [syscall]-> shmdt
+
+Path to shutdown:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN15G1CollectedHeap10initializeEv_6f0820
+  _ZN15G1CollectedHeap10initializeEv_6f0820 - [DIRECT]-> _Z33vm_shutdown_during_initializationPKcS0__8248a0
+  _Z33vm_shutdown_during_initializationPKcS0__8248a0 - [DIRECT]-> _ZN2os8shutdownEv_c29c00
+  _ZN2os8shutdownEv_c29c00 - [DIRECT]-> _ZN14AttachListener5abortEv_423750
+  _ZN14AttachListener5abortEv_423750 - [DIRECT]-> shutdown_127b80
+  shutdown_127b80 - [syscall]-> shutdown
+
+Path to readlink:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_c17e00
+  _ZN2os8jvm_pathEPci_c17e00 - [DIRECT]-> _ZN2os5Posix8realpathEPKcPcm_c28050
+  _ZN2os5Posix8realpathEPKcPcm_c28050 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> readlink_1160c0
+  readlink_1160c0 - [syscall]-> readlink
+
+Path to faccessat2:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_c17e00
+  _ZN2os8jvm_pathEPci_c17e00 - [DIRECT]-> _ZN2os5Posix8realpathEPKcPcm_c28050
+  _ZN2os5Posix8realpathEPKcPcm_c28050 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [syscall]-> faccessat2
+
+Path to faccessat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_c17e00
+  _ZN2os8jvm_pathEPci_c17e00 - [DIRECT]-> _ZN2os5Posix8realpathEPKcPcm_c28050
+  _ZN2os5Posix8realpathEPKcPcm_c28050 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [syscall]-> faccessat
+
+Path to rmdir:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN33VM_PopulateDynamicDumpSharedSpace4doitEv_69f140
+  _ZN33VM_PopulateDynamicDumpSharedSpace4doitEv_69f140 - [DIRECT]-> _ZN21DynamicArchiveBuilder13write_archiveEPc_69e700
+  _ZN21DynamicArchiveBuilder13write_archiveEPc_69e700 - [DIRECT]-> _ZN11FileMapInfo14open_for_writeEPKc_6bf6d0
+  _ZN11FileMapInfo14open_for_writeEPKc_6bf6d0 - [DIRECT]-> remove_61e60
+  remove_61e60 - [DIRECT]-> rmdir_116180
+  rmdir_116180 - [syscall]-> rmdir
+
+Path to bind:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> getifaddrs_141c70
+  getifaddrs_141c70 - [DIRECT]-> getifaddrs_internal_140f80
+  getifaddrs_internal_140f80 - [DIRECT]-> __netlink_open_140eb0
+  __netlink_open_140eb0 - [DIRECT]-> bind_127530
+  bind_127530 - [syscall]-> bind
+
+Path to getsockname:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> clntudp_call_166450
+  clntudp_call_166450 - [DIRECT]-> getifaddrs_141c70
+  getifaddrs_141c70 - [DIRECT]-> getifaddrs_internal_140f80
+  getifaddrs_internal_140f80 - [DIRECT]-> __netlink_open_140eb0
+  __netlink_open_140eb0 - [DIRECT]-> getsockname_127630
+  getsockname_127630 - [syscall]-> getsockname
+
+Path to brk:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [DIRECT]-> free_a53e0
+  free_a53e0 - [DIRECT]-> _int_free_a26a0
+  _int_free_a26a0 - [DIRECT]-> systrim.constprop.0_a25f0
+  systrim.constprop.0_a25f0 - [DIRECT]-> __glibc_morecore_a25b0
+  __glibc_morecore_a25b0 - [DIRECT]-> sbrk_11a8e0
+  sbrk_11a8e0 - [DIRECT]-> brk_11a8a0
+  brk_11a8a0 - [syscall]-> brk
+
+Path to fallocate:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_ReadFromNoaccessArea_f0bbd0
+  WB_ReadFromNoaccessArea_f0bbd0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmmPKc_edf170
+  _ZN17ReservedHeapSpaceC1EmmmPKc_edf170 - [DIRECT]-> _ZN13ReservedSpace7reserveEmmmPcb_eddd40
+  _ZN13ReservedSpace7reserveEmmmPcb_eddd40 - [DIRECT]-> _ZN2os18map_memory_to_fileEmi_c15630
+  _ZN2os18map_memory_to_fileEmi_c15630 - [DIRECT]-> _ZN2os18map_memory_to_fileEPcmi_c29d80
+  _ZN2os18map_memory_to_fileEPcmi_c29d80 - [DIRECT]-> posix_fallocate_118fa0
+  posix_fallocate_118fa0 - [syscall]-> fallocate
+
+Path to shmget:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_ReadFromNoaccessArea_f0bbd0
+  WB_ReadFromNoaccessArea_f0bbd0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmmPKc_edf170
+  _ZN17ReservedHeapSpaceC1EmmmPKc_edf170 - [DIRECT]-> _ZN13ReservedSpace7reserveEmmmPcb_eddd40
+  _ZN13ReservedSpace7reserveEmmmPcb_eddd40 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmmPcb_c15930
+  _ZN2os22reserve_memory_specialEmmmPcb_c15930 - [DIRECT]-> _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0
+  _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0 - [DIRECT]-> shmget_1284c0
+  shmget_1284c0 - [syscall]-> shmget
+
+Path to shmat:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_ReadFromNoaccessArea_f0bbd0
+  WB_ReadFromNoaccessArea_f0bbd0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmmPKc_edf170
+  _ZN17ReservedHeapSpaceC1EmmmPKc_edf170 - [DIRECT]-> _ZN13ReservedSpace7reserveEmmmPcb_eddd40
+  _ZN13ReservedSpace7reserveEmmmPcb_eddd40 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmmPcb_c15930
+  _ZN2os22reserve_memory_specialEmmmPcb_c15930 - [DIRECT]-> _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0
+  _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0 - [DIRECT]-> shmat_128460
+  shmat_128460 - [syscall]-> shmat
+
+Path to shmctl:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> WB_ReadFromNoaccessArea_f0bbd0
+  WB_ReadFromNoaccessArea_f0bbd0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmmPKc_edf170
+  _ZN17ReservedHeapSpaceC1EmmmPKc_edf170 - [DIRECT]-> _ZN13ReservedSpace7reserveEmmmPcb_eddd40
+  _ZN13ReservedSpace7reserveEmmmPcb_eddd40 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmmPcb_c15930
+  _ZN2os22reserve_memory_specialEmmmPcb_c15930 - [DIRECT]-> _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0
+  _ZN2os25pd_reserve_memory_specialEmmmPcb_c20ff0 - [DIRECT]-> shmctl@@GLIBC_2.2.5_128500
+  shmctl@@GLIBC_2.2.5_128500 - [syscall]-> shmctl
+
+Path to getuid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZL6_fatalv_9b3d30
+  _ZL6_fatalv_9b3d30 - [DIRECT]-> _Z12report_fatal11VMErrorTypePKciS1_z_60a480
+  _Z12report_fatal11VMErrorTypePKciS1_z_60a480 - [DIRECT]-> _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0
+  _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0 - [DIRECT]-> _ZN7VMError6reportEP12outputStreamb_ee0ac0
+  _ZN7VMError6reportEP12outputStreamb_ee0ac0 - [DIRECT]-> _ZN2os5Posix15print_user_infoEP12outputStream_c27880
+  _ZN2os5Posix15print_user_infoEP12outputStream_c27880 - [DIRECT]-> getuid_ec060
+  getuid_ec060 - [syscall]-> getuid
+
+Path to getgid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZL6_fatalv_9b3d30
+  _ZL6_fatalv_9b3d30 - [DIRECT]-> _Z12report_fatal11VMErrorTypePKciS1_z_60a480
+  _Z12report_fatal11VMErrorTypePKciS1_z_60a480 - [DIRECT]-> _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0
+  _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0 - [DIRECT]-> _ZN7VMError6reportEP12outputStreamb_ee0ac0
+  _ZN7VMError6reportEP12outputStreamb_ee0ac0 - [DIRECT]-> _ZN2os5Posix15print_user_infoEP12outputStream_c27880
+  _ZN2os5Posix15print_user_infoEP12outputStream_c27880 - [DIRECT]-> getgid_ec080
+  getgid_ec080 - [syscall]-> getgid
+
+Path to getegid:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZL6_fatalv_9b3d30
+  _ZL6_fatalv_9b3d30 - [DIRECT]-> _Z12report_fatal11VMErrorTypePKciS1_z_60a480
+  _Z12report_fatal11VMErrorTypePKciS1_z_60a480 - [DIRECT]-> _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0
+  _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0 - [DIRECT]-> _ZN7VMError6reportEP12outputStreamb_ee0ac0
+  _ZN7VMError6reportEP12outputStreamb_ee0ac0 - [DIRECT]-> _ZN2os5Posix15print_user_infoEP12outputStream_c27880
+  _ZN2os5Posix15print_user_infoEP12outputStream_c27880 - [DIRECT]-> getegid_ec090
+  getegid_ec090 - [syscall]-> getegid
+
+Path to umask:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZL6_fatalv_9b3d30
+  _ZL6_fatalv_9b3d30 - [DIRECT]-> _Z12report_fatal11VMErrorTypePKciS1_z_60a480
+  _Z12report_fatal11VMErrorTypePKciS1_z_60a480 - [DIRECT]-> _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0
+  _ZN7VMError14report_and_dieEiPKcS1_P13__va_list_tagP6ThreadPhPvS7_S1_im_ee47f0 - [DIRECT]-> _ZN7VMError6reportEP12outputStreamb_ee0ac0
+  _ZN7VMError6reportEP12outputStreamb_ee0ac0 - [DIRECT]-> _ZN2os5Posix15print_user_infoEP12outputStream_c27880
+  _ZN2os5Posix15print_user_infoEP12outputStream_c27880 - [DIRECT]-> umask_1142c0
+  umask_1142c0 - [syscall]-> umask
+
+Path to get_mempolicy:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN12ZUncommitter11run_serviceEv_f5fc50
+  _ZN12ZUncommitter11run_serviceEv_f5fc50 - [DIRECT]-> _ZN14ZPageAllocator8uncommitEPm_f42230
+  _ZN14ZPageAllocator8uncommitEPm_f42230 - [DIRECT]-> _ZN10ZPageCache18flush_for_uncommitEmP5ZListI5ZPageEPm_f477e0
+  _ZN10ZPageCache18flush_for_uncommitEmP5ZListI5ZPageEPm_f477e0 - [DIRECT]-> _ZN10ZPageCache9free_pageEP5ZPage_f46e70
+  _ZN10ZPageCache9free_pageEP5ZPage_f46e70 - [DIRECT]-> _ZN5ZNUMA9memory_idEm_f3ec10
+  _ZN5ZNUMA9memory_idEm_f3ec10 - [DIRECT]-> _ZN8ZSyscall13get_mempolicyEPiPmmPvm_f5be70
+  _ZN8ZSyscall13get_mempolicyEPiPmmPvm_f5be70 - [syscall]-> get_mempolicy
+
+Path to sched_setaffinity:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN13VM_HeapDumper4doitEv_7c6950
+  _ZN13VM_HeapDumper4doitEv_7c6950 - [DIRECT]-> _ZN8WorkGang8run_taskEP16AbstractGangTaskjb_f18560
+  _ZN8WorkGang8run_taskEP16AbstractGangTaskjb_f18560 - [DIRECT]-> _ZN13WorkerManager11add_workersEP8WorkGangjjjN2os10ThreadTypeEb_f181e0
+  _ZN13WorkerManager11add_workersEP8WorkGangjjjN2os10ThreadTypeEb_f181e0 - [DIRECT]-> _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_c1ed40
+  _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_c1ed40 - [DIRECT]-> pthread_create@@GLIBC_2.34_94c40
+  pthread_create@@GLIBC_2.34_94c40 - [DIRECT]-> create_thread_945e0
+  create_thread_945e0 - [syscall]-> sched_setaffinity
+
+Path to ftruncate:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10ZArguments11create_heapEv_f1c0f0
+  _ZN10ZArguments11create_heapEv_f1c0f0 - [DIRECT]-> _ZN14ZCollectedHeapC1Ev_f27050
+  _ZN14ZCollectedHeapC1Ev_f27050 - [DIRECT]-> _ZN5ZHeapC2Ev_f2bd60
+  _ZN5ZHeapC2Ev_f2bd60 - [DIRECT]-> _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70
+  _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70 - [DIRECT]-> _ZN22ZPhysicalMemoryManagerC2Em_f48090
+  _ZN22ZPhysicalMemoryManagerC2Em_f48090 - [DIRECT]-> _ZN22ZPhysicalMemoryBackingC2Em_f4a740
+  _ZN22ZPhysicalMemoryBackingC2Em_f4a740 - [DIRECT]-> ftruncate_11d030
+  ftruncate_11d030 - [syscall]-> ftruncate
+
+Path to fstatfs:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10ZArguments11create_heapEv_f1c0f0
+  _ZN10ZArguments11create_heapEv_f1c0f0 - [DIRECT]-> _ZN14ZCollectedHeapC1Ev_f27050
+  _ZN14ZCollectedHeapC1Ev_f27050 - [DIRECT]-> _ZN5ZHeapC2Ev_f2bd60
+  _ZN5ZHeapC2Ev_f2bd60 - [DIRECT]-> _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70
+  _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70 - [DIRECT]-> _ZN22ZPhysicalMemoryManagerC2Em_f48090
+  _ZN22ZPhysicalMemoryManagerC2Em_f48090 - [DIRECT]-> _ZN22ZPhysicalMemoryBackingC2Em_f4a740
+  _ZN22ZPhysicalMemoryBackingC2Em_f4a740 - [DIRECT]-> fstatfs_1141b0
+  fstatfs_1141b0 - [syscall]-> fstatfs
+
+Path to pwrite64:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN12ZUncommitter11run_serviceEv_f5fc50
+  _ZN12ZUncommitter11run_serviceEv_f5fc50 - [DIRECT]-> _ZN14ZPageAllocator8uncommitEPm_f42230
+  _ZN14ZPageAllocator8uncommitEPm_f42230 - [DIRECT]-> _ZN22ZPhysicalMemoryManager8uncommitER15ZPhysicalMemory_f48e40
+  _ZN22ZPhysicalMemoryManager8uncommitER15ZPhysicalMemory_f48e40 - [DIRECT]-> _ZNK22ZPhysicalMemoryBacking8uncommitEmm_f4be90
+  _ZNK22ZPhysicalMemoryBacking8uncommitEmm_f4be90 - [DIRECT]-> _ZNK22ZPhysicalMemoryBacking19split_and_fallocateEbmm_f4b700
+  _ZNK22ZPhysicalMemoryBacking19split_and_fallocateEbmm_f4b700 - [DIRECT]-> _ZNK22ZPhysicalMemoryBacking19fallocate_fill_holeEmm_f4b470
+  _ZNK22ZPhysicalMemoryBacking19fallocate_fill_holeEmm_f4b470 - [DIRECT]-> pwrite_112860
+  pwrite_112860 - [syscall]-> pwrite64
+
+Path to getgroups:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_c17e00
+  _ZN2os8jvm_pathEPci_c17e00 - [DIRECT]-> _ZN2os5Posix8realpathEPKcPcm_c28050
+  _ZN2os5Posix8realpathEPKcPcm_c28050 - [DIRECT]-> realpath@@GLIBC_2.3_514e0
+  realpath@@GLIBC_2.3_514e0 - [DIRECT]-> realpath_stk_50da0
+  realpath_stk_50da0 - [DIRECT]-> faccessat_114b40
+  faccessat_114b40 - [DIRECT]-> group_member_ec1f0
+  group_member_ec1f0 - [DIRECT]-> getgroups_ec0a0
+  getgroups_ec0a0 - [syscall]-> getgroups
+
+Path to memfd_create:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN10ZArguments11create_heapEv_f1c0f0
+  _ZN10ZArguments11create_heapEv_f1c0f0 - [DIRECT]-> _ZN14ZCollectedHeapC1Ev_f27050
+  _ZN14ZCollectedHeapC1Ev_f27050 - [DIRECT]-> _ZN5ZHeapC2Ev_f2bd60
+  _ZN5ZHeapC2Ev_f2bd60 - [DIRECT]-> _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70
+  _ZN14ZPageAllocatorC2EP8ZWorkersmmm_f43b70 - [DIRECT]-> _ZN22ZPhysicalMemoryManagerC2Em_f48090
+  _ZN22ZPhysicalMemoryManagerC2Em_f48090 - [DIRECT]-> _ZN22ZPhysicalMemoryBackingC2Em_f4a740
+  _ZN22ZPhysicalMemoryBackingC2Em_f4a740 - [DIRECT]-> _ZNK22ZPhysicalMemoryBacking13create_mem_fdEPKc_f4a250
+  _ZNK22ZPhysicalMemoryBacking13create_mem_fdEPKc_f4a250 - [DIRECT]-> _ZN8ZSyscall12memfd_createEPKcj_f5be30
+  _ZN8ZSyscall12memfd_createEPKcj_f5be30 - [syscall]-> memfd_create
+
+Path to clone3:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> _ZN13VM_HeapDumper4doitEv_7c6950
+  _ZN13VM_HeapDumper4doitEv_7c6950 - [DIRECT]-> _ZN8WorkGang8run_taskEP16AbstractGangTaskjb_f18560
+  _ZN8WorkGang8run_taskEP16AbstractGangTaskjb_f18560 - [DIRECT]-> _ZN13WorkerManager11add_workersEP8WorkGangjjjN2os10ThreadTypeEb_f181e0
+  _ZN13WorkerManager11add_workersEP8WorkGangjjjN2os10ThreadTypeEb_f181e0 - [DIRECT]-> _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_c1ed40
+  _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_c1ed40 - [DIRECT]-> pthread_create@@GLIBC_2.34_94c40
+  pthread_create@@GLIBC_2.34_94c40 - [DIRECT]-> create_thread_945e0
+  create_thread_945e0 - [DIRECT]-> __clone_internal_1268f0
+  __clone_internal_1268f0 - [DIRECT]-> clone3_1268a0
+  clone3_1268a0 - [syscall]-> clone3
+
+Path to dup:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> __libc_thread_freeres_a8180
+  __libc_thread_freeres_a8180 - [DIRECT]-> __rpc_thread_destroy_1688a0
+  __rpc_thread_destroy_1688a0 - [DIRECT]-> __rpc_thread_svc_cleanup_169840
+  __rpc_thread_svc_cleanup_169840 - [DIRECT]-> __EI_pmap_unset_15dc30
+  __EI_pmap_unset_15dc30 - [DIRECT]-> __get_myaddress_15da00
+  __get_myaddress_15da00 - [DIRECT]-> perror_60e70
+  perror_60e70 - [DIRECT]-> dup_115060
+  dup_115060 - [syscall]-> dup
+
+Path to setsockopt:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> __libc_thread_freeres_a8180
+  __libc_thread_freeres_a8180 - [DIRECT]-> __rpc_thread_destroy_1688a0
+  __rpc_thread_destroy_1688a0 - [DIRECT]-> __rpc_thread_svc_cleanup_169840
+  __rpc_thread_svc_cleanup_169840 - [DIRECT]-> __EI_pmap_unset_15dc30
+  __EI_pmap_unset_15dc30 - [DIRECT]-> __EI_clntudp_bufcreate_166f20
+  __EI_clntudp_bufcreate_166f20 - [DIRECT]-> __GI___libc_clntudp_bufcreate_166c50
+  __GI___libc_clntudp_bufcreate_166c50 - [DIRECT]-> setsockopt_127b40
+  setsockopt_127b40 - [syscall]-> setsockopt
+
+Path to connect:
+  Java_java_net_NetworkInterface_getByName0_8fd0 - [INDIRECT]-> start_thread_947d0
+  start_thread_947d0 - [DIRECT]-> __libc_thread_freeres_a8180
+  __libc_thread_freeres_a8180 - [DIRECT]-> __rpc_thread_destroy_1688a0
+  __rpc_thread_destroy_1688a0 - [DIRECT]-> __rpc_thread_svc_cleanup_169840
+  __rpc_thread_svc_cleanup_169840 - [DIRECT]-> __EI_pmap_unset_15dc30
+  __EI_pmap_unset_15dc30 - [DIRECT]-> __EI_clntudp_bufcreate_166f20
+  __EI_clntudp_bufcreate_166f20 - [DIRECT]-> __GI___libc_clntudp_bufcreate_166c50
+  __GI___libc_clntudp_bufcreate_166c50 - [DIRECT]-> __GI_pmap_getport_168640
+  __GI_pmap_getport_168640 - [DIRECT]-> connect_127560
+  connect_127560 - [syscall]-> connect

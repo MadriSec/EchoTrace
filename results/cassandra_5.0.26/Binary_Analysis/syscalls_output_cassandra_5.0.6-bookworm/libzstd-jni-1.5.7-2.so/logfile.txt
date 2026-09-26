@@ -1,0 +1,384 @@
+
+Path to futex:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x86720_86720
+  fuzzyfunc-0x86720_86720 - [syscall]-> futex
+
+Path to set_robust_list:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [syscall]-> set_robust_list
+
+Path to rt_sigprocmask:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [syscall]-> rt_sigprocmask
+
+Path to rseq:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [syscall]-> rseq
+
+Path to exit:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [syscall]-> exit
+
+Path to write:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x1428e0_1428e0
+  fuzzyfunc-0x1428e0_1428e0 - [DIRECT]-> write_f8330
+  write_f8330 - [syscall]-> write
+
+Path to poll:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x142960_142960
+  fuzzyfunc-0x142960_142960 - [DIRECT]-> poll_fc210
+  poll_fc210 - [syscall]-> poll
+
+Path to read:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x142960_142960
+  fuzzyfunc-0x142960_142960 - [DIRECT]-> read_f8290
+  read_f8290 - [syscall]-> read
+
+Path to getpid:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x86720_86720
+  fuzzyfunc-0x86720_86720 - [DIRECT]-> getpid_d54e0
+  getpid_d54e0 - [syscall]-> getpid
+
+Path to madvise:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> madvise_101af0
+  madvise_101af0 - [syscall]-> madvise
+
+Path to writev:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x7f1d0_7f1d0
+  fuzzyfunc-0x7f1d0_7f1d0 - [syscall]-> writev
+
+Path to sched_getscheduler:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [syscall]-> sched_getscheduler
+
+Path to sched_getparam:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [syscall]-> sched_getparam
+
+Path to munmap:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> munmap_1019f0
+  munmap_1019f0 - [syscall]-> munmap
+
+Path to openat:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __open64_nocancel_fcfb0
+  __open64_nocancel_fcfb0 - [syscall]-> openat
+
+Path to mmap:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> mmap_101990
+  mmap_101990 - [syscall]-> mmap
+
+Path to close:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> __close_nocancel_fce50
+  __close_nocancel_fce50 - [syscall]-> close
+
+Path to getdents64:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> getdents64_d0030
+  getdents64_d0030 - [syscall]-> getdents64
+
+Path to pread64:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x94a50_94a50
+  fuzzyfunc-0x94a50_94a50 - [DIRECT]-> fuzzyfunc-0x10a460_10a460
+  fuzzyfunc-0x10a460_10a460 - [DIRECT]-> __pread64_nocancel_fd120
+  __pread64_nocancel_fd120 - [syscall]-> pread64
+
+Path to getrandom:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> getrandom_3f180
+  getrandom_3f180 - [syscall]-> getrandom
+
+Path to clock_gettime:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x952f0_952f0
+  fuzzyfunc-0x952f0_952f0 - [DIRECT]-> clock_gettime_cf420
+  clock_gettime_cf420 - [syscall]-> clock_gettime
+
+Path to sched_setscheduler:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [DIRECT]-> fuzzyfunc-0x88d00_88d00
+  fuzzyfunc-0x88d00_88d00 - [syscall]-> sched_setscheduler
+
+Path to sched_setaffinity:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [DIRECT]-> fuzzyfunc-0x88d00_88d00
+  fuzzyfunc-0x88d00_88d00 - [syscall]-> sched_setaffinity
+
+Path to rt_sigaction:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [DIRECT]-> __libc_sigaction_3c060
+  __libc_sigaction_3c060 - [syscall]-> rt_sigaction
+
+Path to mprotect:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [DIRECT]-> mprotect_101a20
+  mprotect_101a20 - [syscall]-> mprotect
+
+Path to exit_group:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x86720_86720
+  fuzzyfunc-0x86720_86720 - [DIRECT]-> fuzzyfunc-0x26dc0_26dc0
+  fuzzyfunc-0x26dc0_26dc0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> _exit_d43e0
+  _exit_d43e0 - [syscall]-> exit_group
+
+Path to sched_getaffinity:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> malloc_98920
+  malloc_98920 - [DIRECT]-> fuzzyfunc-0x957a0_957a0
+  fuzzyfunc-0x957a0_957a0 - [DIRECT]-> get_nprocs_104330
+  get_nprocs_104330 - [DIRECT]-> fuzzyfunc-0x1042b0_1042b0
+  fuzzyfunc-0x1042b0_1042b0 - [syscall]-> sched_getaffinity
+
+Path to sched_get_priority_max:
+  Java_com_github_luben_zstd_ZstdCompressCtx_getFrameProgression0_d3810 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_max_ee040
+  sched_get_priority_max_ee040 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  Java_com_github_luben_zstd_ZstdCompressCtx_getFrameProgression0_d3810 - [DIRECT]-> pthread_mutex_lock_8c370
+  pthread_mutex_lock_8c370 - [DIRECT]-> fuzzyfunc-0x8bc70_8bc70
+  fuzzyfunc-0x8bc70_8bc70 - [DIRECT]-> fuzzyfunc-0x90e60_90e60
+  fuzzyfunc-0x90e60_90e60 - [DIRECT]-> sched_get_priority_min_ee070
+  sched_get_priority_min_ee070 - [syscall]-> sched_get_priority_min
+
+Path to getcwd:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [syscall]-> getcwd
+
+Path to clone:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [DIRECT]-> ZSTD_compressStream2_a5f70
+  ZSTD_compressStream2_a5f70 - [DIRECT]-> ZSTD_CCtx_init_compressStream2_a40f0
+  ZSTD_CCtx_init_compressStream2_a40f0 - [DIRECT]-> pthread_create_89380
+  pthread_create_89380 - [DIRECT]-> fuzzyfunc-0x88d00_88d00
+  fuzzyfunc-0x88d00_88d00 - [DIRECT]-> fuzzyfunc-0x109900_109900
+  fuzzyfunc-0x109900_109900 - [DIRECT]-> clone_108b00
+  clone_108b00 - [syscall]-> clone
+
+Path to brk:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> free_98ee0
+  free_98ee0 - [DIRECT]-> fuzzyfunc-0x96120_96120
+  fuzzyfunc-0x96120_96120 - [DIRECT]-> fuzzyfunc-0x96070_96070
+  fuzzyfunc-0x96070_96070 - [DIRECT]-> __default_morecore_96030
+  __default_morecore_96030 - [DIRECT]-> sbrk_fdc70
+  sbrk_fdc70 - [DIRECT]-> brk_fdc30
+  brk_fdc30 - [syscall]-> brk
+
+Path to tgkill:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x86720_86720
+  fuzzyfunc-0x86720_86720 - [DIRECT]-> fuzzyfunc-0x26dc0_26dc0
+  fuzzyfunc-0x26dc0_26dc0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> tgkill
+
+Path to gettid:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x86720_86720
+  fuzzyfunc-0x86720_86720 - [DIRECT]-> fuzzyfunc-0x26dc0_26dc0
+  fuzzyfunc-0x26dc0_26dc0 - [DIRECT]-> abort_2639f
+  abort_2639f - [DIRECT]-> raise_3bfa0
+  raise_3bfa0 - [DIRECT]-> pthread_kill_8af40
+  pthread_kill_8af40 - [DIRECT]-> fuzzyfunc-0x8ade0_8ade0
+  fuzzyfunc-0x8ade0_8ade0 - [syscall]-> gettid
+
+Path to newfstatat:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fstatat_f7850
+  fstatat_f7850 - [syscall]-> newfstatat
+
+Path to mremap:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> fuzzyfunc-0x35b50_35b50
+  fuzzyfunc-0x35b50_35b50 - [DIRECT]-> realloc_99120
+  realloc_99120 - [DIRECT]-> mremap_1099c0
+  mremap_1099c0 - [syscall]-> mremap
+
+Path to fcntl:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> fdopendir_d03b0
+  fdopendir_d03b0 - [DIRECT]-> fuzzyfunc-0xfce80_fce80
+  fuzzyfunc-0xfce80_fce80 - [syscall]-> fcntl
+
+Path to lseek:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> getcwd_f8c40
+  getcwd_f8c40 - [DIRECT]-> rewinddir_cff00
+  rewinddir_cff00 - [DIRECT]-> lseek_f83d0
+  lseek_f83d0 - [syscall]-> lseek
+
+Path to dup:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> fuzzyfunc-0x13b260_13b260
+  fuzzyfunc-0x13b260_13b260 - [DIRECT]-> perror_524e0
+  perror_524e0 - [DIRECT]-> dup_f8a60
+  dup_f8a60 - [syscall]-> dup
+
+Path to socket:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> clntudp_bufcreate_143a50
+  clntudp_bufcreate_143a50 - [DIRECT]-> __libc_clntudp_bufcreate_143760
+  __libc_clntudp_bufcreate_143760 - [DIRECT]-> socket_10adb0
+  socket_10adb0 - [syscall]-> socket
+
+Path to setsockopt:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> clntudp_bufcreate_143a50
+  clntudp_bufcreate_143a50 - [DIRECT]-> __libc_clntudp_bufcreate_143760
+  __libc_clntudp_bufcreate_143760 - [DIRECT]-> setsockopt_10ad50
+  setsockopt_10ad50 - [syscall]-> setsockopt
+
+Path to bind:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> clntudp_bufcreate_143a50
+  clntudp_bufcreate_143a50 - [DIRECT]-> __libc_clntudp_bufcreate_143760
+  __libc_clntudp_bufcreate_143760 - [DIRECT]-> bindresvport_11f370
+  bindresvport_11f370 - [DIRECT]-> bind_10a770
+  bind_10a770 - [syscall]-> bind
+
+Path to getsockname:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> fuzzyfunc-0x13b260_13b260
+  fuzzyfunc-0x13b260_13b260 - [DIRECT]-> getifaddrs_122e00
+  getifaddrs_122e00 - [DIRECT]-> fuzzyfunc-0x122150_122150
+  fuzzyfunc-0x122150_122150 - [DIRECT]-> fuzzyfunc-0x122090_122090
+  fuzzyfunc-0x122090_122090 - [DIRECT]-> getsockname_10a870
+  getsockname_10a870 - [syscall]-> getsockname
+
+Path to sendto:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> fuzzyfunc-0x13b260_13b260
+  fuzzyfunc-0x13b260_13b260 - [DIRECT]-> getifaddrs_122e00
+  getifaddrs_122e00 - [DIRECT]-> fuzzyfunc-0x122150_122150
+  fuzzyfunc-0x122150_122150 - [DIRECT]-> fuzzyfunc-0x121d50_121d50
+  fuzzyfunc-0x121d50_121d50 - [DIRECT]-> sendto_10ac90
+  sendto_10ac90 - [syscall]-> sendto
+
+Path to recvmsg:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> fuzzyfunc-0x13b260_13b260
+  fuzzyfunc-0x13b260_13b260 - [DIRECT]-> getifaddrs_122e00
+  getifaddrs_122e00 - [DIRECT]-> fuzzyfunc-0x122150_122150
+  fuzzyfunc-0x122150_122150 - [DIRECT]-> fuzzyfunc-0x121d50_121d50
+  fuzzyfunc-0x121d50_121d50 - [DIRECT]-> recvmsg_10aa80
+  recvmsg_10aa80 - [syscall]-> recvmsg
+
+Path to prlimit64:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> fuzzyfunc-0x36e30_36e30
+  fuzzyfunc-0x36e30_36e30 - [DIRECT]-> fuzzyfunc-0x38a50_38a50
+  fuzzyfunc-0x38a50_38a50 - [DIRECT]-> fuzzyfunc-0x38580_38580
+  fuzzyfunc-0x38580_38580 - [DIRECT]-> qsort_3ffd0
+  qsort_3ffd0 - [DIRECT]-> qsort_r_3fc80
+  qsort_r_3fc80 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> getrlimit_fd7d0
+  getrlimit_fd7d0 - [syscall]-> prlimit64
+
+Path to connect:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> fuzzyfunc-0x9aea0_9aea0
+  fuzzyfunc-0x9aea0_9aea0 - [DIRECT]-> fuzzyfunc-0x144a90_144a90
+  fuzzyfunc-0x144a90_144a90 - [DIRECT]-> fuzzyfunc-0x145940_145940
+  fuzzyfunc-0x145940_145940 - [DIRECT]-> svc_unregister_145030
+  svc_unregister_145030 - [DIRECT]-> pmap_unset_13b480
+  pmap_unset_13b480 - [DIRECT]-> clntudp_bufcreate_143a50
+  clntudp_bufcreate_143a50 - [DIRECT]-> __libc_clntudp_bufcreate_143760
+  __libc_clntudp_bufcreate_143760 - [DIRECT]-> pmap_getport_144a50
+  pmap_getport_144a50 - [DIRECT]-> __libc_rpc_getport_144890
+  __libc_rpc_getport_144890 - [DIRECT]-> fuzzyfunc-0x1447f0_1447f0
+  fuzzyfunc-0x1447f0_1447f0 - [DIRECT]-> connect_10a7a0
+  connect_10a7a0 - [syscall]-> connect
+
+Path to sysinfo:
+  Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream_d5310 - [INDIRECT]-> fuzzyfunc-0x88ef0_88ef0
+  fuzzyfunc-0x88ef0_88ef0 - [DIRECT]-> __assert_fail_34e80
+  __assert_fail_34e80 - [DIRECT]-> dcgettext_358b0
+  dcgettext_358b0 - [DIRECT]-> fuzzyfunc-0x365e0_365e0
+  fuzzyfunc-0x365e0_365e0 - [DIRECT]-> fuzzyfunc-0x36e30_36e30
+  fuzzyfunc-0x36e30_36e30 - [DIRECT]-> fuzzyfunc-0x38a50_38a50
+  fuzzyfunc-0x38a50_38a50 - [DIRECT]-> fuzzyfunc-0x38580_38580
+  fuzzyfunc-0x38580_38580 - [DIRECT]-> qsort_3ffd0
+  qsort_3ffd0 - [DIRECT]-> qsort_r_3fc80
+  qsort_r_3fc80 - [DIRECT]-> sysconf_d62a0
+  sysconf_d62a0 - [DIRECT]-> get_avphys_pages_104440
+  get_avphys_pages_104440 - [DIRECT]-> sysinfo_10a0b0
+  sysinfo_10a0b0 - [syscall]-> sysinfo

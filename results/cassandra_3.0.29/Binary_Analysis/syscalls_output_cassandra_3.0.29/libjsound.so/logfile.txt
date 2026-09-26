@@ -1,0 +1,529 @@
+
+Path to gettid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZL10java_startP6Thread_968130
+  _ZL10java_startP6Thread_968130 - [syscall]-> gettid
+
+Path to futex:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x91870_91870
+  fuzzyfunc-0x91870_91870 - [syscall]-> futex
+
+Path to set_robust_list:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x947d0_947d0
+  fuzzyfunc-0x947d0_947d0 - [syscall]-> set_robust_list
+
+Path to rt_sigprocmask:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x947d0_947d0
+  fuzzyfunc-0x947d0_947d0 - [syscall]-> rt_sigprocmask
+
+Path to exit:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x947d0_947d0
+  fuzzyfunc-0x947d0_947d0 - [syscall]-> exit
+
+Path to rseq:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x947d0_947d0
+  fuzzyfunc-0x947d0_947d0 - [syscall]-> rseq
+
+Path to close:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_close_8a590
+  _IO_file_close_8a590 - [DIRECT]-> __close_nocancel_119860
+  __close_nocancel_119860 - [syscall]-> close
+
+Path to read:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_read_8b930
+  _IO_file_read_8b930 - [DIRECT]-> read_1147d0
+  read_1147d0 - [syscall]-> read
+
+Path to lseek:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_seek_8a670
+  _IO_file_seek_8a670 - [DIRECT]-> lseek_114910
+  lseek_114910 - [syscall]-> lseek
+
+Path to write:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_write_8aec0
+  _IO_file_write_8aec0 - [DIRECT]-> write_114870
+  write_114870 - [syscall]-> write
+
+Path to getpid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZL10java_startP6Thread_968130
+  _ZL10java_startP6Thread_968130 - [DIRECT]-> getpid_ec040
+  getpid_ec040 - [syscall]-> getpid
+
+Path to unlink:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN10CompileLogD0Ev_497480
+  _ZN10CompileLogD0Ev_497480 - [DIRECT]-> unlink_1160a0
+  unlink_1160a0 - [syscall]-> unlink
+
+Path to mprotect:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN15VM_LinuxDllLoad4doitEv_972f70
+  _ZN15VM_LinuxDllLoad4doitEv_972f70 - [DIRECT]-> mprotect_11eaa0
+  mprotect_11eaa0 - [syscall]-> mprotect
+
+Path to access:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> access_114940
+  access_114940 - [syscall]-> access
+
+Path to clock_gettime:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x161e80_161e80
+  fuzzyfunc-0x161e80_161e80 - [DIRECT]-> clock_gettime_e5650
+  clock_gettime_e5650 - [syscall]-> clock_gettime
+
+Path to poll:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1631b0_1631b0
+  fuzzyfunc-0x1631b0_1631b0 - [DIRECT]-> poll_118b80
+  poll_118b80 - [syscall]-> poll
+
+Path to setsockopt:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1631b0_1631b0
+  fuzzyfunc-0x1631b0_1631b0 - [DIRECT]-> setsockopt_127ac0
+  setsockopt_127ac0 - [syscall]-> setsockopt
+
+Path to recvmsg:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1631b0_1631b0
+  fuzzyfunc-0x1631b0_1631b0 - [DIRECT]-> recvmsg_1277e0
+  recvmsg_1277e0 - [syscall]-> recvmsg
+
+Path to accept:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x163730_163730
+  fuzzyfunc-0x163730_163730 - [DIRECT]-> accept_127410
+  accept_127410 - [syscall]-> accept
+
+Path to geteuid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1639d0_1639d0
+  fuzzyfunc-0x1639d0_1639d0 - [DIRECT]-> geteuid_ec070
+  geteuid_ec070 - [syscall]-> geteuid
+
+Path to getegid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1639d0_1639d0
+  fuzzyfunc-0x1639d0_1639d0 - [DIRECT]-> getegid_ec090
+  getegid_ec090 - [syscall]-> getegid
+
+Path to sendmsg:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1639d0_1639d0
+  fuzzyfunc-0x1639d0_1639d0 - [DIRECT]-> sendmsg_127950
+  sendmsg_127950 - [syscall]-> sendmsg
+
+Path to sendto:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1663a0_1663a0
+  fuzzyfunc-0x1663a0_1663a0 - [DIRECT]-> sendto_1279f0
+  sendto_1279f0 - [syscall]-> sendto
+
+Path to recvfrom:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1663a0_1663a0
+  fuzzyfunc-0x1663a0_1663a0 - [DIRECT]-> recvfrom_127710
+  recvfrom_127710 - [syscall]-> recvfrom
+
+Path to mkdir:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x61380_61380
+  fuzzyfunc-0x61380_61380 - [DIRECT]-> mkdir_114450
+  mkdir_114450 - [syscall]-> mkdir
+
+Path to openat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x61390_61390
+  fuzzyfunc-0x61390_61390 - [DIRECT]-> open_1144e0
+  open_1144e0 - [syscall]-> openat
+
+Path to munmap:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x8a640_8a640
+  fuzzyfunc-0x8a640_8a640 - [DIRECT]-> munmap_11ea70
+  munmap_11ea70 - [syscall]-> munmap
+
+Path to mmap:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x8a6e0_8a6e0
+  fuzzyfunc-0x8a6e0_8a6e0 - [DIRECT]-> mmap_11ea10
+  mmap_11ea10 - [syscall]-> mmap
+
+Path to mremap:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x8af60_8af60
+  fuzzyfunc-0x8af60_8af60 - [DIRECT]-> mremap_126940
+  mremap_126940 - [syscall]-> mremap
+
+Path to sched_yield:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x8eb50_8eb50
+  fuzzyfunc-0x8eb50_8eb50 - [DIRECT]-> sched_yield_108c90
+  sched_yield_108c90 - [syscall]-> sched_yield
+
+Path to madvise:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x947d0_947d0
+  fuzzyfunc-0x947d0_947d0 - [DIRECT]-> madvise_11eb70
+  madvise_11eb70 - [syscall]-> madvise
+
+Path to lstat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Perf_Attach_9b4aa0
+  Perf_Attach_9b4aa0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40 - [DIRECT]-> __lxstat_126530
+  __lxstat_126530 - [syscall]-> lstat
+
+Path to kill:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Perf_Attach_9b4aa0
+  Perf_Attach_9b4aa0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40 - [DIRECT]-> kill_42750
+  kill_42750 - [syscall]-> kill
+
+Path to fstat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Perf_Attach_9b4aa0
+  Perf_Attach_9b4aa0 - [DIRECT]-> _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40
+  _ZN10PerfMemory6attachEPKciNS_14PerfMemoryModeEPPcPmP6Thread_9bbb40 - [DIRECT]-> __fxstat_1264d0
+  __fxstat_1264d0 - [syscall]-> fstat
+
+Path to ioctl:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_doallocate_7eb10
+  _IO_file_doallocate_7eb10 - [DIRECT]-> isatty_115f30
+  isatty_115f30 - [DIRECT]-> tcgetattr_119f20
+  tcgetattr_119f20 - [syscall]-> ioctl
+
+Path to newfstatat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_file_stat_8aeb0
+  _IO_file_stat_8aeb0 - [DIRECT]-> fstat_113cd0
+  fstat_113cd0 - [DIRECT]-> fstatat_113d30
+  fstatat_113d30 - [syscall]-> newfstatat
+
+Path to wait4:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _IO_proc_close_807e0
+  _IO_proc_close_807e0 - [DIRECT]-> waitpid_ea3a0
+  waitpid_ea3a0 - [DIRECT]-> wait4_ea3d0
+  wait4_ea3d0 - [syscall]-> wait4
+
+Path to vfork:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0 - [DIRECT]-> _ZN2os13fork_and_execEPcb_971790
+  _ZN2os13fork_and_execEPcb_971790 - [DIRECT]-> vfork_eabc0
+  vfork_eabc0 - [syscall]-> vfork
+
+Path to execve:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0 - [DIRECT]-> _ZN2os13fork_and_execEPcb_971790
+  _ZN2os13fork_and_execEPcb_971790 - [DIRECT]-> execve_eb080
+  execve_eb080 - [syscall]-> execve
+
+Path to exit_group:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0 - [DIRECT]-> _ZN2os13fork_and_execEPcb_971790
+  _ZN2os13fork_and_execEPcb_971790 - [DIRECT]-> _exit_eac00
+  _exit_eac00 - [syscall]-> exit_group
+
+Path to getpriority:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZNK10JavaThread8print_onEP12outputStream_ad7b80
+  _ZNK10JavaThread8print_onEP12outputStream_ad7b80 - [DIRECT]-> _ZN2os19get_native_priorityEPK6ThreadPi_96e680
+  _ZN2os19get_native_priorityEPK6ThreadPi_96e680 - [DIRECT]-> getpriority_11a740
+  getpriority_11a740 - [syscall]-> getpriority
+
+Path to socket:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x164440_164440
+  fuzzyfunc-0x164440_164440 - [DIRECT]-> rtime_161c50
+  rtime_161c50 - [DIRECT]-> socket_127b30
+  socket_127b30 - [syscall]-> socket
+
+Path to connect:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x164440_164440
+  fuzzyfunc-0x164440_164440 - [DIRECT]-> rtime_161c50
+  rtime_161c50 - [DIRECT]-> connect_1274e0
+  connect_1274e0 - [syscall]-> connect
+
+Path to writev:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x2a160_2a160
+  fuzzyfunc-0x2a160_2a160 - [DIRECT]-> __libc_fatal_896d0
+  __libc_fatal_896d0 - [DIRECT]-> fuzzyfunc-0x89280_89280
+  fuzzyfunc-0x89280_89280 - [syscall]-> writev
+
+Path to getdents64:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0xa1000_a1000
+  fuzzyfunc-0xa1000_a1000 - [DIRECT]-> fuzzyfunc-0x1271a0_1271a0
+  fuzzyfunc-0x1271a0_1271a0 - [DIRECT]-> getdents64_e6630
+  getdents64_e6630 - [syscall]-> getdents64
+
+Path to pread64:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0xa1000_a1000
+  fuzzyfunc-0xa1000_a1000 - [DIRECT]-> fuzzyfunc-0x1271a0_1271a0
+  fuzzyfunc-0x1271a0_1271a0 - [DIRECT]-> __pread64_nocancel_119b50
+  __pread64_nocancel_119b50 - [syscall]-> pread64
+
+Path to getrandom:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> fuzzyfunc-0xa19b0_a19b0
+  fuzzyfunc-0xa19b0_a19b0 - [DIRECT]-> getrandom_46c70
+  getrandom_46c70 - [syscall]-> getrandom
+
+Path to sched_getaffinity:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> malloc_a50a0
+  malloc_a50a0 - [DIRECT]-> fuzzyfunc-0xa1ee0_a1ee0
+  fuzzyfunc-0xa1ee0_a1ee0 - [DIRECT]-> fuzzyfunc-0x121a30_121a30
+  fuzzyfunc-0x121a30_121a30 - [syscall]-> sched_getaffinity
+
+Path to sysinfo:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Loadavg_b0c170
+  Unsafe_Loadavg_b0c170 - [DIRECT]-> _ZN2os7loadavgEPdi_970ca0
+  _ZN2os7loadavgEPdi_970ca0 - [DIRECT]-> getloadavg_121dd0
+  getloadavg_121dd0 - [DIRECT]-> sysinfo_126de0
+  sysinfo_126de0 - [syscall]-> sysinfo
+
+Path to uname:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_PrintOsInfo_b53ca0
+  WB_PrintOsInfo_b53ca0 - [DIRECT]-> _ZN2os13print_os_infoEP12outputStream_9702a0
+  _ZN2os13print_os_infoEP12outputStream_9702a0 - [DIRECT]-> _ZN2os5Posix16print_uname_infoEP12outputStream_978270
+  _ZN2os5Posix16print_uname_infoEP12outputStream_978270 - [DIRECT]-> uname_ea300
+  uname_ea300 - [syscall]-> uname
+
+Path to prlimit64:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_PrintOsInfo_b53ca0
+  WB_PrintOsInfo_b53ca0 - [DIRECT]-> _ZN2os13print_os_infoEP12outputStream_9702a0
+  _ZN2os13print_os_infoEP12outputStream_9702a0 - [DIRECT]-> _ZN2os5Posix17print_rlimit_infoEP12outputStream_978060
+  _ZN2os5Posix17print_rlimit_infoEP12outputStream_978060 - [DIRECT]-> getrlimit_11a2d0
+  getrlimit_11a2d0 - [syscall]-> prlimit64
+
+Path to shmget:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_ReadFromNoaccessArea_b58ad0
+  WB_ReadFromNoaccessArea_b58ad0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmbPc_b387e0
+  _ZN17ReservedHeapSpaceC1EmmbPc_b387e0 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmPcb_96d5f0
+  _ZN2os22reserve_memory_specialEmmPcb_96d5f0 - [DIRECT]-> shmget_128440
+  shmget_128440 - [syscall]-> shmget
+
+Path to shmat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_ReadFromNoaccessArea_b58ad0
+  WB_ReadFromNoaccessArea_b58ad0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmbPc_b387e0
+  _ZN17ReservedHeapSpaceC1EmmbPc_b387e0 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmPcb_96d5f0
+  _ZN2os22reserve_memory_specialEmmPcb_96d5f0 - [DIRECT]-> shmat_1283e0
+  shmat_1283e0 - [syscall]-> shmat
+
+Path to shmctl:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_ReadFromNoaccessArea_b58ad0
+  WB_ReadFromNoaccessArea_b58ad0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmbPc_b387e0
+  _ZN17ReservedHeapSpaceC1EmmbPc_b387e0 - [DIRECT]-> _ZN2os22reserve_memory_specialEmmPcb_96d5f0
+  _ZN2os22reserve_memory_specialEmmPcb_96d5f0 - [DIRECT]-> shmctl_128480
+  shmctl_128480 - [syscall]-> shmctl
+
+Path to shmdt:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_ReadFromNoaccessArea_b58ad0
+  WB_ReadFromNoaccessArea_b58ad0 - [DIRECT]-> _ZN17ReservedHeapSpaceC1EmmbPc_b387e0
+  _ZN17ReservedHeapSpaceC1EmmbPc_b387e0 - [DIRECT]-> _ZN2os22release_memory_specialEPcm_96db90
+  _ZN2os22release_memory_specialEPcm_96db90 - [DIRECT]-> shmdt_128410
+  shmdt_128410 - [syscall]-> shmdt
+
+Path to clone:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0
+  _ZN24VM_ReportJavaOutOfMemory4doitEv_b3a9f0 - [DIRECT]-> _ZN2os13fork_and_execEPcb_971790
+  _ZN2os13fork_and_execEPcb_971790 - [DIRECT]-> fork_ea6a0
+  fork_ea6a0 - [DIRECT]-> _Fork_eab30
+  _Fork_eab30 - [syscall]-> clone
+
+Path to getcwd:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> getcwd_1151d0
+  getcwd_1151d0 - [syscall]-> getcwd
+
+Path to readlink:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> readlink_116040
+  readlink_116040 - [syscall]-> readlink
+
+Path to faccessat2:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> faccessat_114ac0
+  faccessat_114ac0 - [syscall]-> faccessat2
+
+Path to faccessat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> faccessat_114ac0
+  faccessat_114ac0 - [syscall]-> faccessat
+
+Path to tgkill:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN9__gnu_cxx27__verbose_terminate_handlerEv_b6da20
+  _ZN9__gnu_cxx27__verbose_terminate_handlerEv_b6da20 - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> raise_42460
+  raise_42460 - [DIRECT]-> pthread_kill_175da0
+  pthread_kill_175da0 - [syscall]-> tgkill
+
+Path to rt_sigaction:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN9__gnu_cxx27__verbose_terminate_handlerEv_b6da20
+  _ZN9__gnu_cxx27__verbose_terminate_handlerEv_b6da20 - [DIRECT]-> abort_28720
+  abort_28720 - [DIRECT]-> sigaction_424d0
+  sigaction_424d0 - [DIRECT]-> __libc_sigaction_42530
+  __libc_sigaction_42530 - [syscall]-> rt_sigaction
+
+Path to sendmmsg:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _nss_dns_getcanonname_r_1446b0
+  _nss_dns_getcanonname_r_1446b0 - [DIRECT]-> __res_context_query_14cfc0
+  __res_context_query_14cfc0 - [DIRECT]-> __res_context_send_14ecf0
+  __res_context_send_14ecf0 - [DIRECT]-> sendmmsg_127e40
+  sendmmsg_127e40 - [syscall]-> sendmmsg
+
+Path to clock_nanosleep:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1324b0_1324b0
+  fuzzyfunc-0x1324b0_1324b0 - [DIRECT]-> sleep_ea570
+  sleep_ea570 - [DIRECT]-> nanosleep_ea660
+  nanosleep_ea660 - [DIRECT]-> clock_nanosleep_e5730
+  clock_nanosleep_e5730 - [syscall]-> clock_nanosleep
+
+Path to getpeername:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x161e80_161e80
+  fuzzyfunc-0x161e80_161e80 - [DIRECT]-> key_decryptsession_pk_167970
+  key_decryptsession_pk_167970 - [DIRECT]-> fuzzyfunc-0x1671e0_1671e0
+  fuzzyfunc-0x1671e0_1671e0 - [DIRECT]-> getpeername_127580
+  getpeername_127580 - [syscall]-> getpeername
+
+Path to fcntl:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x161e80_161e80
+  fuzzyfunc-0x161e80_161e80 - [DIRECT]-> key_decryptsession_pk_167970
+  key_decryptsession_pk_167970 - [DIRECT]-> fuzzyfunc-0x1671e0_1671e0
+  fuzzyfunc-0x1671e0_1671e0 - [DIRECT]-> fcntl_114cf0
+  fcntl_114cf0 - [syscall]-> fcntl
+
+Path to dup:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x164a10_164a10
+  fuzzyfunc-0x164a10_164a10 - [DIRECT]-> fuzzyfunc-0x164940_164940
+  fuzzyfunc-0x164940_164940 - [DIRECT]-> perror_60e70
+  perror_60e70 - [DIRECT]-> dup_114fe0
+  dup_114fe0 - [syscall]-> dup
+
+Path to sched_setscheduler:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Park_b0ccc0
+  Unsafe_Park_b0ccc0 - [DIRECT]-> _ZN6Parker4parkEbl_971180
+  _ZN6Parker4parkEbl_971180 - [DIRECT]-> pthread_mutex_trylock_98e50
+  pthread_mutex_trylock_98e50 - [DIRECT]-> fuzzyfunc-0x9cd70_9cd70
+  fuzzyfunc-0x9cd70_9cd70 - [DIRECT]-> sched_setscheduler_108c30
+  sched_setscheduler_108c30 - [syscall]-> sched_setscheduler
+
+Path to sched_getparam:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Park_b0ccc0
+  Unsafe_Park_b0ccc0 - [DIRECT]-> _ZN6Parker4parkEbl_971180
+  _ZN6Parker4parkEbl_971180 - [DIRECT]-> pthread_mutex_trylock_98e50
+  pthread_mutex_trylock_98e50 - [DIRECT]-> fuzzyfunc-0x9cd70_9cd70
+  fuzzyfunc-0x9cd70_9cd70 - [DIRECT]-> sched_getparam_108c00
+  sched_getparam_108c00 - [syscall]-> sched_getparam
+
+Path to sched_getscheduler:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Park_b0ccc0
+  Unsafe_Park_b0ccc0 - [DIRECT]-> _ZN6Parker4parkEbl_971180
+  _ZN6Parker4parkEbl_971180 - [DIRECT]-> pthread_mutex_trylock_98e50
+  pthread_mutex_trylock_98e50 - [DIRECT]-> fuzzyfunc-0x9cd70_9cd70
+  fuzzyfunc-0x9cd70_9cd70 - [DIRECT]-> sched_getscheduler_108c60
+  sched_getscheduler_108c60 - [syscall]-> sched_getscheduler
+
+Path to sched_get_priority_max:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Park_b0ccc0
+  Unsafe_Park_b0ccc0 - [DIRECT]-> _ZN6Parker4parkEbl_971180
+  _ZN6Parker4parkEbl_971180 - [DIRECT]-> pthread_mutex_trylock_98e50
+  pthread_mutex_trylock_98e50 - [DIRECT]-> fuzzyfunc-0x9cd70_9cd70
+  fuzzyfunc-0x9cd70_9cd70 - [DIRECT]-> sched_get_priority_max_108cc0
+  sched_get_priority_max_108cc0 - [syscall]-> sched_get_priority_max
+
+Path to sched_get_priority_min:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> Unsafe_Park_b0ccc0
+  Unsafe_Park_b0ccc0 - [DIRECT]-> _ZN6Parker4parkEbl_971180
+  _ZN6Parker4parkEbl_971180 - [DIRECT]-> pthread_mutex_trylock_98e50
+  pthread_mutex_trylock_98e50 - [DIRECT]-> fuzzyfunc-0x9cd70_9cd70
+  fuzzyfunc-0x9cd70_9cd70 - [DIRECT]-> sched_get_priority_min_108cf0
+  sched_get_priority_min_108cf0 - [syscall]-> sched_get_priority_min
+
+Path to stat:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> WB_AddToBootstrapClassLoaderSearch_b52150
+  WB_AddToBootstrapClassLoaderSearch_b52150 - [DIRECT]-> _ZN8JvmtiEnv31AddToBootstrapClassLoaderSearchEPKc_7ab1a0
+  _ZN8JvmtiEnv31AddToBootstrapClassLoaderSearchEPKc_7ab1a0 - [DIRECT]-> _ZN11ClassLoader27create_class_path_zip_entryEPKc_446fd0
+  _ZN11ClassLoader27create_class_path_zip_entryEPKc_446fd0 - [DIRECT]-> _ZN2os4statEPKcP4stat_96fde0
+  _ZN2os4statEPKcP4stat_96fde0 - [DIRECT]-> __xstat_126470
+  __xstat_126470 - [syscall]-> stat
+
+Path to mincore:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN10JavaThread3runEv_adc1e0
+  _ZN10JavaThread3runEv_adc1e0 - [DIRECT]-> _ZN10JavaThread24create_stack_guard_pagesEv_adc0f0
+  _ZN10JavaThread24create_stack_guard_pagesEv_adc0f0 - [DIRECT]-> _ZN2os24create_stack_guard_pagesEPcm_9649a0
+  _ZN2os24create_stack_guard_pagesEPcm_9649a0 - [DIRECT]-> _ZN2os27pd_create_stack_guard_pagesEPcm_96bf50
+  _ZN2os27pd_create_stack_guard_pagesEPcm_96bf50 - [DIRECT]-> mincore_11eba0
+  mincore_11eba0 - [syscall]-> mincore
+
+Path to getrusage:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN13InstanceKlass18oop_oop_iterate_nvEP7oopDescP14G1CMOopClosure_658930
+  _ZN13InstanceKlass18oop_oop_iterate_nvEP7oopDescP14G1CMOopClosure_658930 - [DIRECT]-> _ZN6CMTask19deal_with_referenceEP7oopDesc_65e5e0
+  _ZN6CMTask19deal_with_referenceEP7oopDesc_65e5e0 - [DIRECT]-> _ZN6CMTask19process_grey_objectILb0EEEvP7oopDesc_4b0e20
+  _ZN6CMTask19process_grey_objectILb0EEEvP7oopDesc_4b0e20 - [DIRECT]-> _ZN2os12elapsedVTimeEv_968c40
+  _ZN2os12elapsedVTimeEv_968c40 - [DIRECT]-> getrusage_11a350
+  getrusage_11a350 - [syscall]-> getrusage
+
+Path to getgid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> faccessat_114ac0
+  faccessat_114ac0 - [DIRECT]-> getgid_ec080
+  getgid_ec080 - [syscall]-> getgid
+
+Path to getuid:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> faccessat_114ac0
+  faccessat_114ac0 - [DIRECT]-> getuid_ec060
+  getuid_ec060 - [syscall]-> getuid
+
+Path to shutdown:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> checked_jni_AllocObject_72af30
+  checked_jni_AllocObject_72af30 - [DIRECT]-> _ZN2os5abortEb_969090
+  _ZN2os5abortEb_969090 - [DIRECT]-> _ZN2os8shutdownEv_969060
+  _ZN2os8shutdownEv_969060 - [DIRECT]-> _ZN14AttachListener5abortEv_2ed6d0
+  _ZN14AttachListener5abortEv_2ed6d0 - [DIRECT]-> shutdown_127b00
+  shutdown_127b00 - [syscall]-> shutdown
+
+Path to bind:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1663a0_1663a0
+  fuzzyfunc-0x1663a0_1663a0 - [DIRECT]-> getifaddrs_141bf0
+  getifaddrs_141bf0 - [DIRECT]-> fuzzyfunc-0x140f00_140f00
+  fuzzyfunc-0x140f00_140f00 - [DIRECT]-> fuzzyfunc-0x140e30_140e30
+  fuzzyfunc-0x140e30_140e30 - [DIRECT]-> bind_1274b0
+  bind_1274b0 - [syscall]-> bind
+
+Path to getsockname:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x1663a0_1663a0
+  fuzzyfunc-0x1663a0_1663a0 - [DIRECT]-> getifaddrs_141bf0
+  getifaddrs_141bf0 - [DIRECT]-> fuzzyfunc-0x140f00_140f00
+  fuzzyfunc-0x140f00_140f00 - [DIRECT]-> fuzzyfunc-0x140e30_140e30
+  fuzzyfunc-0x140e30_140e30 - [DIRECT]-> getsockname_1275b0
+  getsockname_1275b0 - [syscall]-> getsockname
+
+Path to getgroups:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> _ZN2os8jvm_pathEPci_966df0
+  _ZN2os8jvm_pathEPci_966df0 - [DIRECT]-> realpath_175cf0
+  realpath_175cf0 - [DIRECT]-> fuzzyfunc-0x50da0_50da0
+  fuzzyfunc-0x50da0_50da0 - [DIRECT]-> faccessat_114ac0
+  faccessat_114ac0 - [DIRECT]-> group_member_ec1f0
+  group_member_ec1f0 - [DIRECT]-> getgroups_ec0a0
+  getgroups_ec0a0 - [syscall]-> getgroups
+
+Path to brk:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> free_a53e0
+  free_a53e0 - [DIRECT]-> fuzzyfunc-0xa26a0_a26a0
+  fuzzyfunc-0xa26a0_a26a0 - [DIRECT]-> fuzzyfunc-0xa25f0_a25f0
+  fuzzyfunc-0xa25f0_a25f0 - [DIRECT]-> __default_morecore_a25b0
+  __default_morecore_a25b0 - [DIRECT]-> sbrk_11a860
+  sbrk_11a860 - [DIRECT]-> brk_11a820
+  brk_11a820 - [syscall]-> brk
+
+Path to sched_setaffinity:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> jvmtiTrace_RunAgentThread_78f6c0
+  jvmtiTrace_RunAgentThread_78f6c0 - [DIRECT]-> _ZN8JvmtiEnv14RunAgentThreadEP8_jobjectPFvP9_jvmtiEnvP7JNIEnv_PvEPKvi_7aca30
+  _ZN8JvmtiEnv14RunAgentThreadEP8_jobjectPFvP9_jvmtiEnvP7JNIEnv_PvEPKvi_7aca30 - [DIRECT]-> _ZN16JvmtiAgentThreadC1EP8JvmtiEnvPFvP9_jvmtiEnvP7JNIEnv_PvEPKv_7d1cc0
+  _ZN16JvmtiAgentThreadC1EP8JvmtiEnvPFvP9_jvmtiEnvP7JNIEnv_PvEPKv_7d1cc0 - [DIRECT]-> _ZN10JavaThreadC2EPFvPS_P6ThreadEm_ae2c40
+  _ZN10JavaThreadC2EPFvPS_P6ThreadEm_ae2c40 - [DIRECT]-> _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_972920
+  _ZN2os13create_threadEP6ThreadNS_10ThreadTypeEm_972920 - [DIRECT]-> pthread_create_94c40
+  pthread_create_94c40 - [DIRECT]-> fuzzyfunc-0x945e0_945e0
+  fuzzyfunc-0x945e0_945e0 - [syscall]-> sched_setaffinity
+
+Path to readv:
+  Java_com_sun_media_sound_Platform_nGetExtraLibraries_6f0 - [INDIRECT]-> fuzzyfunc-0x161e80_161e80
+  fuzzyfunc-0x161e80_161e80 - [DIRECT]-> key_decryptsession_pk_167970
+  key_decryptsession_pk_167970 - [DIRECT]-> fuzzyfunc-0x1671e0_1671e0
+  fuzzyfunc-0x1671e0_1671e0 - [DIRECT]-> clnt_create_164fa0
+  clnt_create_164fa0 - [DIRECT]-> fuzzyfunc-0x16d7b0_16d7b0
+  fuzzyfunc-0x16d7b0_16d7b0 - [DIRECT]-> gethostbyname2_r_137440
+  gethostbyname2_r_137440 - [DIRECT]-> fuzzyfunc-0x16ef50_16ef50
+  fuzzyfunc-0x16ef50_16ef50 - [DIRECT]-> fuzzyfunc-0x16e5d0_16e5d0
+  fuzzyfunc-0x16e5d0_16e5d0 - [DIRECT]-> fuzzyfunc-0x170f50_170f50
+  fuzzyfunc-0x170f50_170f50 - [DIRECT]-> readv_11a9a0
+  readv_11a9a0 - [syscall]-> readv
