@@ -542,17 +542,17 @@ process_library() {
     local lib_path
     lib_path=$(build_user_library_path "$BINARY_DIR")
 
-    local cmd="USER_LIBRARY_PATH=\"$lib_path\" $compute_script \"$binary_path\" \"$output_dir\" \"$startfunc_file\""
+    local cmd=("$compute_script" "$binary_path" "$output_dir" "$startfunc_file")
 
     if [ -n "$ENABLE_LOG" ]; then
-        cmd="$cmd --log"
+        cmd+=("--log")
     fi
 
     log_message "INFO" "Executing from: $syspart_app_dir"
     log_message "INFO" "USER_LIBRARY_PATH=$lib_path"
-    log_message "INFO" "Command: $cmd"
+    log_message "INFO" "Command: ${cmd[*]}"
 
-    eval $cmd
+    USER_LIBRARY_PATH="$lib_path" "${cmd[@]}"
     local exit_code=$?
 
     popd > /dev/null
