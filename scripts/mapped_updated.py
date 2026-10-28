@@ -1139,7 +1139,7 @@ else:
 # overloaded methods. Multiple JNI symbols can map to the same Java method name
 # (e.g., Java_*_getZeroTerminatedByteArrayChecked__J and __JI both map to
 # com.kenai.jffi.Foreign.getZeroTerminatedByteArrayChecked). We store all of them
-# and use the first one for output (they all live in the same .so).
+# and emit every distinct target.
 # ----------------------------
 method_to_jni: dict = {}  # str -> list[tuple[str, str]]
 
@@ -1342,17 +1342,11 @@ def load_jni_dynamic_bindings(binding_paths: list, so_paths: list) -> dict:
     """
     Load JNI dynamic bindings from extract_jni_bindings.py output files.
     File format: libfoo.so|com.example.Class.method|(I)V|native_symbol|HIGH_CONF
-    Returns: dict[java_method] -> (jni_symbol, library_path)
+    Returns: dict[java_method] -> list[(jni_symbol, library_path)]
 
-    Conflict resolution per java_method (lower priority value wins):
-      0..N-1  : LIBS_<IMG_NAME>/  (PRIMARY_LIB_DIRS, in order)
-      999     : unresolved or path outside the project tree
-
-    Tie-breaker at the same priority level: keep the first row encountered
-    (preserves file-order intent within a single source).
+    Keep every distinct target for a Java method; duplicate rows are ignored.
     """
     bindings: dict = {}
-    bindings_priority: dict = {}
     if not binding_paths:
         print("INFO: No jni_dynamic_bindings.txt paths discovered (optional).")
         return bindings
@@ -1360,14 +1354,13 @@ def load_jni_dynamic_bindings(binding_paths: list, so_paths: list) -> dict:
     def upsert(java_method, jni_symbol, lib_path):
         if not lib_path:
             return
-        new_prio = lib_priority(lib_path)
-        prev_prio = bindings_priority.get(java_method)
-        if prev_prio is None or new_prio < prev_prio:
-            bindings[java_method] = (jni_symbol, lib_path)
-            bindings_priority[java_method] = new_prio
+        target = (jni_symbol, lib_path)
+        targets = bindings.setdefault(java_method, [])
+        if target not in targets:
+            targets.append(target)
 
     for path in binding_paths:
-        n_before = len(bindings)
+        n_before = sum(map(len, bindings.values()))
         with open(path, "r", encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
@@ -1384,8 +1377,8 @@ def load_jni_dynamic_bindings(binding_paths: list, so_paths: list) -> dict:
                 if lib_path is None and jni_symbol:
                     lib_path = resolve_symbol_in_libs(jni_symbol, so_paths)
                 upsert(java_method, jni_symbol, lib_path)
-        added = len(bindings) - n_before
-        print(f"INFO: JNI dynamic bindings file {path} (+{added} new methods, {len(bindings)} total)")
+        added = sum(map(len, bindings.values())) - n_before
+        print(f"INFO: JNI dynamic bindings file {path} (+{added} new targets, {sum(map(len, bindings.values()))} total)")
 
     return bindings
 
@@ -1535,9 +1528,9 @@ def scan_native_tables(src_root: str):
                     continue
                 key = f"{use_class}.{name}"
                 if target.startswith("JVM_"):
-                    jvm_map.setdefault(key, target)
+                    jvm_map.setdefault(key, []).append(target)
                 else:
-                    reg_map.setdefault(key, target)
+                    reg_map.setdefault(key, []).append(target)
 
     return jvm_map, reg_map
 
@@ -1595,9 +1588,13 @@ def load_jdk_mapping_file(mapping_file, libjvm_path):
                 dropped += 1
                 continue
             if native_sym.startswith("JVM_"):
-                jvm_map.setdefault(java_method, native_sym)
+                targets = jvm_map.setdefault(java_method, [])
+                if native_sym not in targets:
+                    targets.append(native_sym)
             else:
-                reg_map.setdefault(java_method, native_sym)
+                targets = reg_map.setdefault(java_method, [])
+                if native_sym not in targets:
+                    targets.append(native_sym)
             kept += 1
     return jvm_map, reg_map, kept, dropped
 
@@ -1834,19 +1831,19 @@ with open(detailed_output_file, "w", encoding="utf-8") as out:
                 break
 
         if jni_map_key is not None:
-            jni_sym, so_path = method_to_jni[jni_map_key][0]
-            if jni_map_key == "org.hyperic.sigar.Sigar.getFileSystemListNative":
-                # #region agent log
-                debug_log("sigar-jni-direct", "H2", "direct JNI mapping found for Sigar.getFileSystemListNative", {
-                    "lookup": jni_map_key,
-                    "jniSymbol": jni_sym,
-                    "owner": so_path,
-                })
-                # #endregion
-            emit_result(out, so_path, original, jni_map_key, jni_sym, "JNI")
-            count_jni_direct += 1
-            if is_mangled_jni(jni_sym):
-                count_jni_mangled += 1
+            emitted = set()
+            for jni_sym, so_path in method_to_jni[jni_map_key]:
+                if (jni_sym, so_path) in emitted:
+                    continue
+                emitted.add((jni_sym, so_path))
+                if jni_map_key == "org.hyperic.sigar.Sigar.getFileSystemListNative":
+                    debug_log("sigar-jni-direct", "H2", "direct JNI mapping found for Sigar.getFileSystemListNative", {
+                        "lookup": jni_map_key, "jniSymbol": jni_sym, "owner": so_path,
+                    })
+                emit_result(out, so_path, original, jni_map_key, jni_sym, "JNI")
+                count_jni_direct += 1
+                if is_mangled_jni(jni_sym):
+                    count_jni_mangled += 1
             continue
 
         # ----- 1.2) JNI Dynamic Bindings (RegisterNatives tables from extract_jni_bindings.py) -----
@@ -1860,9 +1857,9 @@ with open(detailed_output_file, "w", encoding="utf-8") as out:
                 jni_dyn_key = alt
                 break
         if jni_dyn_key is not None:
-            jni_dyn_sym, so_path = jni_dynamic_map[jni_dyn_key]
-            emit_result(out, so_path, original, jni_dyn_key, jni_dyn_sym, "JNI_DYNAMIC")
-            count_jni_dynamic_bindings += 1
+            for jni_dyn_sym, so_path in jni_dynamic_map[jni_dyn_key]:
+                emit_result(out, so_path, original, jni_dyn_key, jni_dyn_sym, "JNI_DYNAMIC")
+                count_jni_dynamic_bindings += 1
             continue
 
         # ----- 1.3) Netty unix.Socket — nm fallback for dynamically registered JNI ---
@@ -1890,27 +1887,29 @@ with open(detailed_output_file, "w", encoding="utf-8") as out:
             continue
 
         # ----- 2) JVM_* via source tables -----
-        jvm_sym = None
+        jvm_syms = []
         jvm_lookup = lookup
         for cand in compat_lookup_candidates:
-            jvm_sym = jvm_method_map.get(cand)
-            if jvm_sym:
+            jvm_syms = jvm_method_map.get(cand, [])
+            if jvm_syms:
                 jvm_lookup = cand
                 break
             match = re.match(r'^(.+?)([a-z][a-zA-Z0-9_]*)\(', cand)
             if match:
                 lookup_key = f"{match.group(1)}.{match.group(2)}"
-                jvm_sym = jvm_method_map.get(lookup_key)
-                if jvm_sym:
+                jvm_syms = jvm_method_map.get(lookup_key, [])
+                if jvm_syms:
                     jvm_lookup = lookup_key
                     break
 
-        if jvm_sym:
+        if jvm_syms:
             tag = "JVM"
-            if libjvm_so and (jvm_sym not in available_jvm_symbols):
-                tag = "JVM? NOT_IN_THIS_LIB"
-            emit_result(out, libjvm_so, original, jvm_lookup, jvm_sym, tag)
-            count_jvm += 1
+            for jvm_sym in jvm_syms:
+                target_tag = tag
+                if libjvm_so and (jvm_sym not in available_jvm_symbols):
+                    target_tag = "JVM? NOT_IN_THIS_LIB"
+                emit_result(out, libjvm_so, original, jvm_lookup, jvm_sym, target_tag)
+                count_jvm += 1
             continue
 
         # ----- 2.5) JVM built-in natives (well-known JVM_* functions) -----
@@ -1931,22 +1930,22 @@ with open(detailed_output_file, "w", encoding="utf-8") as out:
 
         # ----- 3) Registered natives (non-JVM) via source tables -----
         reg_lookup = lookup
-        reg_sym = None
+        reg_syms = []
         for cand in compat_lookup_candidates:
-            reg_sym = registered_method_map.get(cand)
-            if reg_sym:
+            reg_syms = registered_method_map.get(cand, [])
+            if reg_syms:
                 reg_lookup = cand
                 break
-        if not reg_sym:
+        if not reg_syms:
             # Try stripping shaded prefixes (e.g. org.apache.storm.shade.io.netty -> io.netty)
             for _sp in shaded_netty_prefixes:
                 if lookup.startswith(_sp + "."):
                     _unshaded = "io.netty." + lookup[len(_sp) + 1:]
-                    reg_sym = registered_method_map.get(_unshaded)
-                    if reg_sym:
+                    reg_syms = registered_method_map.get(_unshaded, [])
+                    if reg_syms:
                         reg_lookup = _unshaded
                         break
-        if not reg_sym:
+        if not reg_syms:
             # Netty cross-class alias: epoll.NativeStaticallyReferencedJniMethods declares
             # limit methods (ssizeMax, iovMax, etc.) that are registered under
             # unix.LimitsStaticallyReferencedJniMethods at runtime, and vice versa.
@@ -1959,35 +1958,27 @@ with open(detailed_output_file, "w", encoding="utf-8") as out:
                     break
             if _unshaded_lookup.startswith(_epoll_nsrjm):
                 _method = _unshaded_lookup[len(_epoll_nsrjm):]
-                reg_sym = registered_method_map.get(_unix_lsrjm + _method)
-                if reg_sym:
+                reg_syms = registered_method_map.get(_unix_lsrjm + _method, [])
+                if reg_syms:
                     reg_lookup = _unix_lsrjm + _method
             elif _unshaded_lookup.startswith(_unix_lsrjm):
                 _method = _unshaded_lookup[len(_unix_lsrjm):]
-                reg_sym = registered_method_map.get(_epoll_nsrjm + _method)
-                if reg_sym:
+                reg_syms = registered_method_map.get(_epoll_nsrjm + _method, [])
+                if reg_syms:
                     reg_lookup = _epoll_nsrjm + _method
-        if reg_sym:
-            owner = resolve_symbol_in_libs(reg_sym, search_libs)
-            if owner:
-                emit_result(out, owner, original, reg_lookup, reg_sym, "REGISTERED")
-            else:
-                fence_result = resolve_fence_fallback(reg_lookup, search_libs)
-                if fence_result:
-                    full_owner, full_sym = fence_result
-                    emit_result(
-                        out,
-                        full_owner,
-                        original,
-                        reg_lookup,
-                        full_sym,
-                        "REGISTERED_FENCE_FALLBACK",
-                        note=f" (registered as {reg_sym})",
-                    )
-                    count_registered += 1
-                    continue
-                out.write(f"{original} -> {reg_sym} [REGISTERED? UNRESOLVED]{alias_tag(original, reg_lookup)}\n")
-            count_registered += 1
+        if reg_syms:
+            for reg_sym in reg_syms:
+                owner = resolve_symbol_in_libs(reg_sym, search_libs)
+                if owner:
+                    emit_result(out, owner, original, reg_lookup, reg_sym, "REGISTERED")
+                else:
+                    fence_result = resolve_fence_fallback(reg_lookup, search_libs)
+                    if fence_result:
+                        full_owner, full_sym = fence_result
+                        emit_result(out, full_owner, original, reg_lookup, full_sym, "REGISTERED_FENCE_FALLBACK", note=f" (registered as {reg_sym})")
+                    else:
+                        out.write(f"{original} -> {reg_sym} [REGISTERED? UNRESOLVED]{alias_tag(original, reg_lookup)}\n")
+                count_registered += 1
             continue
 
 
