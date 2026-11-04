@@ -2,7 +2,7 @@
 
 This directory contains EchoTrace's bytecode analysis detectors. Each detector targets a different mechanism by which Java code invokes native (C/C++) functions.
 
-For a **deep dive on JNI static detection**, **`PrototypeFinal`**, **application vs JDK natives**, and **cross-JDK JUnit results**, see **[JNI_INTERFACE_DETECTION.md](./JNI_INTERFACE_DETECTION.md)**.
+For a **deep dive on JNI static detection**, **`PrototypeFinal`**, **application vs JDK natives**, and **cross-JDK JUnit results**, see **[JNI_INTERFACE_DETECTION.md](./JNI_INTERFACE_DETECTION.md)**. For `RegisterNatives` table recovery, see **[JNI Dynamic Binding.md](./JNI%20Dynamic%20Binding.md)**.
 
 ## Overview
 
@@ -10,21 +10,24 @@ Java applications reach native code through several interfaces. Each has a disti
 
 | Type | Detector | What it finds |
 |------|----------|---------------|
-| JNI Static | `PrototypeFinal` / `Mode4NativeScanner` | `native` keyword declarations |
-| JNI Dynamic | `JNIDyn` | Libraries using `RegisterNatives()` |
-| JNA Interface Mapping | `JnaIfaceDetector` | Interfaces extending `com.sun.jna.Library` |
-| JNA Dynamic | `JnaDynDetector` | `NativeLibrary.getInstance().getFunction()` |
+| JNI Static | `PrototypeFinal` | `native` keyword declarations |
+| JNI Dynamic | *(no bytecode detector)* `scripts/extract_jni_bindings.py`, `scripts/extract_registernatives_binary.py` | `JNINativeMethod[]` tables registered via `RegisterNatives()` |
+| JNA Interface Mapping | `JnaIfaceDetector` | Calls to interfaces extending `com.sun.jna.Library` |
+| JNA Dynamic | `JnaDynDetector` | `NativeLibrary.getInstance().getFunction()` -> `Function.invoke*()` |
 | JNA Direct Mapping | `JnaDirectMapDetector` | Classes calling `Native.register()` |
-| Panama FFI | `FfiDetector` | `java.lang.foreign` / `jdk.incubator.foreign` |
-| jnr-ffi | `JnrFfiDetector` | `LibraryLoader.create().load()` |
+| Panama FFI | `FfiDetector` | `java.lang.foreign` / `jdk.incubator.foreign` downcalls |
+| jnr-ffi | `JnrFfiDetector` | `LibraryLoader.create().load()` / `Library.loadLibrary()` |
+
+`JNADetector` is the entry point the pipeline uses: it runs the five JNA/FFI/jnr-ffi detectors over one shared SootUp view, merges their hits, then runs `PrototypeFinal` in Mode 1.
 
 ---
 
 ## 1. JNI Static Binding
 
-**File:** `PrototypeFinal.java`, `Mode4NativeScanner.java`
+**File:** `PrototypeFinal.java`
 
 **Java pattern:**
+
 ```java
 public class System {
     public static native long nanoTime();
@@ -32,55 +35,63 @@ public class System {
 ```
 
 **How we detect it:**
-- Scan all `.class` files in target/dependency JARs using ASM
-- Any method with the `ACC_NATIVE` modifier flag is a native method
-- SootUp `MethodModifier.NATIVE` confirms in Jimple IR
+
+`PrototypeFinal` has two modes:
+
+- **Mode 1 (`--1`, used by the pipeline):** ASM scan of every `.class` in the JARs under the target directory. Any method with the `ACC_NATIVE` flag is a native method. Runtime JARs passed with `--runtime` (or `PROTOTYPE_RUNTIME_DIR`) are only placed on the class loader; they are not scanned wholesale, so a JDK native is reported only when an invoke chain from the application reaches it.
+- **Mode 2 (`--2`, the CLI default):** SootUp worklist over Jimple IR, starting from the target JARs and following calls into a dependencies directory. Requires `<dependencies-directory>` as a second positional argument.
 
 **Symbol naming convention:**
 The JVM resolves these automatically to `Java_<package>_<Class>_<method>`:
+
 ```
 java.lang.System.nanoTime  →  Java_java_lang_System_nanoTime (in libjava.so)
 ```
 
-**Output:** `native_methods.txt` (one fully-qualified method per line)
+**Output:**
 
-**Limitations:** None for detection. The method is always visible in bytecode. The harder problem is *mapping* the method to a library (done downstream by `mapped_updated.py`).
+- Mode 1: `native_methods.txt`
+- Mode 2: `sootup_visitor_natives.txt`
+
+Both land in `outputs_<IMG_NAME>/` when the target directory is `JARFILES_<IMG_NAME>`; override with `-Dprototype.output.dir=<path>`.
+
+**Limitations:** None for detection. The method is always visible in bytecode. The harder problem is *mapping* the method to a library (done downstream by `scripts/mapped_updated.py`).
 
 ---
 
 ## 2. JNI Dynamic Binding (RegisterNatives)
 
-**File:** `JNIDyn.java`
+**Files:** `scripts/extract_jni_bindings.py`, `scripts/extract_registernatives_binary.py` (both invoked automatically by `scripts/mapped_updated.py`)
+
+There is no bytecode detector for this case: a dynamically registered method looks like any other `native` declaration in bytecode and is already reported by `PrototypeFinal`. What is missing is the C symbol, which only the `.so` knows.
 
 **C pattern (inside `.so`):**
+
 ```c
 static JNINativeMethod methods[] = {
     {"beginRecording", "()V", (void*)jfr_begin_recording},
     {"isRecording",    "()Z", (void*)jfr_is_recording},
 };
 
-JNIEXPORT void JNI_OnLoad(JavaVM *vm, void *reserved) {
-    (*env)->RegisterNatives(env, cls, methods, 3);
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
+    (*env)->RegisterNatives(env, cls, methods, 2);
 }
 ```
 
-**How we detect it:**
-1. Parse ELF `.so` files directly (no bytecode needed for detection)
-2. Check for `JNI_OnLoad` in the dynamic symbol table (`nm -D`)
-3. Scan raw bytes for the string `"RegisterNatives"` (indicates the library calls it)
-4. Cross-reference with native methods from Step 1 to identify which methods are dynamically bound
+**How we recover it:**
 
-**Signal levels:**
-- `HIGH` — Both `RegisterNatives` string AND `JNI_OnLoad` exported symbol present
-- `MEDIUM` — `RegisterNatives` string present, `JNI_OnLoad` not exported
-- `LOW` — `JNI_OnLoad` present but no `RegisterNatives` string
+- **`extract_jni_bindings.py`** (third-party JNI: Netty, tcnative, jffi, ...):
+  1. Qualify: the library must export `JNI_OnLoad` and match the host architecture
+  2. Locate: group `R_*_RELATIVE` relocations into RELRO sections by 24-byte stride (one `{name, sig, fnPtr}` triple)
+  3. Validate: `name` must be a Java identifier, `sig` a JNI signature, `fnPtr` an address in `.text` that resolves to a symbol
+  4. Derive the Java class from the C symbol prefix; confidence is `HIGH_CONF` when a matching JNI class path string exists in `.rodata`, otherwise `SYM_INFER`
+  - Output: `jni_dynamic_bindings.txt` (`<lib>|<JavaFQN>|<signature>|<C_symbol>|<confidence>`) and `jni_dynamic_summary.txt`
+- **`extract_registernatives_binary.py`** (JDK libraries such as `libjvm.so`, `libjava.so`): disassembles each exported `*_registerNatives` function, reads the array address (`LEA` into `%rdx`) and count (`MOV` into `%ecx`), then decodes the 24-byte entries.
+  - Output: `jvm_dynamic_mapping.txt`
 
-**Output:** `jni_dynamic_report.txt`
+`scripts/jfr_registernative_mapping.sh` is a standalone helper for the JFR table in `libjvm.so`; the pipeline does not call it.
 
-**Resolution:**
-The actual Java→C mapping is extracted by `jfr_registernative_mapping.sh` which disassembles the `.so` to recover the `JNINativeMethod[]` array contents (method name, signature, function pointer).
-
-**Limitations:** Only works on non-stripped binaries with intact symbol tables. Pointer-based entries where the method name/sig aren't string literals cannot be resolved statically.
+**Limitations:** Tables built at runtime (e.g. `malloc`'d arrays) and non-PIC libraries without `R_*_RELATIVE` relocations are not recovered.
 
 ---
 
@@ -89,6 +100,7 @@ The actual Java→C mapping is extracted by `jfr_registernative_mapping.sh` whic
 **File:** `JnaIfaceDetector.java`
 
 **Java pattern:**
+
 ```java
 public interface CLib extends Library {
     CLib INSTANCE = Native.load("c", CLib.class);
@@ -101,21 +113,25 @@ CLib.INSTANCE.strlen("hello");
 ```
 
 **How we detect it:**
-1. **PASS 1 (class discovery):** Find all interfaces whose hierarchy includes `com.sun.jna.Library` (BFS traversal through `StdCallLibrary`, `ALTLibrary`, custom intermediates)
-2. **PASS 1 (load site analysis):** Scan `<clinit>` and field initializers for `Native.load("libname", Interface.class)` — extract the library name from the first `StringConstant` argument
-3. **PASS 2 (method enumeration):** For each detected Library interface, every declared method name IS the native symbol name (JNA convention: method name = C function name)
+
+1. **Interface discovery:** Find all interfaces whose hierarchy includes `com.sun.jna.Library` (BFS through `StdCallLibrary`, `ALTLibrary` and custom intermediates)
+2. **PASS 1 (taint, fixed point):** Track `Native.load(...)` / `Native.loadLibrary(...)` return values through locals, fields, synthetic accessors and helper methods that return the proxy, recording the library name from the string argument
+3. **PASS 2 (call sites):** Report every call on a tainted proxy to a method of a JNA `Library` interface. The method name IS the native symbol name (JNA convention)
 
 **Taint tracking:**
-- Tracks `Native.load()` return value through field assignments (`INSTANCE = Native.load(...)`)
+
+- Tracks the `Native.load()` result through field assignments (`INSTANCE = Native.load(...)`)
 - Handles `Native.synchronizedLibrary(...)` wrappers
 - Handles conditional library names (`Platform.isWindows() ? "msvcrt" : "c"`)
+- Skips Windows/macOS/Solaris-only packages and libraries (`win32`, `kernel32`, `CoreFoundation`, ...), which are irrelevant in a Linux container
 
 **Output:** `jna_iface_hits.txt`
+
 ```
-lib=c | symbol=strlen | iface=com.example.CLib | jar=app.jar | api=Native.load(String,Class)
+Format: callerSig | lib | symbol | apiPattern | interface | calleeSig | callerJar | calleeJar
 ```
 
-**Limitations:** If the library name is computed at runtime (not a string constant), we output `lib=<?>`.
+**Limitations:** If the library name is computed at runtime (not a string constant), `lib` is `<?>`.
 
 ---
 
@@ -124,6 +140,7 @@ lib=c | symbol=strlen | iface=com.example.CLib | jar=app.jar | api=Native.load(S
 **File:** `JnaDynDetector.java`
 
 **Java pattern:**
+
 ```java
 NativeLibrary lib = NativeLibrary.getInstance("c");
 Function fn = lib.getFunction("mmap");
@@ -131,23 +148,27 @@ fn.invoke(int.class, new Object[]{addr, length, prot, flags, fd, offset});
 ```
 
 **How we detect it:**
-1. **PASS 1 (taint propagation):** Track `NativeLibrary.getInstance("libname")` return values through locals and fields → builds `local/field → library name` map
-2. **PASS 1 (function resolution):** Track `.getFunction("symbolName")` calls → builds `local/field → FuncInfo(lib, symbol)` map
-3. **PASS 2 (invoke detection):** Detect `Function.invoke*()` calls and resolve the receiver back to a `FuncInfo` via taint
+
+1. **PASS 1 (taint, fixed point):** Track `NativeLibrary.getInstance("libname")` and `.getFunction("symbolName")` results through locals, fields and helper-method return summaries
+2. **PASS 2 (invoke detection):** Detect `Function.invoke*()` calls and resolve the receiver back to its library and symbol
+
+Classes under `com.sun.jna.*` are analysed (their field taints matter) but their hits are dropped, since they are JNA framework code rather than application calls.
 
 **API variants detected:**
-- `NativeLibrary.getInstance(String)` → lib from string constant
-- `NativeLibrary.getFunction(String)` → symbol from string constant
-- `Function.getFunction(String, String)` → lib + symbol directly
-- `Function.getFunction(Pointer)` → **unresolvable** (COM vtable)
+
+- `NativeLibrary.getFunction(String)` on a `NativeLibrary.getInstance(String)` result
+- `Function.getFunction(String, String)` and its `int` / `int, String` overloads -> lib + symbol directly
+- `Function.getFunction(Pointer)` / `(Pointer, int)` -> **unresolvable** (raw pointer, e.g. COM vtable)
 
 **Output:** `jna_dyn_hits.txt`
+
 ```
-lib=c | symbol=mmap | caller=com.example.NativeUtils.doMmap | api=NativeLibrary.getFunction
+Format: callerSig | lib | symbol | apiPattern | sinkSig | stmt
 ```
 
 **Limitations:**
-- `Function.getFunction(Pointer)` with a runtime pointer (COM vtable dispatch) — outputs `lib=<?>, symbol=<?>` because the vtable offset doesn't reveal the function name
+
+- `Function.getFunction(Pointer)` with a runtime pointer — `lib` and `symbol` are `<?>` because the pointer doesn't reveal the function name
 - Dynamically computed library/symbol names
 
 ---
@@ -157,6 +178,7 @@ lib=c | symbol=mmap | caller=com.example.NativeUtils.doMmap | api=NativeLibrary.
 **File:** `JnaDirectMapDetector.java`
 
 **Java pattern:**
+
 ```java
 public class CLibrary {
     static {
@@ -168,17 +190,19 @@ public class CLibrary {
 ```
 
 **How we detect it:**
-1. **PASS 1:** Scan `<clinit>` of every class for calls to `Native.register(String)` or `Native.register(Class, String)` or `Native.register(NativeLibrary)` — extract library name
-2. **PASS 2:** For each class that called `register()`, enumerate all methods with `ACC_NATIVE` modifier — each method name IS the C symbol (JNA direct-mapping convention)
+
+1. **PASS 1:** Find calls to `Native.register(String)`, `Native.register(Class, String)`, `Native.register(NativeLibrary)` or `Native.register(Class, NativeLibrary)` and extract the library name (including through `NativeLibrary.getInstance("c", ...)` and string-returning helpers). For the `Class` overloads, the registered class is the `Class` argument, not the class containing the call
+2. **PASS 2:** For each registered class, enumerate all methods with the `ACC_NATIVE` modifier — each method name IS the C symbol (JNA direct-mapping convention)
 
 **Key difference from Interface Mapping:** Direct mapping uses `native` method declarations (like JNI) but resolves them at class-load time via JNA's runtime registration, not the JVM's standard `Java_*` symbol lookup.
 
 **Output:** `jna_directmap_hits.txt`
+
 ```
-lib=c | symbol=strlen | class=com.example.CLibrary | api=Native.register(String)
+Format: methodSig | lib | symbol | apiPattern | jar
 ```
 
-**Limitations:** If `Native.register(NativeLibrary.getInstance(computedName))` uses a runtime-computed name, we output `lib=<?>`.
+**Limitations:** If the library name is computed at runtime, `lib` is `<?>`.
 
 ---
 
@@ -187,6 +211,7 @@ lib=c | symbol=strlen | class=com.example.CLibrary | api=Native.register(String)
 **File:** `FfiDetector.java`
 
 **Java pattern (Java 22+ finalized API):**
+
 ```java
 SymbolLookup lookup = SymbolLookup.libraryLookup("ssl", arena);
 MemorySegment addr = lookup.find("SSL_read").orElseThrow();
@@ -195,6 +220,7 @@ int result = (int) handle.invokeExact(ssl, buf, len);
 ```
 
 **Java pattern (Java 17-21 incubator API):**
+
 ```java
 LibraryLookup lookup = LibraryLookup.ofLibrary("ssl");
 MemoryAddress addr = lookup.lookup("SSL_read").get();
@@ -202,23 +228,35 @@ MethodHandle handle = CLinker.getInstance().downcallHandle(addr, methodType, des
 ```
 
 **How we detect it:**
-1. **PASS 1 (library discovery):** Track `SymbolLookup.libraryLookup("libname", ...)` or `LibraryLookup.ofLibrary("libname")` — extract library name via StringConstant
-2. **PASS 1 (symbol resolution):** Track `.find("symbol")` / `.lookup("symbol")` calls — extract symbol name
-3. **PASS 1 (handle binding):** Track `Linker.downcallHandle(addr, ...)` — connect handle to the resolved symbol
-4. **PASS 2 (invoke detection):** Detect `MethodHandle.invokeExact(...)` / `invoke(...)` and resolve receiver back to library+symbol
+
+1. **PASS 1 (library discovery):** Track `SymbolLookup.libraryLookup(...)`, `LibraryLookup.ofLibrary(...)` / `ofPath(...)`, `loaderLookup()` and `defaultLookup()` — extract the library name via string constant
+2. **PASS 1 (symbol resolution):** Track `.find("symbol")` / `.lookup("symbol")` calls — extract the symbol name
+3. **PASS 1 (handle binding):** Track `downcallHandle(addr, ...)` — connect the handle to the resolved symbol
+4. **PASS 2 (invoke detection):** Detect `MethodHandle.invokeExact(...)` / `invoke(...)` and resolve the receiver back to library + symbol
+
+When a sibling `LIBS_*` directory exists, its `nm -D` symbols are indexed so callback/holder symbols can be attributed to a library.
 
 **Both API generations detected:**
+
 - `java.lang.foreign.*` (Java 22+ finalized)
 - `jdk.incubator.foreign.*` (Java 17-21 incubator)
 
 **Output:** `ffi_hits.txt`
+
 ```
-lib=ssl | symbol=SSL_read | caller=com.example.SslWrapper.read | api=SymbolLookup.libraryLookup
+Format: callerSig | lib | symbol | mechanism | jar
+```
+
+Example (Tomcat's FFM OpenSSL layer):
+
+```
+<org.apache.tomcat.util.openssl.openssl_h: int SSL_do_handshake(java.lang.foreign.MemorySegment)> | ssl | SSL_do_handshake | downcallHandle | tomcat-coyote-ffm.jar
 ```
 
 **Limitations:**
-- `Linker.nativeLinker().defaultLookup().find(...)` resolves symbols from the default (libc) lookup — library is tagged as `<default>`
-- If the symbol name is computed at runtime, outputs `symbol=<?>`
+
+- `defaultLookup()` (and the incubator `ofDefault()` / `CLinker.getInstance()`) resolves from the default C library — `lib` is `<default-c-lib>`; `loaderLookup()` gives `<loader>`
+- If the library or symbol name is computed at runtime, it is `<?>`
 
 ---
 
@@ -227,6 +265,7 @@ lib=ssl | symbol=SSL_read | caller=com.example.SslWrapper.read | api=SymbolLooku
 **File:** `JnrFfiDetector.java`
 
 **Java pattern:**
+
 ```java
 public interface LibC {
     int getpid();
@@ -240,17 +279,20 @@ libc.getpid();
 ```
 
 **How we detect it:**
-1. **PASS 1:** Scan `<clinit>` for `LibraryLoader.create(Interface.class).library("libname").load()` chains or `Library.loadLibrary(Interface.class, "libname")` calls — extract interface + library name
-2. **PASS 2:** For each discovered interface, enumerate all declared methods — each method name IS the C symbol (same convention as JNA)
+
+1. **PASS 1:** Scan `<clinit>` for `LibraryLoader.create(Interface.class).library("libname").load()` chains and `Library.loadLibrary(...)` calls — build interface -> library mappings
+2. **PASS 2:** Report call sites to methods of the discovered interfaces. The method name IS the C symbol (same convention as JNA)
 
 **API variants:**
+
 - `LibraryLoader.create(I.class).library("c").load()` — chained builder
 - `LibraryLoader.create(I.class).load("c")` — direct string
-- `Library.loadLibrary(I.class, "c")` — legacy static factory
+- `Library.loadLibrary("c", I.class)`, `Library.loadLibrary(I.class, "c", ...)` and their `Map`-options overloads — legacy static factory
 
 **Output:** `jnr_ffi_hits.txt`
+
 ```
-lib=c | symbol=getpid | iface=org.jruby.ext.ffi.LibC | api=LibraryLoader.create().library().load()
+Format: interface | lib | symbol | apiPattern | jar
 ```
 
 **Limitations:** Same as JNA interface mapping — runtime-computed library names are unresolvable.
@@ -259,56 +301,62 @@ lib=c | symbol=getpid | iface=org.jruby.ext.ffi.LibC | api=LibraryLoader.create(
 
 ## Running the Detectors
 
-All detectors use SootUp for bytecode analysis (Jimple IR) and are run against the target application's JAR directory:
+The pipeline (`scripts/run_analysis.sh`) runs everything through `JNADetector`:
 
 ```bash
-# JNI static (Mode 1: scan <app-jars-dir>; add --runtime <dir> for staged java.base / modular JARs)
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.PrototypeFinal <app-jars-dir> --1 [--runtime <runtime-jars-dir>]
+mvn -f pom.xml -q clean compile exec:java \
+  -Dexec.mainClass=com.echotrace.app.bytecode_new.JNADetector \
+  -Dexec.args="<JARFILES_dir> <outputs_dir> <RUNTIME_dir>"
+```
+
+It writes each detector's hits, the merged `jna_hits.txt` / `ffi_all_hits.txt` (`Format: detector | payload`), `analyzed_jars.txt`, and `native_methods.txt` into `<outputs_dir>`.
+
+Each detector can also be run on its own after `./build.sh`. The SootUp detectors take `<jars-dir> [outDir]`; add `-Ddetector.runtime.dir=<RUNTIME_dir>` to put the container JDK on the analysis classpath. Without `outDir`, `JnaIfaceDetector`, `JnaDynDetector` and `JnaDirectMapDetector` write to `outputs_<name>/` (derived from `JARFILES_<name>`), while `FfiDetector` and `JnrFfiDetector` write to the current directory.
+
+```bash
+CP="target/echotrace-1.0-SNAPSHOT.jar:target/deps/*"
+
+# JNI static (Mode 1, ASM; --runtime puts the container JDK on the class loader)
+java -cp "$CP" com.echotrace.app.bytecode_new.PrototypeFinal <app-jars-dir> --1 --runtime <runtime-jars-dir>
+
+# JNI static (Mode 2, SootUp)
+java -cp "$CP" com.echotrace.app.bytecode_new.PrototypeFinal <app-jars-dir> <deps-jars-dir> --2
 
 # JNA Interface Mapping
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.JnaIfaceDetector <jars-dir>
+java -cp "$CP" com.echotrace.app.bytecode_new.JnaIfaceDetector <jars-dir> [outDir]
 
 # JNA Dynamic
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.JnaDynDetector <jars-dir>
+java -cp "$CP" com.echotrace.app.bytecode_new.JnaDynDetector <jars-dir> [outDir]
 
 # JNA Direct Mapping
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.JnaDirectMapDetector <jars-dir>
+java -cp "$CP" com.echotrace.app.bytecode_new.JnaDirectMapDetector <jars-dir> [outDir]
 
 # Panama FFI
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.FfiDetector <jars-dir>
+java -cp "$CP" com.echotrace.app.bytecode_new.FfiDetector <jars-dir> [outDir]
 
 # jnr-ffi
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.JnrFfiDetector <jars-dir>
+java -cp "$CP" com.echotrace.app.bytecode_new.JnrFfiDetector <jars-dir> [outDir]
 
-# JNI Dynamic (binary-level, not bytecode)
-java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
-  com.echotrace.app.bytecode_new.JNIDyn <libs-dir> <native_methods.txt>
+# JNI Dynamic (binary-level, normally run by mapped_updated.py)
+python3 scripts/extract_jni_bindings.py --libs-dir <LIBS_dir> [--output-dir <dir>]
+python3 scripts/extract_registernatives_binary.py <LIBS_dir>/libjvm.so <LIBS_dir>/libjava.so
 ```
 
 ---
 
 ## How Results Feed into the Pipeline
 
+JNI natives and JNA/FFI bindings take separate paths to SysPart. The mapper only reads `native_methods.txt`; the JNA/FFI hits already name their library and symbol, so `analyse_jna_ffi.py` seeds SysPart with them directly.
+
 ```
- Bytecode Detectors                    Binary Analysis
- ──────────────────                    ───────────────
- PrototypeFinal ──→ native_methods.txt
- JnaIfaceDetector ──→ jna_iface_hits.txt
- JnaDynDetector ──→ jna_dyn_hits.txt        jfr_registernative_mapping.sh
- JnaDirectMapDetector ──→ jna_directmap_hits.txt       │
- FfiDetector ──→ ffi_hits.txt                          │
- JnrFfiDetector ──→ jnr_ffi_hits.txt                  │
- JNIDyn ──→ jni_dynamic_report.txt                     │
+ Bytecode (JNADetector)                     Binary (LIBS_<IMG_NAME>)
+ ──────────────────────                     ────────────────────────
+ PrototypeFinal ──→ native_methods.txt      extract_jni_bindings.py
+        │                                   extract_registernatives_binary.py
         │                                              │
         ▼                                              ▼
  ┌─────────────────────────────────────────────────────────┐
- │              mapped_updated.py (mapper)                  │
+ │              mapped_updated.py (mapper)                 │
  │  Maps Java methods → C symbols → owning .so library     │
  └─────────────────────────────────────────────────────────┘
                           │
@@ -317,10 +365,17 @@ java -cp "target/echotrace-1.0-SNAPSHOT.jar:target/deps/*" \
                           │
                           ▼
  ┌─────────────────────────────────────────────────────────┐
- │           SysPart (binary value-flow analysis)           │
- │     Traces C functions → reachable Linux syscalls        │
+ │           SysPart (binary value-flow analysis)          │
+ │     Traces C functions → reachable Linux syscalls       │
  └─────────────────────────────────────────────────────────┘
                           │
                           ▼
-                  seccomp profile
+              merge_all_syscalls.py ──→ seccomp profile
+                          ▲
+                          │
+ JnaIfaceDetector ─┐      │
+ JnaDynDetector ───┤      │
+ JnaDirectMap... ──┼─→ jna_hits.txt ────────→ analyse_jna_ffi.py ──→ SysPart
+ FfiDetector ──────┤   ffi_all_hits.txt       (jna_ffi_analysis/union_syscalls.txt)
+ JnrFfiDetector ───┘
 ```
