@@ -1001,8 +1001,9 @@ def write_mapping_file(output_path: str, all_entries: list[dict]):
     """Write results in pipe-delimited mapping format:
     so_file|java_class.method|signature|native_symbol|BIN_SCAN
 
-    Deduplicates on (so_file, class.method, signature), keeping the first
-    occurrence (newest version variant from the registration tables).
+    Deduplicates identical bindings on (so_file, class.method, signature,
+    native_symbol), preserving distinct native targets for the same Java
+    method and descriptor.
     """
     seen = set()
     lines = []
@@ -1013,7 +1014,7 @@ def write_mapping_file(output_path: str, all_entries: list[dict]):
             method_name = m["name"]
             sig = m["signature"]
             fn = m["fn_name"]
-            key = (so_file, f"{java_class}.{method_name}", sig)
+            key = (so_file, f"{java_class}.{method_name}", sig, fn)
             if key in seen:
                 continue
             seen.add(key)
