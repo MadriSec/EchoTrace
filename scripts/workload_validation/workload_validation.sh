@@ -5,7 +5,7 @@
 # docker-library/official-images smoke tests).
 #
 # For every subject in subjects.conf, sequentially, and every test:
-#   workload  run the test WITHOUT any seccomp policy while bpftrace counts
+#   workload  run the test under an allow-all seccomp filter while bpftrace counts
 #             every syscall made by the container under test, then diff:
 #               missing = observed - policy   (needed, not found by SysJava)
 #               used    = observed & policy
@@ -66,11 +66,15 @@ fi
 BT_VER="$(bpftrace --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+' | head -1)"
 if [[ "$(printf '%s\n' "0.20" "$BT_VER" | sort -V | head -1)" == "0.20" ]]; then ARG=args.id; else ARG='args->id'; fi
 # Count syscalls per (cgroup, syscall nr) in the kernel. Print each cgroup's path
-# and the first process making each syscall once (cheap). Skip runc's own setup
-# code (comm "runc:[...]"), which runs before the seccomp filter is installed.
+# and the first process making each syscall once (cheap).
+# Only syscalls made by tasks that already run under a seccomp filter
+# (seccomp.mode == 2, SECCOMP_MODE_FILTER) are counted: exactly the syscalls a
+# policy is checked against. This excludes runc's container setup, which runs
+# before the filter is installed (as "runc:[2:INIT]" or "memfd:runc_cloned").
+# The workload run therefore uses ALLOW_ALL_PROFILE, a filter that blocks nothing.
 BT_PROG='
 BEGIN { printf("READY\n"); }
-tracepoint:raw_syscalls:sys_enter /strncmp(comm, "runc:[", 6) != 0/ {
+tracepoint:raw_syscalls:sys_enter /curtask->seccomp.mode == 2/ {
   @n[cgroup, '"$ARG"'] = count();
   if (@cg[cgroup] == 0) { @cg[cgroup] = 1; printf("CG %llu %s\n", cgroup, cgroup_path(cgroup)); }
   if (@first[cgroup, '"$ARG"'] == 0) { @first[cgroup, '"$ARG"'] = 1; printf("FIRST %llu %d %s\n", cgroup, '"$ARG"', comm); }
@@ -78,6 +82,12 @@ tracepoint:raw_syscalls:sys_enter /strncmp(comm, "runc:[", 6) != 0/ {
 END { clear(@cg); clear(@first); }'
 
 mkdir -p "$OUT/bin"
+# Allows every syscall. The single LOG rule only exists so that the runtime
+# installs a real filter (an empty allow-all profile could be skipped); LOG
+# never blocks, and kexec_load cannot succeed in a container anyway.
+ALLOW_ALL_PROFILE="$OUT/allow_all.json"
+echo '{"defaultAction":"SCMP_ACT_ALLOW","syscalls":[{"names":["kexec_load"],"action":"SCMP_ACT_LOG"}]}' \
+  > "$ALLOW_ALL_PROFILE"
 TRACE_PID=""
 cleanup() {
   [[ -n $TRACE_PID ]] && kill -INT "$TRACE_PID" 2>/dev/null
@@ -217,7 +227,7 @@ while read -r -u 3 subject image policy_rel mode tests _; do
     if has_phase workload; then
       log "[$subject] $t: workload run (no policy, tracing)"
       trace_start "$sd/$t.workload"
-      wl="$(run_test "$image" "$t" "$mode" "" "$sd/$t.workload")"
+      wl="$(run_test "$image" "$t" "$mode" "$ALLOW_ALL_PROFILE" "$sd/$t.workload")"
       trace_stop
       log "[$subject] $t: workload run -> $wl"
       if "$PY" "$WV" trace --bpftrace "$sd/$t.workload.bpftrace.out" --match "$CG_MATCH" \
