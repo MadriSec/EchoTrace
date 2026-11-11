@@ -22,7 +22,11 @@
 #   TEST_TIMEOUT=1200         per-test timeout (s)
 #   OI_REF=<commit>           pin docker-library/official-images (recorded in meta.txt)
 #   CONF=<file>               subjects file (default: subjects.conf next to this script)
-#   OUT=<dir>                 output dir (default: workload_validation_runs/<timestamp>)
+#   OUT=<dir>                 output dir (default: workload_validation_runs/results)
+#
+# Output: one folder per subject under $OUT. Re-running a subject replaces only
+# that subject's results (and only for the phases that ran). At the end,
+# report.py prints the per-subject diff and writes $OUT/report.csv.
 #
 # Requires: x86_64 Linux, root, docker, bpftrace, jq, git, python3, timeout.
 #############################################################################
@@ -35,7 +39,7 @@ PHASES="${PHASES:-workload,enforce}"
 TEST_TIMEOUT="${TEST_TIMEOUT:-1200}"
 OI_DIR="${OI_DIR:-$ROOT/.cache/official-images}"
 OI_REF="${OI_REF:-}"
-OUT="${OUT:-$ROOT/workload_validation_runs/$(date +%Y%m%d-%H%M%S)}"
+OUT="${OUT:-$ROOT/workload_validation_runs/results}"
 PY="${PYTHON:-python3}"
 WV="$HERE/wv.py"
 RUNTIME_LIST="$ROOT/runc.txt"
@@ -135,14 +139,12 @@ exec "$WV_REAL_DOCKER" "$@"
 EOF
 chmod +x "$OUT/bin/docker"
 
-{
-  echo "date: $(date -Is)"
-  echo "host: $(uname -a)"
-  echo "docker: $("$REAL_DOCKER" version --format '{{.Server.Version}}')"
-  echo "bpftrace: $(bpftrace --version 2>&1)"
-  echo "official-images: $OI_COMMIT"
-  echo "phases: $PHASES  cgroup_parent: $CG_PARENT"
-} > "$OUT/meta.txt"
+RUN_META="date: $(date -Is)
+host: $(uname -a)
+docker: $("$REAL_DOCKER" version --format '{{.Server.Version}}')
+bpftrace: $(bpftrace --version 2>&1)
+official-images: $OI_COMMIT
+phases: $PHASES  cgroup_parent: $CG_PARENT"
 log "output: $OUT"
 
 # ------------------------------------------------------------------ helpers
@@ -186,9 +188,9 @@ run_test() {  # image test inject_mode profile('' = none) out_prefix -> prints s
 }
 
 # ------------------------------------------------------------------ main loop
-SUMMARY="$OUT/summary.tsv"
-printf 'subject\ttest\tworkload_run\tenforce_run\tn_policy\tn_observed\tn_used\tn_missing\tn_unused\tpct_policy_used\tmissing\tinvalid_policy_names\n' > "$SUMMARY"
-skip_row() { printf '%s\t%s\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n' "$1" "$2" >> "$SUMMARY"; }
+skip() {  # subject reason
+  rm -rf "${OUT:?}/$1"; mkdir -p "$OUT/$1"; echo "$2" > "$OUT/$1/skipped.txt"
+}
 
 while read -r -u 3 subject image policy_rel mode tests _; do
   [[ -z "${subject:-}" || "$subject" == \#* ]] && continue
@@ -197,17 +199,17 @@ while read -r -u 3 subject image policy_rel mode tests _; do
 
   policy="$policy_rel"; [[ "$policy" == /* ]] || policy="$ROOT/$policy"
   if [[ ! -f "$policy" ]] || ! jq -e '.defaultAction' "$policy" >/dev/null 2>&1; then
-    log "SKIP $subject: policy missing or invalid: $policy"; skip_row "$subject" "SKIPPED(no policy)"; continue
+    log "SKIP $subject: policy missing or invalid: $policy"; skip "$subject" "SKIPPED (no policy: $policy_rel)"; continue
   fi
   if ! "$REAL_DOCKER" image inspect "$image" >/dev/null 2>&1; then
     log "pulling $image"
     "$REAL_DOCKER" pull -q --platform linux/amd64 "$image" >/dev/null \
-      || { log "SKIP $subject: cannot pull $image"; skip_row "$subject" "SKIPPED(no image)"; continue; }
+      || { log "SKIP $subject: cannot pull $image"; skip "$subject" "SKIPPED (cannot pull $image)"; continue; }
   fi
   # SysJava per-source syscall files live under results/<subject_dir>/
   sources_dir="$(dirname "$(dirname "$(dirname "$policy")")")"
 
-  sd="$OUT/$subject"; mkdir -p "$sd"
+  sd="$OUT/$subject"; mkdir -p "$sd"; rm -f "$sd/skipped.txt"
   cp "$policy" "$sd/policy.json"
   {
     echo "image: $image"
@@ -217,18 +219,18 @@ while read -r -u 3 subject image policy_rel mode tests _; do
     echo "policy_sha256: $(sha256sum "$policy" | cut -d' ' -f1)"
     echo "sources_dir: $sources_dir"
     echo "inject: $mode  tests: $tests"
+    echo "$RUN_META"
   } > "$sd/meta.txt"
 
   IFS=',' read -ra test_list <<< "$tests"
   for t in "${test_list[@]}"; do
-    wl="-" en="-"
-    rm -f "$sd/$t.workload.summary"
-
     if has_phase workload; then
-      log "[$subject] $t: workload run (no policy, tracing)"
+      rm -f "$sd/$t.workload."*
+      log "[$subject] $t: workload run (allow-all filter, tracing)"
       trace_start "$sd/$t.workload"
       wl="$(run_test "$image" "$t" "$mode" "$ALLOW_ALL_PROFILE" "$sd/$t.workload")"
       trace_stop
+      echo "$wl" > "$sd/$t.workload.status"
       log "[$subject] $t: workload run -> $wl"
       if "$PY" "$WV" trace --bpftrace "$sd/$t.workload.bpftrace.out" --match "$CG_MATCH" \
            --out "$sd/$t.workload" >&2; then
@@ -238,24 +240,14 @@ while read -r -u 3 subject image policy_rel mode tests _; do
     fi
 
     if has_phase enforce; then
+      rm -f "$sd/$t.enforce."*
       log "[$subject] $t: enforce run (SysJava policy)"
       en="$(run_test "$image" "$t" "$mode" "$sd/policy.json" "$sd/$t.enforce")"
+      echo "$en" > "$sd/$t.enforce.status"
       log "[$subject] $t: enforce run -> $en"
     fi
-
-    declare -A d=([n_policy]=- [n_observed]=- [n_used]=- [n_missing]=- [n_unused]=- [pct_policy_used]=- [missing]=- [invalid_policy_names]=-)
-    if [[ -f "$sd/$t.workload.summary" ]]; then
-      while IFS='=' read -r k v; do d[$k]="$v"; done < "$sd/$t.workload.summary"
-    fi
-    printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$subject" "$t" "$wl" "$en" \
-      "${d[n_policy]}" "${d[n_observed]}" "${d[n_used]}" "${d[n_missing]}" "${d[n_unused]}" \
-      "${d[pct_policy_used]}" "${d[missing]}" "${d[invalid_policy_names]}" >> "$SUMMARY"
-    unset d
   done
 done 3< "$CONF"
 
 echo
-column -t -s $'\t' "$SUMMARY"
-echo
-log "done. Per test: <subject>/<test>.workload.diff.tsv (every syscall: missing/used/unused,"
-log "count, first process, SysJava source) and .by_source.tsv; logs in *.stdout/*.stderr"
+"$PY" "$HERE/report.py" "$OUT"
