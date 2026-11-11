@@ -206,8 +206,12 @@ while read -r -u 3 subject image policy_rel mode tests _; do
     "$REAL_DOCKER" pull -q --platform linux/amd64 "$image" >/dev/null \
       || { log "SKIP $subject: cannot pull $image"; skip "$subject" "SKIPPED (cannot pull $image)"; continue; }
   fi
-  # SysJava per-source syscall files live under results/<subject_dir>/
-  sources_dir="$(dirname "$(dirname "$(dirname "$policy")")")"
+  # SysJava per-source syscall files live under results/<subject_dir>/ (any depth)
+  sources_dir="$(dirname "$policy")"
+  while [[ "$sources_dir" != / && "$(basename "$(dirname "$sources_dir")")" != results ]]; do
+    sources_dir="$(dirname "$sources_dir")"
+  done
+  [[ "$sources_dir" == / ]] && sources_dir="$(dirname "$policy")"
 
   sd="$OUT/$subject"; mkdir -p "$sd"; rm -f "$sd/skipped.txt"
   cp "$policy" "$sd/policy.json"
