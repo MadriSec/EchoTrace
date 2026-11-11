@@ -126,10 +126,12 @@ def main():
         for r in all_rows:
             show(r)
 
-    print(f"{'subject':<14}{'test':<24}{'workload':<10}{'enforce':<10}"
+    width = max([len('image')] + [len(str(r.get('image', '-'))) for r in all_rows]) + 2
+    print(f"{'subject':<14}{'image':<{width}}{'test':<24}{'workload':<10}{'enforce':<10}"
           f"{'sysjava':>8}{'workload':>9}{'missing':>8}{'used':>6}{'unused':>7}{'%used':>7}")
     for r in all_rows:
-        print(f"{r['subject']:<14}{r['test']:<24}{str(r.get('workload_run', '-'))[:9]:<10}"
+        print(f"{r['subject']:<14}{str(r.get('image', '-')):<{width}}{r['test']:<24}"
+              f"{str(r.get('workload_run', '-'))[:9]:<10}"
               f"{str(r.get('enforce_run', '-'))[:9]:<10}{r.get('n_sysjava', '-'):>8}{r.get('n_workload', '-'):>9}"
               f"{r.get('n_missing', '-'):>8}{r.get('n_used', '-'):>6}{r.get('n_unused', '-'):>7}"
               f"{r.get('pct_sysjava_used', '-'):>7}")
