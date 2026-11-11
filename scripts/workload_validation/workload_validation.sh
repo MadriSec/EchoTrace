@@ -22,6 +22,8 @@
 #   TEST_TIMEOUT=1200         per-test timeout (s)
 #   OI_REF=<commit>           pin docker-library/official-images (recorded in meta.txt)
 #   CONF=<file>               subjects file (default: subjects.conf next to this script)
+#   SYSJAVA_ROOT=<dir>        SysJava artifact (default: ../SysJava, next to Prototype)
+#   SYSJAVA_RESULTS=<dir>     SysJava policies (default: $SYSJAVA_ROOT/2_swat4j_vs_sysjava/sysjava_results)
 #   OUT=<dir>                 output dir (default: workload_validation_runs/results)
 #
 # Output: one folder per subject under $OUT. Re-running a subject replaces only
@@ -42,7 +44,14 @@ OI_REF="${OI_REF:-}"
 OUT="${OUT:-$ROOT/workload_validation_runs/results}"
 PY="${PYTHON:-python3}"
 WV="$HERE/wv.py"
-RUNTIME_LIST="$ROOT/runc.txt"
+SYSJAVA_ROOT="${SYSJAVA_ROOT:-$(cd "$ROOT/.." && pwd)/SysJava}"
+SYSJAVA_RESULTS="${SYSJAVA_RESULTS:-$SYSJAVA_ROOT/2_swat4j_vs_sysjava/sysjava_results}"
+# container-runtime syscall lists SysJava adds to every policy (for source attribution)
+RUNTIME_LISTS=()
+for f in "$SYSJAVA_ROOT/2_swat4j_vs_sysjava/runc.txt" "$SYSJAVA_ROOT/2_swat4j_vs_sysjava/runc_host_1.3.4_additions.txt"; do
+  [[ -f "$f" ]] && RUNTIME_LISTS+=("$f")
+done
+BUILD_IMAGES="$SYSJAVA_ROOT/docker_images/build_jdk8_images.sh"
 
 log() { printf '[%s] %s\n' "$(date +%H:%M:%S)" "$*" >&2; }
 die() { log "ERROR: $*"; exit 1; }
@@ -57,6 +66,7 @@ done
 REAL_DOCKER="$(command -v docker)"
 "$REAL_DOCKER" info >/dev/null 2>&1 || die "cannot reach the Docker daemon"
 [[ -f "$CONF" ]] || die "subjects file not found: $CONF"
+[[ -d "$SYSJAVA_RESULTS" ]] || die "SysJava results not found: $SYSJAVA_RESULTS (set SYSJAVA_ROOT or SYSJAVA_RESULTS)"
 
 # Containers under test are placed in their own cgroup parent so the trace can
 # tell them apart from clients (cqlsh, curl, ...) and from everything else.
@@ -197,21 +207,27 @@ while read -r -u 3 subject image policy_rel mode tests _; do
   if (( $# )) && [[ " $* " != *" $subject "* ]]; then continue; fi
   log "==================== $subject ($image)"
 
-  policy="$policy_rel"; [[ "$policy" == /* ]] || policy="$ROOT/$policy"
+  policy="$policy_rel"; [[ "$policy" == /* ]] || policy="$SYSJAVA_RESULTS/$policy"
   if [[ ! -f "$policy" ]] || ! jq -e '.defaultAction' "$policy" >/dev/null 2>&1; then
     log "SKIP $subject: policy missing or invalid: $policy"; skip "$subject" "SKIPPED (no policy: $policy_rel)"; continue
   fi
   if ! "$REAL_DOCKER" image inspect "$image" >/dev/null 2>&1; then
-    log "pulling $image"
-    "$REAL_DOCKER" pull -q --platform linux/amd64 "$image" >/dev/null \
-      || { log "SKIP $subject: cannot pull $image"; skip "$subject" "SKIPPED (cannot pull $image)"; continue; }
+    if [[ "$image" == *-jdk8-buster && -f "$BUILD_IMAGES" ]]; then
+      # the JDK 8 images are not on Docker Hub; build them exactly as SysJava did
+      log "building $image with $BUILD_IMAGES ${image%%:*} (log: $OUT/$subject.build.log)"
+      mkdir -p "$OUT"
+      bash "$BUILD_IMAGES" "${image%%:*}" > "$OUT/$subject.build.log" 2>&1 \
+        || { log "SKIP $subject: build failed"; skip "$subject" "SKIPPED (image build failed, see $subject.build.log)"; continue; }
+    else
+      log "pulling $image"
+      "$REAL_DOCKER" pull -q --platform linux/amd64 "$image" >/dev/null \
+        || { log "SKIP $subject: cannot pull $image"; skip "$subject" "SKIPPED (cannot pull $image)"; continue; }
+    fi
   fi
   # SysJava per-source syscall files live under results/<subject_dir>/ (any depth)
-  sources_dir="$(dirname "$policy")"
-  while [[ "$sources_dir" != / && "$(basename "$(dirname "$sources_dir")")" != results ]]; do
-    sources_dir="$(dirname "$sources_dir")"
-  done
-  [[ "$sources_dir" == / ]] && sources_dir="$(dirname "$policy")"
+  # SysJava's per-source syscall files are under the subject's results folder
+  if [[ "$policy_rel" == /* ]]; then sources_dir="$(dirname "$policy")"
+  else sources_dir="$SYSJAVA_RESULTS/${policy_rel%%/*}"; fi
 
   sd="$OUT/$subject"; mkdir -p "$sd"; rm -f "$sd/skipped.txt"
   cp "$policy" "$sd/policy.json"
@@ -222,6 +238,7 @@ while read -r -u 3 subject image policy_rel mode tests _; do
     echo "policy: $policy"
     echo "policy_sha256: $(sha256sum "$policy" | cut -d' ' -f1)"
     echo "sources_dir: $sources_dir"
+    [[ -f "$sources_dir/detector_commit.txt" ]] && echo "sysjava_$(cat "$sources_dir/detector_commit.txt")"
     echo "inject: $mode  tests: $tests"
     echo "$RUN_META"
   } > "$sd/meta.txt"
@@ -239,7 +256,7 @@ while read -r -u 3 subject image policy_rel mode tests _; do
       if "$PY" "$WV" trace --bpftrace "$sd/$t.workload.bpftrace.out" --match "$CG_MATCH" \
            --out "$sd/$t.workload" >&2; then
         "$PY" "$WV" diff --observed "$sd/$t.workload.observed.tsv" --policy "$policy" \
-          --sources-dir "$sources_dir" --runtime "$RUNTIME_LIST" --out "$sd/$t.workload" >&2
+          --sources-dir "$sources_dir" --runtime "${RUNTIME_LISTS[@]}" --out "$sd/$t.workload" >&2
       fi
     fi
 

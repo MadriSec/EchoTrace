@@ -8,7 +8,7 @@
       and PREFIX.observed.txt (names only).
 
   wv.py diff --observed PREFIX.observed.tsv --policy POLICY.json
-             --sources-dir RESULTS_DIR [--runtime runc.txt] --out PREFIX
+             --sources-dir RESULTS_DIR [--runtime runc.txt ...] --out PREFIX
       Diff observed syscalls against the SysJava policy:
         missing = observed - policy   (workload needs it, SysJava did not find it)
         used    = observed & policy
@@ -174,8 +174,8 @@ def cmd_diff(a):
         for f in files:
             for s in read_names(f):
                 src_of[s].add(label)
-    if a.runtime:
-        for s in read_names(a.runtime):
+    for f in a.runtime or []:
+        for s in read_names(f):
             src_of[s].add('runtime')
     for s in policy:
         if not src_of[s]:
@@ -234,7 +234,7 @@ def main():
     d.add_argument('--observed', required=True)
     d.add_argument('--policy', required=True)
     d.add_argument('--sources-dir', required=True)
-    d.add_argument('--runtime')
+    d.add_argument('--runtime', nargs='*', default=[])
     d.add_argument('--out', required=True)
     a = ap.parse_args()
     {'trace': cmd_trace, 'diff': cmd_diff}[a.cmd](a)
