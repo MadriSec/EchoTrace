@@ -10,7 +10,9 @@ together with the outcome of the workload run (no restrictions) and of the
 enforce run (under the SysJava policy).
 
 Usage:
-  scripts/workload_validation/report.py [RESULTS_DIR] [--csv FILE]
+  scripts/workload_validation/report.py [RESULTS_DIR] [--csv FILE] [--summary]
+
+--summary prints only the one-line-per-test overview table.
 
 RESULTS_DIR defaults to workload_validation_runs/results; the CSV defaults to
 RESULTS_DIR/report.csv. Syscall lists in the CSV are space-separated.
@@ -113,14 +115,16 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('results', nargs='?', default=ROOT / 'workload_validation_runs' / 'results', type=pathlib.Path)
     ap.add_argument('--csv', type=pathlib.Path)
+    ap.add_argument('--summary', action='store_true', help='print only the overview table')
     a = ap.parse_args()
     if not a.results.is_dir():
         ap.error(f'results folder not found: {a.results}')
     out = a.csv or a.results / 'report.csv'
 
     all_rows = list(rows(a.results))
-    for r in all_rows:
-        show(r)
+    if not a.summary:
+        for r in all_rows:
+            show(r)
 
     print(f"{'subject':<14}{'test':<24}{'workload':<10}{'enforce':<10}"
           f"{'sysjava':>8}{'workload':>9}{'missing':>8}{'used':>6}{'unused':>7}{'%used':>7}")
