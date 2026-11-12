@@ -245,8 +245,15 @@ def base(path):
 
 
 def lib_stem(path):
-    """libnss_files-2.28.so, libnss_files.so.2 -> libnss_files"""
-    return re.sub(r'-[0-9][0-9.]*$', '', re.sub(r'\.so(\.[0-9]+)*$', '', base(path)))
+    """Library name without versions, so that the names one library goes by compare equal:
+         libnss_files-2.28.so, libnss_files.so.2            -> libnss_files
+         ld-2.28.so, ld-linux-x86-64.so.2                   -> ld.so   (the ELF loader)
+         /tmp/liblz4-java6349212041477934139.so             -> liblz4-java
+       (a native library a jar extracts to a temporary file gets a random number per run)."""
+    name = re.sub(r'\.so(\.[0-9]+)*$', '', base(path))
+    if re.fullmatch(r'ld-([0-9.]+|linux.*)', name):
+        return 'ld.so'
+    return re.sub(r'-[0-9][0-9.]*$', '', re.sub(r'[0-9]{6,}$', '', name))
 
 
 def is_lib(path):
@@ -304,9 +311,10 @@ def cmd_artifacts(a):
     notes = []
     if unlocated:
         notes.append(f'path unknown for: {" ".join(unlocated)}')
+    # a truncated path has exactly the capture's string limit (BPFTRACE_MAX_STRLEN, minus the NUL)
     longest = max((len(p) for _, _, p in opens), default=0)
-    if sum(len(p) == longest for _, _, p in opens) >= 3:
-        notes.append(f'{longest}-character paths repeat: paths may be truncated')
+    if longest in (63, 199, 200) and sum(len(p) == longest for _, _, p in opens) >= 2:
+        notes.append(f'several paths are exactly {longest} characters long: paths may be truncated')
     note = '; '.join(notes)
     seen_cids = {re.sub(r'.*docker-([0-9a-f]{12}).*', r'\1', cg_path[cg]) for cg in targets}
 
