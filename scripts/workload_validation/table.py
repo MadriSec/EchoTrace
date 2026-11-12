@@ -77,6 +77,8 @@ def container(subject, image):
 
 def benchmark(tests):
     if len(tests) == 1:
+        if tests[0].startswith('ycsb-'):   # ycsb-a -> YCSB A, ycsb-abcf -> YCSB A, B, C, F
+            return 'YCSB ' + ', '.join(tests[0][len('ycsb-'):].upper())
         return tests[0]
     prefix = os.path.commonprefix(tests)
     return f'{prefix}* ({len(tests)} tests)' if prefix else f'{len(tests)} tests'
