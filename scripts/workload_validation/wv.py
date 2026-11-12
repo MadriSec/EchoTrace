@@ -138,9 +138,9 @@ def cmd_trace(a):
         e = agg.setdefault(name, {'nr': nr, 'count': 0, 'first': '', 'cgs': set()})
         e['count'] += n
         e['first'] = e['first'] or first.get((cg, nr), '')
+        e['cgs'].add(re.sub(r'.*docker-([0-9a-f]{12}).*', r'\1', targets[cg]))
     for e in agg.values():
         e['first'] = e['first'] or '-'
-        e['cgs'].add(re.sub(r'.*docker-([0-9a-f]{12}).*', r'\1', targets[cg]))
 
     names = sorted(agg)
     with open(a.out + '.observed.tsv', 'w') as fh:
