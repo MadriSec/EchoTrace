@@ -17,6 +17,16 @@
       Each policy syscall is attributed to the SysJava source(s) that produced it.
       Writes PREFIX.{missing,used,unused}.txt, PREFIX.diff.tsv,
       PREFIX.by_source.tsv and PREFIX.summary (key=value, read by the driver).
+
+  wv.py artifacts --files PREFIX.sysdig.files --execve PREFIX.sysdig.execve
+                  --match STR [--injected PREFIX.injected] --sources-dir RESULTS_DIR --out PREFIX
+      Diff the binaries executed and the native libraries (and jars) opened by
+      the containers under test against what SysJava's startup discovery saw
+      (Dynamic_Analysis/sysdig_outputs_*/ under RESULTS_DIR):
+        new = observed under the workload - startup discovery
+      Writes PREFIX.observed_{binaries,libs,jars}.txt, PREFIX.new_{binaries,libs,jars}.txt,
+      PREFIX.artifacts.tsv (one line per observed artefact, with notes) and
+      PREFIX.artifacts.summary (key=value).
 """
 import argparse
 import collections
@@ -223,6 +233,151 @@ def cmd_diff(a):
           + (f"  MISSING: {summary['missing']}" if missing else ''))
 
 
+# ----------------------------------------------------------------- artifacts
+SEP = '|~|'   # field separator of the sysdig captures (see workload_validation.sh)
+LIB_RE = re.compile(r'\.so(\.[0-9]+)*$')
+# Not libraries, although the capture filter ("contains .so") lets them through;
+# /gconv/ and /audit/ are dropped by startup discovery as well (sysdig_unified.sh).
+NOT_LIB_RE = re.compile(r'/(gconv|audit)/|^/etc/ld\.so')
+TEMP_RE = re.compile(r'^/(tmp|var/tmp|dev/shm|run)/')
+
+
+def base(path):
+    return path.rstrip('/').rsplit('/', 1)[-1]
+
+
+def lib_stem(path):
+    """libnss_files-2.28.so, libnss_files.so.2 -> libnss_files"""
+    return re.sub(r'-[0-9][0-9.]*$', '', re.sub(r'\.so(\.[0-9]+)*$', '', base(path)))
+
+
+def is_lib(path):
+    return bool(LIB_RE.search(path)) and not NOT_LIB_RE.search(path)
+
+
+def read_paths(files):
+    return {l.strip() for f in files for l in f.read_text(errors='replace').splitlines() if l.strip()}
+
+
+def cmd_artifacts(a):
+    cids = set()
+    if a.injected and pathlib.Path(a.injected).is_file():
+        cids = {l.split()[1] for l in pathlib.Path(a.injected).read_text().splitlines() if l.startswith('cid ')}
+
+    def target(cid, cgroups):
+        return a.match in cgroups or any(c.startswith(cid) for c in cids if cid and cid != 'host')
+
+    # --- observed under the workload
+    libs, jars, seen_cids, n_files = set(), set(), set(), 0
+    for line in open(a.files, errors='replace'):
+        f = line.rstrip('\n').split(SEP, 4)
+        if len(f) != 5:
+            continue
+        _evt, _proc, cid, cgroups, path = f
+        n_files += 1
+        if not path.startswith('/') or not target(cid, cgroups):
+            continue
+        seen_cids.add(cid)
+        if is_lib(path):
+            libs.add(path)
+        elif path.endswith('.jar'):
+            jars.add(path)
+
+    # execve: the exit event ('<') of a successful call describes the new program
+    bins, entered, n_exec = {}, {}, 0
+    for line in open(a.execve, errors='replace'):
+        f = line.rstrip('\n').split(SEP, 6)
+        if len(f) != 7:
+            continue
+        direction, proc, cid, cgroups, exepath, filename, _ = f
+        n_exec += 1
+        if not target(cid, cgroups):
+            continue
+        seen_cids.add(cid)
+        if direction == '<' and exepath.startswith('/'):
+            bins.setdefault(exepath, proc)
+        elif direction == '>' and filename.startswith('/'):
+            entered.setdefault(filename, proc)
+    note = ''
+    if not bins and entered:
+        # this sysdig reports no usable exit events: fall back to the requested paths,
+        # which may include failed PATH lookups
+        bins, note = entered, 'binaries taken from execve enter events (may include failed lookups)'
+    bins = {p: c for p, c in bins.items() if not re.match(r'^/(proc|sys|dev|memfd)', p)}
+
+    if not seen_cids:
+        sys.exit(f'error: no captured event belongs to a container under test '
+                 f'({n_files} file events, {n_exec} execve events read; match={a.match!r}, {len(cids)} known cid(s))')
+
+    # --- startup discovery (baseline)
+    root = pathlib.Path(a.sources_dir)
+    f_bins = sorted(root.rglob('binaries_resolved_*.txt'))
+    f_libs = sorted(root.rglob('jni_libs_opened.txt'))
+    f_jars = sorted(root.rglob('jars_unique_*.txt'))
+    if not f_libs or not f_bins:
+        sys.exit(f'error: startup discovery files (binaries_resolved_*.txt, jni_libs_opened.txt) not found under {root}')
+    base_bins = read_paths(f_bins)
+    # binaries SysJava analysed, by file name: includes the few added by hand after discovery
+    analysed_bins = {f.name for d in root.rglob('syscalls_BIN_*') if d.is_dir()
+                     for f in d.iterdir() if f.name != 'binary_syscalls.txt'}
+    base_bin_names = {base(p) for p in base_bins} | analysed_bins
+    base_libs = {p for p in read_paths(f_libs) if is_lib(p)}
+    base_lib_names = {base(p) for p in base_libs}
+    base_jars = read_paths(f_jars)
+    # libraries the static analysis covers although discovery did not see them loaded (ldd closure)
+    analysed_libs = {lib_stem(f.name) for pat in ('syscalls_output_*', 'syscalls_unanalysed_*')
+                     for d in root.rglob(pat) if d.is_dir() for f in d.iterdir() if '.so' in f.name}
+
+    # --- diff. Binaries are compared by file name: discovery lists them as invoked
+    # (/usr/bin/awk, /bin/sh) and the analysis by their real name (mawk, dash).
+    rows, new = [], {'binaries': [], 'libs': [], 'jars': []}
+    for p in sorted(bins):
+        is_new = base(p) not in base_bin_names
+        if is_new:
+            new['binaries'].append(p)
+        rows.append(('binary', p, 'new' if is_new else 'known', f'first process: {bins[p]}'))
+    for p in sorted(libs):
+        notes = []
+        if p in base_libs:
+            status = 'known'
+        elif base(p) in base_lib_names:
+            status = 'known'
+            notes.append('same file name as a discovered library, different path')
+        else:
+            status = 'new'
+            new['libs'].append(p)
+            if TEMP_RE.match(p):
+                notes.append('temporary path (name may change between runs)')
+            if lib_stem(p) in analysed_libs:
+                notes.append('covered by the static analysis (dependency closure)')
+        rows.append(('library', p, status, '; '.join(notes)))
+    for p in sorted(jars):
+        is_new = p not in base_jars
+        if is_new:
+            new['jars'].append(p)
+        rows.append(('jar', p, 'new' if is_new else 'known', ''))
+
+    for kind, obs in (('binaries', bins), ('libs', libs), ('jars', jars)):
+        pathlib.Path(f'{a.out}.observed_{kind}.txt').write_text(''.join(p + '\n' for p in sorted(obs)))
+        pathlib.Path(f'{a.out}.new_{kind}.txt').write_text(''.join(p + '\n' for p in new[kind]))
+    with open(a.out + '.artifacts.tsv', 'w') as fh:
+        fh.write('kind\tpath\tstatus\tnotes\n')
+        fh.writelines('\t'.join(r) + '\n' for r in rows)
+    summary = {
+        'n_binaries': len(bins), 'n_new_binaries': len(new['binaries']),
+        'n_libs': len(libs), 'n_new_libs': len(new['libs']),
+        'n_jars': len(jars), 'n_new_jars': len(new['jars']),
+        'baseline_binaries': len(base_bin_names), 'baseline_libs': len(base_libs), 'baseline_jars': len(base_jars),
+        'containers': ','.join(sorted(seen_cids)), 'note': note or '-',
+    }
+    pathlib.Path(a.out + '.artifacts.summary').write_text(''.join(f'{k}={v}\n' for k, v in summary.items()))
+    if note:
+        print(f'note: {note}')
+    print(f"artifacts: binaries {len(bins)} ({len(new['binaries'])} new), libraries {len(libs)} "
+          f"({len(new['libs'])} new), jars {len(jars)} ({len(new['jars'])} new)"
+          + (f"  NEW: {' '.join(new['binaries'] + new['libs'])}" if new['binaries'] or new['libs'] else ''))
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -236,8 +391,15 @@ def main():
     d.add_argument('--sources-dir', required=True)
     d.add_argument('--runtime', nargs='*', default=[])
     d.add_argument('--out', required=True)
+    r = sub.add_parser('artifacts')
+    r.add_argument('--files', required=True)
+    r.add_argument('--execve', required=True)
+    r.add_argument('--match', required=True)
+    r.add_argument('--injected')
+    r.add_argument('--sources-dir', required=True)
+    r.add_argument('--out', required=True)
     a = ap.parse_args()
-    {'trace': cmd_trace, 'diff': cmd_diff}[a.cmd](a)
+    {'trace': cmd_trace, 'diff': cmd_diff, 'artifacts': cmd_artifacts}[a.cmd](a)
 
 
 if __name__ == '__main__':

@@ -6,6 +6,8 @@ workload_validation.sh, print and export:
   - the SysJava policy syscalls
   - the syscalls observed under the workload
   - the diff: missing (workload - SysJava), used (both), unused (SysJava - workload)
+  - the binaries executed and native libraries opened under the workload that
+    SysJava's startup discovery did not see (when recorded, see ARTIFACTS)
 together with the outcome of the workload run (no restrictions) and of the
 enforce run (under the SysJava policy).
 
@@ -27,7 +29,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 COLUMNS = [
     'subject', 'test', 'image', 'workload_run', 'enforce_run',
     'n_sysjava', 'n_workload', 'n_missing', 'n_used', 'n_unused', 'pct_sysjava_used',
+    'n_new_binaries', 'n_new_libs',
     'sysjava_syscalls', 'workload_syscalls', 'missing', 'used', 'unused',
+    'new_binaries', 'new_libs',
     'invalid_policy_names',
 ]
 
@@ -79,6 +83,11 @@ def rows(results):
                 if lst is not None:
                     row['n_' + key] = len(lst)
                     row[key if key in ('missing', 'used', 'unused') else key + '_syscalls'] = ' '.join(lst)
+            for key in ('new_binaries', 'new_libs'):   # absent when sysdig did not record
+                lst = names(pathlib.Path(f'{pre}.{key}.txt'))
+                if lst is not None:
+                    row['n_' + key] = len(lst)
+                    row[key] = ' '.join(lst)
             if sysjava:
                 row['pct_sysjava_used'] = f'{100.0 * len(used) / len(sysjava):.1f}'
             yield row
@@ -104,7 +113,12 @@ def show(row):
         ('Missing  (workload, not in SysJava)', 'n_missing', 'missing'),
         ('Used     (in both)', 'n_used', 'used'),
         ('Unused   (SysJava, not in workload)', 'n_unused', 'unused'),
+        ('New binaries  (workload, not in startup discovery)', 'n_new_binaries', 'new_binaries'),
+        ('New libraries (workload, not in startup discovery)', 'n_new_libs', 'new_libs'),
     ):
+        if n not in row and n.startswith('n_new'):
+            print(f"\n   {label}: not recorded")
+            continue
         print(f"\n   {label}: {row.get(n, 0)}")
         body = row.get(lst, '') or '(none)'
         print(textwrap.fill(body, width=100, initial_indent='     ', subsequent_indent='     '))
@@ -128,13 +142,15 @@ def main():
 
     width = max([len('image')] + [len(str(r.get('image', '-'))) for r in all_rows]) + 2
     print(f"{'subject':<14}{'image':<{width}}{'test':<24}{'workload':<10}{'enforce':<10}"
-          f"{'sysjava':>8}{'workload':>9}{'missing':>8}{'used':>6}{'unused':>7}{'%used':>7}")
+          f"{'sysjava':>8}{'workload':>9}{'missing':>8}{'used':>6}{'unused':>7}{'%used':>7}"
+          f"{'newbin':>8}{'newlib':>7}")
     for r in all_rows:
         print(f"{r['subject']:<14}{str(r.get('image', '-')):<{width}}{r['test']:<24}"
               f"{str(r.get('workload_run', '-'))[:9]:<10}"
               f"{str(r.get('enforce_run', '-'))[:9]:<10}{r.get('n_sysjava', '-'):>8}{r.get('n_workload', '-'):>9}"
               f"{r.get('n_missing', '-'):>8}{r.get('n_used', '-'):>6}{r.get('n_unused', '-'):>7}"
-              f"{r.get('pct_sysjava_used', '-'):>7}")
+              f"{r.get('pct_sysjava_used', '-'):>7}"
+              f"{r.get('n_new_binaries', '-'):>8}{r.get('n_new_libs', '-'):>7}")
 
     with open(out, 'w', newline='') as fh:
         w = csv.DictWriter(fh, fieldnames=COLUMNS, restval='-')
