@@ -79,6 +79,21 @@ ycsb_build() {  # module -> 0 if the binding is built
   [[ -d "$YCSB_DIR/$module/target/dependency" && -d "$YCSB_DIR/core/target/dependency" ]] && return 0
   log "building YCSB $module (log: $OUT/ycsb-build-$module.log)"
   mkdir -p "$M2_CACHE"
+  # Solr's test framework (a test-scope dependency of the solr7 binding) needs
+  # Restlet from http://maven.restlet.org, a plain-HTTP repository that Maven
+  # >= 3.8.1 blocks and that has moved. Point it at the repository's HTTPS
+  # address; YCSB itself is not modified. (Read as /root/.m2/settings.xml.)
+  cat > "$M2_CACHE/settings.xml" <<'XML'
+<settings>
+  <mirrors>
+    <mirror>
+      <id>restlet-https</id>
+      <mirrorOf>maven-restlet</mirrorOf>
+      <url>https://maven.restlet.talend.com</url>
+    </mirror>
+  </mirrors>
+</settings>
+XML
   "$REAL_DOCKER" run --rm --network=host -v "$YCSB_DIR:/ycsb" -v "$M2_CACHE:/root/.m2" -w /ycsb "$YCSB_IMAGE" \
     mvn -B -pl "$module" -am package dependency:copy-dependencies -DincludeScope=runtime \
         -DskipTests -Dcheckstyle.skip=true > "$OUT/ycsb-build-$module.log" 2>&1
