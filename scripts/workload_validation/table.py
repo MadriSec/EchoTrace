@@ -1,41 +1,64 @@
 #!/usr/bin/env python3
-"""Print the workload validation results as a LaTeX table.
+"""Print the workload validation results as the paper's LaTeX table
+(tables/policy-validation.tex, Table "Workload validation on the primary
+containers").
 
-One row per container and benchmark (docker-library/official-images test),
-read from the results folder written by workload_validation.sh:
+One row per container, read from the results folder written by
+workload_validation.sh:
 
-  Container | Version | Benchmark | Missing | Policy | Used
+  Container | Benchmark | Syscalls (missing / performed / permitted) | New
 
-  Missing  syscalls the benchmark made that are not in the SysJava policy
-  Policy   syscalls in the SysJava policy
-  Used     syscalls in the SysJava policy that the benchmark made
+  performed  distinct syscalls the container made in the baseline run
+             (allow-all filter, nothing enforced)
+  missing    performed syscalls that are not in the SysJava policy
+  permitted  syscalls in the SysJava policy
+  New        binaries / libraries absent from startup discovery. The workload
+             validation does not measure this yet, so the column is "---".
 
-All three come from the workload run, which enforces nothing (allow-all
-filter) and records every syscall, so Missing is the complete set and not
-only the first syscall a policy would have blocked.
+A container with several benchmarks (JRuby) gets one row: performed and
+missing are the union over its benchmarks (see --per-test).
+
+Only containers that have results are listed. Benchmarks that fail even
+without a policy are left out and named in a LaTeX comment, since their
+trace does not describe a working benchmark (see --all).
 
 Usage:
-  scripts/workload_validation/table.py [RESULTS_DIR] [-o FILE] [options]
+  scripts/workload_validation/table.py [RESULTS_DIR] [-o FILE] [--per-test] [--all]
 
-  --names      add a column listing the missing syscalls by name
-  --enforce    add a column with the outcome of the run under the policy
-  --all        keep benchmarks that fail even without a policy (default: they
-               are left out and listed in a LaTeX comment, since their trace
-               does not describe a working benchmark)
-
-RESULTS_DIR defaults to workload_validation_runs/results. The table needs
-booktabs (and multirow, unless --no-multirow is given).
+RESULTS_DIR defaults to workload_validation_runs/results.
 """
 import argparse
+import os
 import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from report import ROOT, rows  # noqa: E402
 
-# Display names of the subjects (default: the subject name, capitalised).
-NAMES = {'jruby': 'JRuby', 'zookeeper': 'ZooKeeper', 'orientdb': 'OrientDB'}
+# Row order and display names, as in the paper.
+ORDER = ['zookeeper', 'tomcat', 'cassandra', 'jetty', 'storm', 'orientdb',
+         'elasticsearch', 'solr', 'groovy', 'jruby']
+NAMES = {'jruby': 'JRuby', 'orientdb': 'OrientDB'}
 IMAGE_SUFFIX = '-jdk8-buster'
+PENDING = '---'
+
+HEADER = r'''\begin{table}[t]
+\centering
+\caption{Workload validation on the primary containers.
+\emph{Syscalls}: missing / performed / permitted counts. Performed calls
+are observed in the baseline run; missing calls are those absent from
+the policy. \emph{New}: binaries / libraries absent from startup discovery.
+All counts are distinct; ``---'' denotes pending measurements.
+\label{tab:policy-validation}}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llcc@{}}
+\toprule
+\textbf{Container} & \textbf{Benchmark} & \textbf{Syscalls} & \textbf{New} \\
+\midrule'''
+FOOTER = r'''\bottomrule
+\end{tabular*}
+\end{table}'''
 
 
 def tex(s):
@@ -44,75 +67,61 @@ def tex(s):
     return s
 
 
-def version(image):
-    tag = image.split(':', 1)[1] if ':' in image else image
-    return tag[:-len(IMAGE_SUFFIX)] if tag.endswith(IMAGE_SUFFIX) else tag
+def container(subject, image):
+    tag = image.split(':', 1)[1] if ':' in image else ''
+    tag = tag[:-len(IMAGE_SUFFIX)] if tag.endswith(IMAGE_SUFFIX) else tag
+    return f'{NAMES.get(subject, subject.capitalize())} {tag}'.strip()
+
+
+def benchmark(tests):
+    if len(tests) == 1:
+        return tests[0]
+    prefix = os.path.commonprefix(tests)
+    return f'{prefix}* ({len(tests)} tests)' if prefix else f'{len(tests)} tests'
+
+
+def line(name, bench, missing, performed, permitted):
+    return (f'{tex(name)} & {tex(bench)} & {len(missing)} / {len(performed)} / {len(permitted)}'
+            f' & {PENDING} / {PENDING} \\\\')
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('results', nargs='?', default=ROOT / 'workload_validation_runs' / 'results', type=pathlib.Path)
     ap.add_argument('-o', '--out', type=pathlib.Path, help='write the table to FILE instead of stdout')
-    ap.add_argument('--names', action='store_true', help='add a column with the missing syscall names')
-    ap.add_argument('--enforce', action='store_true', help='add a column with the enforce run outcome')
+    ap.add_argument('--per-test', action='store_true', help='one row per benchmark instead of one per container')
     ap.add_argument('--all', action='store_true', help='keep benchmarks that fail without a policy')
-    ap.add_argument('--no-multirow', action='store_true', help='repeat container and version on every row')
-    ap.add_argument('--label', default='tab:workload')
     a = ap.parse_args()
     if not a.results.is_dir():
         ap.error(f'results folder not found: {a.results}')
 
-    kept, dropped = {}, []
+    kept, notes = {}, []
     for r in rows(a.results):
         if r['test'] == '-':
-            dropped.append(f"{r['subject']}: {r['workload_run']}")
+            notes.append(f"left out: {r['subject']}: {r['workload_run']}")
         elif 'n_sysjava' not in r:
-            dropped.append(f"{r['subject']} / {r['test']}: no trace (workload run: {r['workload_run']})")
+            notes.append(f"left out: {r['subject']} / {r['test']}: no trace (baseline run: {r['workload_run']})")
         elif r['workload_run'] != 'pass' and not a.all:
-            dropped.append(f"{r['subject']} / {r['test']}: workload run without a policy: {r['workload_run']}")
+            notes.append(f"left out: {r['subject']} / {r['test']}: baseline run without a policy: {r['workload_run']}")
         else:
             kept.setdefault(r['subject'], []).append(r)
 
-    cols = 'lllrrr' + ('l' if a.names else '') + ('l' if a.enforce else '')
-    head = ['Container', 'Version', 'Benchmark', 'Missing', 'Policy', 'Used']
-    head += ['Missing syscalls'] if a.names else []
-    head += ['Enforced'] if a.enforce else []
+    body = []
+    for subject in sorted(kept, key=lambda s: (ORDER.index(s) if s in ORDER else len(ORDER), s)):
+        rs = kept[subject]
+        name = container(subject, rs[0]['image'])
+        sets = [(r['test'], set(r['missing'].split()), set(r['workload_syscalls'].split()),
+                 set(r['sysjava_syscalls'].split())) for r in rs]
+        if a.per_test:
+            body += [line(name if i == 0 else '', *s) for i, s in enumerate(sets)]
+            continue
+        tests = [s[0] for s in sets]
+        missing = set().union(*(s[1] for s in sets))
+        body.append(line(name, benchmark(tests), missing, set().union(*(s[2] for s in sets)), sets[0][3]))
+        notes.append(f"{subject}: {', '.join(tests)}; missing: {' '.join(sorted(missing)) or '(none)'}")
 
     out = [f'% Generated by scripts/workload_validation/table.py from {a.results.name}/']
-    out += [f'% left out: {d}' for d in dropped]
-    out += [
-        r'\begin{table}[t]',
-        r'\centering',
-        r'\caption{Workload validation of the \sysname{} policies with the Docker official-images tests. '
-        r'\emph{Missing}: syscalls made by the benchmark that are not in the policy; '
-        r'\emph{Policy}: syscalls in the policy; \emph{Used}: policy syscalls made by the benchmark.}',
-        rf'\label{{{a.label}}}',
-        r'\footnotesize',
-        rf'\begin{{tabular}}{{@{{}}{cols}@{{}}}}',
-        r'\toprule',
-        ' & '.join(head) + r' \\',
-        r'\midrule',
-    ]
-    for i, (subject, rs) in enumerate(kept.items()):
-        if i:
-            out.append(r'\addlinespace')
-        name = tex(NAMES.get(subject, subject.capitalize()))
-        ver = tex(version(rs[0]['image']))
-        for j, r in enumerate(rs):
-            if a.no_multirow or len(rs) == 1:
-                lead = [name, ver]
-            elif j == 0:
-                lead = [rf'\multirow{{{len(rs)}}}{{*}}{{{name}}}', rf'\multirow{{{len(rs)}}}{{*}}{{{ver}}}']
-            else:
-                lead = ['', '']
-            cells = lead + [tex(r['test']), str(r['n_missing']), str(r['n_sysjava']), str(r['n_used'])]
-            if a.names:
-                cells.append(', '.join(rf'\texttt{{{tex(s)}}}' for s in r.get('missing', '').split()) or '--')
-            if a.enforce:
-                cells.append(tex(r['enforce_run']))
-            out.append(' & '.join(cells) + r' \\')
-    out += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
-
+    out += [f'% {n}' for n in notes] + [HEADER] + body + [FOOTER]
     text = '\n'.join(out) + '\n'
     if a.out:
         a.out.write_text(text)
