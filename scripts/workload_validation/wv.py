@@ -324,6 +324,10 @@ def cmd_artifacts(a):
     base_bin_names = {base(p) for p in base_bins} | analysed_bins
     base_libs = {p for p in read_paths(f_libs) if is_lib(p)}
     base_lib_names = {base(p) for p in base_libs}
+    # The capture reports a library under its real file name (libc-2.28.so,
+    # libpcre.so.3.13.3) while discovery lists the name it was opened by, usually a
+    # symlink (libc.so.6, libpcre.so.3): also match on the name without versions.
+    base_lib_stems = {lib_stem(p) for p in base_libs}
     base_jars = read_paths(f_jars)
     # libraries the static analysis covers although discovery did not see them loaded (ldd closure)
     analysed_libs = {lib_stem(f.name) for pat in ('syscalls_output_*', 'syscalls_unanalysed_*')
@@ -344,6 +348,9 @@ def cmd_artifacts(a):
         elif base(p) in base_lib_names:
             status = 'known'
             notes.append('same file name as a discovered library, different path')
+        elif lib_stem(p) in base_lib_stems:
+            status = 'known'
+            notes.append('discovered under another name of the same library (symlink or version)')
         else:
             status = 'new'
             new['libs'].append(p)
