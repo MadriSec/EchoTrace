@@ -14,7 +14,7 @@ workload_validation.sh:
   permitted  syscalls in the SysJava policy
   New        binaries executed / native libraries opened in the baseline run
              that SysJava's startup discovery did not see ("---" when the
-             run did not record them, i.e. sysdig was not available)
+             run did not record them)
 
 A container with several benchmarks (JRuby) gets one row: performed and
 missing, and the new binaries and libraries, are the union over its

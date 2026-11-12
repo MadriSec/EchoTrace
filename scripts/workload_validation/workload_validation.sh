@@ -11,7 +11,7 @@
 #               used    = observed & policy
 #               unused  = policy - observed   (allowed, not exercised)
 #             with each policy syscall attributed to its SysJava source.
-#             In the same run sysdig records the binaries executed and the
+#             In the same run a second bpftrace records the binaries executed and the
 #             native libraries (and jars) opened by the container under test,
 #             and these are diffed against SysJava's startup discovery:
 #               new = seen under the workload, not at startup
@@ -24,8 +24,7 @@
 # Environment:
 #   PHASES=workload,enforce   phases to run
 #   TEST_TIMEOUT=1200         per-test timeout (s)
-#   ARTIFACTS=auto            1 = record binaries/libraries with sysdig, 0 = do not,
-#                             auto = record if sysdig is installed
+#   ARTIFACTS=1               0 = do not record the binaries/libraries of the workload
 #   OI_REF=<commit>           pin docker-library/official-images (recorded in meta.txt)
 #   CONF=<file>               subjects file (default: subjects.conf next to this script)
 #   SYSJAVA_ROOT=<dir>        SysJava artifact (default: ../SysJava, next to Prototype)
@@ -36,8 +35,8 @@
 # that subject's results (and only for the phases that ran). At the end,
 # report.py prints the per-subject diff and writes $OUT/report.csv.
 #
-# Requires: x86_64 Linux, root, docker, bpftrace, jq, git, python3, timeout;
-# sysdig (with --modern-bpf) for the binaries/libraries diff.
+# Requires: x86_64 Linux, root, docker, bpftrace, jq, git, python3, timeout.
+# The binaries/libraries diff needs a kernel with BTF and fentry (bpftrace >= 0.20).
 #############################################################################
 set -uo pipefail
 
@@ -46,7 +45,7 @@ ROOT="$(cd "$HERE/../.." && pwd)"
 CONF="${CONF:-$HERE/subjects.conf}"
 PHASES="${PHASES:-workload,enforce}"
 TEST_TIMEOUT="${TEST_TIMEOUT:-1200}"
-ARTIFACTS="${ARTIFACTS:-auto}"
+ARTIFACTS="${ARTIFACTS:-1}"
 OI_DIR="${OI_DIR:-$ROOT/.cache/official-images}"
 OI_REF="${OI_REF:-}"
 OUT="${OUT:-$ROOT/workload_validation_runs/results}"
@@ -71,11 +70,6 @@ has_phase() { [[ ",$PHASES," == *",$1,"* ]]; }
 for t in docker jq git timeout bpftrace "$PY"; do
   command -v "$t" >/dev/null || die "missing tool: $t"
 done
-if [[ "$ARTIFACTS" == auto ]]; then
-  if command -v sysdig >/dev/null; then ARTIFACTS=1
-  else ARTIFACTS=0; log "sysdig not found: binaries/libraries will not be recorded"; fi
-fi
-[[ "$ARTIFACTS" == 0 ]] || command -v sysdig >/dev/null || die "missing tool: sysdig (or set ARTIFACTS=0)"
 REAL_DOCKER="$(command -v docker)"
 "$REAL_DOCKER" info >/dev/null 2>&1 || die "cannot reach the Docker daemon"
 [[ -f "$CONF" ]] || die "subjects file not found: $CONF"
@@ -108,16 +102,33 @@ tracepoint:raw_syscalls:sys_enter /curtask->seccomp.mode == 2/ {
 }
 END { clear(@cg); clear(@first); }'
 
-# sysdig captures for the binaries/libraries diff: the events and filters of
-# SysJava's startup discovery (scripts/sysdig_unified.sh), for every container;
-# wv.py keeps the containers under test (cgroup path, or container id). Fields
-# are separated by "|~|"; the path comes last since it may contain anything.
-# The leading "*" makes sysdig print events in which a field has no value.
-SD_FILES_FILTER='container.id != host and evt.type in (open,openat,openat2,mmap) and evt.failed=false and (fd.name contains .so or fd.name contains .jar)'
-SD_FILES_FMT='*%evt.type|~|%proc.name|~|%container.id|~|%thread.cgroups|~|%fd.name'
-SD_EXEC_FILTER='container.id != host and evt.type in (execve,execveat) and evt.failed=false'
-SD_EXEC_FMT='*%evt.dir|~|%proc.name|~|%container.id|~|%thread.cgroups|~|%proc.exepath|~|%evt.arg.filename|~|%proc.cmdline'
-SD_PIDS=()
+# Binaries and libraries of the workload, for the diff against SysJava's startup
+# discovery (which records execve and the opens of .so/.jar files with sysdig).
+# A separate bpftrace, so that a failure here cannot affect the syscall trace.
+# Same task filter as above (tasks running under a seccomp filter).
+#   OPEN  every file opened, once per (cgroup, file, opened-for-exec), with its
+#         path as the container sees it. flag 1 = opened to be executed
+#         (__FMODE_EXEC: the program, a script's interpreter, the ELF loader).
+#   EXEC  every successful exec, with the file name of the program that now
+#         runs (for a script: its interpreter, as in startup discovery).
+ART_PROG='
+BEGIN { printf("READY\n"); }
+fentry:security_file_open /curtask->seccomp.mode == 2/ {
+  $x = (args.file->f_flags & 0x20) != 0;
+  $dev = args.file->f_inode->i_sb->s_dev;
+  $ino = args.file->f_inode->i_ino;
+  if (@seen[cgroup, $dev, $ino, $x] == 0) {
+    @seen[cgroup, $dev, $ino, $x] = 1;
+    if (@cg[cgroup] == 0) { @cg[cgroup] = 1; printf("CG %llu %s\n", cgroup, cgroup_path(cgroup)); }
+    printf("OPEN %llu %d %s\n", cgroup, $x, path(args.file->f_path));
+  }
+}
+tracepoint:sched:sched_process_exec /curtask->seccomp.mode == 2/ {
+  if (@cg[cgroup] == 0) { @cg[cgroup] = 1; printf("CG %llu %s\n", cgroup, cgroup_path(cgroup)); }
+  printf("EXEC %llu %s\n", cgroup, str(curtask->mm->exe_file->f_path.dentry->d_name.name));
+}
+END { clear(@seen); clear(@cg); }'
+ART_PID=""
 
 mkdir -p "$OUT/bin"
 # Allows every syscall. The single LOG rule only exists so that the runtime
@@ -129,7 +140,7 @@ echo '{"defaultAction":"SCMP_ACT_ALLOW","syscalls":[{"names":["kexec_load"],"act
 TRACE_PID=""
 cleanup() {
   [[ -n $TRACE_PID ]] && kill -INT "$TRACE_PID" 2>/dev/null
-  (( ${#SD_PIDS[@]} )) && kill -INT "${SD_PIDS[@]}" 2>/dev/null
+  [[ -n $ART_PID ]] && kill -INT "$ART_PID" 2>/dev/null
   # hand results back to the invoking user
   if [[ -n "${SUDO_UID:-}" ]]; then
     chown -R "$SUDO_UID:$SUDO_GID" "$OUT" 2>/dev/null
@@ -179,30 +190,26 @@ host: $(uname -a)
 docker: $("$REAL_DOCKER" version --format '{{.Server.Version}}')
 bpftrace: $(bpftrace --version 2>&1)
 official-images: $OI_COMMIT
-sysdig: $( (( ARTIFACTS )) && sysdig --version 2>&1 | head -1 || echo "not used")
 phases: $PHASES  cgroup_parent: $CG_PARENT"
 log "output: $OUT"
 
 # ------------------------------------------------------------------ helpers
 artifacts_start() {  # out_prefix; a failure here only loses the binaries/libraries diff
-  SD_PIDS=()
-  (( ARTIFACTS )) || return 0
-  sysdig --modern-bpf --unbuffered -p "$SD_FILES_FMT" "$SD_FILES_FILTER" \
-    < /dev/null > "$1.sysdig.files" 2> "$1.sysdig.files.err" &
-  SD_PIDS+=($!)
-  sysdig --modern-bpf --unbuffered -p "$SD_EXEC_FMT" "$SD_EXEC_FILTER" \
-    < /dev/null > "$1.sysdig.execve" 2> "$1.sysdig.execve.err" &
-  SD_PIDS+=($!)
-  sleep "${SYSDIG_WARMUP:-5}"   # let the probes attach before the container starts
-  local pid
-  for pid in "${SD_PIDS[@]}"; do
-    kill -0 "$pid" 2>/dev/null && continue
-    log "WARNING: sysdig failed to start; no binaries/libraries for this run:"
-    cat "$1.sysdig.files.err" "$1.sysdig.execve.err" >&2
-    kill -INT "${SD_PIDS[@]}" 2>/dev/null; SD_PIDS=()
-    rm -f "$1.sysdig.files" "$1.sysdig.execve"
-    return 0
+  ART_PID=""
+  [[ "$ARTIFACTS" == 1 ]] || return 0
+  BPFTRACE_MAX_MAP_KEYS=262144 BPFTRACE_MAP_KEYS_MAX=262144 BPFTRACE_MAX_STRLEN=200 \
+    bpftrace -B line -e "$ART_PROG" < /dev/null > "$1.artifacts.out" 2> "$1.artifacts.err" &
+  ART_PID=$!
+  local i
+  for (( i = 0; i < 240; i++ )); do
+    grep -q '^READY' "$1.artifacts.out" 2>/dev/null && return 0
+    kill -0 "$ART_PID" 2>/dev/null || break
+    sleep 0.25
   done
+  log "WARNING: the binaries/libraries capture failed to start; none recorded for this run:"
+  cat "$1.artifacts.err" >&2
+  kill -INT "$ART_PID" 2>/dev/null; ART_PID=""
+  rm -f "$1.artifacts.out"
 }
 
 trace_start() {  # out_prefix
@@ -223,11 +230,10 @@ trace_stop() {
   kill -INT "$TRACE_PID" 2>/dev/null
   wait "$TRACE_PID" 2>/dev/null
   TRACE_PID=""
-  if (( ${#SD_PIDS[@]} )); then
-    sleep 1   # let sysdig flush the last events
-    kill -INT "${SD_PIDS[@]}" 2>/dev/null
-    wait "${SD_PIDS[@]}" 2>/dev/null
-    SD_PIDS=()
+  if [[ -n $ART_PID ]]; then
+    kill -INT "$ART_PID" 2>/dev/null
+    wait "$ART_PID" 2>/dev/null
+    ART_PID=""
   fi
 }
 
@@ -311,9 +317,8 @@ while read -r -u 3 subject image policy_rel mode tests _; do
         "$PY" "$WV" diff --observed "$sd/$t.workload.observed.tsv" --policy "$policy" \
           --sources-dir "$sources_dir" --runtime "${RUNTIME_LISTS[@]}" --out "$sd/$t.workload" >&2
       fi
-      if [[ -f "$sd/$t.workload.sysdig.files" ]]; then
-        "$PY" "$WV" artifacts --files "$sd/$t.workload.sysdig.files" --execve "$sd/$t.workload.sysdig.execve" \
-          --match "$CG_MATCH" --injected "$sd/$t.workload.injected" \
+      if [[ -f "$sd/$t.workload.artifacts.out" ]]; then
+        "$PY" "$WV" artifacts --capture "$sd/$t.workload.artifacts.out" --match "$CG_MATCH" \
           --sources-dir "$sources_dir" --out "$sd/$t.workload" >&2
       fi
     fi

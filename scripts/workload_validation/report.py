@@ -83,7 +83,7 @@ def rows(results):
                 if lst is not None:
                     row['n_' + key] = len(lst)
                     row[key if key in ('missing', 'used', 'unused') else key + '_syscalls'] = ' '.join(lst)
-            for key in ('new_binaries', 'new_libs'):   # absent when sysdig did not record
+            for key in ('new_binaries', 'new_libs'):   # absent when not recorded
                 lst = names(pathlib.Path(f'{pre}.{key}.txt'))
                 if lst is not None:
                     row['n_' + key] = len(lst)

@@ -18,8 +18,7 @@
       Writes PREFIX.{missing,used,unused}.txt, PREFIX.diff.tsv,
       PREFIX.by_source.tsv and PREFIX.summary (key=value, read by the driver).
 
-  wv.py artifacts --files PREFIX.sysdig.files --execve PREFIX.sysdig.execve
-                  --match STR [--injected PREFIX.injected] --sources-dir RESULTS_DIR --out PREFIX
+  wv.py artifacts --capture PREFIX.artifacts.out --match STR --sources-dir RESULTS_DIR --out PREFIX
       Diff the binaries executed and the native libraries (and jars) opened by
       the containers under test against what SysJava's startup discovery saw
       (Dynamic_Analysis/sysdig_outputs_*/ under RESULTS_DIR):
@@ -234,7 +233,6 @@ def cmd_diff(a):
 
 
 # ----------------------------------------------------------------- artifacts
-SEP = '|~|'   # field separator of the sysdig captures (see workload_validation.sh)
 LIB_RE = re.compile(r'\.so(\.[0-9]+)*$')
 # Not libraries, although the capture filter ("contains .so") lets them through;
 # /gconv/ and /audit/ are dropped by startup discovery as well (sysdig_unified.sh).
@@ -260,54 +258,57 @@ def read_paths(files):
 
 
 def cmd_artifacts(a):
-    cids = set()
-    if a.injected and pathlib.Path(a.injected).is_file():
-        cids = {l.split()[1] for l in pathlib.Path(a.injected).read_text().splitlines() if l.startswith('cid ')}
+    # --- observed under the workload (bpftrace capture, see ART_PROG in workload_validation.sh)
+    cg_path, opens, execs = {}, [], collections.defaultdict(set)
+    for line in open(a.capture, errors='replace'):
+        line = line.rstrip('\n')
+        if line.startswith('CG '):
+            _, cg, path = line.split(' ', 2)
+            cg_path[int(cg)] = path
+        elif line.startswith('OPEN '):
+            f = line.split(' ', 3)
+            if len(f) == 4 and f[3].startswith('/'):
+                opens.append((int(f[1]), f[2] == '1', f[3]))
+        elif line.startswith('EXEC '):
+            f = line.split(' ', 2)
+            if len(f) == 3 and f[2]:
+                execs[int(f[1])].add(f[2])
+    targets = {cg for cg, p in cg_path.items() if a.match in p}
+    if not targets:
+        sys.exit(f'error: no captured cgroup path contains {a.match!r} '
+                 f'({len(opens)} opens, {len(cg_path)} cgroups read)')
 
-    def target(cid, cgroups):
-        return a.match in cgroups or any(c.startswith(cid) for c in cids if cid and cid != 'host')
-
-    # --- observed under the workload
-    libs, jars, seen_cids, n_files = set(), set(), set(), 0
-    for line in open(a.files, errors='replace'):
-        f = line.rstrip('\n').split(SEP, 4)
-        if len(f) != 5:
+    libs, jars, by_name = set(), set(), collections.defaultdict(lambda: [set(), set()])
+    for cg, for_exec, path in opens:
+        if cg not in targets:
             continue
-        _evt, _proc, cid, cgroups, path = f
-        n_files += 1
-        if not path.startswith('/') or not target(cid, cgroups):
-            continue
-        seen_cids.add(cid)
+        by_name[base(path)][0 if for_exec else 1].add(path)
+        if for_exec:
+            continue   # opened by the kernel for an exec (program, ELF loader): not an open
+                       # by the program, so startup discovery would not list it as a library
         if is_lib(path):
             libs.add(path)
         elif path.endswith('.jar'):
             jars.add(path)
-
-    # execve: the exit event ('<') of a successful call describes the new program
-    bins, entered, n_exec = {}, {}, 0
-    for line in open(a.execve, errors='replace'):
-        f = line.rstrip('\n').split(SEP, 6)
-        if len(f) != 7:
-            continue
-        direction, proc, cid, cgroups, exepath, filename, _ = f
-        n_exec += 1
-        if not target(cid, cgroups):
-            continue
-        seen_cids.add(cid)
-        if direction == '<' and exepath.startswith('/'):
-            bins.setdefault(exepath, proc)
-        elif direction == '>' and filename.startswith('/'):
-            entered.setdefault(filename, proc)
-    note = ''
-    if not bins and entered:
-        # this sysdig reports no usable exit events: fall back to the requested paths,
-        # which may include failed PATH lookups
-        bins, note = entered, 'binaries taken from execve enter events (may include failed lookups)'
-    bins = {p: c for p, c in bins.items() if not re.match(r'^/(proc|sys|dev|memfd)', p)}
-
-    if not seen_cids:
-        sys.exit(f'error: no captured event belongs to a container under test '
-                 f'({n_files} file events, {n_exec} execve events read; match={a.match!r}, {len(cids)} known cid(s))')
+    # A program that ran = the file name reported at exec, located through the
+    # file opened for execution under that name (else any open, else name only).
+    bins, unlocated = {}, []
+    for name in sorted({n for cg in targets for n in execs[cg]}):
+        if name.startswith('memfd:') or name.startswith('runc'):
+            continue   # the container runtime re-executing itself
+        paths = by_name[name][0] or by_name[name][1]
+        if not paths:
+            unlocated.append(name)
+        for p in paths or {name}:
+            bins[p] = name
+    notes = []
+    if unlocated:
+        notes.append(f'path unknown for: {" ".join(unlocated)}')
+    longest = max((len(p) for _, _, p in opens), default=0)
+    if sum(len(p) == longest for _, _, p in opens) >= 3:
+        notes.append(f'{longest}-character paths repeat: paths may be truncated')
+    note = '; '.join(notes)
+    seen_cids = {re.sub(r'.*docker-([0-9a-f]{12}).*', r'\1', cg_path[cg]) for cg in targets}
 
     # --- startup discovery (baseline)
     root = pathlib.Path(a.sources_dir)
@@ -335,7 +336,7 @@ def cmd_artifacts(a):
         is_new = base(p) not in base_bin_names
         if is_new:
             new['binaries'].append(p)
-        rows.append(('binary', p, 'new' if is_new else 'known', f'first process: {bins[p]}'))
+        rows.append(('binary', p, 'new' if is_new else 'known', ''))
     for p in sorted(libs):
         notes = []
         if p in base_libs:
@@ -392,10 +393,8 @@ def main():
     d.add_argument('--runtime', nargs='*', default=[])
     d.add_argument('--out', required=True)
     r = sub.add_parser('artifacts')
-    r.add_argument('--files', required=True)
-    r.add_argument('--execve', required=True)
+    r.add_argument('--capture', required=True)
     r.add_argument('--match', required=True)
-    r.add_argument('--injected')
     r.add_argument('--sources-dir', required=True)
     r.add_argument('--out', required=True)
     a = ap.parse_args()
