@@ -1,0 +1,13 @@
+--- a/elasticsearch5/src/main/java/site/ycsb/db/elasticsearch5/ElasticsearchRestClient.java	2026-11-13 09:45:58
++++ b/elasticsearch5/src/main/java/site/ycsb/db/elasticsearch5/ElasticsearchRestClient.java	2026-11-13 09:45:58
+@@ -427,7 +427,9 @@
+ 
+   private Response search(final String table, final XContentBuilder builder) throws IOException {
+     refreshIfNeeded();
+-    final Map<String, String> params = emptyMap();
++    // Elasticsearch 7 reports hits.total as an object unless asked for the
++    // integer this client parses (the parameter exists since 6.6)
++    final Map<String, String> params = Collections.singletonMap("rest_total_hits_as_int", "true");
+     final StringEntity entity = new StringEntity(builder.string());
+     final Header header = new BasicHeader("content-type", ContentType.APPLICATION_JSON.toString());
+     return restClient.performRequest("GET", "/" + indexKey + "/" + table + "/_search", params, entity, header);
