@@ -34,8 +34,11 @@
 #   sudo env "PATH=$PATH" scripts/workload_validation/workload_validation_jetty.sh
 #
 # Environment (plus those of workload_validation.sh: PHASES, ARTIFACTS, OUT, ...):
-#   SMALL_REQUESTS=100000     requests for index.html in each of steps 1 and 2
-#   LARGE_REQUESTS=5000       requests for large.bin
+#   SMALL_REQUESTS=500000       requests for index.html, new connection each (step 1)
+#   KEEPALIVE_REQUESTS=3500000  requests for index.html over keep-alive connections (step 2)
+#   LARGE_REQUESTS=85000        requests for large.bin (step 3)
+#                             The defaults make each step last about 40 s on the test
+#                             machine (measured: 13,800, 91,800 and 2,170 requests/s).
 #   CONCURRENCY=16            concurrent connections
 #   AB_IMAGE=httpd:2.4        image that provides ab
 #   READY_TIMEOUT=300         seconds to wait for the server to start
@@ -52,8 +55,9 @@ CONF="${CONF:-$HERE/jetty_subject.conf}"
 source "$HERE/wv_lib.sh"   # configuration, preflight, tracing, prepare_subject, postprocess
 source "$CONF"             # SUBJECT, IMAGE, POLICY, READY_LOG, READY_PORT, WEBAPP_DIR
 
-SMALL_REQUESTS="${SMALL_REQUESTS:-100000}"
-LARGE_REQUESTS="${LARGE_REQUESTS:-5000}"
+SMALL_REQUESTS="${SMALL_REQUESTS:-500000}"
+KEEPALIVE_REQUESTS="${KEEPALIVE_REQUESTS:-3500000}"
+LARGE_REQUESTS="${LARGE_REQUESTS:-85000}"
 CONCURRENCY="${CONCURRENCY:-16}"
 AB_IMAGE="${AB_IMAGE:-httpd:2.4}"
 READY_TIMEOUT="${READY_TIMEOUT:-300}"
@@ -86,7 +90,7 @@ chmod -R a+rX "$ROOT/.cache/jetty-workload"   # the server runs as the unprivile
 
 RUN_META+="
 content: index.html sha256 $(sha256sum "$CONTENT/index.html" | cut -c1-16), large.bin $LARGE_BYTES bytes sha256 $(sha256sum "$CONTENT/large.bin" | cut -c1-16)
-load: ab ($AB_IMAGE, $("$REAL_DOCKER" run --rm "$AB_IMAGE" ab -V 2>/dev/null | head -1)) -c $CONCURRENCY; index.html x $SMALL_REQUESTS, index.html keep-alive x $SMALL_REQUESTS, large.bin x $LARGE_REQUESTS"
+load: ab ($AB_IMAGE, $("$REAL_DOCKER" run --rm "$AB_IMAGE" ab -V 2>/dev/null | head -1)) -c $CONCURRENCY; index.html x $SMALL_REQUESTS, index.html keep-alive x $KEEPALIVE_REQUESTS, large.bin x $LARGE_REQUESTS"
 log "output: $OUT"
 
 # ------------------------------------------------------------------ server
@@ -148,7 +152,7 @@ run_load() {
       status="fail(content)"
     elif ! ab_step "index.html" "$SMALL_REQUESTS" "$base/index.html" >> "$pre.stdout" 2>> "$pre.stderr"; then
       status="fail(index.html)"
-    elif ! ab_step "index.html keep-alive" "$SMALL_REQUESTS" "$base/index.html" -k >> "$pre.stdout" 2>> "$pre.stderr"; then
+    elif ! ab_step "index.html keep-alive" "$KEEPALIVE_REQUESTS" "$base/index.html" -k >> "$pre.stdout" 2>> "$pre.stderr"; then
       status="fail(index.html keep-alive)"
     elif ! ab_step "large.bin" "$LARGE_REQUESTS" "$base/large.bin" >> "$pre.stdout" 2>> "$pre.stderr"; then
       status="fail(large.bin)"
