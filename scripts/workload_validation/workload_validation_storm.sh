@@ -153,9 +153,9 @@ run_storm() {
         # storm-perf prints one CSV line of metrics a minute:
         #   elapsed,workers,tasks,executors,transferred,transfer rate,...
         # the topology worked if at least one of them reports transferred messages
-        # (the client's upload progress bar writes carriage returns and other
-        # control characters into the same output: normalise before matching)
-        elif ! tr '\r' '\n' < "$pre.stdout" | tr -d '\000' \
+        # storm-perf writes this table to its standard error; the upload
+        # progress bar may add carriage returns, so normalise before matching
+        elif ! cat "$pre.stdout" "$pre.stderr" | tr '\r' '\n' | tr -d '\000' \
                | awk -F, '/^[[:space:]]*[0-9]+,[0-9]+,[0-9]+,[0-9]+,[0-9]+,/ && $5 > 0 { ok = 1 } END { exit !ok }'; then
           status="fail(no-throughput)"
         elif ! grep -a -q 'Killed Topology' "$pre.stdout" "$pre.stderr"; then
