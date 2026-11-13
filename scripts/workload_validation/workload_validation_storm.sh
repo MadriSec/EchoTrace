@@ -150,6 +150,13 @@ run_storm() {
         elif (( rc != 0 )); then status="fail(client)"
         elif ! grep -q 'Finished submitting topology' "$pre.stdout" "$pre.stderr"; then
           status="fail(not-submitted)"
+        # storm-perf prints one CSV line of metrics a minute:
+        #   elapsed,workers,tasks,executors,transferred,transfer rate,...
+        # the topology worked if at least one of them reports transferred messages
+        elif ! awk -F, '/^[0-9]+,[0-9]+,[0-9]+,[0-9]+,[0-9]+,/ && $5 > 0 { ok = 1 } END { exit !ok }' "$pre.stdout"; then
+          status="fail(no-throughput)"
+        elif ! grep -q 'Killed Topology' "$pre.stdout" "$pre.stderr"; then
+          status="fail(not-killed)"
         fi
       fi
     fi
