@@ -25,7 +25,8 @@
 #   sudo env "PATH=$PATH" scripts/workload_validation/workload_validation_orientdb.sh
 #
 # Environment (plus those of workload_validation.sh: PHASES, ARTIFACTS, OUT, ...):
-#   OPS=25000                 operations of each kind (create, read, update, delete)
+#   OPS=500000                operations of each kind (create, read, update, delete);
+#                             25,000 of each take about 6 s on the test machine
 #   THREADS=4                 concurrent client threads
 #   READY_TIMEOUT=300         seconds to wait for the server to start
 #   RUN_TIMEOUT=1800          seconds allowed for the stress tester
@@ -41,7 +42,7 @@ source "$HERE/wv_lib.sh"   # configuration, preflight, tracing, prepare_subject,
 RUN_ARGS=()
 source "$CONF"             # SUBJECT, IMAGE, POLICY, ROOT_PASSWORD, RUN_ARGS, READY_LOG, READY_PORT
 
-OPS="${OPS:-25000}"
+OPS="${OPS:-500000}"
 THREADS="${THREADS:-4}"
 READY_TIMEOUT="${READY_TIMEOUT:-300}"
 RUN_TIMEOUT="${RUN_TIMEOUT:-1800}"
@@ -109,6 +110,14 @@ run_stress() {
       status="fail(no-result)"
     elif grep -a -q -E 'Exception|Error on ' "$pre.stdout" "$pre.stderr"; then
       status="fail(errors)"
+    else
+      # the tool reports how many records each kind of operation completed
+      local kind
+      for kind in Created Read Updated Deleted; do
+        grep -a -q -E "^- $kind $OPS records in " "$pre.stdout" "$pre.stderr" \
+          || { status="fail(incomplete: $kind)"; break; }
+      done
+      [[ $status != pass ]] || grep -a -q 'Dropped database' "$pre.stdout" "$pre.stderr" || status="fail(not-dropped)"
     fi
   fi
 
