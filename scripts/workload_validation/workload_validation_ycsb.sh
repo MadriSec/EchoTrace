@@ -49,7 +49,7 @@ READY_TIMEOUT="${READY_TIMEOUT:-300}"
 M2_CACHE="$ROOT/.cache/ycsb-m2"
 
 [[ -f "$YCSB_DIR/bin/bindings.properties" ]] || die "YCSB checkout not found: $YCSB_DIR (set YCSB_DIR)"
-declare -A IMAGE POLICY RUN_ARGS READY_LOG READY_PORT SETUP_URLS BINDING MODULE PROPS WORKLOADS
+declare -A IMAGE POLICY RUN_ARGS READY_LOG READY_PORT SETUP_URLS BINDING MODULE MVN_ARGS PROPS WORKLOADS
 SUBJECTS=()
 source "$CONF"
 
@@ -74,10 +74,17 @@ log "output: $OUT"
 # The YCSB containers use the host's network: they reach the server by its
 # container address and need no DNS inside the container.
 
-ycsb_build() {  # module -> 0 if the binding is built
-  local module=$1
-  [[ -d "$YCSB_DIR/$module/target/dependency" && -d "$YCSB_DIR/core/target/dependency" ]] && return 0
-  log "building YCSB $module (log: $OUT/ycsb-build-$module.log)"
+ycsb_build() {  # module extra-maven-args -> 0 if the binding is built
+  local module=$1 extra=$2 marker="$YCSB_DIR/$1/target/.wv-build-args" margs=()
+  if [[ -d "$YCSB_DIR/$module/target/dependency" && -d "$YCSB_DIR/core/target/dependency" \
+        && "$(cat "$marker" 2>/dev/null)" == "args: $extra" ]]; then
+    return 0
+  fi
+  # built with other arguments (or not by this script): start clean, so that
+  # jars of another client version do not stay on the classpath
+  rm -rf "$YCSB_DIR/$module/target"
+  eval "margs=($extra)"
+  log "building YCSB $module $extra (log: $OUT/ycsb-build-$module.log)"
   mkdir -p "$M2_CACHE"
   # Solr's test framework (a test-scope dependency of the solr7 binding) needs
   # Restlet from http://maven.restlet.org, a plain-HTTP repository that Maven
@@ -96,7 +103,8 @@ ycsb_build() {  # module -> 0 if the binding is built
 XML
   "$REAL_DOCKER" run --rm --network=host -v "$YCSB_DIR:/ycsb" -v "$M2_CACHE:/root/.m2" -w /ycsb "$YCSB_IMAGE" \
     mvn -B -pl "$module" -am package dependency:copy-dependencies -DincludeScope=runtime \
-        -DskipTests -Dcheckstyle.skip=true > "$OUT/ycsb-build-$module.log" 2>&1
+        -DskipTests -Dcheckstyle.skip=true "${margs[@]}" > "$OUT/ycsb-build-$module.log" 2>&1 || return 1
+  echo "args: $extra" > "$marker"
 }
 
 ycsb_class() {  # binding -> its client class
@@ -195,12 +203,12 @@ for subject in "${SUBJECTS[@]}"; do
   log "==================== $subject ($image)"
   t="ycsb-${WORKLOADS[$subject]// /}"
   prepare_subject "$subject" "$image" "${POLICY[$subject]}" \
-    "ycsb binding: ${BINDING[$subject]}  workloads: ${WORKLOADS[$subject]}  run args: ${RUN_ARGS[$subject]}" || continue
+    "ycsb binding: ${BINDING[$subject]}  build args: ${MVN_ARGS[$subject]:-}  workloads: ${WORKLOADS[$subject]}  run args: ${RUN_ARGS[$subject]}" || continue
   if [[ -z "$(ycsb_class "${BINDING[$subject]}")" ]]; then
     log "SKIP $subject: unknown YCSB binding ${BINDING[$subject]}"
     skip "$subject" "SKIPPED (unknown YCSB binding ${BINDING[$subject]})"; continue
   fi
-  if ! ycsb_build "${MODULE[$subject]}"; then
+  if ! ycsb_build "${MODULE[$subject]}" "${MVN_ARGS[$subject]:-}"; then
     log "SKIP $subject: YCSB build failed"
     skip "$subject" "SKIPPED (YCSB build failed, see ycsb-build-${MODULE[$subject]}.log)"; continue
   fi
