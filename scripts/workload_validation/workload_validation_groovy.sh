@@ -33,7 +33,7 @@ set -uo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONF="${CONF:-$HERE/groovy_subject.conf}"
 source "$HERE/wv_lib.sh"   # configuration, preflight, tracing, prepare_subject, postprocess
-BENCHMARKS=()
+BENCHMARKS=(); RUN_ARGS=()
 source "$CONF"             # SUBJECT, IMAGE, POLICY, BENCH_TAG, BENCHMARKS
 
 RUN_TIMEOUT="${RUN_TIMEOUT:-600}"
@@ -75,9 +75,9 @@ run_bench() {
     script="${b%%:*}"
     for input in ${b#*:}; do
       echo "### groovy /bench/$script.groovy $input" | tee -a "$pre.stdout" >> "$pre.stderr"
-      echo "docker run --cgroup-parent $CG_PARENT --security-opt seccomp=$profile $IMAGE groovy /bench/$script.groovy $input" >> "$pre.injected"
+      echo "docker run --cgroup-parent $CG_PARENT --security-opt seccomp=$profile ${RUN_ARGS[*]} $IMAGE groovy /bench/$script.groovy $input" >> "$pre.injected"
       out="$(timeout "$RUN_TIMEOUT" "$REAL_DOCKER" run --rm --cgroup-parent "$CG_PARENT" \
-               --security-opt "seccomp=$profile" -v "$GROOVY_BENCH_DIR:/bench:ro" \
+               --security-opt "seccomp=$profile" -v "$GROOVY_BENCH_DIR:/bench:ro" "${RUN_ARGS[@]}" \
                "$IMAGE" groovy "/bench/$script.groovy" "$input" < /dev/null 2>> "$pre.stderr")"
       rc=$?
       printf '%s\n' "$out" >> "$pre.stdout"
@@ -95,7 +95,7 @@ run_bench() {
 # ------------------------------------------------------------------ main
 log "==================== $SUBJECT ($IMAGE)"
 if prepare_subject "$SUBJECT" "$IMAGE" "$POLICY" \
-     "benchmark: apache/groovy $BENCH_TAG benchmark/bench: ${BENCHMARKS[*]}"; then
+     "benchmark: apache/groovy $BENCH_TAG benchmark/bench: ${BENCHMARKS[*]}; run args: ${RUN_ARGS[*]}"; then
   t=$TEST
   if has_phase workload; then
     rm -f "$sd/$t.workload."*
