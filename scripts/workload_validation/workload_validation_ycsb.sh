@@ -38,6 +38,7 @@ set -uo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONF="${CONF:-$HERE/ycsb_subjects.conf}"
+WV_EXTRA_TOOLS="git"
 source "$HERE/wv_lib.sh"   # configuration, preflight, tracing, prepare_subject, postprocess
 
 YCSB_DIR="${YCSB_DIR:-$(cd "$ROOT/.." && pwd)/YCSB}"
@@ -49,7 +50,7 @@ READY_TIMEOUT="${READY_TIMEOUT:-300}"
 M2_CACHE="$ROOT/.cache/ycsb-m2"
 
 [[ -f "$YCSB_DIR/bin/bindings.properties" ]] || die "YCSB checkout not found: $YCSB_DIR (set YCSB_DIR)"
-declare -A IMAGE POLICY RUN_ARGS READY_LOG READY_PORT SETUP_URLS BINDING MODULE MVN_ARGS PROPS WORKLOADS
+declare -A IMAGE POLICY RUN_ARGS READY_LOG READY_PORT SETUP_URLS BINDING MODULE MVN_ARGS PATCH PROPS WORKLOADS
 SUBJECTS=()
 source "$CONF"
 
@@ -74,8 +75,17 @@ log "output: $OUT"
 # The YCSB containers use the host's network: they reach the server by its
 # container address and need no DNS inside the container.
 
-ycsb_build() {  # module extra-maven-args -> 0 if the binding is built
-  local module=$1 extra=$2 marker="$YCSB_DIR/$1/target/.wv-build-args" margs=()
+ycsb_build() {  # module extra-maven-args patch -> 0 if the binding is built
+  local module=$1 extra=$2 patch=${3:+$HERE/ycsb_patches/$3} marker="$YCSB_DIR/$1/target/.wv-build-args" margs=()
+  if [[ -n $patch ]]; then
+    [[ -f $patch ]] || { log "patch not found: $patch"; return 1; }
+    # apply the compatibility patch to the YCSB checkout, unless it is applied already
+    if ! "${YCSB_GIT[@]}" apply --reverse --check "$patch" 2>/dev/null; then
+      log "applying $(basename "$patch") to $YCSB_DIR"
+      "${YCSB_GIT[@]}" apply "$patch" || { log "cannot apply $patch"; return 1; }
+    fi
+    extra+=" patch: $(basename "$patch") $(sha256sum "$patch" | cut -c1-12)"
+  fi
   if [[ -d "$YCSB_DIR/$module/target/dependency" && -d "$YCSB_DIR/core/target/dependency" \
         && "$(cat "$marker" 2>/dev/null)" == "args: $extra" ]]; then
     return 0
@@ -83,7 +93,7 @@ ycsb_build() {  # module extra-maven-args -> 0 if the binding is built
   # built with other arguments (or not by this script): start clean, so that
   # jars of another client version do not stay on the classpath
   rm -rf "$YCSB_DIR/$module/target"
-  eval "margs=($extra)"
+  eval "margs=($2)"
   log "building YCSB $module $extra (log: $OUT/ycsb-build-$module.log)"
   mkdir -p "$M2_CACHE"
   # Solr's test framework (a test-scope dependency of the solr7 binding) needs
@@ -203,12 +213,12 @@ for subject in "${SUBJECTS[@]}"; do
   log "==================== $subject ($image)"
   t="ycsb-${WORKLOADS[$subject]// /}"
   prepare_subject "$subject" "$image" "${POLICY[$subject]}" \
-    "ycsb binding: ${BINDING[$subject]}  build args: ${MVN_ARGS[$subject]:-}  workloads: ${WORKLOADS[$subject]}  run args: ${RUN_ARGS[$subject]}" || continue
+    "ycsb binding: ${BINDING[$subject]}  build args: ${MVN_ARGS[$subject]:-}  patch: ${PATCH[$subject]:-none}  workloads: ${WORKLOADS[$subject]}  run args: ${RUN_ARGS[$subject]}" || continue
   if [[ -z "$(ycsb_class "${BINDING[$subject]}")" ]]; then
     log "SKIP $subject: unknown YCSB binding ${BINDING[$subject]}"
     skip "$subject" "SKIPPED (unknown YCSB binding ${BINDING[$subject]})"; continue
   fi
-  if ! ycsb_build "${MODULE[$subject]}" "${MVN_ARGS[$subject]:-}"; then
+  if ! ycsb_build "${MODULE[$subject]}" "${MVN_ARGS[$subject]:-}" "${PATCH[$subject]:-}"; then
     log "SKIP $subject: YCSB build failed"
     skip "$subject" "SKIPPED (YCSB build failed, see ycsb-build-${MODULE[$subject]}.log)"; continue
   fi

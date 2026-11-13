@@ -1,0 +1,22 @@
+--- a/orientdb/src/main/java/site/ycsb/db/OrientDBClient.java	2026-11-13 09:30:13
++++ b/orientdb/src/main/java/site/ycsb/db/OrientDBClient.java	2026-11-13 09:30:13
+@@ -95,7 +95,8 @@
+ 
+         ODatabaseDocumentTx db = new ODatabaseDocumentTx(url);
+ 
+-        if (db.getStorage().isRemote()) {
++        // OrientDB 3.x: an unopened database has no storage yet
++        if (url.startsWith("remote:")) {
+           isRemote = true;
+         }
+ 
+@@ -139,7 +140,8 @@
+               if (!server.existsDatabase()) {
+ 
+                 LOG.info("OrientDB database not found, creating fresh db");
+-                server.createDatabase(server.getURL(), ORIENTDB_DOCUMENT_TYPE, remoteStorageType);
++                // OrientDB 3.x expects the database name here, not its URL
++                server.createDatabase(db.getName(), ORIENTDB_DOCUMENT_TYPE, remoteStorageType);
+               }
+             }
+ 
